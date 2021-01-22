@@ -52,7 +52,6 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 from __future__ import print_function
-import time
 import riam_api_client
 from riam_api_client.rest import ApiException
 from pprint import pprint
@@ -60,8 +59,6 @@ from pprint import pprint
 # Configure API key authorization: ApiKeyAuth
 configuration = riam_api_client.Configuration()
 configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-Key'] = 'Bearer'
 
 # create an instance of the API class. Here you should try one of the APIs you purchased.
 api_instance = riam_api_client.CalculadoraApi(riam_api_client.ApiClient(configuration))

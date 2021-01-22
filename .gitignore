@@ -65,3 +65,4 @@ target/
 
 # RiskAmerica
 git_push.sh
+.swagger-codegen/*

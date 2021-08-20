@@ -61,7 +61,7 @@ configuration = riam_api_client.Configuration()
 configuration.api_key['X-API-Key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class. Here you should try one of the APIs you purchased.
-api_instance = riam_api_client.CalculadoraApi(riam_api_client.ApiClient(configuration))
+api_instance = riam_api_client.RFNCalculadoraApi(riam_api_client.ApiClient(configuration))
 nemo = 'BACEN-A1' # str | Nemotecnico del instrumento a valorizar
 fecha = '2013-10-20' # date | Fecha para la cual se efectua la valorización
 tir = 1.2 # float | Tasa usada para valorizar
@@ -69,10 +69,10 @@ nominal = 1000 # float | Nominal a valorizar (default to 1000)
 
 try:
     # Obtiene la valorización de un instrumento para una tasa dada.
-    api_response = api_instance.calculadora_calculadora_calcular_con_tir(nemo, fecha, tir, nominal)
+    api_response = api_instance.r_fn_calculadora_calculadora_calcular_con_tir(nemo, fecha, tir, nominal)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CalculadoraApi->calculadora_calculadora_calcular_con_tir: %s\n" % e)
+    print("Exception when calling CalculadoraApi->r_fn_calculadora_calculadora_calcular_con_tir: %s\n" % e)
 ```
 
 ## Documentation For Authorization

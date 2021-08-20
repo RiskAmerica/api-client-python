@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -36,11 +36,12 @@ class InlineResponse20018Message(object):
         'tir': 'float',
         'cantidad': 'float',
         'monto_transado': 'float',
+        'moneda': 'str',
         'monto_transado_clp': 'float',
         'precio_porcentaje_valor_par': 'float',
         'duracion_macaulay': 'float',
-        'plazo_residual': 'float',
         'tir_base': 'float',
+        'origen': 'str',
         'spread': 'float',
         'nemo': 'str'
     }
@@ -50,26 +51,28 @@ class InlineResponse20018Message(object):
         'tir': 'tir',
         'cantidad': 'cantidad',
         'monto_transado': 'montoTransado',
+        'moneda': 'moneda',
         'monto_transado_clp': 'montoTransadoCLP',
         'precio_porcentaje_valor_par': 'precioPorcentajeValorPar',
         'duracion_macaulay': 'duracionMacaulay',
-        'plazo_residual': 'plazoResidual',
         'tir_base': 'tirBase',
+        'origen': 'origen',
         'spread': 'spread',
         'nemo': 'nemo'
     }
 
-    def __init__(self, fecha=None, tir=None, cantidad=None, monto_transado=None, monto_transado_clp=None, precio_porcentaje_valor_par=None, duracion_macaulay=None, plazo_residual=None, tir_base=None, spread=None, nemo=None):  # noqa: E501
+    def __init__(self, fecha=None, tir=None, cantidad=None, monto_transado=None, moneda=None, monto_transado_clp=None, precio_porcentaje_valor_par=None, duracion_macaulay=None, tir_base=None, origen=None, spread=None, nemo=None):  # noqa: E501
         """InlineResponse20018Message - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
         self._tir = None
         self._cantidad = None
         self._monto_transado = None
+        self._moneda = None
         self._monto_transado_clp = None
         self._precio_porcentaje_valor_par = None
         self._duracion_macaulay = None
-        self._plazo_residual = None
         self._tir_base = None
+        self._origen = None
         self._spread = None
         self._nemo = None
         self.discriminator = None
@@ -81,16 +84,18 @@ class InlineResponse20018Message(object):
             self.cantidad = cantidad
         if monto_transado is not None:
             self.monto_transado = monto_transado
+        if moneda is not None:
+            self.moneda = moneda
         if monto_transado_clp is not None:
             self.monto_transado_clp = monto_transado_clp
         if precio_porcentaje_valor_par is not None:
             self.precio_porcentaje_valor_par = precio_porcentaje_valor_par
         if duracion_macaulay is not None:
             self.duracion_macaulay = duracion_macaulay
-        if plazo_residual is not None:
-            self.plazo_residual = plazo_residual
         if tir_base is not None:
             self.tir_base = tir_base
+        if origen is not None:
+            self.origen = origen
         if spread is not None:
             self.spread = spread
         if nemo is not None:
@@ -185,6 +190,28 @@ class InlineResponse20018Message(object):
         self._monto_transado = monto_transado
 
     @property
+    def moneda(self):
+        """Gets the moneda of this InlineResponse20018Message.  # noqa: E501
+        Moneda del instrumento  # noqa: E501
+
+        :return: The moneda of this InlineResponse20018Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._moneda
+
+    @moneda.setter
+    def moneda(self, moneda):
+        """Sets the moneda of this InlineResponse20018Message.
+
+        Moneda del instrumento  # noqa: E501
+
+        :param moneda: The moneda of this InlineResponse20018Message.  # noqa: E501
+        :type: str
+        """
+
+        self._moneda = moneda
+
+    @property
     def monto_transado_clp(self):
         """Gets the monto_transado_clp of this InlineResponse20018Message.  # noqa: E501
         Monto transado en pesos  # noqa: E501
@@ -251,28 +278,6 @@ class InlineResponse20018Message(object):
         self._duracion_macaulay = duracion_macaulay
 
     @property
-    def plazo_residual(self):
-        """Gets the plazo_residual of this InlineResponse20018Message.  # noqa: E501
-        Plazo residual del instrumento  # noqa: E501
-
-        :return: The plazo_residual of this InlineResponse20018Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._plazo_residual
-
-    @plazo_residual.setter
-    def plazo_residual(self, plazo_residual):
-        """Sets the plazo_residual of this InlineResponse20018Message.
-
-        Plazo residual del instrumento  # noqa: E501
-
-        :param plazo_residual: The plazo_residual of this InlineResponse20018Message.  # noqa: E501
-        :type: float
-        """
-
-        self._plazo_residual = plazo_residual
-
-    @property
     def tir_base(self):
         """Gets the tir_base of this InlineResponse20018Message.  # noqa: E501
         TIR Base  # noqa: E501
@@ -293,6 +298,28 @@ class InlineResponse20018Message(object):
         """
 
         self._tir_base = tir_base
+
+    @property
+    def origen(self):
+        """Gets the origen of this InlineResponse20018Message.  # noqa: E501
+        Origen  # noqa: E501
+
+        :return: The origen of this InlineResponse20018Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._origen
+
+    @origen.setter
+    def origen(self, origen):
+        """Sets the origen of this InlineResponse20018Message.
+
+        Origen  # noqa: E501
+
+        :param origen: The origen of this InlineResponse20018Message.  # noqa: E501
+        :type: str
+        """
+
+        self._origen = origen
 
     @property
     def spread(self):

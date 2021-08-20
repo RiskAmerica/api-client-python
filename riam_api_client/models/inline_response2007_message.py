@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -32,122 +32,203 @@ class InlineResponse2007Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'short_name': 'str',
-        'long_name': 'str',
-        'id_grupo_padre': 'str'
+        'rut': 'int',
+        'serie': 'str',
+        'fecha': 'date',
+        'tac_remuneracion_fija': 'float',
+        'tac_remuneracion_variable': 'float',
+        'tac_gastos_operacionales': 'float',
+        'tac_total': 'float'
     }
 
     attribute_map = {
-        'id': 'id',
-        'short_name': 'shortName',
-        'long_name': 'longName',
-        'id_grupo_padre': 'idGrupoPadre'
+        'rut': 'rut',
+        'serie': 'serie',
+        'fecha': 'fecha',
+        'tac_remuneracion_fija': 'tacRemuneracionFija',
+        'tac_remuneracion_variable': 'tacRemuneracionVariable',
+        'tac_gastos_operacionales': 'tacGastosOperacionales',
+        'tac_total': 'tacTotal'
     }
 
-    def __init__(self, id=None, short_name=None, long_name=None, id_grupo_padre=None):  # noqa: E501
+    def __init__(self, rut=None, serie=None, fecha=None, tac_remuneracion_fija=None, tac_remuneracion_variable=None, tac_gastos_operacionales=None, tac_total=None):  # noqa: E501
         """InlineResponse2007Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._short_name = None
-        self._long_name = None
-        self._id_grupo_padre = None
+        self._rut = None
+        self._serie = None
+        self._fecha = None
+        self._tac_remuneracion_fija = None
+        self._tac_remuneracion_variable = None
+        self._tac_gastos_operacionales = None
+        self._tac_total = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
-        if id_grupo_padre is not None:
-            self.id_grupo_padre = id_grupo_padre
+        if rut is not None:
+            self.rut = rut
+        if serie is not None:
+            self.serie = serie
+        if fecha is not None:
+            self.fecha = fecha
+        if tac_remuneracion_fija is not None:
+            self.tac_remuneracion_fija = tac_remuneracion_fija
+        if tac_remuneracion_variable is not None:
+            self.tac_remuneracion_variable = tac_remuneracion_variable
+        if tac_gastos_operacionales is not None:
+            self.tac_gastos_operacionales = tac_gastos_operacionales
+        if tac_total is not None:
+            self.tac_total = tac_total
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse2007Message.  # noqa: E501
-        Identificador de RiskAmerica para el Grupo  # noqa: E501
+    def rut(self):
+        """Gets the rut of this InlineResponse2007Message.  # noqa: E501
+        Rut del Fondo (sin dígito verificador)  # noqa: E501
 
-        :return: The id of this InlineResponse2007Message.  # noqa: E501
+        :return: The rut of this InlineResponse2007Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._rut
+
+    @rut.setter
+    def rut(self, rut):
+        """Sets the rut of this InlineResponse2007Message.
+
+        Rut del Fondo (sin dígito verificador)  # noqa: E501
+
+        :param rut: The rut of this InlineResponse2007Message.  # noqa: E501
+        :type: int
+        """
+
+        self._rut = rut
+
+    @property
+    def serie(self):
+        """Gets the serie of this InlineResponse2007Message.  # noqa: E501
+        Código de la serie  # noqa: E501
+
+        :return: The serie of this InlineResponse2007Message.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._serie
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse2007Message.
+    @serie.setter
+    def serie(self, serie):
+        """Sets the serie of this InlineResponse2007Message.
 
-        Identificador de RiskAmerica para el Grupo  # noqa: E501
+        Código de la serie  # noqa: E501
 
-        :param id: The id of this InlineResponse2007Message.  # noqa: E501
+        :param serie: The serie of this InlineResponse2007Message.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._serie = serie
 
     @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse2007Message.  # noqa: E501
-        Nombre corto del Grupo  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse2007Message.  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :return: The short_name of this InlineResponse2007Message.  # noqa: E501
-        :rtype: str
+        :return: The fecha of this InlineResponse2007Message.  # noqa: E501
+        :rtype: date
         """
-        return self._short_name
+        return self._fecha
 
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse2007Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse2007Message.
 
-        Nombre corto del Grupo  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :param short_name: The short_name of this InlineResponse2007Message.  # noqa: E501
-        :type: str
+        :param fecha: The fecha of this InlineResponse2007Message.  # noqa: E501
+        :type: date
         """
 
-        self._short_name = short_name
+        self._fecha = fecha
 
     @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse2007Message.  # noqa: E501
-        Nombre largo del Grupo  # noqa: E501
+    def tac_remuneracion_fija(self):
+        """Gets the tac_remuneracion_fija of this InlineResponse2007Message.  # noqa: E501
+        TAC de remuneración fija (%)  # noqa: E501
 
-        :return: The long_name of this InlineResponse2007Message.  # noqa: E501
-        :rtype: str
+        :return: The tac_remuneracion_fija of this InlineResponse2007Message.  # noqa: E501
+        :rtype: float
         """
-        return self._long_name
+        return self._tac_remuneracion_fija
 
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse2007Message.
+    @tac_remuneracion_fija.setter
+    def tac_remuneracion_fija(self, tac_remuneracion_fija):
+        """Sets the tac_remuneracion_fija of this InlineResponse2007Message.
 
-        Nombre largo del Grupo  # noqa: E501
+        TAC de remuneración fija (%)  # noqa: E501
 
-        :param long_name: The long_name of this InlineResponse2007Message.  # noqa: E501
-        :type: str
+        :param tac_remuneracion_fija: The tac_remuneracion_fija of this InlineResponse2007Message.  # noqa: E501
+        :type: float
         """
 
-        self._long_name = long_name
+        self._tac_remuneracion_fija = tac_remuneracion_fija
 
     @property
-    def id_grupo_padre(self):
-        """Gets the id_grupo_padre of this InlineResponse2007Message.  # noqa: E501
-        Identificador del Grupo Padre al cual pertenece este Grupo dentro de la jerarquía de grupos  # noqa: E501
+    def tac_remuneracion_variable(self):
+        """Gets the tac_remuneracion_variable of this InlineResponse2007Message.  # noqa: E501
+        TAC de remuneración variable (%)  # noqa: E501
 
-        :return: The id_grupo_padre of this InlineResponse2007Message.  # noqa: E501
-        :rtype: str
+        :return: The tac_remuneracion_variable of this InlineResponse2007Message.  # noqa: E501
+        :rtype: float
         """
-        return self._id_grupo_padre
+        return self._tac_remuneracion_variable
 
-    @id_grupo_padre.setter
-    def id_grupo_padre(self, id_grupo_padre):
-        """Sets the id_grupo_padre of this InlineResponse2007Message.
+    @tac_remuneracion_variable.setter
+    def tac_remuneracion_variable(self, tac_remuneracion_variable):
+        """Sets the tac_remuneracion_variable of this InlineResponse2007Message.
 
-        Identificador del Grupo Padre al cual pertenece este Grupo dentro de la jerarquía de grupos  # noqa: E501
+        TAC de remuneración variable (%)  # noqa: E501
 
-        :param id_grupo_padre: The id_grupo_padre of this InlineResponse2007Message.  # noqa: E501
-        :type: str
+        :param tac_remuneracion_variable: The tac_remuneracion_variable of this InlineResponse2007Message.  # noqa: E501
+        :type: float
         """
 
-        self._id_grupo_padre = id_grupo_padre
+        self._tac_remuneracion_variable = tac_remuneracion_variable
+
+    @property
+    def tac_gastos_operacionales(self):
+        """Gets the tac_gastos_operacionales of this InlineResponse2007Message.  # noqa: E501
+        TAC de gastos (%)  # noqa: E501
+
+        :return: The tac_gastos_operacionales of this InlineResponse2007Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tac_gastos_operacionales
+
+    @tac_gastos_operacionales.setter
+    def tac_gastos_operacionales(self, tac_gastos_operacionales):
+        """Sets the tac_gastos_operacionales of this InlineResponse2007Message.
+
+        TAC de gastos (%)  # noqa: E501
+
+        :param tac_gastos_operacionales: The tac_gastos_operacionales of this InlineResponse2007Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tac_gastos_operacionales = tac_gastos_operacionales
+
+    @property
+    def tac_total(self):
+        """Gets the tac_total of this InlineResponse2007Message.  # noqa: E501
+        Tasa Anual de Costo (%)  # noqa: E501
+
+        :return: The tac_total of this InlineResponse2007Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tac_total
+
+    @tac_total.setter
+    def tac_total(self, tac_total):
+        """Sets the tac_total of this InlineResponse2007Message.
+
+        Tasa Anual de Costo (%)  # noqa: E501
+
+        :param tac_total: The tac_total of this InlineResponse2007Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tac_total = tac_total
 
     def to_dict(self):
         """Returns the model properties as a dict"""

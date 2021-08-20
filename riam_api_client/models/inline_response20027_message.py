@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -33,38 +33,28 @@ class InlineResponse20027Message(object):
     """
     swagger_types = {
         'fecha': 'date',
-        'tipo': 'str',
-        'monto': 'float',
-        'porcentaje_saldo': 'float'
+        'tasa_prepago': 'float'
     }
 
     attribute_map = {
         'fecha': 'fecha',
-        'tipo': 'tipo',
-        'monto': 'monto',
-        'porcentaje_saldo': 'porcentajeSaldo'
+        'tasa_prepago': 'tasaPrepago'
     }
 
-    def __init__(self, fecha=None, tipo=None, monto=None, porcentaje_saldo=None):  # noqa: E501
+    def __init__(self, fecha=None, tasa_prepago=None):  # noqa: E501
         """InlineResponse20027Message - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
-        self._tipo = None
-        self._monto = None
-        self._porcentaje_saldo = None
+        self._tasa_prepago = None
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
-        if tipo is not None:
-            self.tipo = tipo
-        if monto is not None:
-            self.monto = monto
-        if porcentaje_saldo is not None:
-            self.porcentaje_saldo = porcentaje_saldo
+        if tasa_prepago is not None:
+            self.tasa_prepago = tasa_prepago
 
     @property
     def fecha(self):
         """Gets the fecha of this InlineResponse20027Message.  # noqa: E501
-        Fecha del prepago  # noqa: E501
+        Fecha de la Tasa  # noqa: E501
 
         :return: The fecha of this InlineResponse20027Message.  # noqa: E501
         :rtype: date
@@ -75,7 +65,7 @@ class InlineResponse20027Message(object):
     def fecha(self, fecha):
         """Sets the fecha of this InlineResponse20027Message.
 
-        Fecha del prepago  # noqa: E501
+        Fecha de la Tasa  # noqa: E501
 
         :param fecha: The fecha of this InlineResponse20027Message.  # noqa: E501
         :type: date
@@ -84,70 +74,26 @@ class InlineResponse20027Message(object):
         self._fecha = fecha
 
     @property
-    def tipo(self):
-        """Gets the tipo of this InlineResponse20027Message.  # noqa: E501
-        Tipo de prepago, puede ser TOTAL  o PARCIAL  # noqa: E501
+    def tasa_prepago(self):
+        """Gets the tasa_prepago of this InlineResponse20027Message.  # noqa: E501
+        Tasa de prepago  # noqa: E501
 
-        :return: The tipo of this InlineResponse20027Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._tipo
-
-    @tipo.setter
-    def tipo(self, tipo):
-        """Sets the tipo of this InlineResponse20027Message.
-
-        Tipo de prepago, puede ser TOTAL  o PARCIAL  # noqa: E501
-
-        :param tipo: The tipo of this InlineResponse20027Message.  # noqa: E501
-        :type: str
-        """
-
-        self._tipo = tipo
-
-    @property
-    def monto(self):
-        """Gets the monto of this InlineResponse20027Message.  # noqa: E501
-        Monto prepagado  # noqa: E501
-
-        :return: The monto of this InlineResponse20027Message.  # noqa: E501
+        :return: The tasa_prepago of this InlineResponse20027Message.  # noqa: E501
         :rtype: float
         """
-        return self._monto
+        return self._tasa_prepago
 
-    @monto.setter
-    def monto(self, monto):
-        """Sets the monto of this InlineResponse20027Message.
+    @tasa_prepago.setter
+    def tasa_prepago(self, tasa_prepago):
+        """Sets the tasa_prepago of this InlineResponse20027Message.
 
-        Monto prepagado  # noqa: E501
+        Tasa de prepago  # noqa: E501
 
-        :param monto: The monto of this InlineResponse20027Message.  # noqa: E501
+        :param tasa_prepago: The tasa_prepago of this InlineResponse20027Message.  # noqa: E501
         :type: float
         """
 
-        self._monto = monto
-
-    @property
-    def porcentaje_saldo(self):
-        """Gets the porcentaje_saldo of this InlineResponse20027Message.  # noqa: E501
-        Monto prepagado como porcentaje del saldo  # noqa: E501
-
-        :return: The porcentaje_saldo of this InlineResponse20027Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._porcentaje_saldo
-
-    @porcentaje_saldo.setter
-    def porcentaje_saldo(self, porcentaje_saldo):
-        """Sets the porcentaje_saldo of this InlineResponse20027Message.
-
-        Monto prepagado como porcentaje del saldo  # noqa: E501
-
-        :param porcentaje_saldo: The porcentaje_saldo of this InlineResponse20027Message.  # noqa: E501
-        :type: float
-        """
-
-        self._porcentaje_saldo = porcentaje_saldo
+        self._tasa_prepago = tasa_prepago
 
     def to_dict(self):
         """Returns the model properties as a dict"""

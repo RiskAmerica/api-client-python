@@ -54,6 +54,9 @@ venv/
 # Django stuff:
 *.log
 
+docs/
+test/
+
 # Sphinx documentation
 docs/_build/
 
@@ -62,7 +65,3 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
-
-# RiskAmerica
-git_push.sh
-.swagger-codegen/*

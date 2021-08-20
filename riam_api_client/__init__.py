@@ -5,7 +5,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -15,22 +15,22 @@
 from __future__ import absolute_import
 
 # import apis into sdk package
-from riam_api_client.api.calculadora_api import CalculadoraApi
 from riam_api_client.api.curvas_api import CurvasApi
 from riam_api_client.api.fondos_api import FondosApi
 from riam_api_client.api.indices_api import IndicesApi
 from riam_api_client.api.monedas_e_indicadores_api import MonedasEIndicadoresApi
+from riam_api_client.api.rfn_calculadora_api import RFNCalculadoraApi
 from riam_api_client.api.rfn_informacion_api import RFNInformacionApi
 from riam_api_client.api.rfn_transacciones_api import RFNTransaccionesApi
 from riam_api_client.api.rfn_valorizaciones_api import RFNValorizacionesApi
 from riam_api_client.api.rfn_valorizaciones_sin_desfase_api import RFNValorizacionesSinDesfaseApi
 from riam_api_client.api.sic_api import SicApi
+from riam_api_client.api.svc_api import SvcApi
 # import ApiClient
 from riam_api_client.api_client import ApiClient
 from riam_api_client.configuration import Configuration
 # import models into sdk package
-from riam_api_client.models.body import Body
-from riam_api_client.models.body1 import Body1
+from riam_api_client.models.handler_upload_file_body import HandlerUploadFileBody
 from riam_api_client.models.inline_response200 import InlineResponse200
 from riam_api_client.models.inline_response2001 import InlineResponse2001
 from riam_api_client.models.inline_response20010 import InlineResponse20010
@@ -53,10 +53,10 @@ from riam_api_client.models.inline_response20018 import InlineResponse20018
 from riam_api_client.models.inline_response20018_message import InlineResponse20018Message
 from riam_api_client.models.inline_response20019 import InlineResponse20019
 from riam_api_client.models.inline_response20019_message import InlineResponse20019Message
-from riam_api_client.models.inline_response20019_message_valorizacion import InlineResponse20019MessageValorizacion
 from riam_api_client.models.inline_response2001_message import InlineResponse2001Message
 from riam_api_client.models.inline_response2002 import InlineResponse2002
 from riam_api_client.models.inline_response20020 import InlineResponse20020
+from riam_api_client.models.inline_response20020_message import InlineResponse20020Message
 from riam_api_client.models.inline_response20021 import InlineResponse20021
 from riam_api_client.models.inline_response20021_message import InlineResponse20021Message
 from riam_api_client.models.inline_response20022 import InlineResponse20022
@@ -65,42 +65,57 @@ from riam_api_client.models.inline_response20023 import InlineResponse20023
 from riam_api_client.models.inline_response20023_message import InlineResponse20023Message
 from riam_api_client.models.inline_response20024 import InlineResponse20024
 from riam_api_client.models.inline_response20024_message import InlineResponse20024Message
-from riam_api_client.models.inline_response20024_message_instrumento import InlineResponse20024MessageInstrumento
 from riam_api_client.models.inline_response20025 import InlineResponse20025
 from riam_api_client.models.inline_response20025_message import InlineResponse20025Message
 from riam_api_client.models.inline_response20026 import InlineResponse20026
 from riam_api_client.models.inline_response20026_message import InlineResponse20026Message
+from riam_api_client.models.inline_response20026_message_instrumento import InlineResponse20026MessageInstrumento
 from riam_api_client.models.inline_response20027 import InlineResponse20027
 from riam_api_client.models.inline_response20027_message import InlineResponse20027Message
 from riam_api_client.models.inline_response20028 import InlineResponse20028
-from riam_api_client.models.inline_response20028_clasificacion import InlineResponse20028Clasificacion
 from riam_api_client.models.inline_response20028_message import InlineResponse20028Message
 from riam_api_client.models.inline_response20029 import InlineResponse20029
 from riam_api_client.models.inline_response20029_message import InlineResponse20029Message
-from riam_api_client.models.inline_response20029_message_liquidez import InlineResponse20029MessageLiquidez
 from riam_api_client.models.inline_response2002_message import InlineResponse2002Message
 from riam_api_client.models.inline_response2003 import InlineResponse2003
 from riam_api_client.models.inline_response20030 import InlineResponse20030
-from riam_api_client.models.inline_response20030_message import InlineResponse20030Message
 from riam_api_client.models.inline_response20031 import InlineResponse20031
+from riam_api_client.models.inline_response20031_clasificacion import InlineResponse20031Clasificacion
 from riam_api_client.models.inline_response20031_message import InlineResponse20031Message
 from riam_api_client.models.inline_response20032 import InlineResponse20032
 from riam_api_client.models.inline_response20032_message import InlineResponse20032Message
+from riam_api_client.models.inline_response20032_message_liquidez import InlineResponse20032MessageLiquidez
 from riam_api_client.models.inline_response20033 import InlineResponse20033
 from riam_api_client.models.inline_response20033_message import InlineResponse20033Message
-from riam_api_client.models.inline_response20033_message_tabla_desarrollo import InlineResponse20033MessageTablaDesarrollo
 from riam_api_client.models.inline_response20034 import InlineResponse20034
 from riam_api_client.models.inline_response20034_message import InlineResponse20034Message
-from riam_api_client.models.inline_response20034_message_valorizacion import InlineResponse20034MessageValorizacion
 from riam_api_client.models.inline_response20035 import InlineResponse20035
 from riam_api_client.models.inline_response20035_message import InlineResponse20035Message
-from riam_api_client.models.inline_response20035_message_tipo_cambio import InlineResponse20035MessageTipoCambio
 from riam_api_client.models.inline_response20036 import InlineResponse20036
+from riam_api_client.models.inline_response20036_message import InlineResponse20036Message
+from riam_api_client.models.inline_response20036_message_tabla_desarrollo import InlineResponse20036MessageTablaDesarrollo
 from riam_api_client.models.inline_response20037 import InlineResponse20037
 from riam_api_client.models.inline_response20037_message import InlineResponse20037Message
-from riam_api_client.models.inline_response20037_message_issues import InlineResponse20037MessageIssues
+from riam_api_client.models.inline_response20037_message_valorizacion import InlineResponse20037MessageValorizacion
+from riam_api_client.models.inline_response20038 import InlineResponse20038
+from riam_api_client.models.inline_response20038_message import InlineResponse20038Message
+from riam_api_client.models.inline_response20039 import InlineResponse20039
+from riam_api_client.models.inline_response20039_message import InlineResponse20039Message
 from riam_api_client.models.inline_response2003_message import InlineResponse2003Message
 from riam_api_client.models.inline_response2004 import InlineResponse2004
+from riam_api_client.models.inline_response20040 import InlineResponse20040
+from riam_api_client.models.inline_response20040_message import InlineResponse20040Message
+from riam_api_client.models.inline_response20040_message_issues import InlineResponse20040MessageIssues
+from riam_api_client.models.inline_response20041 import InlineResponse20041
+from riam_api_client.models.inline_response20041_message import InlineResponse20041Message
+from riam_api_client.models.inline_response20042 import InlineResponse20042
+from riam_api_client.models.inline_response20042_message import InlineResponse20042Message
+from riam_api_client.models.inline_response20043 import InlineResponse20043
+from riam_api_client.models.inline_response20043_message import InlineResponse20043Message
+from riam_api_client.models.inline_response20044 import InlineResponse20044
+from riam_api_client.models.inline_response20044_message import InlineResponse20044Message
+from riam_api_client.models.inline_response20045 import InlineResponse20045
+from riam_api_client.models.inline_response20045_message import InlineResponse20045Message
 from riam_api_client.models.inline_response2004_message import InlineResponse2004Message
 from riam_api_client.models.inline_response2005 import InlineResponse2005
 from riam_api_client.models.inline_response2005_message import InlineResponse2005Message
@@ -116,3 +131,5 @@ from riam_api_client.models.inline_response200_message import InlineResponse200M
 from riam_api_client.models.inline_response200_message_fondo import InlineResponse200MessageFondo
 from riam_api_client.models.inline_response200_message_fondo_administradora import InlineResponse200MessageFondoAdministradora
 from riam_api_client.models.inline_response200_message_fondo_series import InlineResponse200MessageFondoSeries
+from riam_api_client.models.upload_upload_body import UploadUploadBody
+from riam_api_client.models.valores_get_body import ValoresGetBody

@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -33,68 +33,88 @@ class InlineResponse20022Message(object):
     """
     swagger_types = {
         'fecha': 'date',
-        'ret_total': 'float',
-        'ret_mtd': 'float',
-        'ret_ytd': 'float',
-        'ret_curva_cero': 'float',
-        'ret_spread': 'float',
-        'ret_devengo': 'float',
-        'ret_prepago': 'float',
-        'ret_moneda': 'float',
-        'ret_roll_down': 'float',
-        'ret_residual': 'float'
+        'tir': 'float',
+        'tir_base': 'float',
+        'spread': 'float',
+        'plazo_residual': 'int',
+        'duracion_macaulay': 'float',
+        'duracion_mod_act365': 'float',
+        'precio_porcentaje_valor_par': 'float',
+        'valor_par': 'float',
+        'convexidad': 'float',
+        'volatilidad': 'float',
+        'monto_clp': 'float',
+        'tir_act365': 'float',
+        'tipo_val': 'str',
+        'clasificacion': 'str'
     }
 
     attribute_map = {
         'fecha': 'fecha',
-        'ret_total': 'retTotal',
-        'ret_mtd': 'retMTD',
-        'ret_ytd': 'retYTD',
-        'ret_curva_cero': 'retCurvaCero',
-        'ret_spread': 'retSpread',
-        'ret_devengo': 'retDevengo',
-        'ret_prepago': 'retPrepago',
-        'ret_moneda': 'retMoneda',
-        'ret_roll_down': 'retRollDown',
-        'ret_residual': 'retResidual'
+        'tir': 'tir',
+        'tir_base': 'tirBase',
+        'spread': 'spread',
+        'plazo_residual': 'plazoResidual',
+        'duracion_macaulay': 'duracionMacaulay',
+        'duracion_mod_act365': 'duracionModACT365',
+        'precio_porcentaje_valor_par': 'precioPorcentajeValorPar',
+        'valor_par': 'valorPar',
+        'convexidad': 'convexidad',
+        'volatilidad': 'volatilidad',
+        'monto_clp': 'montoCLP',
+        'tir_act365': 'tirACT365',
+        'tipo_val': 'tipoVal',
+        'clasificacion': 'clasificacion'
     }
 
-    def __init__(self, fecha=None, ret_total=None, ret_mtd=None, ret_ytd=None, ret_curva_cero=None, ret_spread=None, ret_devengo=None, ret_prepago=None, ret_moneda=None, ret_roll_down=None, ret_residual=None):  # noqa: E501
+    def __init__(self, fecha=None, tir=None, tir_base=None, spread=None, plazo_residual=None, duracion_macaulay=None, duracion_mod_act365=None, precio_porcentaje_valor_par=None, valor_par=None, convexidad=None, volatilidad=None, monto_clp=None, tir_act365=None, tipo_val=None, clasificacion=None):  # noqa: E501
         """InlineResponse20022Message - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
-        self._ret_total = None
-        self._ret_mtd = None
-        self._ret_ytd = None
-        self._ret_curva_cero = None
-        self._ret_spread = None
-        self._ret_devengo = None
-        self._ret_prepago = None
-        self._ret_moneda = None
-        self._ret_roll_down = None
-        self._ret_residual = None
+        self._tir = None
+        self._tir_base = None
+        self._spread = None
+        self._plazo_residual = None
+        self._duracion_macaulay = None
+        self._duracion_mod_act365 = None
+        self._precio_porcentaje_valor_par = None
+        self._valor_par = None
+        self._convexidad = None
+        self._volatilidad = None
+        self._monto_clp = None
+        self._tir_act365 = None
+        self._tipo_val = None
+        self._clasificacion = None
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
-        if ret_total is not None:
-            self.ret_total = ret_total
-        if ret_mtd is not None:
-            self.ret_mtd = ret_mtd
-        if ret_ytd is not None:
-            self.ret_ytd = ret_ytd
-        if ret_curva_cero is not None:
-            self.ret_curva_cero = ret_curva_cero
-        if ret_spread is not None:
-            self.ret_spread = ret_spread
-        if ret_devengo is not None:
-            self.ret_devengo = ret_devengo
-        if ret_prepago is not None:
-            self.ret_prepago = ret_prepago
-        if ret_moneda is not None:
-            self.ret_moneda = ret_moneda
-        if ret_roll_down is not None:
-            self.ret_roll_down = ret_roll_down
-        if ret_residual is not None:
-            self.ret_residual = ret_residual
+        if tir is not None:
+            self.tir = tir
+        if tir_base is not None:
+            self.tir_base = tir_base
+        if spread is not None:
+            self.spread = spread
+        if plazo_residual is not None:
+            self.plazo_residual = plazo_residual
+        if duracion_macaulay is not None:
+            self.duracion_macaulay = duracion_macaulay
+        if duracion_mod_act365 is not None:
+            self.duracion_mod_act365 = duracion_mod_act365
+        if precio_porcentaje_valor_par is not None:
+            self.precio_porcentaje_valor_par = precio_porcentaje_valor_par
+        if valor_par is not None:
+            self.valor_par = valor_par
+        if convexidad is not None:
+            self.convexidad = convexidad
+        if volatilidad is not None:
+            self.volatilidad = volatilidad
+        if monto_clp is not None:
+            self.monto_clp = monto_clp
+        if tir_act365 is not None:
+            self.tir_act365 = tir_act365
+        if tipo_val is not None:
+            self.tipo_val = tipo_val
+        if clasificacion is not None:
+            self.clasificacion = clasificacion
 
     @property
     def fecha(self):
@@ -119,224 +139,312 @@ class InlineResponse20022Message(object):
         self._fecha = fecha
 
     @property
-    def ret_total(self):
-        """Gets the ret_total of this InlineResponse20022Message.  # noqa: E501
-        Retorno Dia.  # noqa: E501
+    def tir(self):
+        """Gets the tir of this InlineResponse20022Message.  # noqa: E501
+        Tir de la Valorización  # noqa: E501
 
-        :return: The ret_total of this InlineResponse20022Message.  # noqa: E501
+        :return: The tir of this InlineResponse20022Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_total
+        return self._tir
 
-    @ret_total.setter
-    def ret_total(self, ret_total):
-        """Sets the ret_total of this InlineResponse20022Message.
+    @tir.setter
+    def tir(self, tir):
+        """Sets the tir of this InlineResponse20022Message.
 
-        Retorno Dia.  # noqa: E501
+        Tir de la Valorización  # noqa: E501
 
-        :param ret_total: The ret_total of this InlineResponse20022Message.  # noqa: E501
+        :param tir: The tir of this InlineResponse20022Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_total = ret_total
+        self._tir = tir
 
     @property
-    def ret_mtd(self):
-        """Gets the ret_mtd of this InlineResponse20022Message.  # noqa: E501
-        Retorno Month to Date  # noqa: E501
+    def tir_base(self):
+        """Gets the tir_base of this InlineResponse20022Message.  # noqa: E501
+        Tir Base Curva RiskAmerica  # noqa: E501
 
-        :return: The ret_mtd of this InlineResponse20022Message.  # noqa: E501
+        :return: The tir_base of this InlineResponse20022Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_mtd
+        return self._tir_base
 
-    @ret_mtd.setter
-    def ret_mtd(self, ret_mtd):
-        """Sets the ret_mtd of this InlineResponse20022Message.
+    @tir_base.setter
+    def tir_base(self, tir_base):
+        """Sets the tir_base of this InlineResponse20022Message.
 
-        Retorno Month to Date  # noqa: E501
+        Tir Base Curva RiskAmerica  # noqa: E501
 
-        :param ret_mtd: The ret_mtd of this InlineResponse20022Message.  # noqa: E501
+        :param tir_base: The tir_base of this InlineResponse20022Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_mtd = ret_mtd
+        self._tir_base = tir_base
 
     @property
-    def ret_ytd(self):
-        """Gets the ret_ytd of this InlineResponse20022Message.  # noqa: E501
-        Retorno Year to Date  # noqa: E501
+    def spread(self):
+        """Gets the spread of this InlineResponse20022Message.  # noqa: E501
+        Diferencia entre la TIR de valorización y la TIR libre de riesgo  # noqa: E501
 
-        :return: The ret_ytd of this InlineResponse20022Message.  # noqa: E501
+        :return: The spread of this InlineResponse20022Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_ytd
+        return self._spread
 
-    @ret_ytd.setter
-    def ret_ytd(self, ret_ytd):
-        """Sets the ret_ytd of this InlineResponse20022Message.
+    @spread.setter
+    def spread(self, spread):
+        """Sets the spread of this InlineResponse20022Message.
 
-        Retorno Year to Date  # noqa: E501
+        Diferencia entre la TIR de valorización y la TIR libre de riesgo  # noqa: E501
 
-        :param ret_ytd: The ret_ytd of this InlineResponse20022Message.  # noqa: E501
+        :param spread: The spread of this InlineResponse20022Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_ytd = ret_ytd
+        self._spread = spread
 
     @property
-    def ret_curva_cero(self):
-        """Gets the ret_curva_cero of this InlineResponse20022Message.  # noqa: E501
-        Retorno Curva Cero  # noqa: E501
+    def plazo_residual(self):
+        """Gets the plazo_residual of this InlineResponse20022Message.  # noqa: E501
+        Días al vencimiento  # noqa: E501
 
-        :return: The ret_curva_cero of this InlineResponse20022Message.  # noqa: E501
-        :rtype: float
+        :return: The plazo_residual of this InlineResponse20022Message.  # noqa: E501
+        :rtype: int
         """
-        return self._ret_curva_cero
+        return self._plazo_residual
 
-    @ret_curva_cero.setter
-    def ret_curva_cero(self, ret_curva_cero):
-        """Sets the ret_curva_cero of this InlineResponse20022Message.
+    @plazo_residual.setter
+    def plazo_residual(self, plazo_residual):
+        """Sets the plazo_residual of this InlineResponse20022Message.
 
-        Retorno Curva Cero  # noqa: E501
+        Días al vencimiento  # noqa: E501
 
-        :param ret_curva_cero: The ret_curva_cero of this InlineResponse20022Message.  # noqa: E501
-        :type: float
+        :param plazo_residual: The plazo_residual of this InlineResponse20022Message.  # noqa: E501
+        :type: int
         """
 
-        self._ret_curva_cero = ret_curva_cero
+        self._plazo_residual = plazo_residual
 
     @property
-    def ret_spread(self):
-        """Gets the ret_spread of this InlineResponse20022Message.  # noqa: E501
-        Retorno Spread  # noqa: E501
+    def duracion_macaulay(self):
+        """Gets the duracion_macaulay of this InlineResponse20022Message.  # noqa: E501
+        Duración de Macaulay  # noqa: E501
 
-        :return: The ret_spread of this InlineResponse20022Message.  # noqa: E501
+        :return: The duracion_macaulay of this InlineResponse20022Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_spread
+        return self._duracion_macaulay
 
-    @ret_spread.setter
-    def ret_spread(self, ret_spread):
-        """Sets the ret_spread of this InlineResponse20022Message.
+    @duracion_macaulay.setter
+    def duracion_macaulay(self, duracion_macaulay):
+        """Sets the duracion_macaulay of this InlineResponse20022Message.
 
-        Retorno Spread  # noqa: E501
+        Duración de Macaulay  # noqa: E501
 
-        :param ret_spread: The ret_spread of this InlineResponse20022Message.  # noqa: E501
+        :param duracion_macaulay: The duracion_macaulay of this InlineResponse20022Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_spread = ret_spread
+        self._duracion_macaulay = duracion_macaulay
 
     @property
-    def ret_devengo(self):
-        """Gets the ret_devengo of this InlineResponse20022Message.  # noqa: E501
-        Retorno Devengo  # noqa: E501
+    def duracion_mod_act365(self):
+        """Gets the duracion_mod_act365 of this InlineResponse20022Message.  # noqa: E501
+        Duración Modificada en ACT365  # noqa: E501
 
-        :return: The ret_devengo of this InlineResponse20022Message.  # noqa: E501
+        :return: The duracion_mod_act365 of this InlineResponse20022Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_devengo
+        return self._duracion_mod_act365
 
-    @ret_devengo.setter
-    def ret_devengo(self, ret_devengo):
-        """Sets the ret_devengo of this InlineResponse20022Message.
+    @duracion_mod_act365.setter
+    def duracion_mod_act365(self, duracion_mod_act365):
+        """Sets the duracion_mod_act365 of this InlineResponse20022Message.
 
-        Retorno Devengo  # noqa: E501
+        Duración Modificada en ACT365  # noqa: E501
 
-        :param ret_devengo: The ret_devengo of this InlineResponse20022Message.  # noqa: E501
+        :param duracion_mod_act365: The duracion_mod_act365 of this InlineResponse20022Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_devengo = ret_devengo
+        self._duracion_mod_act365 = duracion_mod_act365
 
     @property
-    def ret_prepago(self):
-        """Gets the ret_prepago of this InlineResponse20022Message.  # noqa: E501
-        Retorno Prepago  # noqa: E501
+    def precio_porcentaje_valor_par(self):
+        """Gets the precio_porcentaje_valor_par of this InlineResponse20022Message.  # noqa: E501
+        Precio Porcentaje Valor Par  # noqa: E501
 
-        :return: The ret_prepago of this InlineResponse20022Message.  # noqa: E501
+        :return: The precio_porcentaje_valor_par of this InlineResponse20022Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_prepago
+        return self._precio_porcentaje_valor_par
 
-    @ret_prepago.setter
-    def ret_prepago(self, ret_prepago):
-        """Sets the ret_prepago of this InlineResponse20022Message.
+    @precio_porcentaje_valor_par.setter
+    def precio_porcentaje_valor_par(self, precio_porcentaje_valor_par):
+        """Sets the precio_porcentaje_valor_par of this InlineResponse20022Message.
 
-        Retorno Prepago  # noqa: E501
+        Precio Porcentaje Valor Par  # noqa: E501
 
-        :param ret_prepago: The ret_prepago of this InlineResponse20022Message.  # noqa: E501
+        :param precio_porcentaje_valor_par: The precio_porcentaje_valor_par of this InlineResponse20022Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_prepago = ret_prepago
+        self._precio_porcentaje_valor_par = precio_porcentaje_valor_par
 
     @property
-    def ret_moneda(self):
-        """Gets the ret_moneda of this InlineResponse20022Message.  # noqa: E501
-        Retorno Moneda  # noqa: E501
+    def valor_par(self):
+        """Gets the valor_par of this InlineResponse20022Message.  # noqa: E501
+        Valor Par  # noqa: E501
 
-        :return: The ret_moneda of this InlineResponse20022Message.  # noqa: E501
+        :return: The valor_par of this InlineResponse20022Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_moneda
+        return self._valor_par
 
-    @ret_moneda.setter
-    def ret_moneda(self, ret_moneda):
-        """Sets the ret_moneda of this InlineResponse20022Message.
+    @valor_par.setter
+    def valor_par(self, valor_par):
+        """Sets the valor_par of this InlineResponse20022Message.
 
-        Retorno Moneda  # noqa: E501
+        Valor Par  # noqa: E501
 
-        :param ret_moneda: The ret_moneda of this InlineResponse20022Message.  # noqa: E501
+        :param valor_par: The valor_par of this InlineResponse20022Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_moneda = ret_moneda
+        self._valor_par = valor_par
 
     @property
-    def ret_roll_down(self):
-        """Gets the ret_roll_down of this InlineResponse20022Message.  # noqa: E501
-        Retorno RollDown  # noqa: E501
+    def convexidad(self):
+        """Gets the convexidad of this InlineResponse20022Message.  # noqa: E501
+        Convexidad  # noqa: E501
 
-        :return: The ret_roll_down of this InlineResponse20022Message.  # noqa: E501
+        :return: The convexidad of this InlineResponse20022Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_roll_down
+        return self._convexidad
 
-    @ret_roll_down.setter
-    def ret_roll_down(self, ret_roll_down):
-        """Sets the ret_roll_down of this InlineResponse20022Message.
+    @convexidad.setter
+    def convexidad(self, convexidad):
+        """Sets the convexidad of this InlineResponse20022Message.
 
-        Retorno RollDown  # noqa: E501
+        Convexidad  # noqa: E501
 
-        :param ret_roll_down: The ret_roll_down of this InlineResponse20022Message.  # noqa: E501
+        :param convexidad: The convexidad of this InlineResponse20022Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_roll_down = ret_roll_down
+        self._convexidad = convexidad
 
     @property
-    def ret_residual(self):
-        """Gets the ret_residual of this InlineResponse20022Message.  # noqa: E501
-        Retorno Residual  # noqa: E501
+    def volatilidad(self):
+        """Gets the volatilidad of this InlineResponse20022Message.  # noqa: E501
+        Volatilidad  # noqa: E501
 
-        :return: The ret_residual of this InlineResponse20022Message.  # noqa: E501
+        :return: The volatilidad of this InlineResponse20022Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_residual
+        return self._volatilidad
 
-    @ret_residual.setter
-    def ret_residual(self, ret_residual):
-        """Sets the ret_residual of this InlineResponse20022Message.
+    @volatilidad.setter
+    def volatilidad(self, volatilidad):
+        """Sets the volatilidad of this InlineResponse20022Message.
 
-        Retorno Residual  # noqa: E501
+        Volatilidad  # noqa: E501
 
-        :param ret_residual: The ret_residual of this InlineResponse20022Message.  # noqa: E501
+        :param volatilidad: The volatilidad of this InlineResponse20022Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_residual = ret_residual
+        self._volatilidad = volatilidad
+
+    @property
+    def monto_clp(self):
+        """Gets the monto_clp of this InlineResponse20022Message.  # noqa: E501
+        Precio de 1000 nominales en pesos  # noqa: E501
+
+        :return: The monto_clp of this InlineResponse20022Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._monto_clp
+
+    @monto_clp.setter
+    def monto_clp(self, monto_clp):
+        """Sets the monto_clp of this InlineResponse20022Message.
+
+        Precio de 1000 nominales en pesos  # noqa: E501
+
+        :param monto_clp: The monto_clp of this InlineResponse20022Message.  # noqa: E501
+        :type: float
+        """
+
+        self._monto_clp = monto_clp
+
+    @property
+    def tir_act365(self):
+        """Gets the tir_act365 of this InlineResponse20022Message.  # noqa: E501
+        Tir de Valorización en ACT365  # noqa: E501
+
+        :return: The tir_act365 of this InlineResponse20022Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tir_act365
+
+    @tir_act365.setter
+    def tir_act365(self, tir_act365):
+        """Sets the tir_act365 of this InlineResponse20022Message.
+
+        Tir de Valorización en ACT365  # noqa: E501
+
+        :param tir_act365: The tir_act365 of this InlineResponse20022Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tir_act365 = tir_act365
+
+    @property
+    def tipo_val(self):
+        """Gets the tipo_val of this InlineResponse20022Message.  # noqa: E501
+        Tipo de Valorización usada por RiskAmerica  # noqa: E501
+
+        :return: The tipo_val of this InlineResponse20022Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._tipo_val
+
+    @tipo_val.setter
+    def tipo_val(self, tipo_val):
+        """Sets the tipo_val of this InlineResponse20022Message.
+
+        Tipo de Valorización usada por RiskAmerica  # noqa: E501
+
+        :param tipo_val: The tipo_val of this InlineResponse20022Message.  # noqa: E501
+        :type: str
+        """
+
+        self._tipo_val = tipo_val
+
+    @property
+    def clasificacion(self):
+        """Gets the clasificacion of this InlineResponse20022Message.  # noqa: E501
+        Clasificación de Riesgo  # noqa: E501
+
+        :return: The clasificacion of this InlineResponse20022Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._clasificacion
+
+    @clasificacion.setter
+    def clasificacion(self, clasificacion):
+        """Sets the clasificacion of this InlineResponse20022Message.
+
+        Clasificación de Riesgo  # noqa: E501
+
+        :param clasificacion: The clasificacion of this InlineResponse20022Message.  # noqa: E501
+        :type: str
+        """
+
+        self._clasificacion = clasificacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

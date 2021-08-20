@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -17,12 +17,12 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse2008
-from . import InlineResponse2007
-from . import InlineResponse2006
+from . import InlineResponse20010
 from . import InlineResponse2009
-from . import InlineResponse20010
-from . import InlineResponse20010
+from . import InlineResponse2008
+from . import InlineResponse20011
+from . import InlineResponse20012
+from . import InlineResponse20012
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -50,10 +50,10 @@ class IndicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse2008
+        :return: InlineResponse20010
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2008 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20010 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -72,10 +72,10 @@ class IndicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse2008
+        :return: InlineResponse20010
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2008 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20010 | multiprocessing.pool.ApplyResult
         """
 
         all_params = []  # noqa: E501
@@ -121,7 +121,7 @@ class IndicesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2008',  # noqa: E501
+            response_type='InlineResponse20010',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -139,10 +139,10 @@ class IndicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse2007
+        :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2009 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -161,10 +161,10 @@ class IndicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse2007
+        :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2009 | multiprocessing.pool.ApplyResult
         """
 
         all_params = []  # noqa: E501
@@ -210,7 +210,7 @@ class IndicesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2007',  # noqa: E501
+            response_type='InlineResponse2009',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -228,10 +228,10 @@ class IndicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse2006
+        :return: InlineResponse2008
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2008 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -250,10 +250,10 @@ class IndicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse2006
+        :return: InlineResponse2008
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2008 | multiprocessing.pool.ApplyResult
         """
 
         all_params = []  # noqa: E501
@@ -299,7 +299,7 @@ class IndicesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='InlineResponse2008',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -319,10 +319,10 @@ class IndicesApi(object):
         :param async_req bool
         :param int id_indice: Id del Índice a consultar (required)
         :param date fecha: Fecha a consultar (required)
-        :return: InlineResponse2009
+        :return: InlineResponse20011
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2009 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20011 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -343,10 +343,10 @@ class IndicesApi(object):
         :param async_req bool
         :param int id_indice: Id del Índice a consultar (required)
         :param date fecha: Fecha a consultar (required)
-        :return: InlineResponse2009
+        :return: InlineResponse20011
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2009 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20011 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['id_indice', 'fecha']  # noqa: E501
@@ -404,7 +404,7 @@ class IndicesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2009',  # noqa: E501
+            response_type='InlineResponse20011',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -424,10 +424,10 @@ class IndicesApi(object):
         :param async_req bool
         :param date fecha: Límite inferior del intervalo de fechas a consultar (required)
         :param str id_indice: ID del índice a consultar. Se pueden especificar varios separando por 'pipes' (ASCII 124). IE: 5 (required)
-        :return: InlineResponse20010
+        :return: InlineResponse20012
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20010 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20012 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -448,10 +448,10 @@ class IndicesApi(object):
         :param async_req bool
         :param date fecha: Límite inferior del intervalo de fechas a consultar (required)
         :param str id_indice: ID del índice a consultar. Se pueden especificar varios separando por 'pipes' (ASCII 124). IE: 5 (required)
-        :return: InlineResponse20010
+        :return: InlineResponse20012
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20010 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20012 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'id_indice']  # noqa: E501
@@ -509,7 +509,7 @@ class IndicesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20010',  # noqa: E501
+            response_type='InlineResponse20012',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -530,10 +530,10 @@ class IndicesApi(object):
         :param date fecha_min: Límite inferior del intervalo de fechas a consultar (required)
         :param date fecha_max: Límite superior del intervalo de fechas a consultar (required)
         :param int id_indice: Id del Índice a consultar. (required)
-        :return: InlineResponse20010
+        :return: InlineResponse20012
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20010 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20012 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -555,10 +555,10 @@ class IndicesApi(object):
         :param date fecha_min: Límite inferior del intervalo de fechas a consultar (required)
         :param date fecha_max: Límite superior del intervalo de fechas a consultar (required)
         :param int id_indice: Id del Índice a consultar. (required)
-        :return: InlineResponse20010
+        :return: InlineResponse20012
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20010 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20012 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'id_indice']  # noqa: E501
@@ -622,7 +622,7 @@ class IndicesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20010',  # noqa: E501
+            response_type='InlineResponse20012',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

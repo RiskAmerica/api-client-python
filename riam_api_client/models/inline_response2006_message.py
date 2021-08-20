@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -32,257 +32,149 @@ class InlineResponse2006Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'cod': 'str',
-        'short_name': 'str',
-        'long_name': 'str',
-        'fecha_creacion': 'date',
-        'fecha_inicio': 'date',
-        'id_dias_con_retornos': 'int',
-        'id_grupo': 'str',
-        'ticker_bloomberg': 'str'
+        'rut': 'int',
+        'serie': 'str',
+        'fecha': 'date',
+        'duracion_rfn': 'float',
+        'duracion_total': 'float'
     }
 
     attribute_map = {
-        'id': 'id',
-        'cod': 'cod',
-        'short_name': 'shortName',
-        'long_name': 'longName',
-        'fecha_creacion': 'fechaCreacion',
-        'fecha_inicio': 'fechaInicio',
-        'id_dias_con_retornos': 'idDiasConRetornos',
-        'id_grupo': 'idGrupo',
-        'ticker_bloomberg': 'tickerBloomberg'
+        'rut': 'rut',
+        'serie': 'serie',
+        'fecha': 'fecha',
+        'duracion_rfn': 'duracionRFN',
+        'duracion_total': 'duracionTotal'
     }
 
-    def __init__(self, id=None, cod=None, short_name=None, long_name=None, fecha_creacion=None, fecha_inicio=None, id_dias_con_retornos=None, id_grupo=None, ticker_bloomberg=None):  # noqa: E501
+    def __init__(self, rut=None, serie=None, fecha=None, duracion_rfn=None, duracion_total=None):  # noqa: E501
         """InlineResponse2006Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._cod = None
-        self._short_name = None
-        self._long_name = None
-        self._fecha_creacion = None
-        self._fecha_inicio = None
-        self._id_dias_con_retornos = None
-        self._id_grupo = None
-        self._ticker_bloomberg = None
+        self._rut = None
+        self._serie = None
+        self._fecha = None
+        self._duracion_rfn = None
+        self._duracion_total = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if cod is not None:
-            self.cod = cod
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
-        if fecha_creacion is not None:
-            self.fecha_creacion = fecha_creacion
-        if fecha_inicio is not None:
-            self.fecha_inicio = fecha_inicio
-        if id_dias_con_retornos is not None:
-            self.id_dias_con_retornos = id_dias_con_retornos
-        if id_grupo is not None:
-            self.id_grupo = id_grupo
-        if ticker_bloomberg is not None:
-            self.ticker_bloomberg = ticker_bloomberg
+        if rut is not None:
+            self.rut = rut
+        if serie is not None:
+            self.serie = serie
+        if fecha is not None:
+            self.fecha = fecha
+        if duracion_rfn is not None:
+            self.duracion_rfn = duracion_rfn
+        if duracion_total is not None:
+            self.duracion_total = duracion_total
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse2006Message.  # noqa: E501
-        Identificador de RiskAmerica para el Índice  # noqa: E501
+    def rut(self):
+        """Gets the rut of this InlineResponse2006Message.  # noqa: E501
+        Rut del Fondo (sin dígito verificador)  # noqa: E501
 
-        :return: The id of this InlineResponse2006Message.  # noqa: E501
+        :return: The rut of this InlineResponse2006Message.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._rut
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse2006Message.
+    @rut.setter
+    def rut(self, rut):
+        """Sets the rut of this InlineResponse2006Message.
 
-        Identificador de RiskAmerica para el Índice  # noqa: E501
+        Rut del Fondo (sin dígito verificador)  # noqa: E501
 
-        :param id: The id of this InlineResponse2006Message.  # noqa: E501
+        :param rut: The rut of this InlineResponse2006Message.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._rut = rut
 
     @property
-    def cod(self):
-        """Gets the cod of this InlineResponse2006Message.  # noqa: E501
-        Código del Índice  # noqa: E501
+    def serie(self):
+        """Gets the serie of this InlineResponse2006Message.  # noqa: E501
+        Código de la serie  # noqa: E501
 
-        :return: The cod of this InlineResponse2006Message.  # noqa: E501
+        :return: The serie of this InlineResponse2006Message.  # noqa: E501
         :rtype: str
         """
-        return self._cod
+        return self._serie
 
-    @cod.setter
-    def cod(self, cod):
-        """Sets the cod of this InlineResponse2006Message.
+    @serie.setter
+    def serie(self, serie):
+        """Sets the serie of this InlineResponse2006Message.
 
-        Código del Índice  # noqa: E501
+        Código de la serie  # noqa: E501
 
-        :param cod: The cod of this InlineResponse2006Message.  # noqa: E501
+        :param serie: The serie of this InlineResponse2006Message.  # noqa: E501
         :type: str
         """
 
-        self._cod = cod
+        self._serie = serie
 
     @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse2006Message.  # noqa: E501
-        Nombre corto del Índice  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse2006Message.  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :return: The short_name of this InlineResponse2006Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._short_name
-
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse2006Message.
-
-        Nombre corto del Índice  # noqa: E501
-
-        :param short_name: The short_name of this InlineResponse2006Message.  # noqa: E501
-        :type: str
-        """
-
-        self._short_name = short_name
-
-    @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse2006Message.  # noqa: E501
-        Nombre largo del Índice  # noqa: E501
-
-        :return: The long_name of this InlineResponse2006Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._long_name
-
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse2006Message.
-
-        Nombre largo del Índice  # noqa: E501
-
-        :param long_name: The long_name of this InlineResponse2006Message.  # noqa: E501
-        :type: str
-        """
-
-        self._long_name = long_name
-
-    @property
-    def fecha_creacion(self):
-        """Gets the fecha_creacion of this InlineResponse2006Message.  # noqa: E501
-        Fecha de la creación del Índice  # noqa: E501
-
-        :return: The fecha_creacion of this InlineResponse2006Message.  # noqa: E501
+        :return: The fecha of this InlineResponse2006Message.  # noqa: E501
         :rtype: date
         """
-        return self._fecha_creacion
+        return self._fecha
 
-    @fecha_creacion.setter
-    def fecha_creacion(self, fecha_creacion):
-        """Sets the fecha_creacion of this InlineResponse2006Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse2006Message.
 
-        Fecha de la creación del Índice  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :param fecha_creacion: The fecha_creacion of this InlineResponse2006Message.  # noqa: E501
+        :param fecha: The fecha of this InlineResponse2006Message.  # noqa: E501
         :type: date
         """
 
-        self._fecha_creacion = fecha_creacion
+        self._fecha = fecha
 
     @property
-    def fecha_inicio(self):
-        """Gets the fecha_inicio of this InlineResponse2006Message.  # noqa: E501
-        Fecha desde la cual el Índice tiene datos  # noqa: E501
+    def duracion_rfn(self):
+        """Gets the duracion_rfn of this InlineResponse2006Message.  # noqa: E501
+        Duracion RFN  # noqa: E501
 
-        :return: The fecha_inicio of this InlineResponse2006Message.  # noqa: E501
-        :rtype: date
+        :return: The duracion_rfn of this InlineResponse2006Message.  # noqa: E501
+        :rtype: float
         """
-        return self._fecha_inicio
+        return self._duracion_rfn
 
-    @fecha_inicio.setter
-    def fecha_inicio(self, fecha_inicio):
-        """Sets the fecha_inicio of this InlineResponse2006Message.
+    @duracion_rfn.setter
+    def duracion_rfn(self, duracion_rfn):
+        """Sets the duracion_rfn of this InlineResponse2006Message.
 
-        Fecha desde la cual el Índice tiene datos  # noqa: E501
+        Duracion RFN  # noqa: E501
 
-        :param fecha_inicio: The fecha_inicio of this InlineResponse2006Message.  # noqa: E501
-        :type: date
+        :param duracion_rfn: The duracion_rfn of this InlineResponse2006Message.  # noqa: E501
+        :type: float
         """
 
-        self._fecha_inicio = fecha_inicio
+        self._duracion_rfn = duracion_rfn
 
     @property
-    def id_dias_con_retornos(self):
-        """Gets the id_dias_con_retornos of this InlineResponse2006Message.  # noqa: E501
-        Identificador de los Días que el Índice tiene Retornos  # noqa: E501
+    def duracion_total(self):
+        """Gets the duracion_total of this InlineResponse2006Message.  # noqa: E501
+        Duracion Total  # noqa: E501
 
-        :return: The id_dias_con_retornos of this InlineResponse2006Message.  # noqa: E501
-        :rtype: int
+        :return: The duracion_total of this InlineResponse2006Message.  # noqa: E501
+        :rtype: float
         """
-        return self._id_dias_con_retornos
+        return self._duracion_total
 
-    @id_dias_con_retornos.setter
-    def id_dias_con_retornos(self, id_dias_con_retornos):
-        """Sets the id_dias_con_retornos of this InlineResponse2006Message.
+    @duracion_total.setter
+    def duracion_total(self, duracion_total):
+        """Sets the duracion_total of this InlineResponse2006Message.
 
-        Identificador de los Días que el Índice tiene Retornos  # noqa: E501
+        Duracion Total  # noqa: E501
 
-        :param id_dias_con_retornos: The id_dias_con_retornos of this InlineResponse2006Message.  # noqa: E501
-        :type: int
-        """
-
-        self._id_dias_con_retornos = id_dias_con_retornos
-
-    @property
-    def id_grupo(self):
-        """Gets the id_grupo of this InlineResponse2006Message.  # noqa: E501
-        Identificador del grupo al que pertenece el Índice  # noqa: E501
-
-        :return: The id_grupo of this InlineResponse2006Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_grupo
-
-    @id_grupo.setter
-    def id_grupo(self, id_grupo):
-        """Sets the id_grupo of this InlineResponse2006Message.
-
-        Identificador del grupo al que pertenece el Índice  # noqa: E501
-
-        :param id_grupo: The id_grupo of this InlineResponse2006Message.  # noqa: E501
-        :type: str
+        :param duracion_total: The duracion_total of this InlineResponse2006Message.  # noqa: E501
+        :type: float
         """
 
-        self._id_grupo = id_grupo
-
-    @property
-    def ticker_bloomberg(self):
-        """Gets the ticker_bloomberg of this InlineResponse2006Message.  # noqa: E501
-        Ticker del Índice en Bloomberg  # noqa: E501
-
-        :return: The ticker_bloomberg of this InlineResponse2006Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._ticker_bloomberg
-
-    @ticker_bloomberg.setter
-    def ticker_bloomberg(self, ticker_bloomberg):
-        """Sets the ticker_bloomberg of this InlineResponse2006Message.
-
-        Ticker del Índice en Bloomberg  # noqa: E501
-
-        :param ticker_bloomberg: The ticker_bloomberg of this InlineResponse2006Message.  # noqa: E501
-        :type: str
-        """
-
-        self._ticker_bloomberg = ticker_bloomberg
+        self._duracion_total = duracion_total
 
     def to_dict(self):
         """Returns the model properties as a dict"""

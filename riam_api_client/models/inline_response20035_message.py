@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20035_message_tipo_cambio import InlineResponse20035MessageTipoCambio
 
 
 
@@ -33,39 +32,68 @@ class InlineResponse20035Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'tipo_cambio': 'InlineResponse20035MessageTipoCambio'
+        'fecha': 'date',
+        'ncg376': 'float'
     }
 
     attribute_map = {
-        'tipo_cambio': 'TipoCambio'
+        'fecha': 'fecha',
+        'ncg376': 'ncg376'
     }
 
-    def __init__(self, tipo_cambio=None):  # noqa: E501
+    def __init__(self, fecha=None, ncg376=None):  # noqa: E501
         """InlineResponse20035Message - a model defined in Swagger"""  # noqa: E501
-        self._tipo_cambio = None
+        self._fecha = None
+        self._ncg376 = None
         self.discriminator = None
-        if tipo_cambio is not None:
-            self.tipo_cambio = tipo_cambio
+        if fecha is not None:
+            self.fecha = fecha
+        if ncg376 is not None:
+            self.ncg376 = ncg376
 
     @property
-    def tipo_cambio(self):
-        """Gets the tipo_cambio of this InlineResponse20035Message.  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20035Message.  # noqa: E501
+        Fecha del saldo  # noqa: E501
 
-        :return: The tipo_cambio of this InlineResponse20035Message.  # noqa: E501
-        :rtype: InlineResponse20035MessageTipoCambio
+        :return: The fecha of this InlineResponse20035Message.  # noqa: E501
+        :rtype: date
         """
-        return self._tipo_cambio
+        return self._fecha
 
-    @tipo_cambio.setter
-    def tipo_cambio(self, tipo_cambio):
-        """Sets the tipo_cambio of this InlineResponse20035Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20035Message.
 
+        Fecha del saldo  # noqa: E501
 
-        :param tipo_cambio: The tipo_cambio of this InlineResponse20035Message.  # noqa: E501
-        :type: InlineResponse20035MessageTipoCambio
+        :param fecha: The fecha of this InlineResponse20035Message.  # noqa: E501
+        :type: date
         """
 
-        self._tipo_cambio = tipo_cambio
+        self._fecha = fecha
+
+    @property
+    def ncg376(self):
+        """Gets the ncg376 of this InlineResponse20035Message.  # noqa: E501
+        Saldo custodia NCG 376  # noqa: E501
+
+        :return: The ncg376 of this InlineResponse20035Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ncg376
+
+    @ncg376.setter
+    def ncg376(self, ncg376):
+        """Sets the ncg376 of this InlineResponse20035Message.
+
+        Saldo custodia NCG 376  # noqa: E501
+
+        :param ncg376: The ncg376 of this InlineResponse20035Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ncg376 = ncg376
 
     def to_dict(self):
         """Returns the model properties as a dict"""

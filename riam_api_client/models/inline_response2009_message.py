@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -32,203 +32,122 @@ class InlineResponse2009Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'ponderacion_inicio_dia': 'float',
-        'nemo': 'str',
-        'moneda': 'str',
-        'clasificacion': 'str',
-        'duracion': 'float',
-        'plazo_residual': 'float',
-        'tipo_svs': 'str'
+        'id': 'str',
+        'short_name': 'str',
+        'long_name': 'str',
+        'id_grupo_padre': 'str'
     }
 
     attribute_map = {
-        'ponderacion_inicio_dia': 'ponderacionInicioDia',
-        'nemo': 'nemo',
-        'moneda': 'moneda',
-        'clasificacion': 'clasificacion',
-        'duracion': 'duracion',
-        'plazo_residual': 'plazoResidual',
-        'tipo_svs': 'tipoSVS'
+        'id': 'id',
+        'short_name': 'shortName',
+        'long_name': 'longName',
+        'id_grupo_padre': 'idGrupoPadre'
     }
 
-    def __init__(self, ponderacion_inicio_dia=None, nemo=None, moneda=None, clasificacion=None, duracion=None, plazo_residual=None, tipo_svs=None):  # noqa: E501
+    def __init__(self, id=None, short_name=None, long_name=None, id_grupo_padre=None):  # noqa: E501
         """InlineResponse2009Message - a model defined in Swagger"""  # noqa: E501
-        self._ponderacion_inicio_dia = None
-        self._nemo = None
-        self._moneda = None
-        self._clasificacion = None
-        self._duracion = None
-        self._plazo_residual = None
-        self._tipo_svs = None
+        self._id = None
+        self._short_name = None
+        self._long_name = None
+        self._id_grupo_padre = None
         self.discriminator = None
-        if ponderacion_inicio_dia is not None:
-            self.ponderacion_inicio_dia = ponderacion_inicio_dia
-        if nemo is not None:
-            self.nemo = nemo
-        if moneda is not None:
-            self.moneda = moneda
-        if clasificacion is not None:
-            self.clasificacion = clasificacion
-        if duracion is not None:
-            self.duracion = duracion
-        if plazo_residual is not None:
-            self.plazo_residual = plazo_residual
-        if tipo_svs is not None:
-            self.tipo_svs = tipo_svs
+        if id is not None:
+            self.id = id
+        if short_name is not None:
+            self.short_name = short_name
+        if long_name is not None:
+            self.long_name = long_name
+        if id_grupo_padre is not None:
+            self.id_grupo_padre = id_grupo_padre
 
     @property
-    def ponderacion_inicio_dia(self):
-        """Gets the ponderacion_inicio_dia of this InlineResponse2009Message.  # noqa: E501
-        Ponderación del instrumento para la fecha consultada  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse2009Message.  # noqa: E501
+        Identificador de RiskAmerica para el Grupo  # noqa: E501
 
-        :return: The ponderacion_inicio_dia of this InlineResponse2009Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._ponderacion_inicio_dia
-
-    @ponderacion_inicio_dia.setter
-    def ponderacion_inicio_dia(self, ponderacion_inicio_dia):
-        """Sets the ponderacion_inicio_dia of this InlineResponse2009Message.
-
-        Ponderación del instrumento para la fecha consultada  # noqa: E501
-
-        :param ponderacion_inicio_dia: The ponderacion_inicio_dia of this InlineResponse2009Message.  # noqa: E501
-        :type: float
-        """
-
-        self._ponderacion_inicio_dia = ponderacion_inicio_dia
-
-    @property
-    def nemo(self):
-        """Gets the nemo of this InlineResponse2009Message.  # noqa: E501
-        Nemotécnico del instrumento  # noqa: E501
-
-        :return: The nemo of this InlineResponse2009Message.  # noqa: E501
+        :return: The id of this InlineResponse2009Message.  # noqa: E501
         :rtype: str
         """
-        return self._nemo
+        return self._id
 
-    @nemo.setter
-    def nemo(self, nemo):
-        """Sets the nemo of this InlineResponse2009Message.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse2009Message.
 
-        Nemotécnico del instrumento  # noqa: E501
+        Identificador de RiskAmerica para el Grupo  # noqa: E501
 
-        :param nemo: The nemo of this InlineResponse2009Message.  # noqa: E501
+        :param id: The id of this InlineResponse2009Message.  # noqa: E501
         :type: str
         """
 
-        self._nemo = nemo
+        self._id = id
 
     @property
-    def moneda(self):
-        """Gets the moneda of this InlineResponse2009Message.  # noqa: E501
-        Moneda del instrumento  # noqa: E501
+    def short_name(self):
+        """Gets the short_name of this InlineResponse2009Message.  # noqa: E501
+        Nombre corto del Grupo  # noqa: E501
 
-        :return: The moneda of this InlineResponse2009Message.  # noqa: E501
+        :return: The short_name of this InlineResponse2009Message.  # noqa: E501
         :rtype: str
         """
-        return self._moneda
+        return self._short_name
 
-    @moneda.setter
-    def moneda(self, moneda):
-        """Sets the moneda of this InlineResponse2009Message.
+    @short_name.setter
+    def short_name(self, short_name):
+        """Sets the short_name of this InlineResponse2009Message.
 
-        Moneda del instrumento  # noqa: E501
+        Nombre corto del Grupo  # noqa: E501
 
-        :param moneda: The moneda of this InlineResponse2009Message.  # noqa: E501
+        :param short_name: The short_name of this InlineResponse2009Message.  # noqa: E501
         :type: str
         """
 
-        self._moneda = moneda
+        self._short_name = short_name
 
     @property
-    def clasificacion(self):
-        """Gets the clasificacion of this InlineResponse2009Message.  # noqa: E501
-        Mínima clasificación de riesgo para el instrumento  # noqa: E501
+    def long_name(self):
+        """Gets the long_name of this InlineResponse2009Message.  # noqa: E501
+        Nombre largo del Grupo  # noqa: E501
 
-        :return: The clasificacion of this InlineResponse2009Message.  # noqa: E501
+        :return: The long_name of this InlineResponse2009Message.  # noqa: E501
         :rtype: str
         """
-        return self._clasificacion
+        return self._long_name
 
-    @clasificacion.setter
-    def clasificacion(self, clasificacion):
-        """Sets the clasificacion of this InlineResponse2009Message.
+    @long_name.setter
+    def long_name(self, long_name):
+        """Sets the long_name of this InlineResponse2009Message.
 
-        Mínima clasificación de riesgo para el instrumento  # noqa: E501
+        Nombre largo del Grupo  # noqa: E501
 
-        :param clasificacion: The clasificacion of this InlineResponse2009Message.  # noqa: E501
+        :param long_name: The long_name of this InlineResponse2009Message.  # noqa: E501
         :type: str
         """
 
-        self._clasificacion = clasificacion
+        self._long_name = long_name
 
     @property
-    def duracion(self):
-        """Gets the duracion of this InlineResponse2009Message.  # noqa: E501
-        Duración del instrumento  # noqa: E501
+    def id_grupo_padre(self):
+        """Gets the id_grupo_padre of this InlineResponse2009Message.  # noqa: E501
+        Identificador del Grupo Padre al cual pertenece este Grupo dentro de la jerarquía de grupos  # noqa: E501
 
-        :return: The duracion of this InlineResponse2009Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._duracion
-
-    @duracion.setter
-    def duracion(self, duracion):
-        """Sets the duracion of this InlineResponse2009Message.
-
-        Duración del instrumento  # noqa: E501
-
-        :param duracion: The duracion of this InlineResponse2009Message.  # noqa: E501
-        :type: float
-        """
-
-        self._duracion = duracion
-
-    @property
-    def plazo_residual(self):
-        """Gets the plazo_residual of this InlineResponse2009Message.  # noqa: E501
-        Plazo del instrumento  # noqa: E501
-
-        :return: The plazo_residual of this InlineResponse2009Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._plazo_residual
-
-    @plazo_residual.setter
-    def plazo_residual(self, plazo_residual):
-        """Sets the plazo_residual of this InlineResponse2009Message.
-
-        Plazo del instrumento  # noqa: E501
-
-        :param plazo_residual: The plazo_residual of this InlineResponse2009Message.  # noqa: E501
-        :type: float
-        """
-
-        self._plazo_residual = plazo_residual
-
-    @property
-    def tipo_svs(self):
-        """Gets the tipo_svs of this InlineResponse2009Message.  # noqa: E501
-        Tipo de instrumento, de acuerdo a la SVS  # noqa: E501
-
-        :return: The tipo_svs of this InlineResponse2009Message.  # noqa: E501
+        :return: The id_grupo_padre of this InlineResponse2009Message.  # noqa: E501
         :rtype: str
         """
-        return self._tipo_svs
+        return self._id_grupo_padre
 
-    @tipo_svs.setter
-    def tipo_svs(self, tipo_svs):
-        """Sets the tipo_svs of this InlineResponse2009Message.
+    @id_grupo_padre.setter
+    def id_grupo_padre(self, id_grupo_padre):
+        """Sets the id_grupo_padre of this InlineResponse2009Message.
 
-        Tipo de instrumento, de acuerdo a la SVS  # noqa: E501
+        Identificador del Grupo Padre al cual pertenece este Grupo dentro de la jerarquía de grupos  # noqa: E501
 
-        :param tipo_svs: The tipo_svs of this InlineResponse2009Message.  # noqa: E501
+        :param id_grupo_padre: The id_grupo_padre of this InlineResponse2009Message.  # noqa: E501
         :type: str
         """
 
-        self._tipo_svs = tipo_svs
+        self._id_grupo_padre = id_grupo_padre
 
     def to_dict(self):
         """Returns the model properties as a dict"""

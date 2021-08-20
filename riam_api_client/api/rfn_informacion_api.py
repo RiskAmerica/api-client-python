@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -17,16 +17,17 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20024
 from . import InlineResponse20026
-from . import InlineResponse20027
-from . import InlineResponse20025
-from . import InlineResponse20029
-from . import InlineResponse20032
-from . import InlineResponse20031
-from . import InlineResponse20030
 from . import InlineResponse20028
+from . import InlineResponse20029
+from . import InlineResponse20027
+from . import InlineResponse20030
+from . import InlineResponse20032
+from . import InlineResponse20035
+from . import InlineResponse20034
 from . import InlineResponse20033
+from . import InlineResponse20031
+from . import InlineResponse20036
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -55,10 +56,10 @@ class RFNInformacionApi(object):
 
         :param async_req bool
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20024
+        :return: InlineResponse20026
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20024 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20026 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -78,10 +79,10 @@ class RFNInformacionApi(object):
 
         :param async_req bool
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20024
+        :return: InlineResponse20026
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20024 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20026 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo']  # noqa: E501
@@ -133,7 +134,7 @@ class RFNInformacionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20024',  # noqa: E501
+            response_type='InlineResponse20026',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -154,10 +155,10 @@ class RFNInformacionApi(object):
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha_min: Límite inferior del intervalo de consulta (required)
         :param date fecha_max: Límite superior del intervalo de consulta (required)
-        :return: InlineResponse20026
+        :return: InlineResponse20028
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20026 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20028 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -179,10 +180,10 @@ class RFNInformacionApi(object):
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha_min: Límite inferior del intervalo de consulta (required)
         :param date fecha_max: Límite superior del intervalo de consulta (required)
-        :return: InlineResponse20026
+        :return: InlineResponse20028
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20026 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20028 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha_min', 'fecha_max']  # noqa: E501
@@ -246,7 +247,7 @@ class RFNInformacionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20026',  # noqa: E501
+            response_type='InlineResponse20028',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -265,10 +266,10 @@ class RFNInformacionApi(object):
 
         :param async_req bool
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20027
+        :return: InlineResponse20029
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20027 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20029 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -288,10 +289,10 @@ class RFNInformacionApi(object):
 
         :param async_req bool
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20027
+        :return: InlineResponse20029
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20027 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20029 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo']  # noqa: E501
@@ -343,7 +344,7 @@ class RFNInformacionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20027',  # noqa: E501
+            response_type='InlineResponse20029',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -363,10 +364,10 @@ class RFNInformacionApi(object):
         :param async_req bool
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha: Fecha de consulta (required)
-        :return: InlineResponse20025
+        :return: InlineResponse20027
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20025 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20027 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -387,10 +388,10 @@ class RFNInformacionApi(object):
         :param async_req bool
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha: Fecha de consulta (required)
-        :return: InlineResponse20025
+        :return: InlineResponse20027
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20025 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20027 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha']  # noqa: E501
@@ -448,7 +449,104 @@ class RFNInformacionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20025',  # noqa: E501
+            response_type='InlineResponse20027',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def r_fn_informacion_informacion_get_vigentes(self, fecha, **kwargs):  # noqa: E501
+        """Obtiene la lista de instrumentos vigentes para una fecha.  # noqa: E501
+
+        Obtiene la lista de instrumentos vigentes para una fecha excluyendo depósitos y efectos de comercio ya que esos siempre se encuentran vigentes cuando tienen una fecha de vencimiento mayor a la fecha de consulta.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.r_fn_informacion_informacion_get_vigentes(fecha, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha: Fecha de consulta (required)
+        :return: InlineResponse20030
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20030 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.r_fn_informacion_informacion_get_vigentes_with_http_info(fecha, **kwargs)  # noqa: E501
+        else:
+            (data) = self.r_fn_informacion_informacion_get_vigentes_with_http_info(fecha, **kwargs)  # noqa: E501
+            return data
+
+    def r_fn_informacion_informacion_get_vigentes_with_http_info(self, fecha, **kwargs):  # noqa: E501
+        """Obtiene la lista de instrumentos vigentes para una fecha.  # noqa: E501
+
+        Obtiene la lista de instrumentos vigentes para una fecha excluyendo depósitos y efectos de comercio ya que esos siempre se encuentran vigentes cuando tienen una fecha de vencimiento mayor a la fecha de consulta.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.r_fn_informacion_informacion_get_vigentes_with_http_info(fecha, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha: Fecha de consulta (required)
+        :return: InlineResponse20030
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20030 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['fecha']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method r_fn_informacion_informacion_get_vigentes" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'fecha' is set
+        if ('fecha' not in params or
+                params['fecha'] is None):
+            raise ValueError("Missing the required parameter `fecha` when calling `r_fn_informacion_informacion_get_vigentes`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'fecha' in params:
+            query_params.append(('fecha', params['fecha']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/InformacionRF/Informacion/getVigentes', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20030',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -468,10 +566,10 @@ class RFNInformacionApi(object):
         :param async_req bool
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha: Fecha de consulta (required)
-        :return: InlineResponse20029
+        :return: InlineResponse20032
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20029 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20032 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -492,10 +590,10 @@ class RFNInformacionApi(object):
         :param async_req bool
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha: Fecha de consulta (required)
-        :return: InlineResponse20029
+        :return: InlineResponse20032
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20029 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20032 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha']  # noqa: E501
@@ -553,7 +651,7 @@ class RFNInformacionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20029',  # noqa: E501
+            response_type='InlineResponse20032',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -574,10 +672,10 @@ class RFNInformacionApi(object):
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha_min: Límite inferior del intervalo a consultar (required)
         :param date fecha_max: Límite superior del intervalo a consultar (required)
-        :return: InlineResponse20032
+        :return: InlineResponse20035
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20032 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20035 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -599,10 +697,10 @@ class RFNInformacionApi(object):
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha_min: Límite inferior del intervalo a consultar (required)
         :param date fecha_max: Límite superior del intervalo a consultar (required)
-        :return: InlineResponse20032
+        :return: InlineResponse20035
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20032 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20035 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha_min', 'fecha_max']  # noqa: E501
@@ -666,7 +764,7 @@ class RFNInformacionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20032',  # noqa: E501
+            response_type='InlineResponse20035',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -687,10 +785,10 @@ class RFNInformacionApi(object):
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha_min: Límite inferior del intervalo a consultar (required)
         :param date fecha_max: Límite superior del intervalo a consultar (required)
-        :return: InlineResponse20031
+        :return: InlineResponse20034
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20031 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20034 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -712,10 +810,10 @@ class RFNInformacionApi(object):
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha_min: Límite inferior del intervalo a consultar (required)
         :param date fecha_max: Límite superior del intervalo a consultar (required)
-        :return: InlineResponse20031
+        :return: InlineResponse20034
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20031 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20034 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha_min', 'fecha_max']  # noqa: E501
@@ -779,7 +877,7 @@ class RFNInformacionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20031',  # noqa: E501
+            response_type='InlineResponse20034',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -800,10 +898,10 @@ class RFNInformacionApi(object):
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha_min: Límite inferior del intervalo a consultar (required)
         :param date fecha_max: Límite superior del intervalo a consultar (required)
-        :return: InlineResponse20030
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20030 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20033 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -825,10 +923,10 @@ class RFNInformacionApi(object):
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param date fecha_min: Límite inferior del intervalo a consultar (required)
         :param date fecha_max: Límite superior del intervalo a consultar (required)
-        :return: InlineResponse20030
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20030 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20033 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha_min', 'fecha_max']  # noqa: E501
@@ -892,7 +990,7 @@ class RFNInformacionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20030',  # noqa: E501
+            response_type='InlineResponse20033',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -911,10 +1009,10 @@ class RFNInformacionApi(object):
 
         :param async_req bool
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20028
+        :return: InlineResponse20031
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20028 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20031 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -934,10 +1032,10 @@ class RFNInformacionApi(object):
 
         :param async_req bool
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20028
+        :return: InlineResponse20031
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20028 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20031 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo']  # noqa: E501
@@ -989,7 +1087,7 @@ class RFNInformacionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20028',  # noqa: E501
+            response_type='InlineResponse20031',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1009,10 +1107,10 @@ class RFNInformacionApi(object):
         :param async_req bool
         :param date nemo: Nemotecnico a consultar (required)
         :param date fecha: Fecha a consultar (required)
-        :return: InlineResponse20033
+        :return: InlineResponse20036
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20033 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20036 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1033,10 +1131,10 @@ class RFNInformacionApi(object):
         :param async_req bool
         :param date nemo: Nemotecnico a consultar (required)
         :param date fecha: Fecha a consultar (required)
-        :return: InlineResponse20033
+        :return: InlineResponse20036
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20033 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20036 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha']  # noqa: E501
@@ -1094,7 +1192,7 @@ class RFNInformacionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20033',  # noqa: E501
+            response_type='InlineResponse20036',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

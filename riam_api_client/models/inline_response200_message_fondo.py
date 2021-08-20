@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -42,6 +42,8 @@ class InlineResponse200MessageFondo(object):
         'tipo_fondo': 'str',
         'categoria_svs': 'str',
         'id_categoria_svs': 'int',
+        'categoria_aafm': 'str',
+        'categoria_acafi': 'str',
         'administradora': 'InlineResponse200MessageFondoAdministradora',
         'series': 'list[InlineResponse200MessageFondoSeries]'
     }
@@ -55,11 +57,13 @@ class InlineResponse200MessageFondo(object):
         'tipo_fondo': 'tipoFondo',
         'categoria_svs': 'categoriaSVS',
         'id_categoria_svs': 'idCategoriaSVS',
+        'categoria_aafm': 'categoriaAAFM',
+        'categoria_acafi': 'categoriaACAFI',
         'administradora': 'Administradora',
         'series': 'Series'
     }
 
-    def __init__(self, rut_fondo=None, nombre_fondo=None, fecha_inicio_fondo=None, fecha_termino_fondo=None, moneda=None, tipo_fondo=None, categoria_svs=None, id_categoria_svs=None, administradora=None, series=None):  # noqa: E501
+    def __init__(self, rut_fondo=None, nombre_fondo=None, fecha_inicio_fondo=None, fecha_termino_fondo=None, moneda=None, tipo_fondo=None, categoria_svs=None, id_categoria_svs=None, categoria_aafm=None, categoria_acafi=None, administradora=None, series=None):  # noqa: E501
         """InlineResponse200MessageFondo - a model defined in Swagger"""  # noqa: E501
         self._rut_fondo = None
         self._nombre_fondo = None
@@ -69,6 +73,8 @@ class InlineResponse200MessageFondo(object):
         self._tipo_fondo = None
         self._categoria_svs = None
         self._id_categoria_svs = None
+        self._categoria_aafm = None
+        self._categoria_acafi = None
         self._administradora = None
         self._series = None
         self.discriminator = None
@@ -88,6 +94,10 @@ class InlineResponse200MessageFondo(object):
             self.categoria_svs = categoria_svs
         if id_categoria_svs is not None:
             self.id_categoria_svs = id_categoria_svs
+        if categoria_aafm is not None:
+            self.categoria_aafm = categoria_aafm
+        if categoria_acafi is not None:
+            self.categoria_acafi = categoria_acafi
         if administradora is not None:
             self.administradora = administradora
         if series is not None:
@@ -268,6 +278,50 @@ class InlineResponse200MessageFondo(object):
         """
 
         self._id_categoria_svs = id_categoria_svs
+
+    @property
+    def categoria_aafm(self):
+        """Gets the categoria_aafm of this InlineResponse200MessageFondo.  # noqa: E501
+        Categoria AAFM del fondo  # noqa: E501
+
+        :return: The categoria_aafm of this InlineResponse200MessageFondo.  # noqa: E501
+        :rtype: str
+        """
+        return self._categoria_aafm
+
+    @categoria_aafm.setter
+    def categoria_aafm(self, categoria_aafm):
+        """Sets the categoria_aafm of this InlineResponse200MessageFondo.
+
+        Categoria AAFM del fondo  # noqa: E501
+
+        :param categoria_aafm: The categoria_aafm of this InlineResponse200MessageFondo.  # noqa: E501
+        :type: str
+        """
+
+        self._categoria_aafm = categoria_aafm
+
+    @property
+    def categoria_acafi(self):
+        """Gets the categoria_acafi of this InlineResponse200MessageFondo.  # noqa: E501
+        Categoria ACAFI del fondo  # noqa: E501
+
+        :return: The categoria_acafi of this InlineResponse200MessageFondo.  # noqa: E501
+        :rtype: str
+        """
+        return self._categoria_acafi
+
+    @categoria_acafi.setter
+    def categoria_acafi(self, categoria_acafi):
+        """Sets the categoria_acafi of this InlineResponse200MessageFondo.
+
+        Categoria ACAFI del fondo  # noqa: E501
+
+        :param categoria_acafi: The categoria_acafi of this InlineResponse200MessageFondo.  # noqa: E501
+        :type: str
+        """
+
+        self._categoria_acafi = categoria_acafi
 
     @property
     def administradora(self):

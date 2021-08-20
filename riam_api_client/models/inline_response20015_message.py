@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**.   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -32,95 +32,95 @@ class InlineResponse20015Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'plazo': 'float',
-        'fecha': 'date',
-        'valor': 'float'
+        'id': 'str',
+        'short_name': 'str',
+        'long_name': 'str'
     }
 
     attribute_map = {
-        'plazo': 'plazo',
-        'fecha': 'fecha',
-        'valor': 'valor'
+        'id': 'id',
+        'short_name': 'shortName',
+        'long_name': 'longName'
     }
 
-    def __init__(self, plazo=None, fecha=None, valor=None):  # noqa: E501
+    def __init__(self, id=None, short_name=None, long_name=None):  # noqa: E501
         """InlineResponse20015Message - a model defined in Swagger"""  # noqa: E501
-        self._plazo = None
-        self._fecha = None
-        self._valor = None
+        self._id = None
+        self._short_name = None
+        self._long_name = None
         self.discriminator = None
-        if plazo is not None:
-            self.plazo = plazo
-        if fecha is not None:
-            self.fecha = fecha
-        if valor is not None:
-            self.valor = valor
+        if id is not None:
+            self.id = id
+        if short_name is not None:
+            self.short_name = short_name
+        if long_name is not None:
+            self.long_name = long_name
 
     @property
-    def plazo(self):
-        """Gets the plazo of this InlineResponse20015Message.  # noqa: E501
-        Plazo para el cual se calculó la Curva  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20015Message.  # noqa: E501
+        Identificador de RiskAmerica para la Unidad  # noqa: E501
 
-        :return: The plazo of this InlineResponse20015Message.  # noqa: E501
-        :rtype: float
+        :return: The id of this InlineResponse20015Message.  # noqa: E501
+        :rtype: str
         """
-        return self._plazo
+        return self._id
 
-    @plazo.setter
-    def plazo(self, plazo):
-        """Sets the plazo of this InlineResponse20015Message.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20015Message.
 
-        Plazo para el cual se calculó la Curva  # noqa: E501
+        Identificador de RiskAmerica para la Unidad  # noqa: E501
 
-        :param plazo: The plazo of this InlineResponse20015Message.  # noqa: E501
-        :type: float
+        :param id: The id of this InlineResponse20015Message.  # noqa: E501
+        :type: str
         """
 
-        self._plazo = plazo
+        self._id = id
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20015Message.  # noqa: E501
-        Fecha para la cual se calculó la Curva  # noqa: E501
+    def short_name(self):
+        """Gets the short_name of this InlineResponse20015Message.  # noqa: E501
+        Nombre corto de la Unidad  # noqa: E501
 
-        :return: The fecha of this InlineResponse20015Message.  # noqa: E501
-        :rtype: date
+        :return: The short_name of this InlineResponse20015Message.  # noqa: E501
+        :rtype: str
         """
-        return self._fecha
+        return self._short_name
 
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20015Message.
+    @short_name.setter
+    def short_name(self, short_name):
+        """Sets the short_name of this InlineResponse20015Message.
 
-        Fecha para la cual se calculó la Curva  # noqa: E501
+        Nombre corto de la Unidad  # noqa: E501
 
-        :param fecha: The fecha of this InlineResponse20015Message.  # noqa: E501
-        :type: date
+        :param short_name: The short_name of this InlineResponse20015Message.  # noqa: E501
+        :type: str
         """
 
-        self._fecha = fecha
+        self._short_name = short_name
 
     @property
-    def valor(self):
-        """Gets the valor of this InlineResponse20015Message.  # noqa: E501
-        Valor de la Curva  # noqa: E501
+    def long_name(self):
+        """Gets the long_name of this InlineResponse20015Message.  # noqa: E501
+        Nombre largo de la Unidad  # noqa: E501
 
-        :return: The valor of this InlineResponse20015Message.  # noqa: E501
-        :rtype: float
+        :return: The long_name of this InlineResponse20015Message.  # noqa: E501
+        :rtype: str
         """
-        return self._valor
+        return self._long_name
 
-    @valor.setter
-    def valor(self, valor):
-        """Sets the valor of this InlineResponse20015Message.
+    @long_name.setter
+    def long_name(self, long_name):
+        """Sets the long_name of this InlineResponse20015Message.
 
-        Valor de la Curva  # noqa: E501
+        Nombre largo de la Unidad  # noqa: E501
 
-        :param valor: The valor of this InlineResponse20015Message.  # noqa: E501
-        :type: float
+        :param long_name: The long_name of this InlineResponse20015Message.  # noqa: E501
+        :type: str
         """
 
-        self._valor = valor
+        self._long_name = long_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -37,6 +37,7 @@ class InlineResponse2003Message(object):
         'fecha': 'date',
         'dia': 'float',
         'mtd': 'float',
+        'qtd': 'float',
         'ytd': 'float',
         'meses_1': 'float',
         'meses_3': 'float',
@@ -45,7 +46,8 @@ class InlineResponse2003Message(object):
         'anos_1': 'float',
         'anos_2': 'float',
         'anos_3': 'float',
-        'anos_5': 'float'
+        'anos_5': 'float',
+        'stddev': 'float'
     }
 
     attribute_map = {
@@ -54,6 +56,7 @@ class InlineResponse2003Message(object):
         'fecha': 'fecha',
         'dia': 'Dia',
         'mtd': 'MTD',
+        'qtd': 'QTD',
         'ytd': 'YTD',
         'meses_1': 'Meses_1',
         'meses_3': 'Meses_3',
@@ -62,16 +65,18 @@ class InlineResponse2003Message(object):
         'anos_1': 'Anos_1',
         'anos_2': 'Anos_2',
         'anos_3': 'Anos_3',
-        'anos_5': 'Anos_5'
+        'anos_5': 'Anos_5',
+        'stddev': 'stddev'
     }
 
-    def __init__(self, rut=None, serie=None, fecha=None, dia=None, mtd=None, ytd=None, meses_1=None, meses_3=None, meses_6=None, meses_9=None, anos_1=None, anos_2=None, anos_3=None, anos_5=None):  # noqa: E501
+    def __init__(self, rut=None, serie=None, fecha=None, dia=None, mtd=None, qtd=None, ytd=None, meses_1=None, meses_3=None, meses_6=None, meses_9=None, anos_1=None, anos_2=None, anos_3=None, anos_5=None, stddev=None):  # noqa: E501
         """InlineResponse2003Message - a model defined in Swagger"""  # noqa: E501
         self._rut = None
         self._serie = None
         self._fecha = None
         self._dia = None
         self._mtd = None
+        self._qtd = None
         self._ytd = None
         self._meses_1 = None
         self._meses_3 = None
@@ -81,6 +86,7 @@ class InlineResponse2003Message(object):
         self._anos_2 = None
         self._anos_3 = None
         self._anos_5 = None
+        self._stddev = None
         self.discriminator = None
         if rut is not None:
             self.rut = rut
@@ -92,6 +98,8 @@ class InlineResponse2003Message(object):
             self.dia = dia
         if mtd is not None:
             self.mtd = mtd
+        if qtd is not None:
+            self.qtd = qtd
         if ytd is not None:
             self.ytd = ytd
         if meses_1 is not None:
@@ -110,6 +118,8 @@ class InlineResponse2003Message(object):
             self.anos_3 = anos_3
         if anos_5 is not None:
             self.anos_5 = anos_5
+        if stddev is not None:
+            self.stddev = stddev
 
     @property
     def rut(self):
@@ -220,6 +230,28 @@ class InlineResponse2003Message(object):
         """
 
         self._mtd = mtd
+
+    @property
+    def qtd(self):
+        """Gets the qtd of this InlineResponse2003Message.  # noqa: E501
+        Retorno acumulado del trimestre  # noqa: E501
+
+        :return: The qtd of this InlineResponse2003Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._qtd
+
+    @qtd.setter
+    def qtd(self, qtd):
+        """Sets the qtd of this InlineResponse2003Message.
+
+        Retorno acumulado del trimestre  # noqa: E501
+
+        :param qtd: The qtd of this InlineResponse2003Message.  # noqa: E501
+        :type: float
+        """
+
+        self._qtd = qtd
 
     @property
     def ytd(self):
@@ -418,6 +450,28 @@ class InlineResponse2003Message(object):
         """
 
         self._anos_5 = anos_5
+
+    @property
+    def stddev(self):
+        """Gets the stddev of this InlineResponse2003Message.  # noqa: E501
+        Desviacion standard en 1 año  # noqa: E501
+
+        :return: The stddev of this InlineResponse2003Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._stddev
+
+    @stddev.setter
+    def stddev(self, stddev):
+        """Sets the stddev of this InlineResponse2003Message.
+
+        Desviacion standard en 1 año  # noqa: E501
+
+        :param stddev: The stddev of this InlineResponse2003Message.  # noqa: E501
+        :type: float
+        """
+
+        self._stddev = stddev
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -17,6 +17,12 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
+from . import InlineResponse20045
+from . import InlineResponse20042
+from . import InlineResponse20041
+from . import InlineResponse20043
+from . import InlineResponse20044
+from . import InlineResponse20045
 from . import InlineResponse20040
 # Importing for doctring purposes
 # Api Client
@@ -34,6 +40,672 @@ class SicApi(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
+
+    def sic_detalle_cartera_get_table(self, fecha, id_fondo, tipo_activo, **kwargs):  # noqa: E501
+        """Obtiene la informacion de detalle de cartera para un fondo y un tipo de activo  # noqa: E501
+
+        Obtiene la informacion de detalle de cartera para un fondo y un tipo de activo  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_detalle_cartera_get_table(fecha, id_fondo, tipo_activo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha: Fecha a consultar (required)
+        :param int id_fondo: idFondo a consutal (required)
+        :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
+        :return: InlineResponse20045
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20045 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.sic_detalle_cartera_get_table_with_http_info(fecha, id_fondo, tipo_activo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.sic_detalle_cartera_get_table_with_http_info(fecha, id_fondo, tipo_activo, **kwargs)  # noqa: E501
+            return data
+
+    def sic_detalle_cartera_get_table_with_http_info(self, fecha, id_fondo, tipo_activo, **kwargs):  # noqa: E501
+        """Obtiene la informacion de detalle de cartera para un fondo y un tipo de activo  # noqa: E501
+
+        Obtiene la informacion de detalle de cartera para un fondo y un tipo de activo  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_detalle_cartera_get_table_with_http_info(fecha, id_fondo, tipo_activo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha: Fecha a consultar (required)
+        :param int id_fondo: idFondo a consutal (required)
+        :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
+        :return: InlineResponse20045
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20045 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['fecha', 'id_fondo', 'tipo_activo']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sic_detalle_cartera_get_table" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'fecha' is set
+        if ('fecha' not in params or
+                params['fecha'] is None):
+            raise ValueError("Missing the required parameter `fecha` when calling `sic_detalle_cartera_get_table`")  # noqa: E501
+        # verify the required parameter 'id_fondo' is set
+        if ('id_fondo' not in params or
+                params['id_fondo'] is None):
+            raise ValueError("Missing the required parameter `id_fondo` when calling `sic_detalle_cartera_get_table`")  # noqa: E501
+        # verify the required parameter 'tipo_activo' is set
+        if ('tipo_activo' not in params or
+                params['tipo_activo'] is None):
+            raise ValueError("Missing the required parameter `tipo_activo` when calling `sic_detalle_cartera_get_table`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'fecha' in params:
+            query_params.append(('fecha', params['fecha']))  # noqa: E501
+        if 'id_fondo' in params:
+            query_params.append(('idFondo', params['id_fondo']))  # noqa: E501
+        if 'tipo_activo' in params:
+            query_params.append(('tipoActivo', params['tipo_activo']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/SIC/DetalleCartera/getTable', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20045',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def sic_general_get_ejercicios(self, id_fondo, **kwargs):  # noqa: E501
+        """Obtiene el listado de los ejercicios vigentes  # noqa: E501
+
+        Obtiene el listado de los fondos existentes para el idFondo  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_general_get_ejercicios(id_fondo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id_fondo: Identificador del fondo para el cual obtener los ejercicios (required)
+        :return: InlineResponse20042
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20042 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.sic_general_get_ejercicios_with_http_info(id_fondo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.sic_general_get_ejercicios_with_http_info(id_fondo, **kwargs)  # noqa: E501
+            return data
+
+    def sic_general_get_ejercicios_with_http_info(self, id_fondo, **kwargs):  # noqa: E501
+        """Obtiene el listado de los ejercicios vigentes  # noqa: E501
+
+        Obtiene el listado de los fondos existentes para el idFondo  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_general_get_ejercicios_with_http_info(id_fondo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id_fondo: Identificador del fondo para el cual obtener los ejercicios (required)
+        :return: InlineResponse20042
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20042 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['id_fondo']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sic_general_get_ejercicios" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id_fondo' is set
+        if ('id_fondo' not in params or
+                params['id_fondo'] is None):
+            raise ValueError("Missing the required parameter `id_fondo` when calling `sic_general_get_ejercicios`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'id_fondo' in params:
+            query_params.append(('idFondo', params['id_fondo']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/SIC/General/getEjercicios', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20042',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def sic_general_get_fondos(self, **kwargs):  # noqa: E501
+        """Obtiene el listado de los fondos existentes.  # noqa: E501
+
+        Obtiene el listado de los fondos existentes para la API KEY suministrada  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_general_get_fondos(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: InlineResponse20041
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20041 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.sic_general_get_fondos_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.sic_general_get_fondos_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def sic_general_get_fondos_with_http_info(self, **kwargs):  # noqa: E501
+        """Obtiene el listado de los fondos existentes.  # noqa: E501
+
+        Obtiene el listado de los fondos existentes para la API KEY suministrada  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_general_get_fondos_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: InlineResponse20041
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20041 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sic_general_get_fondos" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/SIC/General/getFondos', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20041',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def sic_performance_get_orden(self, id_ejercicio, tipo_activo, **kwargs):  # noqa: E501
+        """Obtiene el listado de los idOrden por tipo de Activo  # noqa: E501
+
+        Obtiene el listado de los idOrden por tipo de Activo  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_performance_get_orden(id_ejercicio, tipo_activo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id_ejercicio: idEjercicio a Consultar (required)
+        :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
+        :return: InlineResponse20043
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20043 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.sic_performance_get_orden_with_http_info(id_ejercicio, tipo_activo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.sic_performance_get_orden_with_http_info(id_ejercicio, tipo_activo, **kwargs)  # noqa: E501
+            return data
+
+    def sic_performance_get_orden_with_http_info(self, id_ejercicio, tipo_activo, **kwargs):  # noqa: E501
+        """Obtiene el listado de los idOrden por tipo de Activo  # noqa: E501
+
+        Obtiene el listado de los idOrden por tipo de Activo  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_performance_get_orden_with_http_info(id_ejercicio, tipo_activo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id_ejercicio: idEjercicio a Consultar (required)
+        :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
+        :return: InlineResponse20043
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20043 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['id_ejercicio', 'tipo_activo']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sic_performance_get_orden" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id_ejercicio' is set
+        if ('id_ejercicio' not in params or
+                params['id_ejercicio'] is None):
+            raise ValueError("Missing the required parameter `id_ejercicio` when calling `sic_performance_get_orden`")  # noqa: E501
+        # verify the required parameter 'tipo_activo' is set
+        if ('tipo_activo' not in params or
+                params['tipo_activo'] is None):
+            raise ValueError("Missing the required parameter `tipo_activo` when calling `sic_performance_get_orden`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'id_ejercicio' in params:
+            query_params.append(('idEjercicio', params['id_ejercicio']))  # noqa: E501
+        if 'tipo_activo' in params:
+            query_params.append(('tipoActivo', params['tipo_activo']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/SIC/Performance/getOrden', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20043',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def sic_performance_get_resumen(self, fecha, horizonte, id_ejercicio, **kwargs):  # noqa: E501
+        """Obtiene el resumen del performance para un horizonte y idEjercicio dado  # noqa: E501
+
+        Obtiene el resumen del performance para un horizonte y idEjercicio dado  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_performance_get_resumen(fecha, horizonte, id_ejercicio, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha: Fecha a consultar (required)
+        :param str horizonte: Horizonte a consultar. YTD, MTD o Diario (required)
+        :param int id_ejercicio: idEjercicio a Consultar (required)
+        :return: InlineResponse20044
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20044 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.sic_performance_get_resumen_with_http_info(fecha, horizonte, id_ejercicio, **kwargs)  # noqa: E501
+        else:
+            (data) = self.sic_performance_get_resumen_with_http_info(fecha, horizonte, id_ejercicio, **kwargs)  # noqa: E501
+            return data
+
+    def sic_performance_get_resumen_with_http_info(self, fecha, horizonte, id_ejercicio, **kwargs):  # noqa: E501
+        """Obtiene el resumen del performance para un horizonte y idEjercicio dado  # noqa: E501
+
+        Obtiene el resumen del performance para un horizonte y idEjercicio dado  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_performance_get_resumen_with_http_info(fecha, horizonte, id_ejercicio, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha: Fecha a consultar (required)
+        :param str horizonte: Horizonte a consultar. YTD, MTD o Diario (required)
+        :param int id_ejercicio: idEjercicio a Consultar (required)
+        :return: InlineResponse20044
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20044 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['fecha', 'horizonte', 'id_ejercicio']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sic_performance_get_resumen" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'fecha' is set
+        if ('fecha' not in params or
+                params['fecha'] is None):
+            raise ValueError("Missing the required parameter `fecha` when calling `sic_performance_get_resumen`")  # noqa: E501
+        # verify the required parameter 'horizonte' is set
+        if ('horizonte' not in params or
+                params['horizonte'] is None):
+            raise ValueError("Missing the required parameter `horizonte` when calling `sic_performance_get_resumen`")  # noqa: E501
+        # verify the required parameter 'id_ejercicio' is set
+        if ('id_ejercicio' not in params or
+                params['id_ejercicio'] is None):
+            raise ValueError("Missing the required parameter `id_ejercicio` when calling `sic_performance_get_resumen`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'fecha' in params:
+            query_params.append(('fecha', params['fecha']))  # noqa: E501
+        if 'horizonte' in params:
+            query_params.append(('horizonte', params['horizonte']))  # noqa: E501
+        if 'id_ejercicio' in params:
+            query_params.append(('idEjercicio', params['id_ejercicio']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/SIC/Performance/getResumen', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20044',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def sic_performance_get_table(self, fecha, tipo_activo, tabla_analisis, horizonte, id_ejercicio, tipo_portafolio, id_orden, **kwargs):  # noqa: E501
+        """Obtiene la tabla del performance para un tipo de analisis, para un tipo de activo, para un horizonte, un idEjercicio  # noqa: E501
+
+        Obtiene la tabla del performance para un tipo de analisis, para un tipo de activo, para un horizonte, un idEjercicio  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_performance_get_table(fecha, tipo_activo, tabla_analisis, horizonte, id_ejercicio, tipo_portafolio, id_orden, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha: Fecha a consultar (required)
+        :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
+        :param str tabla_analisis: tabla del analisis a obtener. Pesos, Retornos, ContribRetornos, Performance (required)
+        :param str horizonte: Horizonte a consultar. YTD, MTD o Diario (required)
+        :param int id_ejercicio: idEjercicio a Consultar (required)
+        :param str tipo_portafolio: tipo de Portafolio. Fondo, Benchmark, Diferencia (required)
+        :param int id_orden: idOrden obtenido de getidOrden (required)
+        :param str tipo_performance: tipo de Performance. Solo se utiliza cuando la tablaAnalisis es igual a \"Performance\"
+        :return: InlineResponse20045
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20045 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.sic_performance_get_table_with_http_info(fecha, tipo_activo, tabla_analisis, horizonte, id_ejercicio, tipo_portafolio, id_orden, **kwargs)  # noqa: E501
+        else:
+            (data) = self.sic_performance_get_table_with_http_info(fecha, tipo_activo, tabla_analisis, horizonte, id_ejercicio, tipo_portafolio, id_orden, **kwargs)  # noqa: E501
+            return data
+
+    def sic_performance_get_table_with_http_info(self, fecha, tipo_activo, tabla_analisis, horizonte, id_ejercicio, tipo_portafolio, id_orden, **kwargs):  # noqa: E501
+        """Obtiene la tabla del performance para un tipo de analisis, para un tipo de activo, para un horizonte, un idEjercicio  # noqa: E501
+
+        Obtiene la tabla del performance para un tipo de analisis, para un tipo de activo, para un horizonte, un idEjercicio  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_performance_get_table_with_http_info(fecha, tipo_activo, tabla_analisis, horizonte, id_ejercicio, tipo_portafolio, id_orden, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha: Fecha a consultar (required)
+        :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
+        :param str tabla_analisis: tabla del analisis a obtener. Pesos, Retornos, ContribRetornos, Performance (required)
+        :param str horizonte: Horizonte a consultar. YTD, MTD o Diario (required)
+        :param int id_ejercicio: idEjercicio a Consultar (required)
+        :param str tipo_portafolio: tipo de Portafolio. Fondo, Benchmark, Diferencia (required)
+        :param int id_orden: idOrden obtenido de getidOrden (required)
+        :param str tipo_performance: tipo de Performance. Solo se utiliza cuando la tablaAnalisis es igual a \"Performance\"
+        :return: InlineResponse20045
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20045 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['fecha', 'tipo_activo', 'tabla_analisis', 'horizonte', 'id_ejercicio', 'tipo_portafolio', 'id_orden', 'tipo_performance']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sic_performance_get_table" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'fecha' is set
+        if ('fecha' not in params or
+                params['fecha'] is None):
+            raise ValueError("Missing the required parameter `fecha` when calling `sic_performance_get_table`")  # noqa: E501
+        # verify the required parameter 'tipo_activo' is set
+        if ('tipo_activo' not in params or
+                params['tipo_activo'] is None):
+            raise ValueError("Missing the required parameter `tipo_activo` when calling `sic_performance_get_table`")  # noqa: E501
+        # verify the required parameter 'tabla_analisis' is set
+        if ('tabla_analisis' not in params or
+                params['tabla_analisis'] is None):
+            raise ValueError("Missing the required parameter `tabla_analisis` when calling `sic_performance_get_table`")  # noqa: E501
+        # verify the required parameter 'horizonte' is set
+        if ('horizonte' not in params or
+                params['horizonte'] is None):
+            raise ValueError("Missing the required parameter `horizonte` when calling `sic_performance_get_table`")  # noqa: E501
+        # verify the required parameter 'id_ejercicio' is set
+        if ('id_ejercicio' not in params or
+                params['id_ejercicio'] is None):
+            raise ValueError("Missing the required parameter `id_ejercicio` when calling `sic_performance_get_table`")  # noqa: E501
+        # verify the required parameter 'tipo_portafolio' is set
+        if ('tipo_portafolio' not in params or
+                params['tipo_portafolio'] is None):
+            raise ValueError("Missing the required parameter `tipo_portafolio` when calling `sic_performance_get_table`")  # noqa: E501
+        # verify the required parameter 'id_orden' is set
+        if ('id_orden' not in params or
+                params['id_orden'] is None):
+            raise ValueError("Missing the required parameter `id_orden` when calling `sic_performance_get_table`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'fecha' in params:
+            query_params.append(('fecha', params['fecha']))  # noqa: E501
+        if 'tipo_activo' in params:
+            query_params.append(('tipoActivo', params['tipo_activo']))  # noqa: E501
+        if 'tabla_analisis' in params:
+            query_params.append(('tablaAnalisis', params['tabla_analisis']))  # noqa: E501
+        if 'horizonte' in params:
+            query_params.append(('horizonte', params['horizonte']))  # noqa: E501
+        if 'id_ejercicio' in params:
+            query_params.append(('idEjercicio', params['id_ejercicio']))  # noqa: E501
+        if 'tipo_portafolio' in params:
+            query_params.append(('tipoPortafolio', params['tipo_portafolio']))  # noqa: E501
+        if 'id_orden' in params:
+            query_params.append(('idOrden', params['id_orden']))  # noqa: E501
+        if 'tipo_performance' in params:
+            query_params.append(('tipoPerformance', params['tipo_performance']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/SIC/Performance/getTable', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20045',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
 
     def sic_upload_upload(self, file, id_file_type, **kwargs):  # noqa: E501
         """Carga un archivo al módulo de Sistema Integrado de Carteras (SIC).  # noqa: E501

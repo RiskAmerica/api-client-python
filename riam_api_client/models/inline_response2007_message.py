@@ -35,31 +35,25 @@ class InlineResponse2007Message(object):
         'rut': 'int',
         'serie': 'str',
         'fecha': 'date',
-        'tac_remuneracion_fija': 'float',
-        'tac_remuneracion_variable': 'float',
-        'tac_gastos_operacionales': 'float',
-        'tac_total': 'float'
+        'tir_rfnclp': 'float',
+        'tir_rfnuf': 'float'
     }
 
     attribute_map = {
         'rut': 'rut',
         'serie': 'serie',
         'fecha': 'fecha',
-        'tac_remuneracion_fija': 'tacRemuneracionFija',
-        'tac_remuneracion_variable': 'tacRemuneracionVariable',
-        'tac_gastos_operacionales': 'tacGastosOperacionales',
-        'tac_total': 'tacTotal'
+        'tir_rfnclp': 'tirRFNCLP',
+        'tir_rfnuf': 'tirRFNUF'
     }
 
-    def __init__(self, rut=None, serie=None, fecha=None, tac_remuneracion_fija=None, tac_remuneracion_variable=None, tac_gastos_operacionales=None, tac_total=None):  # noqa: E501
+    def __init__(self, rut=None, serie=None, fecha=None, tir_rfnclp=None, tir_rfnuf=None):  # noqa: E501
         """InlineResponse2007Message - a model defined in Swagger"""  # noqa: E501
         self._rut = None
         self._serie = None
         self._fecha = None
-        self._tac_remuneracion_fija = None
-        self._tac_remuneracion_variable = None
-        self._tac_gastos_operacionales = None
-        self._tac_total = None
+        self._tir_rfnclp = None
+        self._tir_rfnuf = None
         self.discriminator = None
         if rut is not None:
             self.rut = rut
@@ -67,14 +61,10 @@ class InlineResponse2007Message(object):
             self.serie = serie
         if fecha is not None:
             self.fecha = fecha
-        if tac_remuneracion_fija is not None:
-            self.tac_remuneracion_fija = tac_remuneracion_fija
-        if tac_remuneracion_variable is not None:
-            self.tac_remuneracion_variable = tac_remuneracion_variable
-        if tac_gastos_operacionales is not None:
-            self.tac_gastos_operacionales = tac_gastos_operacionales
-        if tac_total is not None:
-            self.tac_total = tac_total
+        if tir_rfnclp is not None:
+            self.tir_rfnclp = tir_rfnclp
+        if tir_rfnuf is not None:
+            self.tir_rfnuf = tir_rfnuf
 
     @property
     def rut(self):
@@ -143,92 +133,48 @@ class InlineResponse2007Message(object):
         self._fecha = fecha
 
     @property
-    def tac_remuneracion_fija(self):
-        """Gets the tac_remuneracion_fija of this InlineResponse2007Message.  # noqa: E501
-        TAC de remuneración fija (%)  # noqa: E501
+    def tir_rfnclp(self):
+        """Gets the tir_rfnclp of this InlineResponse2007Message.  # noqa: E501
+        TIR RFN en Pesos  # noqa: E501
 
-        :return: The tac_remuneracion_fija of this InlineResponse2007Message.  # noqa: E501
+        :return: The tir_rfnclp of this InlineResponse2007Message.  # noqa: E501
         :rtype: float
         """
-        return self._tac_remuneracion_fija
+        return self._tir_rfnclp
 
-    @tac_remuneracion_fija.setter
-    def tac_remuneracion_fija(self, tac_remuneracion_fija):
-        """Sets the tac_remuneracion_fija of this InlineResponse2007Message.
+    @tir_rfnclp.setter
+    def tir_rfnclp(self, tir_rfnclp):
+        """Sets the tir_rfnclp of this InlineResponse2007Message.
 
-        TAC de remuneración fija (%)  # noqa: E501
+        TIR RFN en Pesos  # noqa: E501
 
-        :param tac_remuneracion_fija: The tac_remuneracion_fija of this InlineResponse2007Message.  # noqa: E501
+        :param tir_rfnclp: The tir_rfnclp of this InlineResponse2007Message.  # noqa: E501
         :type: float
         """
 
-        self._tac_remuneracion_fija = tac_remuneracion_fija
+        self._tir_rfnclp = tir_rfnclp
 
     @property
-    def tac_remuneracion_variable(self):
-        """Gets the tac_remuneracion_variable of this InlineResponse2007Message.  # noqa: E501
-        TAC de remuneración variable (%)  # noqa: E501
+    def tir_rfnuf(self):
+        """Gets the tir_rfnuf of this InlineResponse2007Message.  # noqa: E501
+        TIR RFN en UF  # noqa: E501
 
-        :return: The tac_remuneracion_variable of this InlineResponse2007Message.  # noqa: E501
+        :return: The tir_rfnuf of this InlineResponse2007Message.  # noqa: E501
         :rtype: float
         """
-        return self._tac_remuneracion_variable
+        return self._tir_rfnuf
 
-    @tac_remuneracion_variable.setter
-    def tac_remuneracion_variable(self, tac_remuneracion_variable):
-        """Sets the tac_remuneracion_variable of this InlineResponse2007Message.
+    @tir_rfnuf.setter
+    def tir_rfnuf(self, tir_rfnuf):
+        """Sets the tir_rfnuf of this InlineResponse2007Message.
 
-        TAC de remuneración variable (%)  # noqa: E501
+        TIR RFN en UF  # noqa: E501
 
-        :param tac_remuneracion_variable: The tac_remuneracion_variable of this InlineResponse2007Message.  # noqa: E501
+        :param tir_rfnuf: The tir_rfnuf of this InlineResponse2007Message.  # noqa: E501
         :type: float
         """
 
-        self._tac_remuneracion_variable = tac_remuneracion_variable
-
-    @property
-    def tac_gastos_operacionales(self):
-        """Gets the tac_gastos_operacionales of this InlineResponse2007Message.  # noqa: E501
-        TAC de gastos (%)  # noqa: E501
-
-        :return: The tac_gastos_operacionales of this InlineResponse2007Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tac_gastos_operacionales
-
-    @tac_gastos_operacionales.setter
-    def tac_gastos_operacionales(self, tac_gastos_operacionales):
-        """Sets the tac_gastos_operacionales of this InlineResponse2007Message.
-
-        TAC de gastos (%)  # noqa: E501
-
-        :param tac_gastos_operacionales: The tac_gastos_operacionales of this InlineResponse2007Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tac_gastos_operacionales = tac_gastos_operacionales
-
-    @property
-    def tac_total(self):
-        """Gets the tac_total of this InlineResponse2007Message.  # noqa: E501
-        Tasa Anual de Costo (%)  # noqa: E501
-
-        :return: The tac_total of this InlineResponse2007Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tac_total
-
-    @tac_total.setter
-    def tac_total(self, tac_total):
-        """Sets the tac_total of this InlineResponse2007Message.
-
-        Tasa Anual de Costo (%)  # noqa: E501
-
-        :param tac_total: The tac_total of this InlineResponse2007Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tac_total = tac_total
+        self._tir_rfnuf = tir_rfnuf
 
     def to_dict(self):
         """Returns the model properties as a dict"""

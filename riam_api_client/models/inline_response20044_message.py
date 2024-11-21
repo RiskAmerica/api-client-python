@@ -15,6 +15,9 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20044_message_posicion import InlineResponse20044MessagePosicion
+from .inline_response20044_message_contribucion import InlineResponse20044MessageContribucion
+from .inline_response20044_message_performance import InlineResponse20044MessagePerformance
 
 
 
@@ -32,122 +35,89 @@ class InlineResponse20044Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'short_name': 'str',
-        'long_name': 'str',
-        'mime_type': 'str'
+        'posicion': 'InlineResponse20044MessagePosicion',
+        'contribucion': 'InlineResponse20044MessageContribucion',
+        'performance': 'InlineResponse20044MessagePerformance'
     }
 
     attribute_map = {
-        'id': 'id',
-        'short_name': 'shortName',
-        'long_name': 'longName',
-        'mime_type': 'mimeType'
+        'posicion': 'Posicion',
+        'contribucion': 'Contribucion',
+        'performance': 'Performance'
     }
 
-    def __init__(self, id=None, short_name=None, long_name=None, mime_type=None):  # noqa: E501
+    def __init__(self, posicion=None, contribucion=None, performance=None):  # noqa: E501
         """InlineResponse20044Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._short_name = None
-        self._long_name = None
-        self._mime_type = None
+        self._posicion = None
+        self._contribucion = None
+        self._performance = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
-        if mime_type is not None:
-            self.mime_type = mime_type
+        if posicion is not None:
+            self.posicion = posicion
+        if contribucion is not None:
+            self.contribucion = contribucion
+        if performance is not None:
+            self.performance = performance
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20044Message.  # noqa: E501
-        Identificador del formato de descarga  # noqa: E501
+    def posicion(self):
+        """Gets the posicion of this InlineResponse20044Message.  # noqa: E501
 
-        :return: The id of this InlineResponse20044Message.  # noqa: E501
-        :rtype: int
+        :return: The posicion of this InlineResponse20044Message.  # noqa: E501
+        :rtype: InlineResponse20044MessagePosicion
         """
-        return self._id
+        return self._posicion
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20044Message.
+    @posicion.setter
+    def posicion(self, posicion):
+        """Sets the posicion of this InlineResponse20044Message.
 
-        Identificador del formato de descarga  # noqa: E501
 
-        :param id: The id of this InlineResponse20044Message.  # noqa: E501
-        :type: int
+        :param posicion: The posicion of this InlineResponse20044Message.  # noqa: E501
+        :type: InlineResponse20044MessagePosicion
         """
 
-        self._id = id
+        self._posicion = posicion
 
     @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse20044Message.  # noqa: E501
-        Título del formato de descarga  # noqa: E501
+    def contribucion(self):
+        """Gets the contribucion of this InlineResponse20044Message.  # noqa: E501
 
-        :return: The short_name of this InlineResponse20044Message.  # noqa: E501
-        :rtype: str
+        :return: The contribucion of this InlineResponse20044Message.  # noqa: E501
+        :rtype: InlineResponse20044MessageContribucion
         """
-        return self._short_name
+        return self._contribucion
 
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse20044Message.
+    @contribucion.setter
+    def contribucion(self, contribucion):
+        """Sets the contribucion of this InlineResponse20044Message.
 
-        Título del formato de descarga  # noqa: E501
 
-        :param short_name: The short_name of this InlineResponse20044Message.  # noqa: E501
-        :type: str
+        :param contribucion: The contribucion of this InlineResponse20044Message.  # noqa: E501
+        :type: InlineResponse20044MessageContribucion
         """
 
-        self._short_name = short_name
+        self._contribucion = contribucion
 
     @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse20044Message.  # noqa: E501
-        Descripción del formato de descarga  # noqa: E501
+    def performance(self):
+        """Gets the performance of this InlineResponse20044Message.  # noqa: E501
 
-        :return: The long_name of this InlineResponse20044Message.  # noqa: E501
-        :rtype: str
+        :return: The performance of this InlineResponse20044Message.  # noqa: E501
+        :rtype: InlineResponse20044MessagePerformance
         """
-        return self._long_name
+        return self._performance
 
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse20044Message.
+    @performance.setter
+    def performance(self, performance):
+        """Sets the performance of this InlineResponse20044Message.
 
-        Descripción del formato de descarga  # noqa: E501
 
-        :param long_name: The long_name of this InlineResponse20044Message.  # noqa: E501
-        :type: str
+        :param performance: The performance of this InlineResponse20044Message.  # noqa: E501
+        :type: InlineResponse20044MessagePerformance
         """
 
-        self._long_name = long_name
-
-    @property
-    def mime_type(self):
-        """Gets the mime_type of this InlineResponse20044Message.  # noqa: E501
-        MimeType que describe el tipo de archivo usado para la descarga  # noqa: E501
-
-        :return: The mime_type of this InlineResponse20044Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._mime_type
-
-    @mime_type.setter
-    def mime_type(self, mime_type):
-        """Sets the mime_type of this InlineResponse20044Message.
-
-        MimeType que describe el tipo de archivo usado para la descarga  # noqa: E501
-
-        :param mime_type: The mime_type of this InlineResponse20044Message.  # noqa: E501
-        :type: str
-        """
-
-        self._mime_type = mime_type
+        self._performance = performance
 
     def to_dict(self):
         """Returns the model properties as a dict"""

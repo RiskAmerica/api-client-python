@@ -34,32 +34,37 @@ class InlineResponse2005Message(object):
     swagger_types = {
         'rut': 'int',
         'serie': 'str',
-        'fecha_reproceso': 'datetime',
-        'fecha_reprocesada': 'date'
+        'fecha': 'date',
+        'duracion_rfn': 'float',
+        'duracion_total': 'float'
     }
 
     attribute_map = {
         'rut': 'rut',
         'serie': 'serie',
-        'fecha_reproceso': 'fechaReproceso',
-        'fecha_reprocesada': 'fechaReprocesada'
+        'fecha': 'fecha',
+        'duracion_rfn': 'duracionRFN',
+        'duracion_total': 'duracionTotal'
     }
 
-    def __init__(self, rut=None, serie=None, fecha_reproceso=None, fecha_reprocesada=None):  # noqa: E501
+    def __init__(self, rut=None, serie=None, fecha=None, duracion_rfn=None, duracion_total=None):  # noqa: E501
         """InlineResponse2005Message - a model defined in Swagger"""  # noqa: E501
         self._rut = None
         self._serie = None
-        self._fecha_reproceso = None
-        self._fecha_reprocesada = None
+        self._fecha = None
+        self._duracion_rfn = None
+        self._duracion_total = None
         self.discriminator = None
         if rut is not None:
             self.rut = rut
         if serie is not None:
             self.serie = serie
-        if fecha_reproceso is not None:
-            self.fecha_reproceso = fecha_reproceso
-        if fecha_reprocesada is not None:
-            self.fecha_reprocesada = fecha_reprocesada
+        if fecha is not None:
+            self.fecha = fecha
+        if duracion_rfn is not None:
+            self.duracion_rfn = duracion_rfn
+        if duracion_total is not None:
+            self.duracion_total = duracion_total
 
     @property
     def rut(self):
@@ -106,48 +111,70 @@ class InlineResponse2005Message(object):
         self._serie = serie
 
     @property
-    def fecha_reproceso(self):
-        """Gets the fecha_reproceso of this InlineResponse2005Message.  # noqa: E501
-        Fecha de los datos cuota que cambiaron  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse2005Message.  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :return: The fecha_reproceso of this InlineResponse2005Message.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._fecha_reproceso
-
-    @fecha_reproceso.setter
-    def fecha_reproceso(self, fecha_reproceso):
-        """Sets the fecha_reproceso of this InlineResponse2005Message.
-
-        Fecha de los datos cuota que cambiaron  # noqa: E501
-
-        :param fecha_reproceso: The fecha_reproceso of this InlineResponse2005Message.  # noqa: E501
-        :type: datetime
-        """
-
-        self._fecha_reproceso = fecha_reproceso
-
-    @property
-    def fecha_reprocesada(self):
-        """Gets the fecha_reprocesada of this InlineResponse2005Message.  # noqa: E501
-        Fecha en que ocurrió el reproceso  # noqa: E501
-
-        :return: The fecha_reprocesada of this InlineResponse2005Message.  # noqa: E501
+        :return: The fecha of this InlineResponse2005Message.  # noqa: E501
         :rtype: date
         """
-        return self._fecha_reprocesada
+        return self._fecha
 
-    @fecha_reprocesada.setter
-    def fecha_reprocesada(self, fecha_reprocesada):
-        """Sets the fecha_reprocesada of this InlineResponse2005Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse2005Message.
 
-        Fecha en que ocurrió el reproceso  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :param fecha_reprocesada: The fecha_reprocesada of this InlineResponse2005Message.  # noqa: E501
+        :param fecha: The fecha of this InlineResponse2005Message.  # noqa: E501
         :type: date
         """
 
-        self._fecha_reprocesada = fecha_reprocesada
+        self._fecha = fecha
+
+    @property
+    def duracion_rfn(self):
+        """Gets the duracion_rfn of this InlineResponse2005Message.  # noqa: E501
+        Duracion RFN  # noqa: E501
+
+        :return: The duracion_rfn of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._duracion_rfn
+
+    @duracion_rfn.setter
+    def duracion_rfn(self, duracion_rfn):
+        """Sets the duracion_rfn of this InlineResponse2005Message.
+
+        Duracion RFN  # noqa: E501
+
+        :param duracion_rfn: The duracion_rfn of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._duracion_rfn = duracion_rfn
+
+    @property
+    def duracion_total(self):
+        """Gets the duracion_total of this InlineResponse2005Message.  # noqa: E501
+        Duracion Total  # noqa: E501
+
+        :return: The duracion_total of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._duracion_total
+
+    @duracion_total.setter
+    def duracion_total(self, duracion_total):
+        """Sets the duracion_total of this InlineResponse2005Message.
+
+        Duracion Total  # noqa: E501
+
+        :param duracion_total: The duracion_total of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._duracion_total = duracion_total
 
     def to_dict(self):
         """Returns the model properties as a dict"""

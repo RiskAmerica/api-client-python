@@ -54,7 +54,10 @@ class InlineResponse20026MessageInstrumento(object):
         'nominal_outstanding': 'float',
         'corte_maximo': 'int',
         'corte_minimo': 'int',
-        'spread_colocacion': 'float'
+        'spread_colocacion': 'float',
+        'articulo104': 'str',
+        'articulo74': 'str',
+        'verde_social': 'str'
     }
 
     attribute_map = {
@@ -80,10 +83,13 @@ class InlineResponse20026MessageInstrumento(object):
         'nominal_outstanding': 'nominalOutstanding',
         'corte_maximo': 'corteMaximo',
         'corte_minimo': 'corteMinimo',
-        'spread_colocacion': 'spreadColocacion'
+        'spread_colocacion': 'spreadColocacion',
+        'articulo104': 'articulo104',
+        'articulo74': 'articulo74',
+        'verde_social': 'verdeSocial'
     }
 
-    def __init__(self, nemotecnico=None, familia=None, tipo=None, tipo_svs=None, emisor=None, sector=None, riesgo=None, moneda=None, fecha_emision=None, fecha_vencimiento=None, fecha_primera_transaccion=None, fecha_prepagable=None, periodicidad=None, numero_cupones=None, tasa_emision=None, condicion_prepago=None, tera=None, base_tasa=None, monto_emitido=None, nominal_outstanding=None, corte_maximo=None, corte_minimo=None, spread_colocacion=None):  # noqa: E501
+    def __init__(self, nemotecnico=None, familia=None, tipo=None, tipo_svs=None, emisor=None, sector=None, riesgo=None, moneda=None, fecha_emision=None, fecha_vencimiento=None, fecha_primera_transaccion=None, fecha_prepagable=None, periodicidad=None, numero_cupones=None, tasa_emision=None, condicion_prepago=None, tera=None, base_tasa=None, monto_emitido=None, nominal_outstanding=None, corte_maximo=None, corte_minimo=None, spread_colocacion=None, articulo104=None, articulo74=None, verde_social=None):  # noqa: E501
         """InlineResponse20026MessageInstrumento - a model defined in Swagger"""  # noqa: E501
         self._nemotecnico = None
         self._familia = None
@@ -108,6 +114,9 @@ class InlineResponse20026MessageInstrumento(object):
         self._corte_maximo = None
         self._corte_minimo = None
         self._spread_colocacion = None
+        self._articulo104 = None
+        self._articulo74 = None
+        self._verde_social = None
         self.discriminator = None
         if nemotecnico is not None:
             self.nemotecnico = nemotecnico
@@ -155,6 +164,12 @@ class InlineResponse20026MessageInstrumento(object):
             self.corte_minimo = corte_minimo
         if spread_colocacion is not None:
             self.spread_colocacion = spread_colocacion
+        if articulo104 is not None:
+            self.articulo104 = articulo104
+        if articulo74 is not None:
+            self.articulo74 = articulo74
+        if verde_social is not None:
+            self.verde_social = verde_social
 
     @property
     def nemotecnico(self):
@@ -661,6 +676,72 @@ class InlineResponse20026MessageInstrumento(object):
         """
 
         self._spread_colocacion = spread_colocacion
+
+    @property
+    def articulo104(self):
+        """Gets the articulo104 of this InlineResponse20026MessageInstrumento.  # noqa: E501
+        Acogido al Articulo 104  # noqa: E501
+
+        :return: The articulo104 of this InlineResponse20026MessageInstrumento.  # noqa: E501
+        :rtype: str
+        """
+        return self._articulo104
+
+    @articulo104.setter
+    def articulo104(self, articulo104):
+        """Sets the articulo104 of this InlineResponse20026MessageInstrumento.
+
+        Acogido al Articulo 104  # noqa: E501
+
+        :param articulo104: The articulo104 of this InlineResponse20026MessageInstrumento.  # noqa: E501
+        :type: str
+        """
+
+        self._articulo104 = articulo104
+
+    @property
+    def articulo74(self):
+        """Gets the articulo74 of this InlineResponse20026MessageInstrumento.  # noqa: E501
+        Acogido al Articulo 74  # noqa: E501
+
+        :return: The articulo74 of this InlineResponse20026MessageInstrumento.  # noqa: E501
+        :rtype: str
+        """
+        return self._articulo74
+
+    @articulo74.setter
+    def articulo74(self, articulo74):
+        """Sets the articulo74 of this InlineResponse20026MessageInstrumento.
+
+        Acogido al Articulo 74  # noqa: E501
+
+        :param articulo74: The articulo74 of this InlineResponse20026MessageInstrumento.  # noqa: E501
+        :type: str
+        """
+
+        self._articulo74 = articulo74
+
+    @property
+    def verde_social(self):
+        """Gets the verde_social of this InlineResponse20026MessageInstrumento.  # noqa: E501
+        Bono Verde/Social  # noqa: E501
+
+        :return: The verde_social of this InlineResponse20026MessageInstrumento.  # noqa: E501
+        :rtype: str
+        """
+        return self._verde_social
+
+    @verde_social.setter
+    def verde_social(self, verde_social):
+        """Sets the verde_social of this InlineResponse20026MessageInstrumento.
+
+        Bono Verde/Social  # noqa: E501
+
+        :param verde_social: The verde_social of this InlineResponse20026MessageInstrumento.  # noqa: E501
+        :type: str
+        """
+
+        self._verde_social = verde_social
 
     def to_dict(self):
         """Returns the model properties as a dict"""

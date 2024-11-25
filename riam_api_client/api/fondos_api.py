@@ -17,19 +17,22 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse2007
-from . import InlineResponse2007
+from . import InlineResponse2006
+from . import InlineResponse2006
 from . import InlineResponse2001
 from . import InlineResponse2002
-from . import InlineResponse2006
-from . import InlineResponse2006
+from . import InlineResponse2005
+from . import InlineResponse2005
 from . import InlineResponse200
-from . import InlineResponse2005
-from . import InlineResponse2005
+from . import InlineResponse200
 from . import InlineResponse2004
 from . import InlineResponse2004
 from . import InlineResponse2003
 from . import InlineResponse2003
+from . import InlineResponse2003
+from . import InlineResponse2003
+from . import InlineResponse2007
+from . import InlineResponse2007
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -58,10 +61,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2007
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -81,10 +84,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2007
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha']  # noqa: E501
@@ -136,7 +139,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2007',  # noqa: E501
+            response_type='InlineResponse2006',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -158,10 +161,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2007
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -184,10 +187,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2007
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'serie']  # noqa: E501
@@ -257,7 +260,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2007',  # noqa: E501
+            response_type='InlineResponse2006',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -502,10 +505,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2006
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -525,10 +528,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2006
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha']  # noqa: E501
@@ -580,7 +583,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='InlineResponse2005',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -602,10 +605,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2006
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -628,10 +631,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2006
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'serie']  # noqa: E501
@@ -701,7 +704,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='InlineResponse2005',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -810,6 +813,99 @@ class FondosApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def fondos_informacion_get_all(self, **kwargs):  # noqa: E501
+        """Obtiene la información de todos los fondos por tipo de fondo  # noqa: E501
+
+        Obtiene la información de todos los fondos por tipo de fondo  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fondos_informacion_get_all(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str tipo_fondo: tipoFondo. Si no se especifica se consultan todos (CFI y CFM)
+        :return: InlineResponse200
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse200 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.fondos_informacion_get_all_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.fondos_informacion_get_all_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def fondos_informacion_get_all_with_http_info(self, **kwargs):  # noqa: E501
+        """Obtiene la información de todos los fondos por tipo de fondo  # noqa: E501
+
+        Obtiene la información de todos los fondos por tipo de fondo  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fondos_informacion_get_all_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str tipo_fondo: tipoFondo. Si no se especifica se consultan todos (CFI y CFM)
+        :return: InlineResponse200
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse200 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['tipo_fondo']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method fondos_informacion_get_all" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'tipo_fondo' in params:
+            query_params.append(('tipoFondo', params['tipo_fondo']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/Fondos/Informacion/getAll', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse200',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def fondos_reprocesos_get_periodo(self, fecha_min, fecha_max, **kwargs):  # noqa: E501
         """Obtiene los reprocesos de los datos cuota que han ocurrido en un periodo de tiempo.  # noqa: E501
 
@@ -822,10 +918,10 @@ class FondosApi(object):
         :param async_req bool
         :param date fecha_min: Fecha mínima a consultar (required)
         :param date fecha_max: Fecha máxima a consultar (No inclusive) (required)
-        :return: InlineResponse2005
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2004 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -846,10 +942,10 @@ class FondosApi(object):
         :param async_req bool
         :param date fecha_min: Fecha mínima a consultar (required)
         :param date fecha_max: Fecha máxima a consultar (No inclusive) (required)
-        :return: InlineResponse2005
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2004 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max']  # noqa: E501
@@ -907,7 +1003,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2005',  # noqa: E501
+            response_type='InlineResponse2004',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -927,10 +1023,10 @@ class FondosApi(object):
         :param async_req bool
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2005
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2004 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -951,10 +1047,10 @@ class FondosApi(object):
         :param async_req bool
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2005
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2004 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['rut', 'serie']  # noqa: E501
@@ -1012,7 +1108,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2005',  # noqa: E501
+            response_type='InlineResponse2004',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1031,10 +1127,11 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2004
+        :param str tipo_fondo: tipoFondo. Si no se especifica se consultan todos (CFI y CFM)
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2004 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2003 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1054,13 +1151,14 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2004
+        :param str tipo_fondo: tipoFondo. Si no se especifica se consultan todos (CFI y CFM)
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2004 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2003 | multiprocessing.pool.ApplyResult
         """
 
-        all_params = ['fecha']  # noqa: E501
+        all_params = ['fecha', 'tipo_fondo']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1087,6 +1185,8 @@ class FondosApi(object):
         query_params = []
         if 'fecha' in params:
             query_params.append(('fecha', params['fecha']))  # noqa: E501
+        if 'tipo_fondo' in params:
+            query_params.append(('tipoFondo', params['tipo_fondo']))  # noqa: E501
 
         header_params = {}
 
@@ -1109,7 +1209,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2004',  # noqa: E501
+            response_type='InlineResponse2003',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1131,10 +1231,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2004
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2004 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2003 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1157,10 +1257,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2004
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2004 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse2003 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'serie']  # noqa: E501
@@ -1230,7 +1330,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2004',  # noqa: E501
+            response_type='InlineResponse2003',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1449,6 +1549,224 @@ class FondosApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='InlineResponse2003',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def fondos_tir_get_fecha(self, fecha, **kwargs):  # noqa: E501
+        """Obtiene los registros de la tir para todos los fondos en la fecha consultada.  # noqa: E501
+
+        Obtiene los registros de la tir para todos los fondos en la fecha consultada.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fondos_tir_get_fecha(fecha, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha: Fecha a Consultar (required)
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.fondos_tir_get_fecha_with_http_info(fecha, **kwargs)  # noqa: E501
+        else:
+            (data) = self.fondos_tir_get_fecha_with_http_info(fecha, **kwargs)  # noqa: E501
+            return data
+
+    def fondos_tir_get_fecha_with_http_info(self, fecha, **kwargs):  # noqa: E501
+        """Obtiene los registros de la tir para todos los fondos en la fecha consultada.  # noqa: E501
+
+        Obtiene los registros de la tir para todos los fondos en la fecha consultada.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fondos_tir_get_fecha_with_http_info(fecha, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha: Fecha a Consultar (required)
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['fecha']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method fondos_tir_get_fecha" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'fecha' is set
+        if ('fecha' not in params or
+                params['fecha'] is None):
+            raise ValueError("Missing the required parameter `fecha` when calling `fondos_tir_get_fecha`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'fecha' in params:
+            query_params.append(('fecha', params['fecha']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/Fondos/Tir/getFecha', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2007',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def fondos_tir_get_serie(self, fecha_min, fecha_max, rut, serie, **kwargs):  # noqa: E501
+        """Obtiene los registros de la Tir para la serie consultada.  # noqa: E501
+
+        Obtiene los registros de la Tir para la serie consultada entre un rango de fechas.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fondos_tir_get_serie(fecha_min, fecha_max, rut, serie, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha_min: Fecha mínima a consultar (required)
+        :param date fecha_max: Fecha máxima a consultar (required)
+        :param int rut: Rut del Fondo (sin dígito verificador) (required)
+        :param str serie: Código de la serie (required)
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.fondos_tir_get_serie_with_http_info(fecha_min, fecha_max, rut, serie, **kwargs)  # noqa: E501
+        else:
+            (data) = self.fondos_tir_get_serie_with_http_info(fecha_min, fecha_max, rut, serie, **kwargs)  # noqa: E501
+            return data
+
+    def fondos_tir_get_serie_with_http_info(self, fecha_min, fecha_max, rut, serie, **kwargs):  # noqa: E501
+        """Obtiene los registros de la Tir para la serie consultada.  # noqa: E501
+
+        Obtiene los registros de la Tir para la serie consultada entre un rango de fechas.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fondos_tir_get_serie_with_http_info(fecha_min, fecha_max, rut, serie, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param date fecha_min: Fecha mínima a consultar (required)
+        :param date fecha_max: Fecha máxima a consultar (required)
+        :param int rut: Rut del Fondo (sin dígito verificador) (required)
+        :param str serie: Código de la serie (required)
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['fecha_min', 'fecha_max', 'rut', 'serie']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method fondos_tir_get_serie" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'fecha_min' is set
+        if ('fecha_min' not in params or
+                params['fecha_min'] is None):
+            raise ValueError("Missing the required parameter `fecha_min` when calling `fondos_tir_get_serie`")  # noqa: E501
+        # verify the required parameter 'fecha_max' is set
+        if ('fecha_max' not in params or
+                params['fecha_max'] is None):
+            raise ValueError("Missing the required parameter `fecha_max` when calling `fondos_tir_get_serie`")  # noqa: E501
+        # verify the required parameter 'rut' is set
+        if ('rut' not in params or
+                params['rut'] is None):
+            raise ValueError("Missing the required parameter `rut` when calling `fondos_tir_get_serie`")  # noqa: E501
+        # verify the required parameter 'serie' is set
+        if ('serie' not in params or
+                params['serie'] is None):
+            raise ValueError("Missing the required parameter `serie` when calling `fondos_tir_get_serie`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'fecha_min' in params:
+            query_params.append(('fechaMin', params['fecha_min']))  # noqa: E501
+        if 'fecha_max' in params:
+            query_params.append(('fechaMax', params['fecha_max']))  # noqa: E501
+        if 'rut' in params:
+            query_params.append(('rut', params['rut']))  # noqa: E501
+        if 'serie' in params:
+            query_params.append(('serie', params['serie']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/Fondos/Tir/getSerie', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2007',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

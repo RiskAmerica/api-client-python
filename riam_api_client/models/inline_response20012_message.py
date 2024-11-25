@@ -50,7 +50,12 @@ class InlineResponse20012Message(object):
         'convexidad': 'float',
         'tir_act365_clp': 'float',
         'tir_act365_uf': 'float',
-        'spread365': 'float'
+        'spread365': 'float',
+        'ret_sc1_d': 'float',
+        'max_draw_down': 'float',
+        'tir_act365_usd': 'float',
+        'porcentaje_uf': 'float',
+        'porcentaje_clp': 'float'
     }
 
     attribute_map = {
@@ -72,10 +77,15 @@ class InlineResponse20012Message(object):
         'convexidad': 'convexidad',
         'tir_act365_clp': 'tirAct365CLP',
         'tir_act365_uf': 'tirAct365UF',
-        'spread365': 'spread365'
+        'spread365': 'spread365',
+        'ret_sc1_d': 'retSC1D',
+        'max_draw_down': 'maxDrawDown',
+        'tir_act365_usd': 'tirACT365USD',
+        'porcentaje_uf': 'porcentajeUF',
+        'porcentaje_clp': 'porcentajeCLP'
     }
 
-    def __init__(self, fecha=None, id_indice=None, px_last=None, num_em=None, monto=None, ret1_d=None, ret_cont1_d=None, ret1_a=None, ret_mtd=None, ret_ytd=None, desv_est1_a=None, dur_mac=None, dur_mod=None, tir_media=None, plazo=None, convexidad=None, tir_act365_clp=None, tir_act365_uf=None, spread365=None):  # noqa: E501
+    def __init__(self, fecha=None, id_indice=None, px_last=None, num_em=None, monto=None, ret1_d=None, ret_cont1_d=None, ret1_a=None, ret_mtd=None, ret_ytd=None, desv_est1_a=None, dur_mac=None, dur_mod=None, tir_media=None, plazo=None, convexidad=None, tir_act365_clp=None, tir_act365_uf=None, spread365=None, ret_sc1_d=None, max_draw_down=None, tir_act365_usd=None, porcentaje_uf=None, porcentaje_clp=None):  # noqa: E501
         """InlineResponse20012Message - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
         self._id_indice = None
@@ -96,6 +106,11 @@ class InlineResponse20012Message(object):
         self._tir_act365_clp = None
         self._tir_act365_uf = None
         self._spread365 = None
+        self._ret_sc1_d = None
+        self._max_draw_down = None
+        self._tir_act365_usd = None
+        self._porcentaje_uf = None
+        self._porcentaje_clp = None
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
@@ -135,6 +150,16 @@ class InlineResponse20012Message(object):
             self.tir_act365_uf = tir_act365_uf
         if spread365 is not None:
             self.spread365 = spread365
+        if ret_sc1_d is not None:
+            self.ret_sc1_d = ret_sc1_d
+        if max_draw_down is not None:
+            self.max_draw_down = max_draw_down
+        if tir_act365_usd is not None:
+            self.tir_act365_usd = tir_act365_usd
+        if porcentaje_uf is not None:
+            self.porcentaje_uf = porcentaje_uf
+        if porcentaje_clp is not None:
+            self.porcentaje_clp = porcentaje_clp
 
     @property
     def fecha(self):
@@ -553,6 +578,116 @@ class InlineResponse20012Message(object):
         """
 
         self._spread365 = spread365
+
+    @property
+    def ret_sc1_d(self):
+        """Gets the ret_sc1_d of this InlineResponse20012Message.  # noqa: E501
+        Retorno 1 Día sin considerar cupones  # noqa: E501
+
+        :return: The ret_sc1_d of this InlineResponse20012Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_sc1_d
+
+    @ret_sc1_d.setter
+    def ret_sc1_d(self, ret_sc1_d):
+        """Sets the ret_sc1_d of this InlineResponse20012Message.
+
+        Retorno 1 Día sin considerar cupones  # noqa: E501
+
+        :param ret_sc1_d: The ret_sc1_d of this InlineResponse20012Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_sc1_d = ret_sc1_d
+
+    @property
+    def max_draw_down(self):
+        """Gets the max_draw_down of this InlineResponse20012Message.  # noqa: E501
+        maxDrawDown del indice  # noqa: E501
+
+        :return: The max_draw_down of this InlineResponse20012Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._max_draw_down
+
+    @max_draw_down.setter
+    def max_draw_down(self, max_draw_down):
+        """Sets the max_draw_down of this InlineResponse20012Message.
+
+        maxDrawDown del indice  # noqa: E501
+
+        :param max_draw_down: The max_draw_down of this InlineResponse20012Message.  # noqa: E501
+        :type: float
+        """
+
+        self._max_draw_down = max_draw_down
+
+    @property
+    def tir_act365_usd(self):
+        """Gets the tir_act365_usd of this InlineResponse20012Message.  # noqa: E501
+        TIR del indice en USD  # noqa: E501
+
+        :return: The tir_act365_usd of this InlineResponse20012Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tir_act365_usd
+
+    @tir_act365_usd.setter
+    def tir_act365_usd(self, tir_act365_usd):
+        """Sets the tir_act365_usd of this InlineResponse20012Message.
+
+        TIR del indice en USD  # noqa: E501
+
+        :param tir_act365_usd: The tir_act365_usd of this InlineResponse20012Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tir_act365_usd = tir_act365_usd
+
+    @property
+    def porcentaje_uf(self):
+        """Gets the porcentaje_uf of this InlineResponse20012Message.  # noqa: E501
+        Porcentaje del indice invertido en UF  # noqa: E501
+
+        :return: The porcentaje_uf of this InlineResponse20012Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._porcentaje_uf
+
+    @porcentaje_uf.setter
+    def porcentaje_uf(self, porcentaje_uf):
+        """Sets the porcentaje_uf of this InlineResponse20012Message.
+
+        Porcentaje del indice invertido en UF  # noqa: E501
+
+        :param porcentaje_uf: The porcentaje_uf of this InlineResponse20012Message.  # noqa: E501
+        :type: float
+        """
+
+        self._porcentaje_uf = porcentaje_uf
+
+    @property
+    def porcentaje_clp(self):
+        """Gets the porcentaje_clp of this InlineResponse20012Message.  # noqa: E501
+        Porcentaje del indice invertido en Pesos  # noqa: E501
+
+        :return: The porcentaje_clp of this InlineResponse20012Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._porcentaje_clp
+
+    @porcentaje_clp.setter
+    def porcentaje_clp(self, porcentaje_clp):
+        """Sets the porcentaje_clp of this InlineResponse20012Message.
+
+        Porcentaje del indice invertido en Pesos  # noqa: E501
+
+        :param porcentaje_clp: The porcentaje_clp of this InlineResponse20012Message.  # noqa: E501
+        :type: float
+        """
+
+        self._porcentaje_clp = porcentaje_clp
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -40,7 +40,8 @@ class InlineResponse20032MessageLiquidez(object):
         'cantidad_trans_trimestre': 'float',
         'rotacion_trimestre': 'float',
         'cantidad_trans_anual': 'float',
-        'rotacion_anual': 'float'
+        'rotacion_anual': 'float',
+        'saldo_custodia_insoluto': 'float'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class InlineResponse20032MessageLiquidez(object):
         'cantidad_trans_trimestre': 'cantidadTransTrimestre',
         'rotacion_trimestre': 'rotacionTrimestre',
         'cantidad_trans_anual': 'cantidadTransAnual',
-        'rotacion_anual': 'rotacionAnual'
+        'rotacion_anual': 'rotacionAnual',
+        'saldo_custodia_insoluto': 'saldoCustodiaInsoluto'
     }
 
-    def __init__(self, fecha=None, cantidad_outstanding=None, monto_outstanding_clp=None, cantidad_trans_mes=None, rotacion_mes=None, cantidad_trans_trimestre=None, rotacion_trimestre=None, cantidad_trans_anual=None, rotacion_anual=None):  # noqa: E501
+    def __init__(self, fecha=None, cantidad_outstanding=None, monto_outstanding_clp=None, cantidad_trans_mes=None, rotacion_mes=None, cantidad_trans_trimestre=None, rotacion_trimestre=None, cantidad_trans_anual=None, rotacion_anual=None, saldo_custodia_insoluto=None):  # noqa: E501
         """InlineResponse20032MessageLiquidez - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
         self._cantidad_outstanding = None
@@ -66,6 +68,7 @@ class InlineResponse20032MessageLiquidez(object):
         self._rotacion_trimestre = None
         self._cantidad_trans_anual = None
         self._rotacion_anual = None
+        self._saldo_custodia_insoluto = None
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
@@ -85,6 +88,8 @@ class InlineResponse20032MessageLiquidez(object):
             self.cantidad_trans_anual = cantidad_trans_anual
         if rotacion_anual is not None:
             self.rotacion_anual = rotacion_anual
+        if saldo_custodia_insoluto is not None:
+            self.saldo_custodia_insoluto = saldo_custodia_insoluto
 
     @property
     def fecha(self):
@@ -283,6 +288,28 @@ class InlineResponse20032MessageLiquidez(object):
         """
 
         self._rotacion_anual = rotacion_anual
+
+    @property
+    def saldo_custodia_insoluto(self):
+        """Gets the saldo_custodia_insoluto of this InlineResponse20032MessageLiquidez.  # noqa: E501
+        Saldo Custodia Insoluto  # noqa: E501
+
+        :return: The saldo_custodia_insoluto of this InlineResponse20032MessageLiquidez.  # noqa: E501
+        :rtype: float
+        """
+        return self._saldo_custodia_insoluto
+
+    @saldo_custodia_insoluto.setter
+    def saldo_custodia_insoluto(self, saldo_custodia_insoluto):
+        """Sets the saldo_custodia_insoluto of this InlineResponse20032MessageLiquidez.
+
+        Saldo Custodia Insoluto  # noqa: E501
+
+        :param saldo_custodia_insoluto: The saldo_custodia_insoluto of this InlineResponse20032MessageLiquidez.  # noqa: E501
+        :type: float
+        """
+
+        self._saldo_custodia_insoluto = saldo_custodia_insoluto
 
     def to_dict(self):
         """Returns the model properties as a dict"""

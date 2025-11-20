@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -410,9 +410,9 @@ class CurvasApi(object):
         :param ValoresGetBody body: (required)
         :param date fecha: Fecha para la cual se consulta (required)
         :param str id_curva: Identificador de la Curva (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.
@@ -438,9 +438,9 @@ class CurvasApi(object):
         :param ValoresGetBody body: (required)
         :param date fecha: Fecha para la cual se consulta (required)
         :param str id_curva: Identificador de la Curva (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.
@@ -544,9 +544,9 @@ class CurvasApi(object):
         :param str id_curva: Identificador de la Curva (required)
         :param float plazo_inicial: Plazo inicial a consultar en la base consultada (required)
         :param float plazo_final: Plazo final a consultar en la base consultada (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.
@@ -573,9 +573,9 @@ class CurvasApi(object):
         :param str id_curva: Identificador de la Curva (required)
         :param float plazo_inicial: Plazo inicial a consultar en la base consultada (required)
         :param float plazo_final: Plazo final a consultar en la base consultada (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.
@@ -682,8 +682,8 @@ class CurvasApi(object):
         :param str id_curva: Identificador de la Curva (required)
         :param float plazo: Plazos a consultar (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos (required)
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.
@@ -711,8 +711,8 @@ class CurvasApi(object):
         :param str id_curva: Identificador de la Curva (required)
         :param float plazo: Plazos a consultar (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos (required)
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.

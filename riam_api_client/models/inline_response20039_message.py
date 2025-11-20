@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20039_clasificacion import InlineResponse20039Clasificacion
 
 
 
@@ -33,38 +34,27 @@ class InlineResponse20039Message(object):
     """
     swagger_types = {
         'fecha': 'date',
-        'moneda': 'str',
-        'base': 'str',
-        'valor': 'float'
+        'clasificacion': 'InlineResponse20039Clasificacion'
     }
 
     attribute_map = {
-        'fecha': 'fecha',
-        'moneda': 'moneda',
-        'base': 'base',
-        'valor': 'valor'
+        'fecha': 'Fecha',
+        'clasificacion': 'Clasificacion'
     }
 
-    def __init__(self, fecha=None, moneda=None, base=None, valor=None):  # noqa: E501
+    def __init__(self, fecha=None, clasificacion=None):  # noqa: E501
         """InlineResponse20039Message - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
-        self._moneda = None
-        self._base = None
-        self._valor = None
+        self._clasificacion = None
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
-        if moneda is not None:
-            self.moneda = moneda
-        if base is not None:
-            self.base = base
-        if valor is not None:
-            self.valor = valor
+        if clasificacion is not None:
+            self.clasificacion = clasificacion
 
     @property
     def fecha(self):
         """Gets the fecha of this InlineResponse20039Message.  # noqa: E501
-        Fecha del tipo cambio segun estandar del Banco Central  # noqa: E501
 
         :return: The fecha of this InlineResponse20039Message.  # noqa: E501
         :rtype: date
@@ -75,7 +65,6 @@ class InlineResponse20039Message(object):
     def fecha(self, fecha):
         """Sets the fecha of this InlineResponse20039Message.
 
-        Fecha del tipo cambio segun estandar del Banco Central  # noqa: E501
 
         :param fecha: The fecha of this InlineResponse20039Message.  # noqa: E501
         :type: date
@@ -84,70 +73,24 @@ class InlineResponse20039Message(object):
         self._fecha = fecha
 
     @property
-    def moneda(self):
-        """Gets the moneda of this InlineResponse20039Message.  # noqa: E501
-        Moneda consultada  # noqa: E501
+    def clasificacion(self):
+        """Gets the clasificacion of this InlineResponse20039Message.  # noqa: E501
 
-        :return: The moneda of this InlineResponse20039Message.  # noqa: E501
-        :rtype: str
+        :return: The clasificacion of this InlineResponse20039Message.  # noqa: E501
+        :rtype: InlineResponse20039Clasificacion
         """
-        return self._moneda
+        return self._clasificacion
 
-    @moneda.setter
-    def moneda(self, moneda):
-        """Sets the moneda of this InlineResponse20039Message.
+    @clasificacion.setter
+    def clasificacion(self, clasificacion):
+        """Sets the clasificacion of this InlineResponse20039Message.
 
-        Moneda consultada  # noqa: E501
 
-        :param moneda: The moneda of this InlineResponse20039Message.  # noqa: E501
-        :type: str
+        :param clasificacion: The clasificacion of this InlineResponse20039Message.  # noqa: E501
+        :type: InlineResponse20039Clasificacion
         """
 
-        self._moneda = moneda
-
-    @property
-    def base(self):
-        """Gets the base of this InlineResponse20039Message.  # noqa: E501
-        Moneda en la cual se expresa el valor  # noqa: E501
-
-        :return: The base of this InlineResponse20039Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._base
-
-    @base.setter
-    def base(self, base):
-        """Sets the base of this InlineResponse20039Message.
-
-        Moneda en la cual se expresa el valor  # noqa: E501
-
-        :param base: The base of this InlineResponse20039Message.  # noqa: E501
-        :type: str
-        """
-
-        self._base = base
-
-    @property
-    def valor(self):
-        """Gets the valor of this InlineResponse20039Message.  # noqa: E501
-        Tipo de cambio  # noqa: E501
-
-        :return: The valor of this InlineResponse20039Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._valor
-
-    @valor.setter
-    def valor(self, valor):
-        """Sets the valor of this InlineResponse20039Message.
-
-        Tipo de cambio  # noqa: E501
-
-        :param valor: The valor of this InlineResponse20039Message.  # noqa: E501
-        :type: float
-        """
-
-        self._valor = valor
+        self._clasificacion = clasificacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

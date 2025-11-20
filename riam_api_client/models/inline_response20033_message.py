@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20033_message_valorizacion import InlineResponse20033MessageValorizacion
 
 
 
@@ -32,68 +33,39 @@ class InlineResponse20033Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha': 'date',
-        'saldo_custodia': 'float'
+        'valorizacion': 'InlineResponse20033MessageValorizacion'
     }
 
     attribute_map = {
-        'fecha': 'fecha',
-        'saldo_custodia': 'saldoCustodia'
+        'valorizacion': 'Valorizacion'
     }
 
-    def __init__(self, fecha=None, saldo_custodia=None):  # noqa: E501
+    def __init__(self, valorizacion=None):  # noqa: E501
         """InlineResponse20033Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha = None
-        self._saldo_custodia = None
+        self._valorizacion = None
         self.discriminator = None
-        if fecha is not None:
-            self.fecha = fecha
-        if saldo_custodia is not None:
-            self.saldo_custodia = saldo_custodia
+        if valorizacion is not None:
+            self.valorizacion = valorizacion
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20033Message.  # noqa: E501
-        Fecha del saldo  # noqa: E501
+    def valorizacion(self):
+        """Gets the valorizacion of this InlineResponse20033Message.  # noqa: E501
 
-        :return: The fecha of this InlineResponse20033Message.  # noqa: E501
-        :rtype: date
+        :return: The valorizacion of this InlineResponse20033Message.  # noqa: E501
+        :rtype: InlineResponse20033MessageValorizacion
         """
-        return self._fecha
+        return self._valorizacion
 
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20033Message.
+    @valorizacion.setter
+    def valorizacion(self, valorizacion):
+        """Sets the valorizacion of this InlineResponse20033Message.
 
-        Fecha del saldo  # noqa: E501
 
-        :param fecha: The fecha of this InlineResponse20033Message.  # noqa: E501
-        :type: date
+        :param valorizacion: The valorizacion of this InlineResponse20033Message.  # noqa: E501
+        :type: InlineResponse20033MessageValorizacion
         """
 
-        self._fecha = fecha
-
-    @property
-    def saldo_custodia(self):
-        """Gets the saldo_custodia of this InlineResponse20033Message.  # noqa: E501
-        Saldo custodia nominal  # noqa: E501
-
-        :return: The saldo_custodia of this InlineResponse20033Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._saldo_custodia
-
-    @saldo_custodia.setter
-    def saldo_custodia(self, saldo_custodia):
-        """Sets the saldo_custodia of this InlineResponse20033Message.
-
-        Saldo custodia nominal  # noqa: E501
-
-        :param saldo_custodia: The saldo_custodia of this InlineResponse20033Message.  # noqa: E501
-        :type: float
-        """
-
-        self._saldo_custodia = saldo_custodia
+        self._valorizacion = valorizacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -126,9 +126,9 @@ api_instance = riam_api_client.CurvasApi(riam_api_client.ApiClient(configuration
 body = riam_api_client.ValoresGetBody() # ValoresGetBody | 
 fecha = '2013-10-20' # date | Fecha para la cual se consulta
 id_curva = 'id_curva_example' # str | Identificador de la Curva
-id_intraday = 10 # int | Identificador del Intraday para el cual se consulta (default to 10)
+id_intraday = 10 # int | Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (default to 10)
 id_unidad = 'id_unidad_example' # str | Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO (optional)
-id_base_tasa = 'id_base_tasa_example' # str | Tasa Base en la que se consultan los valores (optional)
+id_base_tasa = 'id_base_tasa_example' # str | Base de la tasa en la que se consultan los valores (optional)
 
 try:
     # Obtiene los valores de una curva para los plazos solicitados.
@@ -149,9 +149,9 @@ fecha = '2013-10-20' # date | Fecha para la cual se consulta
 id_curva = 'id_curva_example' # str | Identificador de la Curva
 plazo_inicial = 1.2 # float | Plazo inicial a consultar en la base consultada
 plazo_final = 1.2 # float | Plazo final a consultar en la base consultada
-id_intraday = 10 # int | Identificador del Intraday para el cual se consulta (default to 10)
+id_intraday = 10 # int | Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (default to 10)
 id_unidad = 'id_unidad_example' # str | Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO (optional)
-id_base_tasa = 'id_base_tasa_example' # str | Tasa Base en la que se consultan los valores (optional)
+id_base_tasa = 'id_base_tasa_example' # str | Base de la tasa en la que se consultan los valores (optional)
 
 try:
     # Obtiene todos los valores de una curva para todos los plazos comprendidos entre el plazo minimo y el maximo.
@@ -173,8 +173,8 @@ fecha_max = '2013-10-20' # date | Intervalo superior de fecha para la que se con
 id_curva = 'id_curva_example' # str | Identificador de la Curva
 plazo = 1.2 # float | Plazos a consultar
 id_unidad = '<i>Unidad base de la Curva</i>' # str | Unidad en la que estan los plazos provistos (default to <i>Unidad base de la Curva</i>)
-id_base_tasa = '<i>Unidad base de la Curva</i>' # str | Tasa Base en la que se consultan los valores (default to <i>Unidad base de la Curva</i>)
-id_intraday = 10 # int | Identificador del Intraday para el cual se consulta (default to 10)
+id_base_tasa = '<i>Unidad base de la Curva</i>' # str | Base de la tasa en la que se consultan los valores (default to <i>Unidad base de la Curva</i>)
+id_intraday = 10 # int | Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (default to 10)
 
 try:
     # Obtiene los valores de una curva para las fechas solicitadas a un plazo fijo.
@@ -224,12 +224,15 @@ Class | Method | HTTP request | Description
 *IndicesApi* | [**indices_retorno_get_interval**](docs/IndicesApi.md#indices_retorno_get_interval) | **POST** /Outputs/Generic/Indices/Retorno/getInterval | Obtiene el valor de los retornos de un Índice para un intervalo de fechas.
 *IntradayApi* | [**intraday_puntas_get_puntas**](docs/IntradayApi.md#intraday_puntas_get_puntas) | **POST** /Outputs/Generic/Intraday/Puntas/getPuntas | Obtiene las puntas de un Instrumento para una fecha.
 *IntradayApi* | [**intraday_transaccion_intraday_get**](docs/IntradayApi.md#intraday_transaccion_intraday_get) | **POST** /Outputs/Generic/Intraday/TransaccionIntraday/get | Obtiene las transacciones Intraday de un instrumento para una fecha.
+*IntradayApi* | [**intraday_valorizacion_intraday_calculadora**](docs/IntradayApi.md#intraday_valorizacion_intraday_calculadora) | **POST** /Outputs/Generic/Intraday/ValorizacionIntraday/calculadora | Obtiene la valorización de un instrumento.
 *IntradayApi* | [**intraday_valorizacion_intraday_familia_get**](docs/IntradayApi.md#intraday_valorizacion_intraday_familia_get) | **POST** /Outputs/Generic/Intraday/ValorizacionIntradayFamilia/get | Obtiene las valorizaciones Intraday para una familia para una fecha.
 *IntradayApi* | [**intraday_valorizacion_intraday_get**](docs/IntradayApi.md#intraday_valorizacion_intraday_get) | **POST** /Outputs/Generic/Intraday/ValorizacionIntraday/get | Obtiene las valorizaciones Intraday de un Instrumento para una fecha.
 *MonedasEIndicadoresApi* | [**monedase_indicadores_monedas_get_tipo_cambio**](docs/MonedasEIndicadoresApi.md#monedase_indicadores_monedas_get_tipo_cambio) | **POST** /Outputs/Generic/Indicadores/Monedas/getTipoCambio | Obtiene el tipo cambio para una fecha específica.
 *MonedasEIndicadoresApi* | [**monedase_indicadores_monedas_get_tipo_cambio_interval**](docs/MonedasEIndicadoresApi.md#monedase_indicadores_monedas_get_tipo_cambio_interval) | **POST** /Outputs/Generic/Indicadores/Monedas/getTipoCambioInterval | Obtiene el tipo cambio para una fecha específica.
 *RFNCalculadoraApi* | [**r_fn_calculadora_calculadora_calcular_con_tir**](docs/RFNCalculadoraApi.md#r_fn_calculadora_calculadora_calcular_con_tir) | **POST** /Outputs/Generic/Calculadora/Calculadora/calcularConTir | Obtiene la valorización de un instrumento para una tasa dada.
 *RFNInformacionApi* | [**r_fn_informacion_informacion_get**](docs/RFNInformacionApi.md#r_fn_informacion_informacion_get) | **POST** /Outputs/Generic/InformacionRF/Informacion/get | Obtiene la información del Instrumento.
+*RFNInformacionApi* | [**r_fn_informacion_informacion_get_all**](docs/RFNInformacionApi.md#r_fn_informacion_informacion_get_all) | **POST** /Outputs/Generic/InformacionRF/Informacion/getAll | Obtiene la información de Instrumentos vigentes para una familia.
+*RFNInformacionApi* | [**r_fn_informacion_informacion_get_familias**](docs/RFNInformacionApi.md#r_fn_informacion_informacion_get_familias) | **POST** /Outputs/Generic/InformacionRF/Informacion/getFamilias | Obtiene las familias de instrumentos disponibles.
 *RFNInformacionApi* | [**r_fn_informacion_informacion_get_interval_tasa_prepago**](docs/RFNInformacionApi.md#r_fn_informacion_informacion_get_interval_tasa_prepago) | **POST** /Outputs/Generic/InformacionRF/Informacion/getIntervalTasaPrepago | Obtiene las tasas de prepago de un instrumento, en un invervalo de tiempo.
 *RFNInformacionApi* | [**r_fn_informacion_informacion_get_prepagos_historicos**](docs/RFNInformacionApi.md#r_fn_informacion_informacion_get_prepagos_historicos) | **POST** /Outputs/Generic/InformacionRF/Informacion/getPrepagosHistoricos | Obtiene los prepagos realizados.
 *RFNInformacionApi* | [**r_fn_informacion_informacion_get_tasa_prepago**](docs/RFNInformacionApi.md#r_fn_informacion_informacion_get_tasa_prepago) | **POST** /Outputs/Generic/InformacionRF/Informacion/getTasaPrepago | Obtiene las tasas de prepago.
@@ -239,20 +242,34 @@ Class | Method | HTTP request | Description
 *RFNInformacionApi* | [**r_fn_informacion_liquidez_get_interval_saldo_custodia_insoluto**](docs/RFNInformacionApi.md#r_fn_informacion_liquidez_get_interval_saldo_custodia_insoluto) | **POST** /Outputs/Generic/InformacionRF/Liquidez/getIntervalSaldoCustodiaInsoluto | Obtiene información histórica del saldo insoluto.
 *RFNInformacionApi* | [**r_fn_informacion_liquidez_get_interval_saldo_custodia_nominal**](docs/RFNInformacionApi.md#r_fn_informacion_liquidez_get_interval_saldo_custodia_nominal) | **POST** /Outputs/Generic/InformacionRF/Liquidez/getIntervalSaldoCustodiaNominal | Obtiene información histórica del saldo de custodia nominal.
 *RFNInformacionApi* | [**r_fn_informacion_riesgo_get**](docs/RFNInformacionApi.md#r_fn_informacion_riesgo_get) | **POST** /Outputs/Generic/InformacionRF/Riesgo/get | Obtiene los cambios de clasificación de riesgo de un instrumento.
+*RFNInformacionApi* | [**r_fn_informacion_tabla_desarrollo_get_cambios_tabla_desarrollo**](docs/RFNInformacionApi.md#r_fn_informacion_tabla_desarrollo_get_cambios_tabla_desarrollo) | **POST** /Outputs/Generic/InformacionRF/TablaDesarrollo/getCambiosTablaDesarrollo | Obtiene la lista de cambios de tablas de desarrollo de los últimos 90 días.
 *RFNInformacionApi* | [**r_fn_informacion_tabla_desarrollo_get_cupones_futuros**](docs/RFNInformacionApi.md#r_fn_informacion_tabla_desarrollo_get_cupones_futuros) | **POST** /Outputs/Generic/InformacionRF/TablaDesarrollo/getCuponesFuturos | Obtiene la tabla de desarrollo residual para un instrumento particular.
+*RFNTransaccionesApi* | [**r_fn_transacciones_colocaciones_get**](docs/RFNTransaccionesApi.md#r_fn_transacciones_colocaciones_get) | **POST** /Outputs/Generic/TransaccionRF/Colocaciones/get | Obtiene todas las colocaciones para una fecha.
+*RFNTransaccionesApi* | [**r_fn_transacciones_colocaciones_get_interval**](docs/RFNTransaccionesApi.md#r_fn_transacciones_colocaciones_get_interval) | **POST** /Outputs/Generic/TransaccionRF/Colocaciones/getInterval | Obtiene las colocaciones para un intervalo de fechas.
 *RFNTransaccionesApi* | [**r_fn_transacciones_transaccion_otc_get**](docs/RFNTransaccionesApi.md#r_fn_transacciones_transaccion_otc_get) | **POST** /Outputs/Generic/TransaccionRF/TransaccionOTC/get | Obtiene las transacciones OTC, ponderadas por monto transado, de un Instrumento para una fecha.
 *RFNTransaccionesApi* | [**r_fn_transacciones_transaccion_otc_get_interval**](docs/RFNTransaccionesApi.md#r_fn_transacciones_transaccion_otc_get_interval) | **POST** /Outputs/Generic/TransaccionRF/TransaccionOTC/getInterval | Obtiene las transacciones OTC, ponderadas por monto transado, de un Instrumento para un intervalo de fechas.
+*RFNTransaccionesApi* | [**r_fn_transacciones_transaccion_otc_get_ultima_transaccion**](docs/RFNTransaccionesApi.md#r_fn_transacciones_transaccion_otc_get_ultima_transaccion) | **POST** /Outputs/Generic/TransaccionRF/TransaccionOTC/getUltimaTransaccion | Obtiene la información de la última transacción OTC de un Instrumento para una fecha.
 *RFNTransaccionesApi* | [**r_fn_transacciones_transaccion_promedio_get**](docs/RFNTransaccionesApi.md#r_fn_transacciones_transaccion_promedio_get) | **POST** /Outputs/Generic/TransaccionRF/TransaccionPromedio/get | Obtiene la transacción promedio de un Instrumento para una fecha.
 *RFNTransaccionesApi* | [**r_fn_transacciones_transaccion_promedio_get_interval**](docs/RFNTransaccionesApi.md#r_fn_transacciones_transaccion_promedio_get_interval) | **POST** /Outputs/Generic/TransaccionRF/TransaccionPromedio/getInterval | Obtiene las transacciones promedio de un Instrumento para un intervalo de fechas.
+*RFNTransaccionesApi* | [**r_fn_transacciones_transaccion_promedio_get_ultima_transaccion**](docs/RFNTransaccionesApi.md#r_fn_transacciones_transaccion_promedio_get_ultima_transaccion) | **POST** /Outputs/Generic/TransaccionRF/TransaccionPromedio/getUltimaTransaccion | Obtiene la información de la última transacción promedio de un Instrumento para una fecha.
 *RFNValorizacionesApi* | [**r_fn_valorizaciones_retornos_get**](docs/RFNValorizacionesApi.md#r_fn_valorizaciones_retornos_get) | **POST** /Outputs/Generic/ValorizacionRF/Retornos/get | Obtiene los Retornos para una fecha.
 *RFNValorizacionesApi* | [**r_fn_valorizaciones_retornos_get_interval**](docs/RFNValorizacionesApi.md#r_fn_valorizaciones_retornos_get_interval) | **POST** /Outputs/Generic/ValorizacionRF/Retornos/getInterval | Obtiene los Retornos para un intervalo de fechas.
+*RFNValorizacionesApi* | [**r_fn_valorizaciones_valorizacion_calculadora**](docs/RFNValorizacionesApi.md#r_fn_valorizaciones_valorizacion_calculadora) | **POST** /Outputs/Generic/ValorizacionRF/Valorizacion/calculadora | Obtiene la valorización de un instrumento.
 *RFNValorizacionesApi* | [**r_fn_valorizaciones_valorizacion_get**](docs/RFNValorizacionesApi.md#r_fn_valorizaciones_valorizacion_get) | **POST** /Outputs/Generic/ValorizacionRF/Valorizacion/get | Obtiene una valorización.
 *RFNValorizacionesApi* | [**r_fn_valorizaciones_valorizacion_get_interval**](docs/RFNValorizacionesApi.md#r_fn_valorizaciones_valorizacion_get_interval) | **POST** /Outputs/Generic/ValorizacionRF/Valorizacion/getInterval | Obtiene las valorizaciones para un intervalo de fechas.
+*RFNValorizacionesSinDesfaseApi* | [**r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora**](docs/RFNValorizacionesSinDesfaseApi.md#r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora) | **POST** /Outputs/Generic/ValorizacionRF/ValorizacionSinDesfase/calculadora | Obtiene la valorización de un instrumento.
 *RFNValorizacionesSinDesfaseApi* | [**r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_get**](docs/RFNValorizacionesSinDesfaseApi.md#r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_get) | **POST** /Outputs/Generic/ValorizacionRF/ValorizacionSinDesfase/get | Obtiene una valorización sin desfase.
 *RFNValorizacionesSinDesfaseApi* | [**r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_get_interval**](docs/RFNValorizacionesSinDesfaseApi.md#r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_get_interval) | **POST** /Outputs/Generic/ValorizacionRF/ValorizacionSinDesfase/getInterval | Obtiene las valorizaciones para un intervalo de fechas, sin desfase.
+*RFNValorizacionesSinDesfaseBulkApi* | [**r_fn_valorizaciones_sin_desfase_bulk_valorizacion_sin_desfase_bulk_get_all**](docs/RFNValorizacionesSinDesfaseBulkApi.md#r_fn_valorizaciones_sin_desfase_bulk_valorizacion_sin_desfase_bulk_get_all) | **POST** /Outputs/Generic/ValorizacionRF/ValorizacionSinDesfaseBulk/getAll | Obtiene una valorización sin desfase para una familia de nemos.
+*RFNValorizacionesSinDesfaseBulkApi* | [**r_fn_valorizaciones_sin_desfase_bulk_valorizacion_sin_desfase_bulk_get_familias**](docs/RFNValorizacionesSinDesfaseBulkApi.md#r_fn_valorizaciones_sin_desfase_bulk_valorizacion_sin_desfase_bulk_get_familias) | **POST** /Outputs/Generic/ValorizacionRF/ValorizacionSinDesfaseBulk/getFamilias | Obtiene las familias de instrumentos disponibles.
+*RFNValorizacionesBulkApi* | [**r_fn_valorizaciones_bulk_valorizacion_bulk_get_all**](docs/RFNValorizacionesBulkApi.md#r_fn_valorizaciones_bulk_valorizacion_bulk_get_all) | **POST** /Outputs/Generic/ValorizacionRF/ValorizacionBulk/getAll | Obtiene valorizaciones para una familia de nemos.
+*RFNValorizacionesBulkApi* | [**r_fn_valorizaciones_bulk_valorizacion_bulk_get_familias**](docs/RFNValorizacionesBulkApi.md#r_fn_valorizaciones_bulk_valorizacion_bulk_get_familias) | **POST** /Outputs/Generic/ValorizacionRF/ValorizacionBulk/getFamilias | Obtiene las familias de instrumentos disponibles.
 *RVNValorizacionesApi* | [**r_vn_valorizaciones_valorizacion_get**](docs/RVNValorizacionesApi.md#r_vn_valorizaciones_valorizacion_get) | **POST** /Outputs/Generic/ValorizacionRVN/Valorizacion/get | Obtiene una valorización de renta variable nacional.
 *RVNValorizacionesApi* | [**r_vn_valorizaciones_valorizacion_get_interval**](docs/RVNValorizacionesApi.md#r_vn_valorizaciones_valorizacion_get_interval) | **POST** /Outputs/Generic/ValorizacionRVN/Valorizacion/getInterval | Obtiene las valorizaciones de renta variable nacional para un intervalo de fechas.
 *RVNValorizacionesApi* | [**r_vn_valorizaciones_valorizacion_get_status**](docs/RVNValorizacionesApi.md#r_vn_valorizaciones_valorizacion_get_status) | **POST** /Outputs/Generic/ValorizacionRVN/Valorizacion/getStatus | Revisa el status del servicio de valorizacion para la fecha seleccionada.
+*SicApi* | [**sic_ajuste_tipo_i_download_file**](docs/SicApi.md#sic_ajuste_tipo_i_download_file) | **POST** /Outputs/Generic/SIC/AjusteTipoI/downloadFile | Descarga la cartera ajustada Descarga la cartera ajustada
+*SicApi* | [**sic_ajuste_tipo_i_get_parametros**](docs/SicApi.md#sic_ajuste_tipo_i_get_parametros) | **POST** /Outputs/Generic/SIC/AjusteTipoI/getParametros | Obtiene el listado de los parámetros posibles a ser usados en un ajuste.
+*SicApi* | [**sic_ajuste_tipo_i_get_resultado**](docs/SicApi.md#sic_ajuste_tipo_i_get_resultado) | **POST** /Outputs/Generic/SIC/AjusteTipoI/getResultado | Genera y muestra la cartera ajustada.
 *SicApi* | [**sic_detalle_cartera_get_table**](docs/SicApi.md#sic_detalle_cartera_get_table) | **POST** /Outputs/Generic/SIC/DetalleCartera/getTable | Obtiene la informacion de detalle de cartera para un fondo y un tipo de activo
 *SicApi* | [**sic_general_get_ejercicios**](docs/SicApi.md#sic_general_get_ejercicios) | **POST** /Outputs/Generic/SIC/General/getEjercicios | Obtiene el listado de los ejercicios vigentes
 *SicApi* | [**sic_general_get_fondos**](docs/SicApi.md#sic_general_get_fondos) | **POST** /Outputs/Generic/SIC/General/getFondos | Obtiene el listado de los fondos existentes.
@@ -307,47 +324,48 @@ Class | Method | HTTP request | Description
  - [InlineResponse20023Message](docs/InlineResponse20023Message.md)
  - [InlineResponse20024](docs/InlineResponse20024.md)
  - [InlineResponse20024Message](docs/InlineResponse20024Message.md)
+ - [InlineResponse20024MessageValorizacion](docs/InlineResponse20024MessageValorizacion.md)
  - [InlineResponse20025](docs/InlineResponse20025.md)
- - [InlineResponse20025Message](docs/InlineResponse20025Message.md)
  - [InlineResponse20026](docs/InlineResponse20026.md)
  - [InlineResponse20026Message](docs/InlineResponse20026Message.md)
- - [InlineResponse20026MessageInstrumento](docs/InlineResponse20026MessageInstrumento.md)
+ - [InlineResponse20026MessageValorizacion](docs/InlineResponse20026MessageValorizacion.md)
  - [InlineResponse20027](docs/InlineResponse20027.md)
  - [InlineResponse20027Message](docs/InlineResponse20027Message.md)
  - [InlineResponse20028](docs/InlineResponse20028.md)
  - [InlineResponse20028Message](docs/InlineResponse20028Message.md)
  - [InlineResponse20029](docs/InlineResponse20029.md)
  - [InlineResponse20029Message](docs/InlineResponse20029Message.md)
+ - [InlineResponse20029MessageValorizacion](docs/InlineResponse20029MessageValorizacion.md)
  - [InlineResponse2002Message](docs/InlineResponse2002Message.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse20030](docs/InlineResponse20030.md)
+ - [InlineResponse20030Message](docs/InlineResponse20030Message.md)
  - [InlineResponse20031](docs/InlineResponse20031.md)
- - [InlineResponse20031Clasificacion](docs/InlineResponse20031Clasificacion.md)
  - [InlineResponse20031Message](docs/InlineResponse20031Message.md)
+ - [InlineResponse20031MessageValorizacion](docs/InlineResponse20031MessageValorizacion.md)
  - [InlineResponse20032](docs/InlineResponse20032.md)
  - [InlineResponse20032Message](docs/InlineResponse20032Message.md)
- - [InlineResponse20032MessageLiquidez](docs/InlineResponse20032MessageLiquidez.md)
  - [InlineResponse20033](docs/InlineResponse20033.md)
  - [InlineResponse20033Message](docs/InlineResponse20033Message.md)
+ - [InlineResponse20033MessageValorizacion](docs/InlineResponse20033MessageValorizacion.md)
  - [InlineResponse20034](docs/InlineResponse20034.md)
  - [InlineResponse20034Message](docs/InlineResponse20034Message.md)
+ - [InlineResponse20034MessageInstrumento](docs/InlineResponse20034MessageInstrumento.md)
  - [InlineResponse20035](docs/InlineResponse20035.md)
  - [InlineResponse20035Message](docs/InlineResponse20035Message.md)
  - [InlineResponse20036](docs/InlineResponse20036.md)
  - [InlineResponse20036Message](docs/InlineResponse20036Message.md)
- - [InlineResponse20036MessageTablaDesarrollo](docs/InlineResponse20036MessageTablaDesarrollo.md)
  - [InlineResponse20037](docs/InlineResponse20037.md)
  - [InlineResponse20037Message](docs/InlineResponse20037Message.md)
- - [InlineResponse20037MessageValorizacion](docs/InlineResponse20037MessageValorizacion.md)
  - [InlineResponse20038](docs/InlineResponse20038.md)
- - [InlineResponse20038Message](docs/InlineResponse20038Message.md)
  - [InlineResponse20039](docs/InlineResponse20039.md)
+ - [InlineResponse20039Clasificacion](docs/InlineResponse20039Clasificacion.md)
  - [InlineResponse20039Message](docs/InlineResponse20039Message.md)
  - [InlineResponse2003Message](docs/InlineResponse2003Message.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse20040](docs/InlineResponse20040.md)
  - [InlineResponse20040Message](docs/InlineResponse20040Message.md)
- - [InlineResponse20040MessageIssues](docs/InlineResponse20040MessageIssues.md)
+ - [InlineResponse20040MessageLiquidez](docs/InlineResponse20040MessageLiquidez.md)
  - [InlineResponse20041](docs/InlineResponse20041.md)
  - [InlineResponse20041Message](docs/InlineResponse20041Message.md)
  - [InlineResponse20042](docs/InlineResponse20042.md)
@@ -356,19 +374,19 @@ Class | Method | HTTP request | Description
  - [InlineResponse20043Message](docs/InlineResponse20043Message.md)
  - [InlineResponse20044](docs/InlineResponse20044.md)
  - [InlineResponse20044Message](docs/InlineResponse20044Message.md)
- - [InlineResponse20044MessageContribucion](docs/InlineResponse20044MessageContribucion.md)
- - [InlineResponse20044MessagePerformance](docs/InlineResponse20044MessagePerformance.md)
- - [InlineResponse20044MessagePosicion](docs/InlineResponse20044MessagePosicion.md)
- - [InlineResponse20044MessagePosicionPosicionFondo](docs/InlineResponse20044MessagePosicionPosicionFondo.md)
+ - [InlineResponse20044MessageTablaDesarrollo](docs/InlineResponse20044MessageTablaDesarrollo.md)
  - [InlineResponse20045](docs/InlineResponse20045.md)
+ - [InlineResponse20045Message](docs/InlineResponse20045Message.md)
  - [InlineResponse20046](docs/InlineResponse20046.md)
  - [InlineResponse20046Message](docs/InlineResponse20046Message.md)
+ - [InlineResponse20046MessageValorizacion](docs/InlineResponse20046MessageValorizacion.md)
  - [InlineResponse20047](docs/InlineResponse20047.md)
  - [InlineResponse20047Message](docs/InlineResponse20047Message.md)
  - [InlineResponse20048](docs/InlineResponse20048.md)
  - [InlineResponse20048Message](docs/InlineResponse20048Message.md)
  - [InlineResponse20049](docs/InlineResponse20049.md)
  - [InlineResponse20049Message](docs/InlineResponse20049Message.md)
+ - [InlineResponse20049MessageIssues](docs/InlineResponse20049MessageIssues.md)
  - [InlineResponse2004Message](docs/InlineResponse2004Message.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
  - [InlineResponse20050](docs/InlineResponse20050.md)
@@ -377,26 +395,53 @@ Class | Method | HTTP request | Description
  - [InlineResponse20051Message](docs/InlineResponse20051Message.md)
  - [InlineResponse20052](docs/InlineResponse20052.md)
  - [InlineResponse20052Message](docs/InlineResponse20052Message.md)
- - [InlineResponse20052MessageValorizacion](docs/InlineResponse20052MessageValorizacion.md)
  - [InlineResponse20053](docs/InlineResponse20053.md)
  - [InlineResponse20053Message](docs/InlineResponse20053Message.md)
- - [InlineResponse20053MessageValorizacion](docs/InlineResponse20053MessageValorizacion.md)
+ - [InlineResponse20053MessageContribucion](docs/InlineResponse20053MessageContribucion.md)
+ - [InlineResponse20053MessagePerformance](docs/InlineResponse20053MessagePerformance.md)
+ - [InlineResponse20053MessagePosicion](docs/InlineResponse20053MessagePosicion.md)
+ - [InlineResponse20053MessagePosicionPosicionFondo](docs/InlineResponse20053MessagePosicionPosicionFondo.md)
  - [InlineResponse20054](docs/InlineResponse20054.md)
- - [InlineResponse20054Message](docs/InlineResponse20054Message.md)
- - [InlineResponse20054MessageValorizacion](docs/InlineResponse20054MessageValorizacion.md)
  - [InlineResponse20055](docs/InlineResponse20055.md)
  - [InlineResponse20055Message](docs/InlineResponse20055Message.md)
- - [InlineResponse20055MessageInstrumento](docs/InlineResponse20055MessageInstrumento.md)
  - [InlineResponse20056](docs/InlineResponse20056.md)
  - [InlineResponse20056Message](docs/InlineResponse20056Message.md)
  - [InlineResponse20057](docs/InlineResponse20057.md)
  - [InlineResponse20057Message](docs/InlineResponse20057Message.md)
  - [InlineResponse20058](docs/InlineResponse20058.md)
  - [InlineResponse20058Message](docs/InlineResponse20058Message.md)
+ - [InlineResponse20059](docs/InlineResponse20059.md)
+ - [InlineResponse20059Message](docs/InlineResponse20059Message.md)
  - [InlineResponse2005Message](docs/InlineResponse2005Message.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
+ - [InlineResponse20060](docs/InlineResponse20060.md)
+ - [InlineResponse20060Message](docs/InlineResponse20060Message.md)
+ - [InlineResponse20061](docs/InlineResponse20061.md)
+ - [InlineResponse20061Message](docs/InlineResponse20061Message.md)
+ - [InlineResponse20062](docs/InlineResponse20062.md)
+ - [InlineResponse20062Message](docs/InlineResponse20062Message.md)
+ - [InlineResponse20063](docs/InlineResponse20063.md)
+ - [InlineResponse20063Message](docs/InlineResponse20063Message.md)
+ - [InlineResponse20063MessageValorizacion](docs/InlineResponse20063MessageValorizacion.md)
+ - [InlineResponse20064](docs/InlineResponse20064.md)
+ - [InlineResponse20064Message](docs/InlineResponse20064Message.md)
+ - [InlineResponse20064MessageValorizacion](docs/InlineResponse20064MessageValorizacion.md)
+ - [InlineResponse20065](docs/InlineResponse20065.md)
+ - [InlineResponse20065Message](docs/InlineResponse20065Message.md)
+ - [InlineResponse20065MessageValorizacion](docs/InlineResponse20065MessageValorizacion.md)
+ - [InlineResponse20066](docs/InlineResponse20066.md)
+ - [InlineResponse20066Message](docs/InlineResponse20066Message.md)
+ - [InlineResponse20067](docs/InlineResponse20067.md)
+ - [InlineResponse20067Message](docs/InlineResponse20067Message.md)
+ - [InlineResponse20067MessageInstrumento](docs/InlineResponse20067MessageInstrumento.md)
+ - [InlineResponse20068](docs/InlineResponse20068.md)
+ - [InlineResponse20068Message](docs/InlineResponse20068Message.md)
+ - [InlineResponse20068MessageValorizacion](docs/InlineResponse20068MessageValorizacion.md)
+ - [InlineResponse20069](docs/InlineResponse20069.md)
  - [InlineResponse2006Message](docs/InlineResponse2006Message.md)
  - [InlineResponse2007](docs/InlineResponse2007.md)
+ - [InlineResponse20070](docs/InlineResponse20070.md)
+ - [InlineResponse20070Message](docs/InlineResponse20070Message.md)
  - [InlineResponse2007Message](docs/InlineResponse2007Message.md)
  - [InlineResponse2008](docs/InlineResponse2008.md)
  - [InlineResponse2008Message](docs/InlineResponse2008Message.md)

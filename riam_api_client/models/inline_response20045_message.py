@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -32,66 +32,68 @@ class InlineResponse20045Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'estado': 'str',
-        'warnings': 'list[str]'
+        'nemo': 'str',
+        'fecha_cambio_tabla_desarrollo': 'date'
     }
 
     attribute_map = {
-        'estado': 'estado',
-        'warnings': 'warnings'
+        'nemo': 'nemo',
+        'fecha_cambio_tabla_desarrollo': 'fechaCambioTablaDesarrollo'
     }
 
-    def __init__(self, estado=None, warnings=None):  # noqa: E501
+    def __init__(self, nemo=None, fecha_cambio_tabla_desarrollo=None):  # noqa: E501
         """InlineResponse20045Message - a model defined in Swagger"""  # noqa: E501
-        self._estado = None
-        self._warnings = None
+        self._nemo = None
+        self._fecha_cambio_tabla_desarrollo = None
         self.discriminator = None
-        if estado is not None:
-            self.estado = estado
-        if warnings is not None:
-            self.warnings = warnings
+        if nemo is not None:
+            self.nemo = nemo
+        if fecha_cambio_tabla_desarrollo is not None:
+            self.fecha_cambio_tabla_desarrollo = fecha_cambio_tabla_desarrollo
 
     @property
-    def estado(self):
-        """Gets the estado of this InlineResponse20045Message.  # noqa: E501
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+    def nemo(self):
+        """Gets the nemo of this InlineResponse20045Message.  # noqa: E501
+        nemo con cambio en la tabla de desarrollo  # noqa: E501
 
-        :return: The estado of this InlineResponse20045Message.  # noqa: E501
+        :return: The nemo of this InlineResponse20045Message.  # noqa: E501
         :rtype: str
         """
-        return self._estado
+        return self._nemo
 
-    @estado.setter
-    def estado(self, estado):
-        """Sets the estado of this InlineResponse20045Message.
+    @nemo.setter
+    def nemo(self, nemo):
+        """Sets the nemo of this InlineResponse20045Message.
 
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+        nemo con cambio en la tabla de desarrollo  # noqa: E501
 
-        :param estado: The estado of this InlineResponse20045Message.  # noqa: E501
+        :param nemo: The nemo of this InlineResponse20045Message.  # noqa: E501
         :type: str
         """
 
-        self._estado = estado
+        self._nemo = nemo
 
     @property
-    def warnings(self):
-        """Gets the warnings of this InlineResponse20045Message.  # noqa: E501
+    def fecha_cambio_tabla_desarrollo(self):
+        """Gets the fecha_cambio_tabla_desarrollo of this InlineResponse20045Message.  # noqa: E501
+        fecha de cambio en la tabla de desarrollo  # noqa: E501
 
-        :return: The warnings of this InlineResponse20045Message.  # noqa: E501
-        :rtype: list[str]
+        :return: The fecha_cambio_tabla_desarrollo of this InlineResponse20045Message.  # noqa: E501
+        :rtype: date
         """
-        return self._warnings
+        return self._fecha_cambio_tabla_desarrollo
 
-    @warnings.setter
-    def warnings(self, warnings):
-        """Sets the warnings of this InlineResponse20045Message.
+    @fecha_cambio_tabla_desarrollo.setter
+    def fecha_cambio_tabla_desarrollo(self, fecha_cambio_tabla_desarrollo):
+        """Sets the fecha_cambio_tabla_desarrollo of this InlineResponse20045Message.
 
+        fecha de cambio en la tabla de desarrollo  # noqa: E501
 
-        :param warnings: The warnings of this InlineResponse20045Message.  # noqa: E501
-        :type: list[str]
+        :param fecha_cambio_tabla_desarrollo: The fecha_cambio_tabla_desarrollo of this InlineResponse20045Message.  # noqa: E501
+        :type: date
         """
 
-        self._warnings = warnings
+        self._fecha_cambio_tabla_desarrollo = fecha_cambio_tabla_desarrollo
 
     def to_dict(self):
         """Returns the model properties as a dict"""

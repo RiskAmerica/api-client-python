@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -17,13 +17,16 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20045
-from . import InlineResponse20042
-from . import InlineResponse20041
-from . import InlineResponse20043
-from . import InlineResponse20044
-from . import InlineResponse20045
-from . import InlineResponse20040
+from . import InlineResponse20054
+from . import InlineResponse20055
+from . import InlineResponse20056
+from . import InlineResponse20054
+from . import InlineResponse20051
+from . import InlineResponse20050
+from . import InlineResponse20052
+from . import InlineResponse20053
+from . import InlineResponse20054
+from . import InlineResponse20049
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -41,6 +44,313 @@ class SicApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def sic_ajuste_tipo_i_download_file(self, id_parametro, id_ajuste_file_type, **kwargs):  # noqa: E501
+        """Descarga la cartera ajustada Descarga la cartera ajustada  # noqa: E501
+
+        Descarga la cartera ajustada Descarga la cartera ajustada  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_ajuste_tipo_i_download_file(id_parametro, id_ajuste_file_type, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id_parametro: Identificador del set de parámetros a usar ( Se obtiene del método Generic/SIC/AjusteTipoI/getParametros (required)
+        :param int id_ajuste_file_type: Identificador del tipo de salida a generar ( 1=XML_RF, 2=XML_DERIVADOS, 4=XML_CONSOLIDADO) (required)
+        :return: InlineResponse20054
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20054 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.sic_ajuste_tipo_i_download_file_with_http_info(id_parametro, id_ajuste_file_type, **kwargs)  # noqa: E501
+        else:
+            (data) = self.sic_ajuste_tipo_i_download_file_with_http_info(id_parametro, id_ajuste_file_type, **kwargs)  # noqa: E501
+            return data
+
+    def sic_ajuste_tipo_i_download_file_with_http_info(self, id_parametro, id_ajuste_file_type, **kwargs):  # noqa: E501
+        """Descarga la cartera ajustada Descarga la cartera ajustada  # noqa: E501
+
+        Descarga la cartera ajustada Descarga la cartera ajustada  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_ajuste_tipo_i_download_file_with_http_info(id_parametro, id_ajuste_file_type, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id_parametro: Identificador del set de parámetros a usar ( Se obtiene del método Generic/SIC/AjusteTipoI/getParametros (required)
+        :param int id_ajuste_file_type: Identificador del tipo de salida a generar ( 1=XML_RF, 2=XML_DERIVADOS, 4=XML_CONSOLIDADO) (required)
+        :return: InlineResponse20054
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20054 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['id_parametro', 'id_ajuste_file_type']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sic_ajuste_tipo_i_download_file" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id_parametro' is set
+        if ('id_parametro' not in params or
+                params['id_parametro'] is None):
+            raise ValueError("Missing the required parameter `id_parametro` when calling `sic_ajuste_tipo_i_download_file`")  # noqa: E501
+        # verify the required parameter 'id_ajuste_file_type' is set
+        if ('id_ajuste_file_type' not in params or
+                params['id_ajuste_file_type'] is None):
+            raise ValueError("Missing the required parameter `id_ajuste_file_type` when calling `sic_ajuste_tipo_i_download_file`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'id_parametro' in params:
+            query_params.append(('idParametro', params['id_parametro']))  # noqa: E501
+        if 'id_ajuste_file_type' in params:
+            query_params.append(('idAjusteFileType', params['id_ajuste_file_type']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/SIC/AjusteTipoI/downloadFile', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20054',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def sic_ajuste_tipo_i_get_parametros(self, **kwargs):  # noqa: E501
+        """Obtiene el listado de los parámetros posibles a ser usados en un ajuste.  # noqa: E501
+
+        Obtiene el listado de los parámetros posibles a ser usados en un ajuste. Nuevos parámetros pueden ser creados en el sitio web apps.riskamerica.com.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_ajuste_tipo_i_get_parametros(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: InlineResponse20055
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20055 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.sic_ajuste_tipo_i_get_parametros_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.sic_ajuste_tipo_i_get_parametros_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def sic_ajuste_tipo_i_get_parametros_with_http_info(self, **kwargs):  # noqa: E501
+        """Obtiene el listado de los parámetros posibles a ser usados en un ajuste.  # noqa: E501
+
+        Obtiene el listado de los parámetros posibles a ser usados en un ajuste. Nuevos parámetros pueden ser creados en el sitio web apps.riskamerica.com.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_ajuste_tipo_i_get_parametros_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: InlineResponse20055
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20055 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sic_ajuste_tipo_i_get_parametros" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/SIC/AjusteTipoI/getParametros', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20055',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def sic_ajuste_tipo_i_get_resultado(self, id_fondo, id_parametro, fecha, **kwargs):  # noqa: E501
+        """Genera y muestra la cartera ajustada.  # noqa: E501
+
+        Genera y muestra la cartera ajustada.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_ajuste_tipo_i_get_resultado(id_fondo, id_parametro, fecha, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id_fondo: Identificador del fondo al cual realizar el ajuste ( Se obtiene del método Generic/SIC/General/getFondos ) (required)
+        :param int id_parametro: Identificador del set de parámetros a usar ( Se obtiene del método Generic/SIC/AjusteTipoI/getParametros ) (required)
+        :param date fecha: Fecha de la cartera a la cual realizarle el ajuste (required)
+        :return: InlineResponse20056
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20056 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.sic_ajuste_tipo_i_get_resultado_with_http_info(id_fondo, id_parametro, fecha, **kwargs)  # noqa: E501
+        else:
+            (data) = self.sic_ajuste_tipo_i_get_resultado_with_http_info(id_fondo, id_parametro, fecha, **kwargs)  # noqa: E501
+            return data
+
+    def sic_ajuste_tipo_i_get_resultado_with_http_info(self, id_fondo, id_parametro, fecha, **kwargs):  # noqa: E501
+        """Genera y muestra la cartera ajustada.  # noqa: E501
+
+        Genera y muestra la cartera ajustada.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sic_ajuste_tipo_i_get_resultado_with_http_info(id_fondo, id_parametro, fecha, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id_fondo: Identificador del fondo al cual realizar el ajuste ( Se obtiene del método Generic/SIC/General/getFondos ) (required)
+        :param int id_parametro: Identificador del set de parámetros a usar ( Se obtiene del método Generic/SIC/AjusteTipoI/getParametros ) (required)
+        :param date fecha: Fecha de la cartera a la cual realizarle el ajuste (required)
+        :return: InlineResponse20056
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20056 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['id_fondo', 'id_parametro', 'fecha']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method sic_ajuste_tipo_i_get_resultado" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id_fondo' is set
+        if ('id_fondo' not in params or
+                params['id_fondo'] is None):
+            raise ValueError("Missing the required parameter `id_fondo` when calling `sic_ajuste_tipo_i_get_resultado`")  # noqa: E501
+        # verify the required parameter 'id_parametro' is set
+        if ('id_parametro' not in params or
+                params['id_parametro'] is None):
+            raise ValueError("Missing the required parameter `id_parametro` when calling `sic_ajuste_tipo_i_get_resultado`")  # noqa: E501
+        # verify the required parameter 'fecha' is set
+        if ('fecha' not in params or
+                params['fecha'] is None):
+            raise ValueError("Missing the required parameter `fecha` when calling `sic_ajuste_tipo_i_get_resultado`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'id_fondo' in params:
+            query_params.append(('idFondo', params['id_fondo']))  # noqa: E501
+        if 'id_parametro' in params:
+            query_params.append(('idParametro', params['id_parametro']))  # noqa: E501
+        if 'fecha' in params:
+            query_params.append(('fecha', params['fecha']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/SIC/AjusteTipoI/getResultado', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20056',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def sic_detalle_cartera_get_table(self, fecha, id_fondo, tipo_activo, **kwargs):  # noqa: E501
         """Obtiene la informacion de detalle de cartera para un fondo y un tipo de activo  # noqa: E501
 
@@ -54,10 +364,10 @@ class SicApi(object):
         :param date fecha: Fecha a consultar (required)
         :param int id_fondo: idFondo a consutal (required)
         :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
-        :return: InlineResponse20045
+        :return: InlineResponse20054
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20045 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20054 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -79,10 +389,10 @@ class SicApi(object):
         :param date fecha: Fecha a consultar (required)
         :param int id_fondo: idFondo a consutal (required)
         :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
-        :return: InlineResponse20045
+        :return: InlineResponse20054
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20045 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20054 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'id_fondo', 'tipo_activo']  # noqa: E501
@@ -146,7 +456,7 @@ class SicApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20045',  # noqa: E501
+            response_type='InlineResponse20054',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -165,10 +475,10 @@ class SicApi(object):
 
         :param async_req bool
         :param int id_fondo: Identificador del fondo para el cual obtener los ejercicios (required)
-        :return: InlineResponse20042
+        :return: InlineResponse20051
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20042 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20051 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -188,10 +498,10 @@ class SicApi(object):
 
         :param async_req bool
         :param int id_fondo: Identificador del fondo para el cual obtener los ejercicios (required)
-        :return: InlineResponse20042
+        :return: InlineResponse20051
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20042 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20051 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['id_fondo']  # noqa: E501
@@ -243,7 +553,7 @@ class SicApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20042',  # noqa: E501
+            response_type='InlineResponse20051',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -261,10 +571,10 @@ class SicApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20041
+        :return: InlineResponse20050
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20041 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20050 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -283,10 +593,10 @@ class SicApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20041
+        :return: InlineResponse20050
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20041 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20050 | multiprocessing.pool.ApplyResult
         """
 
         all_params = []  # noqa: E501
@@ -332,7 +642,7 @@ class SicApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20041',  # noqa: E501
+            response_type='InlineResponse20050',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -352,10 +662,10 @@ class SicApi(object):
         :param async_req bool
         :param int id_ejercicio: idEjercicio a Consultar (required)
         :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
-        :return: InlineResponse20043
+        :return: InlineResponse20052
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20043 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20052 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -376,10 +686,10 @@ class SicApi(object):
         :param async_req bool
         :param int id_ejercicio: idEjercicio a Consultar (required)
         :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
-        :return: InlineResponse20043
+        :return: InlineResponse20052
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20043 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20052 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['id_ejercicio', 'tipo_activo']  # noqa: E501
@@ -437,7 +747,7 @@ class SicApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20043',  # noqa: E501
+            response_type='InlineResponse20052',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -458,10 +768,10 @@ class SicApi(object):
         :param date fecha: Fecha a consultar (required)
         :param str horizonte: Horizonte a consultar. YTD, MTD o Diario (required)
         :param int id_ejercicio: idEjercicio a Consultar (required)
-        :return: InlineResponse20044
+        :return: InlineResponse20053
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20044 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20053 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -483,10 +793,10 @@ class SicApi(object):
         :param date fecha: Fecha a consultar (required)
         :param str horizonte: Horizonte a consultar. YTD, MTD o Diario (required)
         :param int id_ejercicio: idEjercicio a Consultar (required)
-        :return: InlineResponse20044
+        :return: InlineResponse20053
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20044 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20053 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'horizonte', 'id_ejercicio']  # noqa: E501
@@ -550,7 +860,7 @@ class SicApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20044',  # noqa: E501
+            response_type='InlineResponse20053',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -570,16 +880,16 @@ class SicApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
         :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
-        :param str tabla_analisis: tabla del analisis a obtener. Pesos, Retornos, ContribRetornos, Performance (required)
+        :param str tabla_analisis: tabla del analisis a obtener. Pesos, Pesos_Contra_Total (%Fondo), Montos (MM$), Retornos, ContribRetornos, Performance (required)
         :param str horizonte: Horizonte a consultar. YTD, MTD o Diario (required)
         :param int id_ejercicio: idEjercicio a Consultar (required)
         :param str tipo_portafolio: tipo de Portafolio. Fondo, Benchmark, Diferencia (required)
         :param int id_orden: idOrden obtenido de getidOrden (required)
         :param str tipo_performance: tipo de Performance. Solo se utiliza cuando la tablaAnalisis es igual a \"Performance\"
-        :return: InlineResponse20045
+        :return: InlineResponse20054
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20045 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20054 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -600,16 +910,16 @@ class SicApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
         :param str tipo_activo: tipo de activo. RFN, RFI, RVN, RVI, DERIVADOS (required)
-        :param str tabla_analisis: tabla del analisis a obtener. Pesos, Retornos, ContribRetornos, Performance (required)
+        :param str tabla_analisis: tabla del analisis a obtener. Pesos, Pesos_Contra_Total (%Fondo), Montos (MM$), Retornos, ContribRetornos, Performance (required)
         :param str horizonte: Horizonte a consultar. YTD, MTD o Diario (required)
         :param int id_ejercicio: idEjercicio a Consultar (required)
         :param str tipo_portafolio: tipo de Portafolio. Fondo, Benchmark, Diferencia (required)
         :param int id_orden: idOrden obtenido de getidOrden (required)
         :param str tipo_performance: tipo de Performance. Solo se utiliza cuando la tablaAnalisis es igual a \"Performance\"
-        :return: InlineResponse20045
+        :return: InlineResponse20054
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20045 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20054 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'tipo_activo', 'tabla_analisis', 'horizonte', 'id_ejercicio', 'tipo_portafolio', 'id_orden', 'tipo_performance']  # noqa: E501
@@ -699,7 +1009,7 @@ class SicApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20045',  # noqa: E501
+            response_type='InlineResponse20054',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -719,10 +1029,10 @@ class SicApi(object):
         :param async_req bool
         :param str file: (required)
         :param str id_file_type: Tipo de Archivo a cargar (1: CSV, 2: XLS, 3: XML) (required)
-        :return: InlineResponse20040
+        :return: InlineResponse20049
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20040 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20049 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -743,10 +1053,10 @@ class SicApi(object):
         :param async_req bool
         :param str file: (required)
         :param str id_file_type: Tipo de Archivo a cargar (1: CSV, 2: XLS, 3: XML) (required)
-        :return: InlineResponse20040
+        :return: InlineResponse20049
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20040 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20049 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['file', 'id_file_type']  # noqa: E501
@@ -808,7 +1118,7 @@ class SicApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20040',  # noqa: E501
+            response_type='InlineResponse20049',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

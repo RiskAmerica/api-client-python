@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20046_message_valorizacion import InlineResponse20046MessageValorizacion
 
 
 
@@ -32,95 +33,39 @@ class InlineResponse20046Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'short_name': 'str',
-        'long_name': 'str'
+        'valorizacion': 'InlineResponse20046MessageValorizacion'
     }
 
     attribute_map = {
-        'id': 'id',
-        'short_name': 'shortName',
-        'long_name': 'longName'
+        'valorizacion': 'Valorizacion'
     }
 
-    def __init__(self, id=None, short_name=None, long_name=None):  # noqa: E501
+    def __init__(self, valorizacion=None):  # noqa: E501
         """InlineResponse20046Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._short_name = None
-        self._long_name = None
+        self._valorizacion = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
+        if valorizacion is not None:
+            self.valorizacion = valorizacion
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20046Message.  # noqa: E501
-        Identificador del Tipo de Valorización  # noqa: E501
+    def valorizacion(self):
+        """Gets the valorizacion of this InlineResponse20046Message.  # noqa: E501
 
-        :return: The id of this InlineResponse20046Message.  # noqa: E501
-        :rtype: str
+        :return: The valorizacion of this InlineResponse20046Message.  # noqa: E501
+        :rtype: InlineResponse20046MessageValorizacion
         """
-        return self._id
+        return self._valorizacion
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20046Message.
+    @valorizacion.setter
+    def valorizacion(self, valorizacion):
+        """Sets the valorizacion of this InlineResponse20046Message.
 
-        Identificador del Tipo de Valorización  # noqa: E501
 
-        :param id: The id of this InlineResponse20046Message.  # noqa: E501
-        :type: str
+        :param valorizacion: The valorizacion of this InlineResponse20046Message.  # noqa: E501
+        :type: InlineResponse20046MessageValorizacion
         """
 
-        self._id = id
-
-    @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse20046Message.  # noqa: E501
-        Título del Tipo de Valorización  # noqa: E501
-
-        :return: The short_name of this InlineResponse20046Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._short_name
-
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse20046Message.
-
-        Título del Tipo de Valorización  # noqa: E501
-
-        :param short_name: The short_name of this InlineResponse20046Message.  # noqa: E501
-        :type: str
-        """
-
-        self._short_name = short_name
-
-    @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse20046Message.  # noqa: E501
-        Descripción del Tipo de Valorizacion  # noqa: E501
-
-        :return: The long_name of this InlineResponse20046Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._long_name
-
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse20046Message.
-
-        Descripción del Tipo de Valorizacion  # noqa: E501
-
-        :param long_name: The long_name of this InlineResponse20046Message.  # noqa: E501
-        :type: str
-        """
-
-        self._long_name = long_name
+        self._valorizacion = valorizacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

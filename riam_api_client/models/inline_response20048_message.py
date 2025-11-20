@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -32,122 +32,122 @@ class InlineResponse20048Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'short_name': 'str',
-        'long_name': 'str',
-        'mime_type': 'str'
+        'fecha': 'date',
+        'moneda': 'str',
+        'base': 'str',
+        'valor': 'float'
     }
 
     attribute_map = {
-        'id': 'id',
-        'short_name': 'shortName',
-        'long_name': 'longName',
-        'mime_type': 'mimeType'
+        'fecha': 'fecha',
+        'moneda': 'moneda',
+        'base': 'base',
+        'valor': 'valor'
     }
 
-    def __init__(self, id=None, short_name=None, long_name=None, mime_type=None):  # noqa: E501
+    def __init__(self, fecha=None, moneda=None, base=None, valor=None):  # noqa: E501
         """InlineResponse20048Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._short_name = None
-        self._long_name = None
-        self._mime_type = None
+        self._fecha = None
+        self._moneda = None
+        self._base = None
+        self._valor = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
-        if mime_type is not None:
-            self.mime_type = mime_type
+        if fecha is not None:
+            self.fecha = fecha
+        if moneda is not None:
+            self.moneda = moneda
+        if base is not None:
+            self.base = base
+        if valor is not None:
+            self.valor = valor
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20048Message.  # noqa: E501
-        Identificador del formato de carga  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20048Message.  # noqa: E501
+        Fecha del tipo cambio segun estandar del Banco Central  # noqa: E501
 
-        :return: The id of this InlineResponse20048Message.  # noqa: E501
-        :rtype: int
+        :return: The fecha of this InlineResponse20048Message.  # noqa: E501
+        :rtype: date
         """
-        return self._id
+        return self._fecha
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20048Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20048Message.
 
-        Identificador del formato de carga  # noqa: E501
+        Fecha del tipo cambio segun estandar del Banco Central  # noqa: E501
 
-        :param id: The id of this InlineResponse20048Message.  # noqa: E501
-        :type: int
+        :param fecha: The fecha of this InlineResponse20048Message.  # noqa: E501
+        :type: date
         """
 
-        self._id = id
+        self._fecha = fecha
 
     @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse20048Message.  # noqa: E501
-        Título del formato de carga  # noqa: E501
+    def moneda(self):
+        """Gets the moneda of this InlineResponse20048Message.  # noqa: E501
+        Moneda consultada  # noqa: E501
 
-        :return: The short_name of this InlineResponse20048Message.  # noqa: E501
+        :return: The moneda of this InlineResponse20048Message.  # noqa: E501
         :rtype: str
         """
-        return self._short_name
+        return self._moneda
 
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse20048Message.
+    @moneda.setter
+    def moneda(self, moneda):
+        """Sets the moneda of this InlineResponse20048Message.
 
-        Título del formato de carga  # noqa: E501
+        Moneda consultada  # noqa: E501
 
-        :param short_name: The short_name of this InlineResponse20048Message.  # noqa: E501
+        :param moneda: The moneda of this InlineResponse20048Message.  # noqa: E501
         :type: str
         """
 
-        self._short_name = short_name
+        self._moneda = moneda
 
     @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse20048Message.  # noqa: E501
-        Descripción del formato de carga  # noqa: E501
+    def base(self):
+        """Gets the base of this InlineResponse20048Message.  # noqa: E501
+        Moneda en la cual se expresa el valor  # noqa: E501
 
-        :return: The long_name of this InlineResponse20048Message.  # noqa: E501
+        :return: The base of this InlineResponse20048Message.  # noqa: E501
         :rtype: str
         """
-        return self._long_name
+        return self._base
 
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse20048Message.
+    @base.setter
+    def base(self, base):
+        """Sets the base of this InlineResponse20048Message.
 
-        Descripción del formato de carga  # noqa: E501
+        Moneda en la cual se expresa el valor  # noqa: E501
 
-        :param long_name: The long_name of this InlineResponse20048Message.  # noqa: E501
+        :param base: The base of this InlineResponse20048Message.  # noqa: E501
         :type: str
         """
 
-        self._long_name = long_name
+        self._base = base
 
     @property
-    def mime_type(self):
-        """Gets the mime_type of this InlineResponse20048Message.  # noqa: E501
-        MimeType que describe el tipo de archivo usado para la carga  # noqa: E501
+    def valor(self):
+        """Gets the valor of this InlineResponse20048Message.  # noqa: E501
+        Tipo de cambio  # noqa: E501
 
-        :return: The mime_type of this InlineResponse20048Message.  # noqa: E501
-        :rtype: str
+        :return: The valor of this InlineResponse20048Message.  # noqa: E501
+        :rtype: float
         """
-        return self._mime_type
+        return self._valor
 
-    @mime_type.setter
-    def mime_type(self, mime_type):
-        """Sets the mime_type of this InlineResponse20048Message.
+    @valor.setter
+    def valor(self, valor):
+        """Sets the valor of this InlineResponse20048Message.
 
-        MimeType que describe el tipo de archivo usado para la carga  # noqa: E501
+        Tipo de cambio  # noqa: E501
 
-        :param mime_type: The mime_type of this InlineResponse20048Message.  # noqa: E501
-        :type: str
+        :param valor: The valor of this InlineResponse20048Message.  # noqa: E501
+        :type: float
         """
 
-        self._mime_type = mime_type
+        self._valor = valor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

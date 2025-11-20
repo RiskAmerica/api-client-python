@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -15,9 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20044_message_posicion import InlineResponse20044MessagePosicion
-from .inline_response20044_message_contribucion import InlineResponse20044MessageContribucion
-from .inline_response20044_message_performance import InlineResponse20044MessagePerformance
+from .inline_response20044_message_tabla_desarrollo import InlineResponse20044MessageTablaDesarrollo
 
 
 
@@ -35,89 +33,39 @@ class InlineResponse20044Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'posicion': 'InlineResponse20044MessagePosicion',
-        'contribucion': 'InlineResponse20044MessageContribucion',
-        'performance': 'InlineResponse20044MessagePerformance'
+        'tabla_desarrollo': 'list[InlineResponse20044MessageTablaDesarrollo]'
     }
 
     attribute_map = {
-        'posicion': 'Posicion',
-        'contribucion': 'Contribucion',
-        'performance': 'Performance'
+        'tabla_desarrollo': 'TablaDesarrollo'
     }
 
-    def __init__(self, posicion=None, contribucion=None, performance=None):  # noqa: E501
+    def __init__(self, tabla_desarrollo=None):  # noqa: E501
         """InlineResponse20044Message - a model defined in Swagger"""  # noqa: E501
-        self._posicion = None
-        self._contribucion = None
-        self._performance = None
+        self._tabla_desarrollo = None
         self.discriminator = None
-        if posicion is not None:
-            self.posicion = posicion
-        if contribucion is not None:
-            self.contribucion = contribucion
-        if performance is not None:
-            self.performance = performance
+        if tabla_desarrollo is not None:
+            self.tabla_desarrollo = tabla_desarrollo
 
     @property
-    def posicion(self):
-        """Gets the posicion of this InlineResponse20044Message.  # noqa: E501
+    def tabla_desarrollo(self):
+        """Gets the tabla_desarrollo of this InlineResponse20044Message.  # noqa: E501
 
-        :return: The posicion of this InlineResponse20044Message.  # noqa: E501
-        :rtype: InlineResponse20044MessagePosicion
+        :return: The tabla_desarrollo of this InlineResponse20044Message.  # noqa: E501
+        :rtype: list[InlineResponse20044MessageTablaDesarrollo]
         """
-        return self._posicion
+        return self._tabla_desarrollo
 
-    @posicion.setter
-    def posicion(self, posicion):
-        """Sets the posicion of this InlineResponse20044Message.
-
-
-        :param posicion: The posicion of this InlineResponse20044Message.  # noqa: E501
-        :type: InlineResponse20044MessagePosicion
-        """
-
-        self._posicion = posicion
-
-    @property
-    def contribucion(self):
-        """Gets the contribucion of this InlineResponse20044Message.  # noqa: E501
-
-        :return: The contribucion of this InlineResponse20044Message.  # noqa: E501
-        :rtype: InlineResponse20044MessageContribucion
-        """
-        return self._contribucion
-
-    @contribucion.setter
-    def contribucion(self, contribucion):
-        """Sets the contribucion of this InlineResponse20044Message.
+    @tabla_desarrollo.setter
+    def tabla_desarrollo(self, tabla_desarrollo):
+        """Sets the tabla_desarrollo of this InlineResponse20044Message.
 
 
-        :param contribucion: The contribucion of this InlineResponse20044Message.  # noqa: E501
-        :type: InlineResponse20044MessageContribucion
+        :param tabla_desarrollo: The tabla_desarrollo of this InlineResponse20044Message.  # noqa: E501
+        :type: list[InlineResponse20044MessageTablaDesarrollo]
         """
 
-        self._contribucion = contribucion
-
-    @property
-    def performance(self):
-        """Gets the performance of this InlineResponse20044Message.  # noqa: E501
-
-        :return: The performance of this InlineResponse20044Message.  # noqa: E501
-        :rtype: InlineResponse20044MessagePerformance
-        """
-        return self._performance
-
-    @performance.setter
-    def performance(self, performance):
-        """Sets the performance of this InlineResponse20044Message.
-
-
-        :param performance: The performance of this InlineResponse20044Message.  # noqa: E501
-        :type: InlineResponse20044MessagePerformance
-        """
-
-        self._performance = performance
+        self._tabla_desarrollo = tabla_desarrollo
 
     def to_dict(self):
         """Returns the model properties as a dict"""

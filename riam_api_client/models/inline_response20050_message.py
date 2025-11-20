@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -32,66 +32,122 @@ class InlineResponse20050Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'estado': 'str',
-        'warnings': 'list[str]'
+        'id': 'int',
+        'rut': 'int',
+        'nombre': 'str',
+        'identificador_cliente': 'str'
     }
 
     attribute_map = {
-        'estado': 'estado',
-        'warnings': 'warnings'
+        'id': 'id',
+        'rut': 'rut',
+        'nombre': 'nombre',
+        'identificador_cliente': 'identificadorCliente'
     }
 
-    def __init__(self, estado=None, warnings=None):  # noqa: E501
+    def __init__(self, id=None, rut=None, nombre=None, identificador_cliente=None):  # noqa: E501
         """InlineResponse20050Message - a model defined in Swagger"""  # noqa: E501
-        self._estado = None
-        self._warnings = None
+        self._id = None
+        self._rut = None
+        self._nombre = None
+        self._identificador_cliente = None
         self.discriminator = None
-        if estado is not None:
-            self.estado = estado
-        if warnings is not None:
-            self.warnings = warnings
+        if id is not None:
+            self.id = id
+        if rut is not None:
+            self.rut = rut
+        if nombre is not None:
+            self.nombre = nombre
+        if identificador_cliente is not None:
+            self.identificador_cliente = identificador_cliente
 
     @property
-    def estado(self):
-        """Gets the estado of this InlineResponse20050Message.  # noqa: E501
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20050Message.  # noqa: E501
+        Identificador del fondo  # noqa: E501
 
-        :return: The estado of this InlineResponse20050Message.  # noqa: E501
+        :return: The id of this InlineResponse20050Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20050Message.
+
+        Identificador del fondo  # noqa: E501
+
+        :param id: The id of this InlineResponse20050Message.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def rut(self):
+        """Gets the rut of this InlineResponse20050Message.  # noqa: E501
+        RUT  # noqa: E501
+
+        :return: The rut of this InlineResponse20050Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._rut
+
+    @rut.setter
+    def rut(self, rut):
+        """Sets the rut of this InlineResponse20050Message.
+
+        RUT  # noqa: E501
+
+        :param rut: The rut of this InlineResponse20050Message.  # noqa: E501
+        :type: int
+        """
+
+        self._rut = rut
+
+    @property
+    def nombre(self):
+        """Gets the nombre of this InlineResponse20050Message.  # noqa: E501
+        Nombre del fondo  # noqa: E501
+
+        :return: The nombre of this InlineResponse20050Message.  # noqa: E501
         :rtype: str
         """
-        return self._estado
+        return self._nombre
 
-    @estado.setter
-    def estado(self, estado):
-        """Sets the estado of this InlineResponse20050Message.
+    @nombre.setter
+    def nombre(self, nombre):
+        """Sets the nombre of this InlineResponse20050Message.
 
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+        Nombre del fondo  # noqa: E501
 
-        :param estado: The estado of this InlineResponse20050Message.  # noqa: E501
+        :param nombre: The nombre of this InlineResponse20050Message.  # noqa: E501
         :type: str
         """
 
-        self._estado = estado
+        self._nombre = nombre
 
     @property
-    def warnings(self):
-        """Gets the warnings of this InlineResponse20050Message.  # noqa: E501
+    def identificador_cliente(self):
+        """Gets the identificador_cliente of this InlineResponse20050Message.  # noqa: E501
+        Identificador personalizado  # noqa: E501
 
-        :return: The warnings of this InlineResponse20050Message.  # noqa: E501
-        :rtype: list[str]
+        :return: The identificador_cliente of this InlineResponse20050Message.  # noqa: E501
+        :rtype: str
         """
-        return self._warnings
+        return self._identificador_cliente
 
-    @warnings.setter
-    def warnings(self, warnings):
-        """Sets the warnings of this InlineResponse20050Message.
+    @identificador_cliente.setter
+    def identificador_cliente(self, identificador_cliente):
+        """Sets the identificador_cliente of this InlineResponse20050Message.
 
+        Identificador personalizado  # noqa: E501
 
-        :param warnings: The warnings of this InlineResponse20050Message.  # noqa: E501
-        :type: list[str]
+        :param identificador_cliente: The identificador_cliente of this InlineResponse20050Message.  # noqa: E501
+        :type: str
         """
 
-        self._warnings = warnings
+        self._identificador_cliente = identificador_cliente
 
     def to_dict(self):
         """Returns the model properties as a dict"""

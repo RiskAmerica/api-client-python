@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20040_message_issues import InlineResponse20040MessageIssues
+from .inline_response20040_message_liquidez import InlineResponse20040MessageLiquidez
 
 
 
@@ -33,66 +33,39 @@ class InlineResponse20040Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'status': 'str',
-        'issues': 'list[InlineResponse20040MessageIssues]'
+        'liquidez': 'InlineResponse20040MessageLiquidez'
     }
 
     attribute_map = {
-        'status': 'status',
-        'issues': 'issues'
+        'liquidez': 'liquidez'
     }
 
-    def __init__(self, status=None, issues=None):  # noqa: E501
+    def __init__(self, liquidez=None):  # noqa: E501
         """InlineResponse20040Message - a model defined in Swagger"""  # noqa: E501
-        self._status = None
-        self._issues = None
+        self._liquidez = None
         self.discriminator = None
-        if status is not None:
-            self.status = status
-        if issues is not None:
-            self.issues = issues
+        if liquidez is not None:
+            self.liquidez = liquidez
 
     @property
-    def status(self):
-        """Gets the status of this InlineResponse20040Message.  # noqa: E501
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+    def liquidez(self):
+        """Gets the liquidez of this InlineResponse20040Message.  # noqa: E501
 
-        :return: The status of this InlineResponse20040Message.  # noqa: E501
-        :rtype: str
+        :return: The liquidez of this InlineResponse20040Message.  # noqa: E501
+        :rtype: InlineResponse20040MessageLiquidez
         """
-        return self._status
+        return self._liquidez
 
-    @status.setter
-    def status(self, status):
-        """Sets the status of this InlineResponse20040Message.
+    @liquidez.setter
+    def liquidez(self, liquidez):
+        """Sets the liquidez of this InlineResponse20040Message.
 
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
 
-        :param status: The status of this InlineResponse20040Message.  # noqa: E501
-        :type: str
+        :param liquidez: The liquidez of this InlineResponse20040Message.  # noqa: E501
+        :type: InlineResponse20040MessageLiquidez
         """
 
-        self._status = status
-
-    @property
-    def issues(self):
-        """Gets the issues of this InlineResponse20040Message.  # noqa: E501
-
-        :return: The issues of this InlineResponse20040Message.  # noqa: E501
-        :rtype: list[InlineResponse20040MessageIssues]
-        """
-        return self._issues
-
-    @issues.setter
-    def issues(self, issues):
-        """Sets the issues of this InlineResponse20040Message.
-
-
-        :param issues: The issues of this InlineResponse20040Message.  # noqa: E501
-        :type: list[InlineResponse20040MessageIssues]
-        """
-
-        self._issues = issues
+        self._liquidez = liquidez
 
     def to_dict(self):
         """Returns the model properties as a dict"""

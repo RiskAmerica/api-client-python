@@ -3,7 +3,7 @@
 """
     APIs RISKAMERICA
 
-    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SKD disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
+    A continuación les presentamos la documentación las **APIs** **de** **RiskAmerica**, el cual es un servicio pagado ofrecido por RiskAmerica que se contrata por separado a nuestras otras ofertas de software.  Algunas consideraciones que debe tener al momento de usar las APIs: - El APIKEY o Token lo puede conseguir solicitándolo al equipo comercial de RiskAmerica - El request necesita ser enviado con el header **Accept:** **application/json** para que responda en formato **JSON** (de no ser enviado con esto se responderá en formato **XML**) - Todos los Servicios son **REST** y sus parametros pueden ser enviados tanto en **POST** como **GET** - El uso de las APIs puede llevar un cobro asociado según se pacte en el acuerdo comercial, por lo que le recomendamos ser cuidadosos en el uso de éstas para evitar sobre-cargos innecesarios. - RiskAmerica funciona con un mecanismo de **WhiteList** **de** **IPs** para las consultas de las API. Para habilitar o modificar la lista de IPs permitidas debe contactarse al mail **contacto@riskamerica.com**. - En caso de usar **Python** como lenguaje de programación puede visitar nuestro SDK disponible en [https://github.com/RiskAmerica/api-client-python](https://github.com/RiskAmerica/api-client-python) .  - En caso de usar otros lenguajes de programación puede usar el proyecto [https://github.com/swagger-api/swagger-codegen/tree/3.0.0](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) para generar su propio SDK a partir del archivo [openapi.json](https://ra-public-files.s3-sa-east-1.amazonaws.com/wide-public/riam-api/openapi.json) . - Todas las APIs funcionan exclusivamente bajo el protocolo HTTPS usando TLS 1.2 o 1.3   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -32,176 +32,122 @@ class InlineResponse20051Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha_hora': 'date',
-        'tir': 'float',
-        'remate': 'float',
-        'numero': 'float',
-        'cantidad': 'float',
-        'monto_clp': 'float'
+        'id': 'int',
+        'nombre': 'str',
+        'aplicacion': 'str',
+        'fecha_inicio': 'date'
     }
 
     attribute_map = {
-        'fecha_hora': 'fechaHora',
-        'tir': 'tir',
-        'remate': 'remate',
-        'numero': 'numero',
-        'cantidad': 'cantidad',
-        'monto_clp': 'montoCLP'
+        'id': 'id',
+        'nombre': 'nombre',
+        'aplicacion': 'aplicacion',
+        'fecha_inicio': 'fechaInicio'
     }
 
-    def __init__(self, fecha_hora=None, tir=None, remate=None, numero=None, cantidad=None, monto_clp=None):  # noqa: E501
+    def __init__(self, id=None, nombre=None, aplicacion=None, fecha_inicio=None):  # noqa: E501
         """InlineResponse20051Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha_hora = None
-        self._tir = None
-        self._remate = None
-        self._numero = None
-        self._cantidad = None
-        self._monto_clp = None
+        self._id = None
+        self._nombre = None
+        self._aplicacion = None
+        self._fecha_inicio = None
         self.discriminator = None
-        if fecha_hora is not None:
-            self.fecha_hora = fecha_hora
-        if tir is not None:
-            self.tir = tir
-        if remate is not None:
-            self.remate = remate
-        if numero is not None:
-            self.numero = numero
-        if cantidad is not None:
-            self.cantidad = cantidad
-        if monto_clp is not None:
-            self.monto_clp = monto_clp
+        if id is not None:
+            self.id = id
+        if nombre is not None:
+            self.nombre = nombre
+        if aplicacion is not None:
+            self.aplicacion = aplicacion
+        if fecha_inicio is not None:
+            self.fecha_inicio = fecha_inicio
 
     @property
-    def fecha_hora(self):
-        """Gets the fecha_hora of this InlineResponse20051Message.  # noqa: E501
-        Fecha y Hora de la punta  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20051Message.  # noqa: E501
+        Identificador del fondo  # noqa: E501
 
-        :return: The fecha_hora of this InlineResponse20051Message.  # noqa: E501
+        :return: The id of this InlineResponse20051Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20051Message.
+
+        Identificador del fondo  # noqa: E501
+
+        :param id: The id of this InlineResponse20051Message.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def nombre(self):
+        """Gets the nombre of this InlineResponse20051Message.  # noqa: E501
+        Nombre del fondo  # noqa: E501
+
+        :return: The nombre of this InlineResponse20051Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._nombre
+
+    @nombre.setter
+    def nombre(self, nombre):
+        """Sets the nombre of this InlineResponse20051Message.
+
+        Nombre del fondo  # noqa: E501
+
+        :param nombre: The nombre of this InlineResponse20051Message.  # noqa: E501
+        :type: str
+        """
+
+        self._nombre = nombre
+
+    @property
+    def aplicacion(self):
+        """Gets the aplicacion of this InlineResponse20051Message.  # noqa: E501
+        Aplicacion  # noqa: E501
+
+        :return: The aplicacion of this InlineResponse20051Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._aplicacion
+
+    @aplicacion.setter
+    def aplicacion(self, aplicacion):
+        """Sets the aplicacion of this InlineResponse20051Message.
+
+        Aplicacion  # noqa: E501
+
+        :param aplicacion: The aplicacion of this InlineResponse20051Message.  # noqa: E501
+        :type: str
+        """
+
+        self._aplicacion = aplicacion
+
+    @property
+    def fecha_inicio(self):
+        """Gets the fecha_inicio of this InlineResponse20051Message.  # noqa: E501
+        fecha de Inicio del Ejercicio  # noqa: E501
+
+        :return: The fecha_inicio of this InlineResponse20051Message.  # noqa: E501
         :rtype: date
         """
-        return self._fecha_hora
+        return self._fecha_inicio
 
-    @fecha_hora.setter
-    def fecha_hora(self, fecha_hora):
-        """Sets the fecha_hora of this InlineResponse20051Message.
+    @fecha_inicio.setter
+    def fecha_inicio(self, fecha_inicio):
+        """Sets the fecha_inicio of this InlineResponse20051Message.
 
-        Fecha y Hora de la punta  # noqa: E501
+        fecha de Inicio del Ejercicio  # noqa: E501
 
-        :param fecha_hora: The fecha_hora of this InlineResponse20051Message.  # noqa: E501
+        :param fecha_inicio: The fecha_inicio of this InlineResponse20051Message.  # noqa: E501
         :type: date
         """
 
-        self._fecha_hora = fecha_hora
-
-    @property
-    def tir(self):
-        """Gets the tir of this InlineResponse20051Message.  # noqa: E501
-        TIR de la punta  # noqa: E501
-
-        :return: The tir of this InlineResponse20051Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir
-
-    @tir.setter
-    def tir(self, tir):
-        """Sets the tir of this InlineResponse20051Message.
-
-        TIR de la punta  # noqa: E501
-
-        :param tir: The tir of this InlineResponse20051Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tir = tir
-
-    @property
-    def remate(self):
-        """Gets the remate of this InlineResponse20051Message.  # noqa: E501
-        remate en el que ocurrio la punta  # noqa: E501
-
-        :return: The remate of this InlineResponse20051Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._remate
-
-    @remate.setter
-    def remate(self, remate):
-        """Sets the remate of this InlineResponse20051Message.
-
-        remate en el que ocurrio la punta  # noqa: E501
-
-        :param remate: The remate of this InlineResponse20051Message.  # noqa: E501
-        :type: float
-        """
-
-        self._remate = remate
-
-    @property
-    def numero(self):
-        """Gets the numero of this InlineResponse20051Message.  # noqa: E501
-        numero de puntas  # noqa: E501
-
-        :return: The numero of this InlineResponse20051Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._numero
-
-    @numero.setter
-    def numero(self, numero):
-        """Sets the numero of this InlineResponse20051Message.
-
-        numero de puntas  # noqa: E501
-
-        :param numero: The numero of this InlineResponse20051Message.  # noqa: E501
-        :type: float
-        """
-
-        self._numero = numero
-
-    @property
-    def cantidad(self):
-        """Gets the cantidad of this InlineResponse20051Message.  # noqa: E501
-        Cantidad ofrecida en la punta correspondiente  # noqa: E501
-
-        :return: The cantidad of this InlineResponse20051Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._cantidad
-
-    @cantidad.setter
-    def cantidad(self, cantidad):
-        """Sets the cantidad of this InlineResponse20051Message.
-
-        Cantidad ofrecida en la punta correspondiente  # noqa: E501
-
-        :param cantidad: The cantidad of this InlineResponse20051Message.  # noqa: E501
-        :type: float
-        """
-
-        self._cantidad = cantidad
-
-    @property
-    def monto_clp(self):
-        """Gets the monto_clp of this InlineResponse20051Message.  # noqa: E501
-        Monto en pesos ofrecida en la punta correspondiente  # noqa: E501
-
-        :return: The monto_clp of this InlineResponse20051Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._monto_clp
-
-    @monto_clp.setter
-    def monto_clp(self, monto_clp):
-        """Sets the monto_clp of this InlineResponse20051Message.
-
-        Monto en pesos ofrecida en la punta correspondiente  # noqa: E501
-
-        :param monto_clp: The monto_clp of this InlineResponse20051Message.  # noqa: E501
-        :type: float
-        """
-
-        self._monto_clp = monto_clp
+        self._fecha_inicio = fecha_inicio
 
     def to_dict(self):
         """Returns the model properties as a dict"""

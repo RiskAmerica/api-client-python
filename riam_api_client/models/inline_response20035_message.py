@@ -33,28 +33,28 @@ class InlineResponse20035Message(object):
     """
     swagger_types = {
         'fecha': 'date',
-        'ncg376': 'float'
+        'tasa_prepago': 'float'
     }
 
     attribute_map = {
         'fecha': 'fecha',
-        'ncg376': 'ncg376'
+        'tasa_prepago': 'tasaPrepago'
     }
 
-    def __init__(self, fecha=None, ncg376=None):  # noqa: E501
+    def __init__(self, fecha=None, tasa_prepago=None):  # noqa: E501
         """InlineResponse20035Message - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
-        self._ncg376 = None
+        self._tasa_prepago = None
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
-        if ncg376 is not None:
-            self.ncg376 = ncg376
+        if tasa_prepago is not None:
+            self.tasa_prepago = tasa_prepago
 
     @property
     def fecha(self):
         """Gets the fecha of this InlineResponse20035Message.  # noqa: E501
-        Fecha del saldo  # noqa: E501
+        Fecha de la Tasa  # noqa: E501
 
         :return: The fecha of this InlineResponse20035Message.  # noqa: E501
         :rtype: date
@@ -65,7 +65,7 @@ class InlineResponse20035Message(object):
     def fecha(self, fecha):
         """Sets the fecha of this InlineResponse20035Message.
 
-        Fecha del saldo  # noqa: E501
+        Fecha de la Tasa  # noqa: E501
 
         :param fecha: The fecha of this InlineResponse20035Message.  # noqa: E501
         :type: date
@@ -74,26 +74,26 @@ class InlineResponse20035Message(object):
         self._fecha = fecha
 
     @property
-    def ncg376(self):
-        """Gets the ncg376 of this InlineResponse20035Message.  # noqa: E501
-        Saldo custodia NCG 376  # noqa: E501
+    def tasa_prepago(self):
+        """Gets the tasa_prepago of this InlineResponse20035Message.  # noqa: E501
+        Tasa de prepago  # noqa: E501
 
-        :return: The ncg376 of this InlineResponse20035Message.  # noqa: E501
+        :return: The tasa_prepago of this InlineResponse20035Message.  # noqa: E501
         :rtype: float
         """
-        return self._ncg376
+        return self._tasa_prepago
 
-    @ncg376.setter
-    def ncg376(self, ncg376):
-        """Sets the ncg376 of this InlineResponse20035Message.
+    @tasa_prepago.setter
+    def tasa_prepago(self, tasa_prepago):
+        """Sets the tasa_prepago of this InlineResponse20035Message.
 
-        Saldo custodia NCG 376  # noqa: E501
+        Tasa de prepago  # noqa: E501
 
-        :param ncg376: The ncg376 of this InlineResponse20035Message.  # noqa: E501
+        :param tasa_prepago: The tasa_prepago of this InlineResponse20035Message.  # noqa: E501
         :type: float
         """
 
-        self._ncg376 = ncg376
+        self._tasa_prepago = tasa_prepago
 
     def to_dict(self):
         """Returns the model properties as a dict"""

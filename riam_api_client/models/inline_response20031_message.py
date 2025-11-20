@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20031_clasificacion import InlineResponse20031Clasificacion
+from .inline_response20031_message_valorizacion import InlineResponse20031MessageValorizacion
 
 
 
@@ -33,64 +33,39 @@ class InlineResponse20031Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha': 'date',
-        'clasificacion': 'InlineResponse20031Clasificacion'
+        'valorizacion': 'InlineResponse20031MessageValorizacion'
     }
 
     attribute_map = {
-        'fecha': 'Fecha',
-        'clasificacion': 'Clasificacion'
+        'valorizacion': 'Valorizacion'
     }
 
-    def __init__(self, fecha=None, clasificacion=None):  # noqa: E501
+    def __init__(self, valorizacion=None):  # noqa: E501
         """InlineResponse20031Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha = None
-        self._clasificacion = None
+        self._valorizacion = None
         self.discriminator = None
-        if fecha is not None:
-            self.fecha = fecha
-        if clasificacion is not None:
-            self.clasificacion = clasificacion
+        if valorizacion is not None:
+            self.valorizacion = valorizacion
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20031Message.  # noqa: E501
+    def valorizacion(self):
+        """Gets the valorizacion of this InlineResponse20031Message.  # noqa: E501
 
-        :return: The fecha of this InlineResponse20031Message.  # noqa: E501
-        :rtype: date
+        :return: The valorizacion of this InlineResponse20031Message.  # noqa: E501
+        :rtype: InlineResponse20031MessageValorizacion
         """
-        return self._fecha
+        return self._valorizacion
 
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20031Message.
-
-
-        :param fecha: The fecha of this InlineResponse20031Message.  # noqa: E501
-        :type: date
-        """
-
-        self._fecha = fecha
-
-    @property
-    def clasificacion(self):
-        """Gets the clasificacion of this InlineResponse20031Message.  # noqa: E501
-
-        :return: The clasificacion of this InlineResponse20031Message.  # noqa: E501
-        :rtype: InlineResponse20031Clasificacion
-        """
-        return self._clasificacion
-
-    @clasificacion.setter
-    def clasificacion(self, clasificacion):
-        """Sets the clasificacion of this InlineResponse20031Message.
+    @valorizacion.setter
+    def valorizacion(self, valorizacion):
+        """Sets the valorizacion of this InlineResponse20031Message.
 
 
-        :param clasificacion: The clasificacion of this InlineResponse20031Message.  # noqa: E501
-        :type: InlineResponse20031Clasificacion
+        :param valorizacion: The valorizacion of this InlineResponse20031Message.  # noqa: E501
+        :type: InlineResponse20031MessageValorizacion
         """
 
-        self._clasificacion = clasificacion
+        self._valorizacion = valorizacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

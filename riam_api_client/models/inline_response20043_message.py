@@ -32,95 +32,68 @@ class InlineResponse20043Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'nombre': 'str',
-        'aplicacion': 'str',
-        'fecha_inicio': 'date'
+        'fecha': 'date',
+        'ncg376': 'float'
     }
 
     attribute_map = {
-        'nombre': 'nombre',
-        'aplicacion': 'aplicacion',
-        'fecha_inicio': 'fechaInicio'
+        'fecha': 'fecha',
+        'ncg376': 'ncg376'
     }
 
-    def __init__(self, nombre=None, aplicacion=None, fecha_inicio=None):  # noqa: E501
+    def __init__(self, fecha=None, ncg376=None):  # noqa: E501
         """InlineResponse20043Message - a model defined in Swagger"""  # noqa: E501
-        self._nombre = None
-        self._aplicacion = None
-        self._fecha_inicio = None
+        self._fecha = None
+        self._ncg376 = None
         self.discriminator = None
-        if nombre is not None:
-            self.nombre = nombre
-        if aplicacion is not None:
-            self.aplicacion = aplicacion
-        if fecha_inicio is not None:
-            self.fecha_inicio = fecha_inicio
+        if fecha is not None:
+            self.fecha = fecha
+        if ncg376 is not None:
+            self.ncg376 = ncg376
 
     @property
-    def nombre(self):
-        """Gets the nombre of this InlineResponse20043Message.  # noqa: E501
-        Nombre del fondo  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20043Message.  # noqa: E501
+        Fecha del saldo  # noqa: E501
 
-        :return: The nombre of this InlineResponse20043Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._nombre
-
-    @nombre.setter
-    def nombre(self, nombre):
-        """Sets the nombre of this InlineResponse20043Message.
-
-        Nombre del fondo  # noqa: E501
-
-        :param nombre: The nombre of this InlineResponse20043Message.  # noqa: E501
-        :type: str
-        """
-
-        self._nombre = nombre
-
-    @property
-    def aplicacion(self):
-        """Gets the aplicacion of this InlineResponse20043Message.  # noqa: E501
-        Aplicacion  # noqa: E501
-
-        :return: The aplicacion of this InlineResponse20043Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._aplicacion
-
-    @aplicacion.setter
-    def aplicacion(self, aplicacion):
-        """Sets the aplicacion of this InlineResponse20043Message.
-
-        Aplicacion  # noqa: E501
-
-        :param aplicacion: The aplicacion of this InlineResponse20043Message.  # noqa: E501
-        :type: str
-        """
-
-        self._aplicacion = aplicacion
-
-    @property
-    def fecha_inicio(self):
-        """Gets the fecha_inicio of this InlineResponse20043Message.  # noqa: E501
-        fecha de Inicio del Ejercicio  # noqa: E501
-
-        :return: The fecha_inicio of this InlineResponse20043Message.  # noqa: E501
+        :return: The fecha of this InlineResponse20043Message.  # noqa: E501
         :rtype: date
         """
-        return self._fecha_inicio
+        return self._fecha
 
-    @fecha_inicio.setter
-    def fecha_inicio(self, fecha_inicio):
-        """Sets the fecha_inicio of this InlineResponse20043Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20043Message.
 
-        fecha de Inicio del Ejercicio  # noqa: E501
+        Fecha del saldo  # noqa: E501
 
-        :param fecha_inicio: The fecha_inicio of this InlineResponse20043Message.  # noqa: E501
+        :param fecha: The fecha of this InlineResponse20043Message.  # noqa: E501
         :type: date
         """
 
-        self._fecha_inicio = fecha_inicio
+        self._fecha = fecha
+
+    @property
+    def ncg376(self):
+        """Gets the ncg376 of this InlineResponse20043Message.  # noqa: E501
+        Saldo custodia NCG 376  # noqa: E501
+
+        :return: The ncg376 of this InlineResponse20043Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ncg376
+
+    @ncg376.setter
+    def ncg376(self, ncg376):
+        """Sets the ncg376 of this InlineResponse20043Message.
+
+        Saldo custodia NCG 376  # noqa: E501
+
+        :param ncg376: The ncg376 of this InlineResponse20043Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ncg376 = ncg376
 
     def to_dict(self):
         """Returns the model properties as a dict"""

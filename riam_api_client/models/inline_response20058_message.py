@@ -32,41 +32,149 @@ class InlineResponse20058Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'disponible': 'int'
+        'id': 'int',
+        'nombre': 'str',
+        'descripcion': 'str',
+        'id_tipo_valorizacion': 'str',
+        'replicacion': 'int'
     }
 
     attribute_map = {
-        'disponible': 'disponible'
+        'id': 'id',
+        'nombre': 'nombre',
+        'descripcion': 'descripcion',
+        'id_tipo_valorizacion': 'idTipoValorizacion',
+        'replicacion': 'replicacion'
     }
 
-    def __init__(self, disponible=None):  # noqa: E501
+    def __init__(self, id=None, nombre=None, descripcion=None, id_tipo_valorizacion=None, replicacion=None):  # noqa: E501
         """InlineResponse20058Message - a model defined in Swagger"""  # noqa: E501
-        self._disponible = None
+        self._id = None
+        self._nombre = None
+        self._descripcion = None
+        self._id_tipo_valorizacion = None
+        self._replicacion = None
         self.discriminator = None
-        if disponible is not None:
-            self.disponible = disponible
+        if id is not None:
+            self.id = id
+        if nombre is not None:
+            self.nombre = nombre
+        if descripcion is not None:
+            self.descripcion = descripcion
+        if id_tipo_valorizacion is not None:
+            self.id_tipo_valorizacion = id_tipo_valorizacion
+        if replicacion is not None:
+            self.replicacion = replicacion
 
     @property
-    def disponible(self):
-        """Gets the disponible of this InlineResponse20058Message.  # noqa: E501
-        1 si valorización está disponible para la fecha, 0 si no.  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20058Message.  # noqa: E501
+        Identificador del FileTask  # noqa: E501
 
-        :return: The disponible of this InlineResponse20058Message.  # noqa: E501
+        :return: The id of this InlineResponse20058Message.  # noqa: E501
         :rtype: int
         """
-        return self._disponible
+        return self._id
 
-    @disponible.setter
-    def disponible(self, disponible):
-        """Sets the disponible of this InlineResponse20058Message.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20058Message.
 
-        1 si valorización está disponible para la fecha, 0 si no.  # noqa: E501
+        Identificador del FileTask  # noqa: E501
 
-        :param disponible: The disponible of this InlineResponse20058Message.  # noqa: E501
+        :param id: The id of this InlineResponse20058Message.  # noqa: E501
         :type: int
         """
 
-        self._disponible = disponible
+        self._id = id
+
+    @property
+    def nombre(self):
+        """Gets the nombre of this InlineResponse20058Message.  # noqa: E501
+        Título del FileTask  # noqa: E501
+
+        :return: The nombre of this InlineResponse20058Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._nombre
+
+    @nombre.setter
+    def nombre(self, nombre):
+        """Sets the nombre of this InlineResponse20058Message.
+
+        Título del FileTask  # noqa: E501
+
+        :param nombre: The nombre of this InlineResponse20058Message.  # noqa: E501
+        :type: str
+        """
+
+        self._nombre = nombre
+
+    @property
+    def descripcion(self):
+        """Gets the descripcion of this InlineResponse20058Message.  # noqa: E501
+        Descripción del Filetask  # noqa: E501
+
+        :return: The descripcion of this InlineResponse20058Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._descripcion
+
+    @descripcion.setter
+    def descripcion(self, descripcion):
+        """Sets the descripcion of this InlineResponse20058Message.
+
+        Descripción del Filetask  # noqa: E501
+
+        :param descripcion: The descripcion of this InlineResponse20058Message.  # noqa: E501
+        :type: str
+        """
+
+        self._descripcion = descripcion
+
+    @property
+    def id_tipo_valorizacion(self):
+        """Gets the id_tipo_valorizacion of this InlineResponse20058Message.  # noqa: E501
+        Descripción del Tipo de Valorizacion  # noqa: E501
+
+        :return: The id_tipo_valorizacion of this InlineResponse20058Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_tipo_valorizacion
+
+    @id_tipo_valorizacion.setter
+    def id_tipo_valorizacion(self, id_tipo_valorizacion):
+        """Sets the id_tipo_valorizacion of this InlineResponse20058Message.
+
+        Descripción del Tipo de Valorizacion  # noqa: E501
+
+        :param id_tipo_valorizacion: The id_tipo_valorizacion of this InlineResponse20058Message.  # noqa: E501
+        :type: str
+        """
+
+        self._id_tipo_valorizacion = id_tipo_valorizacion
+
+    @property
+    def replicacion(self):
+        """Gets the replicacion of this InlineResponse20058Message.  # noqa: E501
+        Si está en 1, para el caso de Tipo Valorizacion Internacional, provoca que si el cliente no carga el archivo este se copiará del día anterior.  # noqa: E501
+
+        :return: The replicacion of this InlineResponse20058Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._replicacion
+
+    @replicacion.setter
+    def replicacion(self, replicacion):
+        """Sets the replicacion of this InlineResponse20058Message.
+
+        Si está en 1, para el caso de Tipo Valorizacion Internacional, provoca que si el cliente no carga el archivo este se copiará del día anterior.  # noqa: E501
+
+        :param replicacion: The replicacion of this InlineResponse20058Message.  # noqa: E501
+        :type: int
+        """
+
+        self._replicacion = replicacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

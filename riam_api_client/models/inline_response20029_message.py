@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20029_message_valorizacion import InlineResponse20029MessageValorizacion
 
 
 
@@ -32,122 +33,39 @@ class InlineResponse20029Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha': 'date',
-        'tipo': 'str',
-        'monto': 'float',
-        'porcentaje_saldo': 'float'
+        'valorizacion': 'InlineResponse20029MessageValorizacion'
     }
 
     attribute_map = {
-        'fecha': 'fecha',
-        'tipo': 'tipo',
-        'monto': 'monto',
-        'porcentaje_saldo': 'porcentajeSaldo'
+        'valorizacion': 'Valorizacion'
     }
 
-    def __init__(self, fecha=None, tipo=None, monto=None, porcentaje_saldo=None):  # noqa: E501
+    def __init__(self, valorizacion=None):  # noqa: E501
         """InlineResponse20029Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha = None
-        self._tipo = None
-        self._monto = None
-        self._porcentaje_saldo = None
+        self._valorizacion = None
         self.discriminator = None
-        if fecha is not None:
-            self.fecha = fecha
-        if tipo is not None:
-            self.tipo = tipo
-        if monto is not None:
-            self.monto = monto
-        if porcentaje_saldo is not None:
-            self.porcentaje_saldo = porcentaje_saldo
+        if valorizacion is not None:
+            self.valorizacion = valorizacion
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20029Message.  # noqa: E501
-        Fecha del prepago  # noqa: E501
+    def valorizacion(self):
+        """Gets the valorizacion of this InlineResponse20029Message.  # noqa: E501
 
-        :return: The fecha of this InlineResponse20029Message.  # noqa: E501
-        :rtype: date
+        :return: The valorizacion of this InlineResponse20029Message.  # noqa: E501
+        :rtype: InlineResponse20029MessageValorizacion
         """
-        return self._fecha
+        return self._valorizacion
 
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20029Message.
+    @valorizacion.setter
+    def valorizacion(self, valorizacion):
+        """Sets the valorizacion of this InlineResponse20029Message.
 
-        Fecha del prepago  # noqa: E501
 
-        :param fecha: The fecha of this InlineResponse20029Message.  # noqa: E501
-        :type: date
+        :param valorizacion: The valorizacion of this InlineResponse20029Message.  # noqa: E501
+        :type: InlineResponse20029MessageValorizacion
         """
 
-        self._fecha = fecha
-
-    @property
-    def tipo(self):
-        """Gets the tipo of this InlineResponse20029Message.  # noqa: E501
-        Tipo de prepago, puede ser TOTAL  o PARCIAL  # noqa: E501
-
-        :return: The tipo of this InlineResponse20029Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._tipo
-
-    @tipo.setter
-    def tipo(self, tipo):
-        """Sets the tipo of this InlineResponse20029Message.
-
-        Tipo de prepago, puede ser TOTAL  o PARCIAL  # noqa: E501
-
-        :param tipo: The tipo of this InlineResponse20029Message.  # noqa: E501
-        :type: str
-        """
-
-        self._tipo = tipo
-
-    @property
-    def monto(self):
-        """Gets the monto of this InlineResponse20029Message.  # noqa: E501
-        Monto prepagado  # noqa: E501
-
-        :return: The monto of this InlineResponse20029Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._monto
-
-    @monto.setter
-    def monto(self, monto):
-        """Sets the monto of this InlineResponse20029Message.
-
-        Monto prepagado  # noqa: E501
-
-        :param monto: The monto of this InlineResponse20029Message.  # noqa: E501
-        :type: float
-        """
-
-        self._monto = monto
-
-    @property
-    def porcentaje_saldo(self):
-        """Gets the porcentaje_saldo of this InlineResponse20029Message.  # noqa: E501
-        Monto prepagado como porcentaje del saldo  # noqa: E501
-
-        :return: The porcentaje_saldo of this InlineResponse20029Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._porcentaje_saldo
-
-    @porcentaje_saldo.setter
-    def porcentaje_saldo(self, porcentaje_saldo):
-        """Sets the porcentaje_saldo of this InlineResponse20029Message.
-
-        Monto prepagado como porcentaje del saldo  # noqa: E501
-
-        :param porcentaje_saldo: The porcentaje_saldo of this InlineResponse20029Message.  # noqa: E501
-        :type: float
-        """
-
-        self._porcentaje_saldo = porcentaje_saldo
+        self._valorizacion = valorizacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

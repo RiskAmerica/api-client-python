@@ -42,8 +42,9 @@ class InlineResponse20019Message(object):
         'duracion_macaulay': 'float',
         'tir_base': 'float',
         'origen': 'str',
+        'nemo': 'str',
         'spread': 'float',
-        'nemo': 'str'
+        'clasificacion': 'str'
     }
 
     attribute_map = {
@@ -57,11 +58,12 @@ class InlineResponse20019Message(object):
         'duracion_macaulay': 'duracionMacaulay',
         'tir_base': 'tirBase',
         'origen': 'origen',
+        'nemo': 'nemo',
         'spread': 'spread',
-        'nemo': 'nemo'
+        'clasificacion': 'clasificacion'
     }
 
-    def __init__(self, fecha=None, tir=None, cantidad=None, monto_transado=None, moneda=None, monto_transado_clp=None, precio_porcentaje_valor_par=None, duracion_macaulay=None, tir_base=None, origen=None, spread=None, nemo=None):  # noqa: E501
+    def __init__(self, fecha=None, tir=None, cantidad=None, monto_transado=None, moneda=None, monto_transado_clp=None, precio_porcentaje_valor_par=None, duracion_macaulay=None, tir_base=None, origen=None, nemo=None, spread=None, clasificacion=None):  # noqa: E501
         """InlineResponse20019Message - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
         self._tir = None
@@ -73,8 +75,9 @@ class InlineResponse20019Message(object):
         self._duracion_macaulay = None
         self._tir_base = None
         self._origen = None
-        self._spread = None
         self._nemo = None
+        self._spread = None
+        self._clasificacion = None
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
@@ -96,10 +99,12 @@ class InlineResponse20019Message(object):
             self.tir_base = tir_base
         if origen is not None:
             self.origen = origen
-        if spread is not None:
-            self.spread = spread
         if nemo is not None:
             self.nemo = nemo
+        if spread is not None:
+            self.spread = spread
+        if clasificacion is not None:
+            self.clasificacion = clasificacion
 
     @property
     def fecha(self):
@@ -322,6 +327,28 @@ class InlineResponse20019Message(object):
         self._origen = origen
 
     @property
+    def nemo(self):
+        """Gets the nemo of this InlineResponse20019Message.  # noqa: E501
+        Nemotécnico del instrumento  # noqa: E501
+
+        :return: The nemo of this InlineResponse20019Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._nemo
+
+    @nemo.setter
+    def nemo(self, nemo):
+        """Sets the nemo of this InlineResponse20019Message.
+
+        Nemotécnico del instrumento  # noqa: E501
+
+        :param nemo: The nemo of this InlineResponse20019Message.  # noqa: E501
+        :type: str
+        """
+
+        self._nemo = nemo
+
+    @property
     def spread(self):
         """Gets the spread of this InlineResponse20019Message.  # noqa: E501
         Spread de la transacción  # noqa: E501
@@ -344,26 +371,26 @@ class InlineResponse20019Message(object):
         self._spread = spread
 
     @property
-    def nemo(self):
-        """Gets the nemo of this InlineResponse20019Message.  # noqa: E501
-        Nemotécnico del instrumento  # noqa: E501
+    def clasificacion(self):
+        """Gets the clasificacion of this InlineResponse20019Message.  # noqa: E501
+        Clasificación de Riesgo  # noqa: E501
 
-        :return: The nemo of this InlineResponse20019Message.  # noqa: E501
+        :return: The clasificacion of this InlineResponse20019Message.  # noqa: E501
         :rtype: str
         """
-        return self._nemo
+        return self._clasificacion
 
-    @nemo.setter
-    def nemo(self, nemo):
-        """Sets the nemo of this InlineResponse20019Message.
+    @clasificacion.setter
+    def clasificacion(self, clasificacion):
+        """Sets the clasificacion of this InlineResponse20019Message.
 
-        Nemotécnico del instrumento  # noqa: E501
+        Clasificación de Riesgo  # noqa: E501
 
-        :param nemo: The nemo of this InlineResponse20019Message.  # noqa: E501
+        :param clasificacion: The clasificacion of this InlineResponse20019Message.  # noqa: E501
         :type: str
         """
 
-        self._nemo = nemo
+        self._clasificacion = clasificacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

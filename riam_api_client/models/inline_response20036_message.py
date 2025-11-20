@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20036_message_tabla_desarrollo import InlineResponse20036MessageTablaDesarrollo
 
 
 
@@ -33,39 +32,68 @@ class InlineResponse20036Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'tabla_desarrollo': 'list[InlineResponse20036MessageTablaDesarrollo]'
+        'fecha': 'date',
+        'tasa_prepago': 'float'
     }
 
     attribute_map = {
-        'tabla_desarrollo': 'TablaDesarrollo'
+        'fecha': 'fecha',
+        'tasa_prepago': 'tasaPrepago'
     }
 
-    def __init__(self, tabla_desarrollo=None):  # noqa: E501
+    def __init__(self, fecha=None, tasa_prepago=None):  # noqa: E501
         """InlineResponse20036Message - a model defined in Swagger"""  # noqa: E501
-        self._tabla_desarrollo = None
+        self._fecha = None
+        self._tasa_prepago = None
         self.discriminator = None
-        if tabla_desarrollo is not None:
-            self.tabla_desarrollo = tabla_desarrollo
+        if fecha is not None:
+            self.fecha = fecha
+        if tasa_prepago is not None:
+            self.tasa_prepago = tasa_prepago
 
     @property
-    def tabla_desarrollo(self):
-        """Gets the tabla_desarrollo of this InlineResponse20036Message.  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20036Message.  # noqa: E501
+        Fecha  # noqa: E501
 
-        :return: The tabla_desarrollo of this InlineResponse20036Message.  # noqa: E501
-        :rtype: list[InlineResponse20036MessageTablaDesarrollo]
+        :return: The fecha of this InlineResponse20036Message.  # noqa: E501
+        :rtype: date
         """
-        return self._tabla_desarrollo
+        return self._fecha
 
-    @tabla_desarrollo.setter
-    def tabla_desarrollo(self, tabla_desarrollo):
-        """Sets the tabla_desarrollo of this InlineResponse20036Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20036Message.
 
+        Fecha  # noqa: E501
 
-        :param tabla_desarrollo: The tabla_desarrollo of this InlineResponse20036Message.  # noqa: E501
-        :type: list[InlineResponse20036MessageTablaDesarrollo]
+        :param fecha: The fecha of this InlineResponse20036Message.  # noqa: E501
+        :type: date
         """
 
-        self._tabla_desarrollo = tabla_desarrollo
+        self._fecha = fecha
+
+    @property
+    def tasa_prepago(self):
+        """Gets the tasa_prepago of this InlineResponse20036Message.  # noqa: E501
+        Tasa de prepago  # noqa: E501
+
+        :return: The tasa_prepago of this InlineResponse20036Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tasa_prepago
+
+    @tasa_prepago.setter
+    def tasa_prepago(self, tasa_prepago):
+        """Sets the tasa_prepago of this InlineResponse20036Message.
+
+        Tasa de prepago  # noqa: E501
+
+        :param tasa_prepago: The tasa_prepago of this InlineResponse20036Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tasa_prepago = tasa_prepago
 
     def to_dict(self):
         """Returns the model properties as a dict"""

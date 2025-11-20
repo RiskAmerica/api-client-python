@@ -32,122 +32,68 @@ class InlineResponse20041Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'rut': 'int',
-        'nombre': 'str',
-        'identificador_cliente': 'str'
+        'fecha': 'date',
+        'saldo_custodia': 'float'
     }
 
     attribute_map = {
-        'id': 'id',
-        'rut': 'rut',
-        'nombre': 'nombre',
-        'identificador_cliente': 'identificadorCliente'
+        'fecha': 'fecha',
+        'saldo_custodia': 'saldoCustodia'
     }
 
-    def __init__(self, id=None, rut=None, nombre=None, identificador_cliente=None):  # noqa: E501
+    def __init__(self, fecha=None, saldo_custodia=None):  # noqa: E501
         """InlineResponse20041Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._rut = None
-        self._nombre = None
-        self._identificador_cliente = None
+        self._fecha = None
+        self._saldo_custodia = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if rut is not None:
-            self.rut = rut
-        if nombre is not None:
-            self.nombre = nombre
-        if identificador_cliente is not None:
-            self.identificador_cliente = identificador_cliente
+        if fecha is not None:
+            self.fecha = fecha
+        if saldo_custodia is not None:
+            self.saldo_custodia = saldo_custodia
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20041Message.  # noqa: E501
-        Identificador del fondo  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20041Message.  # noqa: E501
+        Fecha del saldo  # noqa: E501
 
-        :return: The id of this InlineResponse20041Message.  # noqa: E501
-        :rtype: int
+        :return: The fecha of this InlineResponse20041Message.  # noqa: E501
+        :rtype: date
         """
-        return self._id
+        return self._fecha
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20041Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20041Message.
 
-        Identificador del fondo  # noqa: E501
+        Fecha del saldo  # noqa: E501
 
-        :param id: The id of this InlineResponse20041Message.  # noqa: E501
-        :type: int
+        :param fecha: The fecha of this InlineResponse20041Message.  # noqa: E501
+        :type: date
         """
 
-        self._id = id
+        self._fecha = fecha
 
     @property
-    def rut(self):
-        """Gets the rut of this InlineResponse20041Message.  # noqa: E501
-        RUT  # noqa: E501
+    def saldo_custodia(self):
+        """Gets the saldo_custodia of this InlineResponse20041Message.  # noqa: E501
+        Saldo custodia nominal  # noqa: E501
 
-        :return: The rut of this InlineResponse20041Message.  # noqa: E501
-        :rtype: int
+        :return: The saldo_custodia of this InlineResponse20041Message.  # noqa: E501
+        :rtype: float
         """
-        return self._rut
+        return self._saldo_custodia
 
-    @rut.setter
-    def rut(self, rut):
-        """Sets the rut of this InlineResponse20041Message.
+    @saldo_custodia.setter
+    def saldo_custodia(self, saldo_custodia):
+        """Sets the saldo_custodia of this InlineResponse20041Message.
 
-        RUT  # noqa: E501
+        Saldo custodia nominal  # noqa: E501
 
-        :param rut: The rut of this InlineResponse20041Message.  # noqa: E501
-        :type: int
-        """
-
-        self._rut = rut
-
-    @property
-    def nombre(self):
-        """Gets the nombre of this InlineResponse20041Message.  # noqa: E501
-        Nombre del fondo  # noqa: E501
-
-        :return: The nombre of this InlineResponse20041Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._nombre
-
-    @nombre.setter
-    def nombre(self, nombre):
-        """Sets the nombre of this InlineResponse20041Message.
-
-        Nombre del fondo  # noqa: E501
-
-        :param nombre: The nombre of this InlineResponse20041Message.  # noqa: E501
-        :type: str
+        :param saldo_custodia: The saldo_custodia of this InlineResponse20041Message.  # noqa: E501
+        :type: float
         """
 
-        self._nombre = nombre
-
-    @property
-    def identificador_cliente(self):
-        """Gets the identificador_cliente of this InlineResponse20041Message.  # noqa: E501
-        Identificador personalizado  # noqa: E501
-
-        :return: The identificador_cliente of this InlineResponse20041Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._identificador_cliente
-
-    @identificador_cliente.setter
-    def identificador_cliente(self, identificador_cliente):
-        """Sets the identificador_cliente of this InlineResponse20041Message.
-
-        Identificador personalizado  # noqa: E501
-
-        :param identificador_cliente: The identificador_cliente of this InlineResponse20041Message.  # noqa: E501
-        :type: str
-        """
-
-        self._identificador_cliente = identificador_cliente
+        self._saldo_custodia = saldo_custodia
 
     def to_dict(self):
         """Returns the model properties as a dict"""

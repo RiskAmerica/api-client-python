@@ -17,8 +17,9 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20021
-from . import InlineResponse20025
+from . import InlineResponse20026
+from . import InlineResponse20031
+from . import InlineResponse20032
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -36,6 +37,119 @@ class RFNValorizacionesSinDesfaseApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora(self, nemo, fecha, **kwargs):  # noqa: E501
+        """Obtiene la valorización de un instrumento.  # noqa: E501
+
+        Obtiene la valorización de un instrumento.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora(nemo, fecha, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str nemo: Nemotecnico del instrumento a valorizar (required)
+        :param date fecha: Fecha para la cual se efectua la valorización (required)
+        :param float nominal: Nominal a valorizar. Si no se carga se asume 1000
+        :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
+        :return: InlineResponse20026
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20026 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora_with_http_info(nemo, fecha, **kwargs)  # noqa: E501
+        else:
+            (data) = self.r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora_with_http_info(nemo, fecha, **kwargs)  # noqa: E501
+            return data
+
+    def r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora_with_http_info(self, nemo, fecha, **kwargs):  # noqa: E501
+        """Obtiene la valorización de un instrumento.  # noqa: E501
+
+        Obtiene la valorización de un instrumento.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora_with_http_info(nemo, fecha, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str nemo: Nemotecnico del instrumento a valorizar (required)
+        :param date fecha: Fecha para la cual se efectua la valorización (required)
+        :param float nominal: Nominal a valorizar. Si no se carga se asume 1000
+        :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
+        :return: InlineResponse20026
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20026 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['nemo', 'fecha', 'nominal', 'condicion_pago']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'nemo' is set
+        if ('nemo' not in params or
+                params['nemo'] is None):
+            raise ValueError("Missing the required parameter `nemo` when calling `r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora`")  # noqa: E501
+        # verify the required parameter 'fecha' is set
+        if ('fecha' not in params or
+                params['fecha'] is None):
+            raise ValueError("Missing the required parameter `fecha` when calling `r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_calculadora`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'nemo' in params:
+            query_params.append(('nemo', params['nemo']))  # noqa: E501
+        if 'fecha' in params:
+            query_params.append(('fecha', params['fecha']))  # noqa: E501
+        if 'nominal' in params:
+            query_params.append(('nominal', params['nominal']))  # noqa: E501
+        if 'condicion_pago' in params:
+            query_params.append(('condicionPago', params['condicion_pago']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/ValorizacionRF/ValorizacionSinDesfase/calculadora', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20026',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def r_fn_valorizaciones_sin_desfase_valorizacion_sin_desfase_get(self, fecha, nemo, **kwargs):  # noqa: E501
         """Obtiene una valorización sin desfase.  # noqa: E501
 
@@ -48,10 +162,10 @@ class RFNValorizacionesSinDesfaseApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20021
+        :return: InlineResponse20031
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20021 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20031 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -72,10 +186,10 @@ class RFNValorizacionesSinDesfaseApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20021
+        :return: InlineResponse20031
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20021 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20031 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'nemo']  # noqa: E501
@@ -133,7 +247,7 @@ class RFNValorizacionesSinDesfaseApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20021',  # noqa: E501
+            response_type='InlineResponse20031',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -154,10 +268,10 @@ class RFNValorizacionesSinDesfaseApi(object):
         :param date fecha_min: Intervalo Inferior de Fecha (required)
         :param date fecha_max: Intervalo Superior de Fecha (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20025
+        :return: InlineResponse20032
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20025 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20032 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -179,10 +293,10 @@ class RFNValorizacionesSinDesfaseApi(object):
         :param date fecha_min: Intervalo Inferior de Fecha (required)
         :param date fecha_max: Intervalo Superior de Fecha (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20025
+        :return: InlineResponse20032
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20025 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20032 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'nemo']  # noqa: E501
@@ -246,7 +360,7 @@ class RFNValorizacionesSinDesfaseApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20025',  # noqa: E501
+            response_type='InlineResponse20032',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20057_message import InlineResponse20057Message
 
 
 
@@ -33,39 +32,41 @@ class InlineResponse20056Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'valorizacion': 'InlineResponse20057Message'
+        'archivo': 'str'
     }
 
     attribute_map = {
-        'valorizacion': 'Valorizacion'
+        'archivo': 'archivo'
     }
 
-    def __init__(self, valorizacion=None):  # noqa: E501
+    def __init__(self, archivo=None):  # noqa: E501
         """InlineResponse20056Message - a model defined in Swagger"""  # noqa: E501
-        self._valorizacion = None
+        self._archivo = None
         self.discriminator = None
-        if valorizacion is not None:
-            self.valorizacion = valorizacion
+        if archivo is not None:
+            self.archivo = archivo
 
     @property
-    def valorizacion(self):
-        """Gets the valorizacion of this InlineResponse20056Message.  # noqa: E501
+    def archivo(self):
+        """Gets the archivo of this InlineResponse20056Message.  # noqa: E501
+        Archivo XML con los resultados del ajuste  # noqa: E501
 
-        :return: The valorizacion of this InlineResponse20056Message.  # noqa: E501
-        :rtype: InlineResponse20057Message
+        :return: The archivo of this InlineResponse20056Message.  # noqa: E501
+        :rtype: str
         """
-        return self._valorizacion
+        return self._archivo
 
-    @valorizacion.setter
-    def valorizacion(self, valorizacion):
-        """Sets the valorizacion of this InlineResponse20056Message.
+    @archivo.setter
+    def archivo(self, archivo):
+        """Sets the archivo of this InlineResponse20056Message.
 
+        Archivo XML con los resultados del ajuste  # noqa: E501
 
-        :param valorizacion: The valorizacion of this InlineResponse20056Message.  # noqa: E501
-        :type: InlineResponse20057Message
+        :param archivo: The archivo of this InlineResponse20056Message.  # noqa: E501
+        :type: str
         """
 
-        self._valorizacion = valorizacion
+        self._archivo = archivo
 
     def to_dict(self):
         """Returns the model properties as a dict"""

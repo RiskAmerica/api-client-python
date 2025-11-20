@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20034_message_instrumento import InlineResponse20034MessageInstrumento
 
 
 
@@ -32,68 +33,39 @@ class InlineResponse20034Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha': 'date',
-        'saldo_custodia': 'float'
+        'instrumento': 'InlineResponse20034MessageInstrumento'
     }
 
     attribute_map = {
-        'fecha': 'fecha',
-        'saldo_custodia': 'saldoCustodia'
+        'instrumento': 'Instrumento'
     }
 
-    def __init__(self, fecha=None, saldo_custodia=None):  # noqa: E501
+    def __init__(self, instrumento=None):  # noqa: E501
         """InlineResponse20034Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha = None
-        self._saldo_custodia = None
+        self._instrumento = None
         self.discriminator = None
-        if fecha is not None:
-            self.fecha = fecha
-        if saldo_custodia is not None:
-            self.saldo_custodia = saldo_custodia
+        if instrumento is not None:
+            self.instrumento = instrumento
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20034Message.  # noqa: E501
-        Fecha del saldo  # noqa: E501
+    def instrumento(self):
+        """Gets the instrumento of this InlineResponse20034Message.  # noqa: E501
 
-        :return: The fecha of this InlineResponse20034Message.  # noqa: E501
-        :rtype: date
+        :return: The instrumento of this InlineResponse20034Message.  # noqa: E501
+        :rtype: InlineResponse20034MessageInstrumento
         """
-        return self._fecha
+        return self._instrumento
 
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20034Message.
+    @instrumento.setter
+    def instrumento(self, instrumento):
+        """Sets the instrumento of this InlineResponse20034Message.
 
-        Fecha del saldo  # noqa: E501
 
-        :param fecha: The fecha of this InlineResponse20034Message.  # noqa: E501
-        :type: date
+        :param instrumento: The instrumento of this InlineResponse20034Message.  # noqa: E501
+        :type: InlineResponse20034MessageInstrumento
         """
 
-        self._fecha = fecha
-
-    @property
-    def saldo_custodia(self):
-        """Gets the saldo_custodia of this InlineResponse20034Message.  # noqa: E501
-        Saldo custodia insoluto  # noqa: E501
-
-        :return: The saldo_custodia of this InlineResponse20034Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._saldo_custodia
-
-    @saldo_custodia.setter
-    def saldo_custodia(self, saldo_custodia):
-        """Sets the saldo_custodia of this InlineResponse20034Message.
-
-        Saldo custodia insoluto  # noqa: E501
-
-        :param saldo_custodia: The saldo_custodia of this InlineResponse20034Message.  # noqa: E501
-        :type: float
-        """
-
-        self._saldo_custodia = saldo_custodia
+        self._instrumento = instrumento
 
     def to_dict(self):
         """Returns the model properties as a dict"""

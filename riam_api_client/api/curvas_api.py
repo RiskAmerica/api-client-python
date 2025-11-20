@@ -410,9 +410,9 @@ class CurvasApi(object):
         :param ValoresGetBody body: (required)
         :param date fecha: Fecha para la cual se consulta (required)
         :param str id_curva: Identificador de la Curva (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.
@@ -438,9 +438,9 @@ class CurvasApi(object):
         :param ValoresGetBody body: (required)
         :param date fecha: Fecha para la cual se consulta (required)
         :param str id_curva: Identificador de la Curva (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.
@@ -544,9 +544,9 @@ class CurvasApi(object):
         :param str id_curva: Identificador de la Curva (required)
         :param float plazo_inicial: Plazo inicial a consultar en la base consultada (required)
         :param float plazo_final: Plazo final a consultar en la base consultada (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.
@@ -573,9 +573,9 @@ class CurvasApi(object):
         :param str id_curva: Identificador de la Curva (required)
         :param float plazo_inicial: Plazo inicial a consultar en la base consultada (required)
         :param float plazo_final: Plazo final a consultar en la base consultada (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.
@@ -682,8 +682,8 @@ class CurvasApi(object):
         :param str id_curva: Identificador de la Curva (required)
         :param float plazo: Plazos a consultar (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos (required)
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.
@@ -711,8 +711,8 @@ class CurvasApi(object):
         :param str id_curva: Identificador de la Curva (required)
         :param float plazo: Plazos a consultar (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos (required)
-        :param str id_base_tasa: Tasa Base en la que se consultan los valores (required)
-        :param int id_intraday: Identificador del Intraday para el cual se consulta (required)
+        :param str id_base_tasa: Base de la tasa en la que se consultan los valores (required)
+        :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :return: InlineResponse20017
                  If the method is called asynchronously,
                  returns the request thread.

@@ -33,28 +33,73 @@ class InlineResponse20027Message(object):
     """
     swagger_types = {
         'fecha': 'date',
-        'tasa_prepago': 'float'
+        'ret_total': 'float',
+        'ret_mtd': 'float',
+        'ret_ytd': 'float',
+        'ret_curva_cero': 'float',
+        'ret_spread': 'float',
+        'ret_devengo': 'float',
+        'ret_prepago': 'float',
+        'ret_moneda': 'float',
+        'ret_roll_down': 'float',
+        'ret_residual': 'float'
     }
 
     attribute_map = {
         'fecha': 'fecha',
-        'tasa_prepago': 'tasaPrepago'
+        'ret_total': 'retTotal',
+        'ret_mtd': 'retMTD',
+        'ret_ytd': 'retYTD',
+        'ret_curva_cero': 'retCurvaCero',
+        'ret_spread': 'retSpread',
+        'ret_devengo': 'retDevengo',
+        'ret_prepago': 'retPrepago',
+        'ret_moneda': 'retMoneda',
+        'ret_roll_down': 'retRollDown',
+        'ret_residual': 'retResidual'
     }
 
-    def __init__(self, fecha=None, tasa_prepago=None):  # noqa: E501
+    def __init__(self, fecha=None, ret_total=None, ret_mtd=None, ret_ytd=None, ret_curva_cero=None, ret_spread=None, ret_devengo=None, ret_prepago=None, ret_moneda=None, ret_roll_down=None, ret_residual=None):  # noqa: E501
         """InlineResponse20027Message - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
-        self._tasa_prepago = None
+        self._ret_total = None
+        self._ret_mtd = None
+        self._ret_ytd = None
+        self._ret_curva_cero = None
+        self._ret_spread = None
+        self._ret_devengo = None
+        self._ret_prepago = None
+        self._ret_moneda = None
+        self._ret_roll_down = None
+        self._ret_residual = None
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
-        if tasa_prepago is not None:
-            self.tasa_prepago = tasa_prepago
+        if ret_total is not None:
+            self.ret_total = ret_total
+        if ret_mtd is not None:
+            self.ret_mtd = ret_mtd
+        if ret_ytd is not None:
+            self.ret_ytd = ret_ytd
+        if ret_curva_cero is not None:
+            self.ret_curva_cero = ret_curva_cero
+        if ret_spread is not None:
+            self.ret_spread = ret_spread
+        if ret_devengo is not None:
+            self.ret_devengo = ret_devengo
+        if ret_prepago is not None:
+            self.ret_prepago = ret_prepago
+        if ret_moneda is not None:
+            self.ret_moneda = ret_moneda
+        if ret_roll_down is not None:
+            self.ret_roll_down = ret_roll_down
+        if ret_residual is not None:
+            self.ret_residual = ret_residual
 
     @property
     def fecha(self):
         """Gets the fecha of this InlineResponse20027Message.  # noqa: E501
-        Fecha de la Tasa  # noqa: E501
+        Fecha de la Valorización  # noqa: E501
 
         :return: The fecha of this InlineResponse20027Message.  # noqa: E501
         :rtype: date
@@ -65,7 +110,7 @@ class InlineResponse20027Message(object):
     def fecha(self, fecha):
         """Sets the fecha of this InlineResponse20027Message.
 
-        Fecha de la Tasa  # noqa: E501
+        Fecha de la Valorización  # noqa: E501
 
         :param fecha: The fecha of this InlineResponse20027Message.  # noqa: E501
         :type: date
@@ -74,26 +119,224 @@ class InlineResponse20027Message(object):
         self._fecha = fecha
 
     @property
-    def tasa_prepago(self):
-        """Gets the tasa_prepago of this InlineResponse20027Message.  # noqa: E501
-        Tasa de prepago  # noqa: E501
+    def ret_total(self):
+        """Gets the ret_total of this InlineResponse20027Message.  # noqa: E501
+        Retorno Día.  # noqa: E501
 
-        :return: The tasa_prepago of this InlineResponse20027Message.  # noqa: E501
+        :return: The ret_total of this InlineResponse20027Message.  # noqa: E501
         :rtype: float
         """
-        return self._tasa_prepago
+        return self._ret_total
 
-    @tasa_prepago.setter
-    def tasa_prepago(self, tasa_prepago):
-        """Sets the tasa_prepago of this InlineResponse20027Message.
+    @ret_total.setter
+    def ret_total(self, ret_total):
+        """Sets the ret_total of this InlineResponse20027Message.
 
-        Tasa de prepago  # noqa: E501
+        Retorno Día.  # noqa: E501
 
-        :param tasa_prepago: The tasa_prepago of this InlineResponse20027Message.  # noqa: E501
+        :param ret_total: The ret_total of this InlineResponse20027Message.  # noqa: E501
         :type: float
         """
 
-        self._tasa_prepago = tasa_prepago
+        self._ret_total = ret_total
+
+    @property
+    def ret_mtd(self):
+        """Gets the ret_mtd of this InlineResponse20027Message.  # noqa: E501
+        Retorno Month to Date  # noqa: E501
+
+        :return: The ret_mtd of this InlineResponse20027Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_mtd
+
+    @ret_mtd.setter
+    def ret_mtd(self, ret_mtd):
+        """Sets the ret_mtd of this InlineResponse20027Message.
+
+        Retorno Month to Date  # noqa: E501
+
+        :param ret_mtd: The ret_mtd of this InlineResponse20027Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_mtd = ret_mtd
+
+    @property
+    def ret_ytd(self):
+        """Gets the ret_ytd of this InlineResponse20027Message.  # noqa: E501
+        Retorno Year to Date  # noqa: E501
+
+        :return: The ret_ytd of this InlineResponse20027Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_ytd
+
+    @ret_ytd.setter
+    def ret_ytd(self, ret_ytd):
+        """Sets the ret_ytd of this InlineResponse20027Message.
+
+        Retorno Year to Date  # noqa: E501
+
+        :param ret_ytd: The ret_ytd of this InlineResponse20027Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_ytd = ret_ytd
+
+    @property
+    def ret_curva_cero(self):
+        """Gets the ret_curva_cero of this InlineResponse20027Message.  # noqa: E501
+        Retorno Curva Cero  # noqa: E501
+
+        :return: The ret_curva_cero of this InlineResponse20027Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_curva_cero
+
+    @ret_curva_cero.setter
+    def ret_curva_cero(self, ret_curva_cero):
+        """Sets the ret_curva_cero of this InlineResponse20027Message.
+
+        Retorno Curva Cero  # noqa: E501
+
+        :param ret_curva_cero: The ret_curva_cero of this InlineResponse20027Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_curva_cero = ret_curva_cero
+
+    @property
+    def ret_spread(self):
+        """Gets the ret_spread of this InlineResponse20027Message.  # noqa: E501
+        Retorno Spread  # noqa: E501
+
+        :return: The ret_spread of this InlineResponse20027Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_spread
+
+    @ret_spread.setter
+    def ret_spread(self, ret_spread):
+        """Sets the ret_spread of this InlineResponse20027Message.
+
+        Retorno Spread  # noqa: E501
+
+        :param ret_spread: The ret_spread of this InlineResponse20027Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_spread = ret_spread
+
+    @property
+    def ret_devengo(self):
+        """Gets the ret_devengo of this InlineResponse20027Message.  # noqa: E501
+        Retorno Devengo  # noqa: E501
+
+        :return: The ret_devengo of this InlineResponse20027Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_devengo
+
+    @ret_devengo.setter
+    def ret_devengo(self, ret_devengo):
+        """Sets the ret_devengo of this InlineResponse20027Message.
+
+        Retorno Devengo  # noqa: E501
+
+        :param ret_devengo: The ret_devengo of this InlineResponse20027Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_devengo = ret_devengo
+
+    @property
+    def ret_prepago(self):
+        """Gets the ret_prepago of this InlineResponse20027Message.  # noqa: E501
+        Retorno Prepago  # noqa: E501
+
+        :return: The ret_prepago of this InlineResponse20027Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_prepago
+
+    @ret_prepago.setter
+    def ret_prepago(self, ret_prepago):
+        """Sets the ret_prepago of this InlineResponse20027Message.
+
+        Retorno Prepago  # noqa: E501
+
+        :param ret_prepago: The ret_prepago of this InlineResponse20027Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_prepago = ret_prepago
+
+    @property
+    def ret_moneda(self):
+        """Gets the ret_moneda of this InlineResponse20027Message.  # noqa: E501
+        Retorno Moneda  # noqa: E501
+
+        :return: The ret_moneda of this InlineResponse20027Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_moneda
+
+    @ret_moneda.setter
+    def ret_moneda(self, ret_moneda):
+        """Sets the ret_moneda of this InlineResponse20027Message.
+
+        Retorno Moneda  # noqa: E501
+
+        :param ret_moneda: The ret_moneda of this InlineResponse20027Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_moneda = ret_moneda
+
+    @property
+    def ret_roll_down(self):
+        """Gets the ret_roll_down of this InlineResponse20027Message.  # noqa: E501
+        Retorno RollDown  # noqa: E501
+
+        :return: The ret_roll_down of this InlineResponse20027Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_roll_down
+
+    @ret_roll_down.setter
+    def ret_roll_down(self, ret_roll_down):
+        """Sets the ret_roll_down of this InlineResponse20027Message.
+
+        Retorno RollDown  # noqa: E501
+
+        :param ret_roll_down: The ret_roll_down of this InlineResponse20027Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_roll_down = ret_roll_down
+
+    @property
+    def ret_residual(self):
+        """Gets the ret_residual of this InlineResponse20027Message.  # noqa: E501
+        Retorno Residual  # noqa: E501
+
+        :return: The ret_residual of this InlineResponse20027Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_residual
+
+    @ret_residual.setter
+    def ret_residual(self, ret_residual):
+        """Sets the ret_residual of this InlineResponse20027Message.
+
+        Retorno Residual  # noqa: E501
+
+        :param ret_residual: The ret_residual of this InlineResponse20027Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_residual = ret_residual
 
     def to_dict(self):
         """Returns the model properties as a dict"""

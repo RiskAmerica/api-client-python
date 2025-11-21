@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20068_message_valorizacion import InlineResponse20068MessageValorizacion
 
 
 
@@ -33,39 +32,149 @@ class InlineResponse20068Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'valorizacion': 'InlineResponse20068MessageValorizacion'
+        'fecha': 'date',
+        'precio_cierre': 'float',
+        'monto_cierre': 'float',
+        'tipo_valorizacion_cierre': 'float',
+        'fecha_ultima_transaccion': 'int'
     }
 
     attribute_map = {
-        'valorizacion': 'Valorizacion'
+        'fecha': 'fecha',
+        'precio_cierre': 'precioCierre',
+        'monto_cierre': 'montoCierre',
+        'tipo_valorizacion_cierre': 'tipoValorizacionCierre',
+        'fecha_ultima_transaccion': 'fechaUltimaTransaccion'
     }
 
-    def __init__(self, valorizacion=None):  # noqa: E501
+    def __init__(self, fecha=None, precio_cierre=None, monto_cierre=None, tipo_valorizacion_cierre=None, fecha_ultima_transaccion=None):  # noqa: E501
         """InlineResponse20068Message - a model defined in Swagger"""  # noqa: E501
-        self._valorizacion = None
+        self._fecha = None
+        self._precio_cierre = None
+        self._monto_cierre = None
+        self._tipo_valorizacion_cierre = None
+        self._fecha_ultima_transaccion = None
         self.discriminator = None
-        if valorizacion is not None:
-            self.valorizacion = valorizacion
+        if fecha is not None:
+            self.fecha = fecha
+        if precio_cierre is not None:
+            self.precio_cierre = precio_cierre
+        if monto_cierre is not None:
+            self.monto_cierre = monto_cierre
+        if tipo_valorizacion_cierre is not None:
+            self.tipo_valorizacion_cierre = tipo_valorizacion_cierre
+        if fecha_ultima_transaccion is not None:
+            self.fecha_ultima_transaccion = fecha_ultima_transaccion
 
     @property
-    def valorizacion(self):
-        """Gets the valorizacion of this InlineResponse20068Message.  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20068Message.  # noqa: E501
+        Fecha de la Valorización  # noqa: E501
 
-        :return: The valorizacion of this InlineResponse20068Message.  # noqa: E501
-        :rtype: InlineResponse20068MessageValorizacion
+        :return: The fecha of this InlineResponse20068Message.  # noqa: E501
+        :rtype: date
         """
-        return self._valorizacion
+        return self._fecha
 
-    @valorizacion.setter
-    def valorizacion(self, valorizacion):
-        """Sets the valorizacion of this InlineResponse20068Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20068Message.
 
+        Fecha de la Valorización  # noqa: E501
 
-        :param valorizacion: The valorizacion of this InlineResponse20068Message.  # noqa: E501
-        :type: InlineResponse20068MessageValorizacion
+        :param fecha: The fecha of this InlineResponse20068Message.  # noqa: E501
+        :type: date
         """
 
-        self._valorizacion = valorizacion
+        self._fecha = fecha
+
+    @property
+    def precio_cierre(self):
+        """Gets the precio_cierre of this InlineResponse20068Message.  # noqa: E501
+        Precio de Cierre del instrumento  # noqa: E501
+
+        :return: The precio_cierre of this InlineResponse20068Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._precio_cierre
+
+    @precio_cierre.setter
+    def precio_cierre(self, precio_cierre):
+        """Sets the precio_cierre of this InlineResponse20068Message.
+
+        Precio de Cierre del instrumento  # noqa: E501
+
+        :param precio_cierre: The precio_cierre of this InlineResponse20068Message.  # noqa: E501
+        :type: float
+        """
+
+        self._precio_cierre = precio_cierre
+
+    @property
+    def monto_cierre(self):
+        """Gets the monto_cierre of this InlineResponse20068Message.  # noqa: E501
+        Monto de Cierre del instrumento  # noqa: E501
+
+        :return: The monto_cierre of this InlineResponse20068Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._monto_cierre
+
+    @monto_cierre.setter
+    def monto_cierre(self, monto_cierre):
+        """Sets the monto_cierre of this InlineResponse20068Message.
+
+        Monto de Cierre del instrumento  # noqa: E501
+
+        :param monto_cierre: The monto_cierre of this InlineResponse20068Message.  # noqa: E501
+        :type: float
+        """
+
+        self._monto_cierre = monto_cierre
+
+    @property
+    def tipo_valorizacion_cierre(self):
+        """Gets the tipo_valorizacion_cierre of this InlineResponse20068Message.  # noqa: E501
+        Tipo de Valorizacion de cierre (condición)  # noqa: E501
+
+        :return: The tipo_valorizacion_cierre of this InlineResponse20068Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tipo_valorizacion_cierre
+
+    @tipo_valorizacion_cierre.setter
+    def tipo_valorizacion_cierre(self, tipo_valorizacion_cierre):
+        """Sets the tipo_valorizacion_cierre of this InlineResponse20068Message.
+
+        Tipo de Valorizacion de cierre (condición)  # noqa: E501
+
+        :param tipo_valorizacion_cierre: The tipo_valorizacion_cierre of this InlineResponse20068Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tipo_valorizacion_cierre = tipo_valorizacion_cierre
+
+    @property
+    def fecha_ultima_transaccion(self):
+        """Gets the fecha_ultima_transaccion of this InlineResponse20068Message.  # noqa: E501
+        Fecha de la última transacción del instrumento  # noqa: E501
+
+        :return: The fecha_ultima_transaccion of this InlineResponse20068Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._fecha_ultima_transaccion
+
+    @fecha_ultima_transaccion.setter
+    def fecha_ultima_transaccion(self, fecha_ultima_transaccion):
+        """Sets the fecha_ultima_transaccion of this InlineResponse20068Message.
+
+        Fecha de la última transacción del instrumento  # noqa: E501
+
+        :param fecha_ultima_transaccion: The fecha_ultima_transaccion of this InlineResponse20068Message.  # noqa: E501
+        :type: int
+        """
+
+        self._fecha_ultima_transaccion = fecha_ultima_transaccion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

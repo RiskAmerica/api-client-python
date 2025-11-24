@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20067_message_emisor import InlineResponse20067MessageEmisor
 
 
 
@@ -32,52 +33,26 @@ class InlineResponse20067Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'emisor': 'str',
-        'sector': 'str',
-        'rut': 'str',
-        'razon_social': 'str',
-        'codigo_svs': 'str',
-        'grupo_empresarial': 'str'
+        'emisor': 'InlineResponse20067MessageEmisor'
     }
 
     attribute_map = {
-        'emisor': 'emisor',
-        'sector': 'sector',
-        'rut': 'rut',
-        'razon_social': 'razonSocial',
-        'codigo_svs': 'codigoSVS',
-        'grupo_empresarial': 'grupoEmpresarial'
+        'emisor': 'Emisor'
     }
 
-    def __init__(self, emisor=None, sector=None, rut=None, razon_social=None, codigo_svs=None, grupo_empresarial=None):  # noqa: E501
+    def __init__(self, emisor=None):  # noqa: E501
         """InlineResponse20067Message - a model defined in Swagger"""  # noqa: E501
         self._emisor = None
-        self._sector = None
-        self._rut = None
-        self._razon_social = None
-        self._codigo_svs = None
-        self._grupo_empresarial = None
         self.discriminator = None
         if emisor is not None:
             self.emisor = emisor
-        if sector is not None:
-            self.sector = sector
-        if rut is not None:
-            self.rut = rut
-        if razon_social is not None:
-            self.razon_social = razon_social
-        if codigo_svs is not None:
-            self.codigo_svs = codigo_svs
-        if grupo_empresarial is not None:
-            self.grupo_empresarial = grupo_empresarial
 
     @property
     def emisor(self):
         """Gets the emisor of this InlineResponse20067Message.  # noqa: E501
-        Emisor  # noqa: E501
 
         :return: The emisor of this InlineResponse20067Message.  # noqa: E501
-        :rtype: str
+        :rtype: InlineResponse20067MessageEmisor
         """
         return self._emisor
 
@@ -85,123 +60,12 @@ class InlineResponse20067Message(object):
     def emisor(self, emisor):
         """Sets the emisor of this InlineResponse20067Message.
 
-        Emisor  # noqa: E501
 
         :param emisor: The emisor of this InlineResponse20067Message.  # noqa: E501
-        :type: str
+        :type: InlineResponse20067MessageEmisor
         """
 
         self._emisor = emisor
-
-    @property
-    def sector(self):
-        """Gets the sector of this InlineResponse20067Message.  # noqa: E501
-        Sector  # noqa: E501
-
-        :return: The sector of this InlineResponse20067Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._sector
-
-    @sector.setter
-    def sector(self, sector):
-        """Sets the sector of this InlineResponse20067Message.
-
-        Sector  # noqa: E501
-
-        :param sector: The sector of this InlineResponse20067Message.  # noqa: E501
-        :type: str
-        """
-
-        self._sector = sector
-
-    @property
-    def rut(self):
-        """Gets the rut of this InlineResponse20067Message.  # noqa: E501
-        RUT del emisor  # noqa: E501
-
-        :return: The rut of this InlineResponse20067Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._rut
-
-    @rut.setter
-    def rut(self, rut):
-        """Sets the rut of this InlineResponse20067Message.
-
-        RUT del emisor  # noqa: E501
-
-        :param rut: The rut of this InlineResponse20067Message.  # noqa: E501
-        :type: str
-        """
-
-        self._rut = rut
-
-    @property
-    def razon_social(self):
-        """Gets the razon_social of this InlineResponse20067Message.  # noqa: E501
-        Razon Social de Emisor  # noqa: E501
-
-        :return: The razon_social of this InlineResponse20067Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._razon_social
-
-    @razon_social.setter
-    def razon_social(self, razon_social):
-        """Sets the razon_social of this InlineResponse20067Message.
-
-        Razon Social de Emisor  # noqa: E501
-
-        :param razon_social: The razon_social of this InlineResponse20067Message.  # noqa: E501
-        :type: str
-        """
-
-        self._razon_social = razon_social
-
-    @property
-    def codigo_svs(self):
-        """Gets the codigo_svs of this InlineResponse20067Message.  # noqa: E501
-        CodigoSVS del Emisor  # noqa: E501
-
-        :return: The codigo_svs of this InlineResponse20067Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._codigo_svs
-
-    @codigo_svs.setter
-    def codigo_svs(self, codigo_svs):
-        """Sets the codigo_svs of this InlineResponse20067Message.
-
-        CodigoSVS del Emisor  # noqa: E501
-
-        :param codigo_svs: The codigo_svs of this InlineResponse20067Message.  # noqa: E501
-        :type: str
-        """
-
-        self._codigo_svs = codigo_svs
-
-    @property
-    def grupo_empresarial(self):
-        """Gets the grupo_empresarial of this InlineResponse20067Message.  # noqa: E501
-        Grupo Empresarial del Emisor  # noqa: E501
-
-        :return: The grupo_empresarial of this InlineResponse20067Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._grupo_empresarial
-
-    @grupo_empresarial.setter
-    def grupo_empresarial(self, grupo_empresarial):
-        """Sets the grupo_empresarial of this InlineResponse20067Message.
-
-        Grupo Empresarial del Emisor  # noqa: E501
-
-        :param grupo_empresarial: The grupo_empresarial of this InlineResponse20067Message.  # noqa: E501
-        :type: str
-        """
-
-        self._grupo_empresarial = grupo_empresarial
 
     def to_dict(self):
         """Returns the model properties as a dict"""

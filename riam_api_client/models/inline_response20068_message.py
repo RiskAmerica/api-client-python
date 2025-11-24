@@ -35,8 +35,8 @@ class InlineResponse20068Message(object):
         'fecha': 'date',
         'precio_cierre': 'float',
         'monto_cierre': 'float',
-        'tipo_valorizacion_cierre': 'float',
-        'fecha_ultima_transaccion': 'int'
+        'tipo_valorizacion_cierre': 'str',
+        'fecha_ultima_transaccion': 'date'
     }
 
     attribute_map = {
@@ -138,7 +138,7 @@ class InlineResponse20068Message(object):
         Tipo de Valorizacion de cierre (condición)  # noqa: E501
 
         :return: The tipo_valorizacion_cierre of this InlineResponse20068Message.  # noqa: E501
-        :rtype: float
+        :rtype: str
         """
         return self._tipo_valorizacion_cierre
 
@@ -149,7 +149,7 @@ class InlineResponse20068Message(object):
         Tipo de Valorizacion de cierre (condición)  # noqa: E501
 
         :param tipo_valorizacion_cierre: The tipo_valorizacion_cierre of this InlineResponse20068Message.  # noqa: E501
-        :type: float
+        :type: str
         """
 
         self._tipo_valorizacion_cierre = tipo_valorizacion_cierre
@@ -160,7 +160,7 @@ class InlineResponse20068Message(object):
         Fecha de la última transacción del instrumento  # noqa: E501
 
         :return: The fecha_ultima_transaccion of this InlineResponse20068Message.  # noqa: E501
-        :rtype: int
+        :rtype: date
         """
         return self._fecha_ultima_transaccion
 
@@ -171,7 +171,7 @@ class InlineResponse20068Message(object):
         Fecha de la última transacción del instrumento  # noqa: E501
 
         :param fecha_ultima_transaccion: The fecha_ultima_transaccion of this InlineResponse20068Message.  # noqa: E501
-        :type: int
+        :type: date
         """
 
         self._fecha_ultima_transaccion = fecha_ultima_transaccion

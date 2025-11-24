@@ -18,8 +18,8 @@ import re  # noqa: F401
 import six
 # Model imports
 from . import InlineResponse20068
-from . import InlineResponse20068
 from . import InlineResponse20069
+from . import InlineResponse20070
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -155,10 +155,10 @@ class RVNValorizacionesApi(object):
         :param date fecha_min: Fecha inicial a consulta (required)
         :param date fecha_max: Fecha final a consultar (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20068
+        :return: InlineResponse20069
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20068 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20069 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -180,10 +180,10 @@ class RVNValorizacionesApi(object):
         :param date fecha_min: Fecha inicial a consulta (required)
         :param date fecha_max: Fecha final a consultar (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20068
+        :return: InlineResponse20069
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20068 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20069 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'nemo']  # noqa: E501
@@ -247,7 +247,7 @@ class RVNValorizacionesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20068',  # noqa: E501
+            response_type='InlineResponse20069',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -266,10 +266,10 @@ class RVNValorizacionesApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
-        :return: InlineResponse20069
+        :return: InlineResponse20070
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20069 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20070 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -289,10 +289,10 @@ class RVNValorizacionesApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
-        :return: InlineResponse20069
+        :return: InlineResponse20070
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20069 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20070 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha']  # noqa: E501
@@ -344,7 +344,7 @@ class RVNValorizacionesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20069',  # noqa: E501
+            response_type='InlineResponse20070',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

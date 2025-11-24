@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20062_message_punta_compra import InlineResponse20062MessagePuntaCompra
 
 
 
@@ -32,176 +33,39 @@ class InlineResponse20062Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha_hora': 'date',
-        'tir': 'float',
-        'remate': 'float',
-        'numero': 'float',
-        'cantidad': 'float',
-        'monto_clp': 'float'
+        'punta_compra': 'list[InlineResponse20062MessagePuntaCompra]'
     }
 
     attribute_map = {
-        'fecha_hora': 'fechaHora',
-        'tir': 'tir',
-        'remate': 'remate',
-        'numero': 'numero',
-        'cantidad': 'cantidad',
-        'monto_clp': 'montoCLP'
+        'punta_compra': 'PuntaCompra'
     }
 
-    def __init__(self, fecha_hora=None, tir=None, remate=None, numero=None, cantidad=None, monto_clp=None):  # noqa: E501
+    def __init__(self, punta_compra=None):  # noqa: E501
         """InlineResponse20062Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha_hora = None
-        self._tir = None
-        self._remate = None
-        self._numero = None
-        self._cantidad = None
-        self._monto_clp = None
+        self._punta_compra = None
         self.discriminator = None
-        if fecha_hora is not None:
-            self.fecha_hora = fecha_hora
-        if tir is not None:
-            self.tir = tir
-        if remate is not None:
-            self.remate = remate
-        if numero is not None:
-            self.numero = numero
-        if cantidad is not None:
-            self.cantidad = cantidad
-        if monto_clp is not None:
-            self.monto_clp = monto_clp
+        if punta_compra is not None:
+            self.punta_compra = punta_compra
 
     @property
-    def fecha_hora(self):
-        """Gets the fecha_hora of this InlineResponse20062Message.  # noqa: E501
-        Fecha y Hora de la punta  # noqa: E501
+    def punta_compra(self):
+        """Gets the punta_compra of this InlineResponse20062Message.  # noqa: E501
 
-        :return: The fecha_hora of this InlineResponse20062Message.  # noqa: E501
-        :rtype: date
+        :return: The punta_compra of this InlineResponse20062Message.  # noqa: E501
+        :rtype: list[InlineResponse20062MessagePuntaCompra]
         """
-        return self._fecha_hora
+        return self._punta_compra
 
-    @fecha_hora.setter
-    def fecha_hora(self, fecha_hora):
-        """Sets the fecha_hora of this InlineResponse20062Message.
+    @punta_compra.setter
+    def punta_compra(self, punta_compra):
+        """Sets the punta_compra of this InlineResponse20062Message.
 
-        Fecha y Hora de la punta  # noqa: E501
 
-        :param fecha_hora: The fecha_hora of this InlineResponse20062Message.  # noqa: E501
-        :type: date
+        :param punta_compra: The punta_compra of this InlineResponse20062Message.  # noqa: E501
+        :type: list[InlineResponse20062MessagePuntaCompra]
         """
 
-        self._fecha_hora = fecha_hora
-
-    @property
-    def tir(self):
-        """Gets the tir of this InlineResponse20062Message.  # noqa: E501
-        TIR de la punta  # noqa: E501
-
-        :return: The tir of this InlineResponse20062Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir
-
-    @tir.setter
-    def tir(self, tir):
-        """Sets the tir of this InlineResponse20062Message.
-
-        TIR de la punta  # noqa: E501
-
-        :param tir: The tir of this InlineResponse20062Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tir = tir
-
-    @property
-    def remate(self):
-        """Gets the remate of this InlineResponse20062Message.  # noqa: E501
-        remate en el que ocurrio la punta  # noqa: E501
-
-        :return: The remate of this InlineResponse20062Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._remate
-
-    @remate.setter
-    def remate(self, remate):
-        """Sets the remate of this InlineResponse20062Message.
-
-        remate en el que ocurrio la punta  # noqa: E501
-
-        :param remate: The remate of this InlineResponse20062Message.  # noqa: E501
-        :type: float
-        """
-
-        self._remate = remate
-
-    @property
-    def numero(self):
-        """Gets the numero of this InlineResponse20062Message.  # noqa: E501
-        numero de puntas  # noqa: E501
-
-        :return: The numero of this InlineResponse20062Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._numero
-
-    @numero.setter
-    def numero(self, numero):
-        """Sets the numero of this InlineResponse20062Message.
-
-        numero de puntas  # noqa: E501
-
-        :param numero: The numero of this InlineResponse20062Message.  # noqa: E501
-        :type: float
-        """
-
-        self._numero = numero
-
-    @property
-    def cantidad(self):
-        """Gets the cantidad of this InlineResponse20062Message.  # noqa: E501
-        Cantidad ofrecida en la punta correspondiente  # noqa: E501
-
-        :return: The cantidad of this InlineResponse20062Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._cantidad
-
-    @cantidad.setter
-    def cantidad(self, cantidad):
-        """Sets the cantidad of this InlineResponse20062Message.
-
-        Cantidad ofrecida en la punta correspondiente  # noqa: E501
-
-        :param cantidad: The cantidad of this InlineResponse20062Message.  # noqa: E501
-        :type: float
-        """
-
-        self._cantidad = cantidad
-
-    @property
-    def monto_clp(self):
-        """Gets the monto_clp of this InlineResponse20062Message.  # noqa: E501
-        Monto en pesos ofrecida en la punta correspondiente  # noqa: E501
-
-        :return: The monto_clp of this InlineResponse20062Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._monto_clp
-
-    @monto_clp.setter
-    def monto_clp(self, monto_clp):
-        """Sets the monto_clp of this InlineResponse20062Message.
-
-        Monto en pesos ofrecida en la punta correspondiente  # noqa: E501
-
-        :param monto_clp: The monto_clp of this InlineResponse20062Message.  # noqa: E501
-        :type: float
-        """
-
-        self._monto_clp = monto_clp
+        self._punta_compra = punta_compra
 
     def to_dict(self):
         """Returns the model properties as a dict"""

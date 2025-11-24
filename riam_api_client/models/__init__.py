@@ -146,6 +146,7 @@ from .inline_response20061 import InlineResponse20061
 from .inline_response20061_message import InlineResponse20061Message
 from .inline_response20062 import InlineResponse20062
 from .inline_response20062_message import InlineResponse20062Message
+from .inline_response20062_message_punta_compra import InlineResponse20062MessagePuntaCompra
 from .inline_response20063 import InlineResponse20063
 from .inline_response20063_message import InlineResponse20063Message
 from .inline_response20064 import InlineResponse20064
@@ -157,12 +158,15 @@ from .inline_response20066 import InlineResponse20066
 from .inline_response20066_message import InlineResponse20066Message
 from .inline_response20067 import InlineResponse20067
 from .inline_response20067_message import InlineResponse20067Message
+from .inline_response20067_message_emisor import InlineResponse20067MessageEmisor
 from .inline_response20068 import InlineResponse20068
 from .inline_response20068_message import InlineResponse20068Message
 from .inline_response20069 import InlineResponse20069
 from .inline_response20069_message import InlineResponse20069Message
 from .inline_response2006_message import InlineResponse2006Message
 from .inline_response2007 import InlineResponse2007
+from .inline_response20070 import InlineResponse20070
+from .inline_response20070_message import InlineResponse20070Message
 from .inline_response2007_message import InlineResponse2007Message
 from .inline_response2008 import InlineResponse2008
 from .inline_response2008_message import InlineResponse2008Message

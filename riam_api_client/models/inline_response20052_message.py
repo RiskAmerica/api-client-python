@@ -32,29 +32,56 @@ class InlineResponse20052Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'int',
         'nombre': 'str',
         'aplicacion': 'str',
         'fecha_inicio': 'date'
     }
 
     attribute_map = {
+        'id': 'id',
         'nombre': 'nombre',
         'aplicacion': 'aplicacion',
         'fecha_inicio': 'fechaInicio'
     }
 
-    def __init__(self, nombre=None, aplicacion=None, fecha_inicio=None):  # noqa: E501
+    def __init__(self, id=None, nombre=None, aplicacion=None, fecha_inicio=None):  # noqa: E501
         """InlineResponse20052Message - a model defined in Swagger"""  # noqa: E501
+        self._id = None
         self._nombre = None
         self._aplicacion = None
         self._fecha_inicio = None
         self.discriminator = None
+        if id is not None:
+            self.id = id
         if nombre is not None:
             self.nombre = nombre
         if aplicacion is not None:
             self.aplicacion = aplicacion
         if fecha_inicio is not None:
             self.fecha_inicio = fecha_inicio
+
+    @property
+    def id(self):
+        """Gets the id of this InlineResponse20052Message.  # noqa: E501
+        Identificador del fondo  # noqa: E501
+
+        :return: The id of this InlineResponse20052Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20052Message.
+
+        Identificador del fondo  # noqa: E501
+
+        :param id: The id of this InlineResponse20052Message.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
 
     @property
     def nombre(self):

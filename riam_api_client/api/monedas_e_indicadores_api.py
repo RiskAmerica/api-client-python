@@ -17,8 +17,8 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20047
 from . import InlineResponse20048
+from . import InlineResponse20049
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -49,10 +49,10 @@ class MonedasEIndicadoresApi(object):
         :param date fecha: Fecha a Consultar (required)
         :param str moneda: Moneda a consultar (required)
         :param str base: Moneda en la cual se expresa el tipo cambio obtenido (required)
-        :return: InlineResponse20047
+        :return: InlineResponse20048
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20047 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20048 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -74,10 +74,10 @@ class MonedasEIndicadoresApi(object):
         :param date fecha: Fecha a Consultar (required)
         :param str moneda: Moneda a consultar (required)
         :param str base: Moneda en la cual se expresa el tipo cambio obtenido (required)
-        :return: InlineResponse20047
+        :return: InlineResponse20048
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20047 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20048 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'moneda', 'base']  # noqa: E501
@@ -141,7 +141,7 @@ class MonedasEIndicadoresApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20047',  # noqa: E501
+            response_type='InlineResponse20048',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -163,10 +163,10 @@ class MonedasEIndicadoresApi(object):
         :param date fecha_max: Intervalo Superior de Fecha (required)
         :param str moneda: Moneda a consultar (required)
         :param str base: Moneda en la cual se expresa el tipo cambio obtenido (required)
-        :return: InlineResponse20048
+        :return: InlineResponse20049
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20048 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20049 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -189,10 +189,10 @@ class MonedasEIndicadoresApi(object):
         :param date fecha_max: Intervalo Superior de Fecha (required)
         :param str moneda: Moneda a consultar (required)
         :param str base: Moneda en la cual se expresa el tipo cambio obtenido (required)
-        :return: InlineResponse20048
+        :return: InlineResponse20049
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20048 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20049 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'moneda', 'base']  # noqa: E501
@@ -262,7 +262,7 @@ class MonedasEIndicadoresApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20048',  # noqa: E501
+            response_type='InlineResponse20049',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -32,47 +32,37 @@ class InlineResponse20058Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'nombre': 'str',
-        'descripcion': 'str',
-        'id_tipo_valorizacion': 'str',
-        'replicacion': 'int'
+        'id': 'str',
+        'short_name': 'str',
+        'long_name': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'nombre': 'nombre',
-        'descripcion': 'descripcion',
-        'id_tipo_valorizacion': 'idTipoValorizacion',
-        'replicacion': 'replicacion'
+        'short_name': 'shortName',
+        'long_name': 'longName'
     }
 
-    def __init__(self, id=None, nombre=None, descripcion=None, id_tipo_valorizacion=None, replicacion=None):  # noqa: E501
+    def __init__(self, id=None, short_name=None, long_name=None):  # noqa: E501
         """InlineResponse20058Message - a model defined in Swagger"""  # noqa: E501
         self._id = None
-        self._nombre = None
-        self._descripcion = None
-        self._id_tipo_valorizacion = None
-        self._replicacion = None
+        self._short_name = None
+        self._long_name = None
         self.discriminator = None
         if id is not None:
             self.id = id
-        if nombre is not None:
-            self.nombre = nombre
-        if descripcion is not None:
-            self.descripcion = descripcion
-        if id_tipo_valorizacion is not None:
-            self.id_tipo_valorizacion = id_tipo_valorizacion
-        if replicacion is not None:
-            self.replicacion = replicacion
+        if short_name is not None:
+            self.short_name = short_name
+        if long_name is not None:
+            self.long_name = long_name
 
     @property
     def id(self):
         """Gets the id of this InlineResponse20058Message.  # noqa: E501
-        Identificador del FileTask  # noqa: E501
+        Identificador del Tipo de Valorización  # noqa: E501
 
         :return: The id of this InlineResponse20058Message.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._id
 
@@ -80,101 +70,57 @@ class InlineResponse20058Message(object):
     def id(self, id):
         """Sets the id of this InlineResponse20058Message.
 
-        Identificador del FileTask  # noqa: E501
+        Identificador del Tipo de Valorización  # noqa: E501
 
         :param id: The id of this InlineResponse20058Message.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._id = id
 
     @property
-    def nombre(self):
-        """Gets the nombre of this InlineResponse20058Message.  # noqa: E501
-        Título del FileTask  # noqa: E501
+    def short_name(self):
+        """Gets the short_name of this InlineResponse20058Message.  # noqa: E501
+        Título del Tipo de Valorización  # noqa: E501
 
-        :return: The nombre of this InlineResponse20058Message.  # noqa: E501
+        :return: The short_name of this InlineResponse20058Message.  # noqa: E501
         :rtype: str
         """
-        return self._nombre
+        return self._short_name
 
-    @nombre.setter
-    def nombre(self, nombre):
-        """Sets the nombre of this InlineResponse20058Message.
+    @short_name.setter
+    def short_name(self, short_name):
+        """Sets the short_name of this InlineResponse20058Message.
 
-        Título del FileTask  # noqa: E501
+        Título del Tipo de Valorización  # noqa: E501
 
-        :param nombre: The nombre of this InlineResponse20058Message.  # noqa: E501
+        :param short_name: The short_name of this InlineResponse20058Message.  # noqa: E501
         :type: str
         """
 
-        self._nombre = nombre
+        self._short_name = short_name
 
     @property
-    def descripcion(self):
-        """Gets the descripcion of this InlineResponse20058Message.  # noqa: E501
-        Descripción del Filetask  # noqa: E501
-
-        :return: The descripcion of this InlineResponse20058Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._descripcion
-
-    @descripcion.setter
-    def descripcion(self, descripcion):
-        """Sets the descripcion of this InlineResponse20058Message.
-
-        Descripción del Filetask  # noqa: E501
-
-        :param descripcion: The descripcion of this InlineResponse20058Message.  # noqa: E501
-        :type: str
-        """
-
-        self._descripcion = descripcion
-
-    @property
-    def id_tipo_valorizacion(self):
-        """Gets the id_tipo_valorizacion of this InlineResponse20058Message.  # noqa: E501
+    def long_name(self):
+        """Gets the long_name of this InlineResponse20058Message.  # noqa: E501
         Descripción del Tipo de Valorizacion  # noqa: E501
 
-        :return: The id_tipo_valorizacion of this InlineResponse20058Message.  # noqa: E501
+        :return: The long_name of this InlineResponse20058Message.  # noqa: E501
         :rtype: str
         """
-        return self._id_tipo_valorizacion
+        return self._long_name
 
-    @id_tipo_valorizacion.setter
-    def id_tipo_valorizacion(self, id_tipo_valorizacion):
-        """Sets the id_tipo_valorizacion of this InlineResponse20058Message.
+    @long_name.setter
+    def long_name(self, long_name):
+        """Sets the long_name of this InlineResponse20058Message.
 
         Descripción del Tipo de Valorizacion  # noqa: E501
 
-        :param id_tipo_valorizacion: The id_tipo_valorizacion of this InlineResponse20058Message.  # noqa: E501
+        :param long_name: The long_name of this InlineResponse20058Message.  # noqa: E501
         :type: str
         """
 
-        self._id_tipo_valorizacion = id_tipo_valorizacion
-
-    @property
-    def replicacion(self):
-        """Gets the replicacion of this InlineResponse20058Message.  # noqa: E501
-        Si está en 1, para el caso de Tipo Valorizacion Internacional, provoca que si el cliente no carga el archivo este se copiará del día anterior.  # noqa: E501
-
-        :return: The replicacion of this InlineResponse20058Message.  # noqa: E501
-        :rtype: int
-        """
-        return self._replicacion
-
-    @replicacion.setter
-    def replicacion(self, replicacion):
-        """Sets the replicacion of this InlineResponse20058Message.
-
-        Si está en 1, para el caso de Tipo Valorizacion Internacional, provoca que si el cliente no carga el archivo este se copiará del día anterior.  # noqa: E501
-
-        :param replicacion: The replicacion of this InlineResponse20058Message.  # noqa: E501
-        :type: int
-        """
-
-        self._replicacion = replicacion
+        self._long_name = long_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

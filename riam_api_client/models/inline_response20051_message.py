@@ -33,33 +33,33 @@ class InlineResponse20051Message(object):
     """
     swagger_types = {
         'id': 'int',
+        'rut': 'int',
         'nombre': 'str',
-        'aplicacion': 'str',
-        'fecha_inicio': 'date'
+        'identificador_cliente': 'str'
     }
 
     attribute_map = {
         'id': 'id',
+        'rut': 'rut',
         'nombre': 'nombre',
-        'aplicacion': 'aplicacion',
-        'fecha_inicio': 'fechaInicio'
+        'identificador_cliente': 'identificadorCliente'
     }
 
-    def __init__(self, id=None, nombre=None, aplicacion=None, fecha_inicio=None):  # noqa: E501
+    def __init__(self, id=None, rut=None, nombre=None, identificador_cliente=None):  # noqa: E501
         """InlineResponse20051Message - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._rut = None
         self._nombre = None
-        self._aplicacion = None
-        self._fecha_inicio = None
+        self._identificador_cliente = None
         self.discriminator = None
         if id is not None:
             self.id = id
+        if rut is not None:
+            self.rut = rut
         if nombre is not None:
             self.nombre = nombre
-        if aplicacion is not None:
-            self.aplicacion = aplicacion
-        if fecha_inicio is not None:
-            self.fecha_inicio = fecha_inicio
+        if identificador_cliente is not None:
+            self.identificador_cliente = identificador_cliente
 
     @property
     def id(self):
@@ -84,6 +84,28 @@ class InlineResponse20051Message(object):
         self._id = id
 
     @property
+    def rut(self):
+        """Gets the rut of this InlineResponse20051Message.  # noqa: E501
+        RUT  # noqa: E501
+
+        :return: The rut of this InlineResponse20051Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._rut
+
+    @rut.setter
+    def rut(self, rut):
+        """Sets the rut of this InlineResponse20051Message.
+
+        RUT  # noqa: E501
+
+        :param rut: The rut of this InlineResponse20051Message.  # noqa: E501
+        :type: int
+        """
+
+        self._rut = rut
+
+    @property
     def nombre(self):
         """Gets the nombre of this InlineResponse20051Message.  # noqa: E501
         Nombre del fondo  # noqa: E501
@@ -106,48 +128,26 @@ class InlineResponse20051Message(object):
         self._nombre = nombre
 
     @property
-    def aplicacion(self):
-        """Gets the aplicacion of this InlineResponse20051Message.  # noqa: E501
-        Aplicacion  # noqa: E501
+    def identificador_cliente(self):
+        """Gets the identificador_cliente of this InlineResponse20051Message.  # noqa: E501
+        Identificador personalizado  # noqa: E501
 
-        :return: The aplicacion of this InlineResponse20051Message.  # noqa: E501
+        :return: The identificador_cliente of this InlineResponse20051Message.  # noqa: E501
         :rtype: str
         """
-        return self._aplicacion
+        return self._identificador_cliente
 
-    @aplicacion.setter
-    def aplicacion(self, aplicacion):
-        """Sets the aplicacion of this InlineResponse20051Message.
+    @identificador_cliente.setter
+    def identificador_cliente(self, identificador_cliente):
+        """Sets the identificador_cliente of this InlineResponse20051Message.
 
-        Aplicacion  # noqa: E501
+        Identificador personalizado  # noqa: E501
 
-        :param aplicacion: The aplicacion of this InlineResponse20051Message.  # noqa: E501
+        :param identificador_cliente: The identificador_cliente of this InlineResponse20051Message.  # noqa: E501
         :type: str
         """
 
-        self._aplicacion = aplicacion
-
-    @property
-    def fecha_inicio(self):
-        """Gets the fecha_inicio of this InlineResponse20051Message.  # noqa: E501
-        fecha de Inicio del Ejercicio  # noqa: E501
-
-        :return: The fecha_inicio of this InlineResponse20051Message.  # noqa: E501
-        :rtype: date
-        """
-        return self._fecha_inicio
-
-    @fecha_inicio.setter
-    def fecha_inicio(self, fecha_inicio):
-        """Sets the fecha_inicio of this InlineResponse20051Message.
-
-        fecha de Inicio del Ejercicio  # noqa: E501
-
-        :param fecha_inicio: The fecha_inicio of this InlineResponse20051Message.  # noqa: E501
-        :type: date
-        """
-
-        self._fecha_inicio = fecha_inicio
+        self._identificador_cliente = identificador_cliente
 
     def to_dict(self):
         """Returns the model properties as a dict"""

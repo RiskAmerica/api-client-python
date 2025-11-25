@@ -35,7 +35,7 @@ class InlineResponse20050(object):
     swagger_types = {
         'code': 'int',
         'error': 'str',
-        'message': 'list[InlineResponse20050Message]'
+        'message': 'InlineResponse20050Message'
     }
 
     attribute_map = {
@@ -102,7 +102,7 @@ class InlineResponse20050(object):
         """Gets the message of this InlineResponse20050.  # noqa: E501
 
         :return: The message of this InlineResponse20050.  # noqa: E501
-        :rtype: list[InlineResponse20050Message]
+        :rtype: InlineResponse20050Message
         """
         return self._message
 
@@ -112,7 +112,7 @@ class InlineResponse20050(object):
 
 
         :param message: The message of this InlineResponse20050.  # noqa: E501
-        :type: list[InlineResponse20050Message]
+        :type: InlineResponse20050Message
         """
 
         self._message = message

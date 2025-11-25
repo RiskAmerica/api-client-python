@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20048_message_tipo_cambio import InlineResponse20048MessageTipoCambio
 
 
 
@@ -32,122 +33,39 @@ class InlineResponse20048Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha': 'date',
-        'moneda': 'str',
-        'base': 'str',
-        'valor': 'float'
+        'tipo_cambio': 'InlineResponse20048MessageTipoCambio'
     }
 
     attribute_map = {
-        'fecha': 'fecha',
-        'moneda': 'moneda',
-        'base': 'base',
-        'valor': 'valor'
+        'tipo_cambio': 'TipoCambio'
     }
 
-    def __init__(self, fecha=None, moneda=None, base=None, valor=None):  # noqa: E501
+    def __init__(self, tipo_cambio=None):  # noqa: E501
         """InlineResponse20048Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha = None
-        self._moneda = None
-        self._base = None
-        self._valor = None
+        self._tipo_cambio = None
         self.discriminator = None
-        if fecha is not None:
-            self.fecha = fecha
-        if moneda is not None:
-            self.moneda = moneda
-        if base is not None:
-            self.base = base
-        if valor is not None:
-            self.valor = valor
+        if tipo_cambio is not None:
+            self.tipo_cambio = tipo_cambio
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20048Message.  # noqa: E501
-        Fecha del tipo cambio segun estandar del Banco Central  # noqa: E501
+    def tipo_cambio(self):
+        """Gets the tipo_cambio of this InlineResponse20048Message.  # noqa: E501
 
-        :return: The fecha of this InlineResponse20048Message.  # noqa: E501
-        :rtype: date
+        :return: The tipo_cambio of this InlineResponse20048Message.  # noqa: E501
+        :rtype: InlineResponse20048MessageTipoCambio
         """
-        return self._fecha
+        return self._tipo_cambio
 
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20048Message.
+    @tipo_cambio.setter
+    def tipo_cambio(self, tipo_cambio):
+        """Sets the tipo_cambio of this InlineResponse20048Message.
 
-        Fecha del tipo cambio segun estandar del Banco Central  # noqa: E501
 
-        :param fecha: The fecha of this InlineResponse20048Message.  # noqa: E501
-        :type: date
+        :param tipo_cambio: The tipo_cambio of this InlineResponse20048Message.  # noqa: E501
+        :type: InlineResponse20048MessageTipoCambio
         """
 
-        self._fecha = fecha
-
-    @property
-    def moneda(self):
-        """Gets the moneda of this InlineResponse20048Message.  # noqa: E501
-        Moneda consultada  # noqa: E501
-
-        :return: The moneda of this InlineResponse20048Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._moneda
-
-    @moneda.setter
-    def moneda(self, moneda):
-        """Sets the moneda of this InlineResponse20048Message.
-
-        Moneda consultada  # noqa: E501
-
-        :param moneda: The moneda of this InlineResponse20048Message.  # noqa: E501
-        :type: str
-        """
-
-        self._moneda = moneda
-
-    @property
-    def base(self):
-        """Gets the base of this InlineResponse20048Message.  # noqa: E501
-        Moneda en la cual se expresa el valor  # noqa: E501
-
-        :return: The base of this InlineResponse20048Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._base
-
-    @base.setter
-    def base(self, base):
-        """Sets the base of this InlineResponse20048Message.
-
-        Moneda en la cual se expresa el valor  # noqa: E501
-
-        :param base: The base of this InlineResponse20048Message.  # noqa: E501
-        :type: str
-        """
-
-        self._base = base
-
-    @property
-    def valor(self):
-        """Gets the valor of this InlineResponse20048Message.  # noqa: E501
-        Tipo de cambio  # noqa: E501
-
-        :return: The valor of this InlineResponse20048Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._valor
-
-    @valor.setter
-    def valor(self, valor):
-        """Sets the valor of this InlineResponse20048Message.
-
-        Tipo de cambio  # noqa: E501
-
-        :param valor: The valor of this InlineResponse20048Message.  # noqa: E501
-        :type: float
-        """
-
-        self._valor = valor
+        self._tipo_cambio = tipo_cambio
 
     def to_dict(self):
         """Returns the model properties as a dict"""

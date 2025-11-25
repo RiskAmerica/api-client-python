@@ -15,9 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20053_message_posicion import InlineResponse20053MessagePosicion
-from .inline_response20053_message_contribucion import InlineResponse20053MessageContribucion
-from .inline_response20053_message_performance import InlineResponse20053MessagePerformance
 
 
 
@@ -35,89 +32,95 @@ class InlineResponse20053Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'posicion': 'InlineResponse20053MessagePosicion',
-        'contribucion': 'InlineResponse20053MessageContribucion',
-        'performance': 'InlineResponse20053MessagePerformance'
+        'nombre': 'str',
+        'aplicacion': 'str',
+        'fecha_inicio': 'date'
     }
 
     attribute_map = {
-        'posicion': 'Posicion',
-        'contribucion': 'Contribucion',
-        'performance': 'Performance'
+        'nombre': 'nombre',
+        'aplicacion': 'aplicacion',
+        'fecha_inicio': 'fechaInicio'
     }
 
-    def __init__(self, posicion=None, contribucion=None, performance=None):  # noqa: E501
+    def __init__(self, nombre=None, aplicacion=None, fecha_inicio=None):  # noqa: E501
         """InlineResponse20053Message - a model defined in Swagger"""  # noqa: E501
-        self._posicion = None
-        self._contribucion = None
-        self._performance = None
+        self._nombre = None
+        self._aplicacion = None
+        self._fecha_inicio = None
         self.discriminator = None
-        if posicion is not None:
-            self.posicion = posicion
-        if contribucion is not None:
-            self.contribucion = contribucion
-        if performance is not None:
-            self.performance = performance
+        if nombre is not None:
+            self.nombre = nombre
+        if aplicacion is not None:
+            self.aplicacion = aplicacion
+        if fecha_inicio is not None:
+            self.fecha_inicio = fecha_inicio
 
     @property
-    def posicion(self):
-        """Gets the posicion of this InlineResponse20053Message.  # noqa: E501
+    def nombre(self):
+        """Gets the nombre of this InlineResponse20053Message.  # noqa: E501
+        Nombre del fondo  # noqa: E501
 
-        :return: The posicion of this InlineResponse20053Message.  # noqa: E501
-        :rtype: InlineResponse20053MessagePosicion
+        :return: The nombre of this InlineResponse20053Message.  # noqa: E501
+        :rtype: str
         """
-        return self._posicion
+        return self._nombre
 
-    @posicion.setter
-    def posicion(self, posicion):
-        """Sets the posicion of this InlineResponse20053Message.
+    @nombre.setter
+    def nombre(self, nombre):
+        """Sets the nombre of this InlineResponse20053Message.
 
+        Nombre del fondo  # noqa: E501
 
-        :param posicion: The posicion of this InlineResponse20053Message.  # noqa: E501
-        :type: InlineResponse20053MessagePosicion
+        :param nombre: The nombre of this InlineResponse20053Message.  # noqa: E501
+        :type: str
         """
 
-        self._posicion = posicion
+        self._nombre = nombre
 
     @property
-    def contribucion(self):
-        """Gets the contribucion of this InlineResponse20053Message.  # noqa: E501
+    def aplicacion(self):
+        """Gets the aplicacion of this InlineResponse20053Message.  # noqa: E501
+        Aplicacion  # noqa: E501
 
-        :return: The contribucion of this InlineResponse20053Message.  # noqa: E501
-        :rtype: InlineResponse20053MessageContribucion
+        :return: The aplicacion of this InlineResponse20053Message.  # noqa: E501
+        :rtype: str
         """
-        return self._contribucion
+        return self._aplicacion
 
-    @contribucion.setter
-    def contribucion(self, contribucion):
-        """Sets the contribucion of this InlineResponse20053Message.
+    @aplicacion.setter
+    def aplicacion(self, aplicacion):
+        """Sets the aplicacion of this InlineResponse20053Message.
 
+        Aplicacion  # noqa: E501
 
-        :param contribucion: The contribucion of this InlineResponse20053Message.  # noqa: E501
-        :type: InlineResponse20053MessageContribucion
+        :param aplicacion: The aplicacion of this InlineResponse20053Message.  # noqa: E501
+        :type: str
         """
 
-        self._contribucion = contribucion
+        self._aplicacion = aplicacion
 
     @property
-    def performance(self):
-        """Gets the performance of this InlineResponse20053Message.  # noqa: E501
+    def fecha_inicio(self):
+        """Gets the fecha_inicio of this InlineResponse20053Message.  # noqa: E501
+        fecha de Inicio del Ejercicio  # noqa: E501
 
-        :return: The performance of this InlineResponse20053Message.  # noqa: E501
-        :rtype: InlineResponse20053MessagePerformance
+        :return: The fecha_inicio of this InlineResponse20053Message.  # noqa: E501
+        :rtype: date
         """
-        return self._performance
+        return self._fecha_inicio
 
-    @performance.setter
-    def performance(self, performance):
-        """Sets the performance of this InlineResponse20053Message.
+    @fecha_inicio.setter
+    def fecha_inicio(self, fecha_inicio):
+        """Sets the fecha_inicio of this InlineResponse20053Message.
 
+        fecha de Inicio del Ejercicio  # noqa: E501
 
-        :param performance: The performance of this InlineResponse20053Message.  # noqa: E501
-        :type: InlineResponse20053MessagePerformance
+        :param fecha_inicio: The fecha_inicio of this InlineResponse20053Message.  # noqa: E501
+        :type: date
         """
 
-        self._performance = performance
+        self._fecha_inicio = fecha_inicio
 
     def to_dict(self):
         """Returns the model properties as a dict"""

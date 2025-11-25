@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20062_message_punta_compra import InlineResponse20062MessagePuntaCompra
 
 
 
@@ -33,39 +32,66 @@ class InlineResponse20062Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'punta_compra': 'list[InlineResponse20062MessagePuntaCompra]'
+        'estado': 'str',
+        'warnings': 'list[str]'
     }
 
     attribute_map = {
-        'punta_compra': 'PuntaCompra'
+        'estado': 'estado',
+        'warnings': 'warnings'
     }
 
-    def __init__(self, punta_compra=None):  # noqa: E501
+    def __init__(self, estado=None, warnings=None):  # noqa: E501
         """InlineResponse20062Message - a model defined in Swagger"""  # noqa: E501
-        self._punta_compra = None
+        self._estado = None
+        self._warnings = None
         self.discriminator = None
-        if punta_compra is not None:
-            self.punta_compra = punta_compra
+        if estado is not None:
+            self.estado = estado
+        if warnings is not None:
+            self.warnings = warnings
 
     @property
-    def punta_compra(self):
-        """Gets the punta_compra of this InlineResponse20062Message.  # noqa: E501
+    def estado(self):
+        """Gets the estado of this InlineResponse20062Message.  # noqa: E501
+        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
 
-        :return: The punta_compra of this InlineResponse20062Message.  # noqa: E501
-        :rtype: list[InlineResponse20062MessagePuntaCompra]
+        :return: The estado of this InlineResponse20062Message.  # noqa: E501
+        :rtype: str
         """
-        return self._punta_compra
+        return self._estado
 
-    @punta_compra.setter
-    def punta_compra(self, punta_compra):
-        """Sets the punta_compra of this InlineResponse20062Message.
+    @estado.setter
+    def estado(self, estado):
+        """Sets the estado of this InlineResponse20062Message.
 
+        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
 
-        :param punta_compra: The punta_compra of this InlineResponse20062Message.  # noqa: E501
-        :type: list[InlineResponse20062MessagePuntaCompra]
+        :param estado: The estado of this InlineResponse20062Message.  # noqa: E501
+        :type: str
         """
 
-        self._punta_compra = punta_compra
+        self._estado = estado
+
+    @property
+    def warnings(self):
+        """Gets the warnings of this InlineResponse20062Message.  # noqa: E501
+
+        :return: The warnings of this InlineResponse20062Message.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._warnings
+
+    @warnings.setter
+    def warnings(self, warnings):
+        """Sets the warnings of this InlineResponse20062Message.
+
+
+        :param warnings: The warnings of this InlineResponse20062Message.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._warnings = warnings
 
     def to_dict(self):
         """Returns the model properties as a dict"""

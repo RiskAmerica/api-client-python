@@ -17,6 +17,7 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
+from . import InlineResponse20047
 from . import InlineResponse20046
 # Importing for doctring purposes
 # Api Client
@@ -34,6 +35,131 @@ class RFNCalculadoraApi(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
+
+    def r_fn_calculadora_calculadora_calcular_con_monto(self, nemo, fecha, monto_clp, nominal, **kwargs):  # noqa: E501
+        """Obtiene la tasa de un instrumento para un monto CLP dado.  # noqa: E501
+
+        Obtiene la tasa de un instrumento para un monto CLP dado.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.r_fn_calculadora_calculadora_calcular_con_monto(nemo, fecha, monto_clp, nominal, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str nemo: Nemotecnico del instrumento a valorizar (required)
+        :param date fecha: Fecha para la cual se efectua la valorización (required)
+        :param float monto_clp: Monto CLP utilizado para encontrar la TIR (required)
+        :param float nominal: Nominal a valorizar. (required)
+        :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
+        :return: InlineResponse20047
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20047 | multiprocessing.pool.ApplyResult
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.r_fn_calculadora_calculadora_calcular_con_monto_with_http_info(nemo, fecha, monto_clp, nominal, **kwargs)  # noqa: E501
+        else:
+            (data) = self.r_fn_calculadora_calculadora_calcular_con_monto_with_http_info(nemo, fecha, monto_clp, nominal, **kwargs)  # noqa: E501
+            return data
+
+    def r_fn_calculadora_calculadora_calcular_con_monto_with_http_info(self, nemo, fecha, monto_clp, nominal, **kwargs):  # noqa: E501
+        """Obtiene la tasa de un instrumento para un monto CLP dado.  # noqa: E501
+
+        Obtiene la tasa de un instrumento para un monto CLP dado.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.r_fn_calculadora_calculadora_calcular_con_monto_with_http_info(nemo, fecha, monto_clp, nominal, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str nemo: Nemotecnico del instrumento a valorizar (required)
+        :param date fecha: Fecha para la cual se efectua la valorización (required)
+        :param float monto_clp: Monto CLP utilizado para encontrar la TIR (required)
+        :param float nominal: Nominal a valorizar. (required)
+        :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
+        :return: InlineResponse20047
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: InlineResponse20047 | multiprocessing.pool.ApplyResult
+        """
+
+        all_params = ['nemo', 'fecha', 'monto_clp', 'nominal', 'condicion_pago']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method r_fn_calculadora_calculadora_calcular_con_monto" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'nemo' is set
+        if ('nemo' not in params or
+                params['nemo'] is None):
+            raise ValueError("Missing the required parameter `nemo` when calling `r_fn_calculadora_calculadora_calcular_con_monto`")  # noqa: E501
+        # verify the required parameter 'fecha' is set
+        if ('fecha' not in params or
+                params['fecha'] is None):
+            raise ValueError("Missing the required parameter `fecha` when calling `r_fn_calculadora_calculadora_calcular_con_monto`")  # noqa: E501
+        # verify the required parameter 'monto_clp' is set
+        if ('monto_clp' not in params or
+                params['monto_clp'] is None):
+            raise ValueError("Missing the required parameter `monto_clp` when calling `r_fn_calculadora_calculadora_calcular_con_monto`")  # noqa: E501
+        # verify the required parameter 'nominal' is set
+        if ('nominal' not in params or
+                params['nominal'] is None):
+            raise ValueError("Missing the required parameter `nominal` when calling `r_fn_calculadora_calculadora_calcular_con_monto`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'nemo' in params:
+            query_params.append(('nemo', params['nemo']))  # noqa: E501
+        if 'fecha' in params:
+            query_params.append(('fecha', params['fecha']))  # noqa: E501
+        if 'monto_clp' in params:
+            query_params.append(('montoCLP', params['monto_clp']))  # noqa: E501
+        if 'nominal' in params:
+            query_params.append(('nominal', params['nominal']))  # noqa: E501
+        if 'condicion_pago' in params:
+            query_params.append(('condicionPago', params['condicion_pago']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['ApiKeyAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Outputs/Generic/Calculadora/Calculadora/calcularConMonto', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20047',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
 
     def r_fn_calculadora_calculadora_calcular_con_tir(self, nemo, fecha, tir, **kwargs):  # noqa: E501
         """Obtiene la valorización de un instrumento para una tasa dada.  # noqa: E501

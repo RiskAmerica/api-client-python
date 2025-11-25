@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20048_message import InlineResponse20048Message
+from .inline_response20047_message_valorizacion import InlineResponse20047MessageValorizacion
 
 
 
@@ -33,39 +33,39 @@ class InlineResponse20047Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'tipo_cambio': 'InlineResponse20048Message'
+        'valorizacion': 'InlineResponse20047MessageValorizacion'
     }
 
     attribute_map = {
-        'tipo_cambio': 'TipoCambio'
+        'valorizacion': 'Valorizacion'
     }
 
-    def __init__(self, tipo_cambio=None):  # noqa: E501
+    def __init__(self, valorizacion=None):  # noqa: E501
         """InlineResponse20047Message - a model defined in Swagger"""  # noqa: E501
-        self._tipo_cambio = None
+        self._valorizacion = None
         self.discriminator = None
-        if tipo_cambio is not None:
-            self.tipo_cambio = tipo_cambio
+        if valorizacion is not None:
+            self.valorizacion = valorizacion
 
     @property
-    def tipo_cambio(self):
-        """Gets the tipo_cambio of this InlineResponse20047Message.  # noqa: E501
+    def valorizacion(self):
+        """Gets the valorizacion of this InlineResponse20047Message.  # noqa: E501
 
-        :return: The tipo_cambio of this InlineResponse20047Message.  # noqa: E501
-        :rtype: InlineResponse20048Message
+        :return: The valorizacion of this InlineResponse20047Message.  # noqa: E501
+        :rtype: InlineResponse20047MessageValorizacion
         """
-        return self._tipo_cambio
+        return self._valorizacion
 
-    @tipo_cambio.setter
-    def tipo_cambio(self, tipo_cambio):
-        """Sets the tipo_cambio of this InlineResponse20047Message.
+    @valorizacion.setter
+    def valorizacion(self, valorizacion):
+        """Sets the valorizacion of this InlineResponse20047Message.
 
 
-        :param tipo_cambio: The tipo_cambio of this InlineResponse20047Message.  # noqa: E501
-        :type: InlineResponse20048Message
+        :param valorizacion: The valorizacion of this InlineResponse20047Message.  # noqa: E501
+        :type: InlineResponse20047MessageValorizacion
         """
 
-        self._tipo_cambio = tipo_cambio
+        self._valorizacion = valorizacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

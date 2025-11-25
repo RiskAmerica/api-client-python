@@ -32,66 +32,122 @@ class InlineResponse20061Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'estado': 'str',
-        'warnings': 'list[str]'
+        'id': 'int',
+        'short_name': 'str',
+        'long_name': 'str',
+        'mime_type': 'str'
     }
 
     attribute_map = {
-        'estado': 'estado',
-        'warnings': 'warnings'
+        'id': 'id',
+        'short_name': 'shortName',
+        'long_name': 'longName',
+        'mime_type': 'mimeType'
     }
 
-    def __init__(self, estado=None, warnings=None):  # noqa: E501
+    def __init__(self, id=None, short_name=None, long_name=None, mime_type=None):  # noqa: E501
         """InlineResponse20061Message - a model defined in Swagger"""  # noqa: E501
-        self._estado = None
-        self._warnings = None
+        self._id = None
+        self._short_name = None
+        self._long_name = None
+        self._mime_type = None
         self.discriminator = None
-        if estado is not None:
-            self.estado = estado
-        if warnings is not None:
-            self.warnings = warnings
+        if id is not None:
+            self.id = id
+        if short_name is not None:
+            self.short_name = short_name
+        if long_name is not None:
+            self.long_name = long_name
+        if mime_type is not None:
+            self.mime_type = mime_type
 
     @property
-    def estado(self):
-        """Gets the estado of this InlineResponse20061Message.  # noqa: E501
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20061Message.  # noqa: E501
+        Identificador del formato de descarga  # noqa: E501
 
-        :return: The estado of this InlineResponse20061Message.  # noqa: E501
+        :return: The id of this InlineResponse20061Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20061Message.
+
+        Identificador del formato de descarga  # noqa: E501
+
+        :param id: The id of this InlineResponse20061Message.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def short_name(self):
+        """Gets the short_name of this InlineResponse20061Message.  # noqa: E501
+        Título del formato de descarga  # noqa: E501
+
+        :return: The short_name of this InlineResponse20061Message.  # noqa: E501
         :rtype: str
         """
-        return self._estado
+        return self._short_name
 
-    @estado.setter
-    def estado(self, estado):
-        """Sets the estado of this InlineResponse20061Message.
+    @short_name.setter
+    def short_name(self, short_name):
+        """Sets the short_name of this InlineResponse20061Message.
 
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+        Título del formato de descarga  # noqa: E501
 
-        :param estado: The estado of this InlineResponse20061Message.  # noqa: E501
+        :param short_name: The short_name of this InlineResponse20061Message.  # noqa: E501
         :type: str
         """
 
-        self._estado = estado
+        self._short_name = short_name
 
     @property
-    def warnings(self):
-        """Gets the warnings of this InlineResponse20061Message.  # noqa: E501
+    def long_name(self):
+        """Gets the long_name of this InlineResponse20061Message.  # noqa: E501
+        Descripción del formato de descarga  # noqa: E501
 
-        :return: The warnings of this InlineResponse20061Message.  # noqa: E501
-        :rtype: list[str]
+        :return: The long_name of this InlineResponse20061Message.  # noqa: E501
+        :rtype: str
         """
-        return self._warnings
+        return self._long_name
 
-    @warnings.setter
-    def warnings(self, warnings):
-        """Sets the warnings of this InlineResponse20061Message.
+    @long_name.setter
+    def long_name(self, long_name):
+        """Sets the long_name of this InlineResponse20061Message.
 
+        Descripción del formato de descarga  # noqa: E501
 
-        :param warnings: The warnings of this InlineResponse20061Message.  # noqa: E501
-        :type: list[str]
+        :param long_name: The long_name of this InlineResponse20061Message.  # noqa: E501
+        :type: str
         """
 
-        self._warnings = warnings
+        self._long_name = long_name
+
+    @property
+    def mime_type(self):
+        """Gets the mime_type of this InlineResponse20061Message.  # noqa: E501
+        MimeType que describe el tipo de archivo usado para la descarga  # noqa: E501
+
+        :return: The mime_type of this InlineResponse20061Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._mime_type
+
+    @mime_type.setter
+    def mime_type(self, mime_type):
+        """Sets the mime_type of this InlineResponse20061Message.
+
+        MimeType que describe el tipo de archivo usado para la descarga  # noqa: E501
+
+        :param mime_type: The mime_type of this InlineResponse20061Message.  # noqa: E501
+        :type: str
+        """
+
+        self._mime_type = mime_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

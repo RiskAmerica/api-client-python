@@ -17,7 +17,7 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20061
+from . import InlineResponse20062
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -46,10 +46,10 @@ class FolletosInformativosApi(object):
 
         :param async_req bool
         :param str file: (required)
-        :return: InlineResponse20061
+        :return: InlineResponse20062
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20061 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20062 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -69,10 +69,10 @@ class FolletosInformativosApi(object):
 
         :param async_req bool
         :param str file: (required)
-        :return: InlineResponse20061
+        :return: InlineResponse20062
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20061 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20062 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['file']  # noqa: E501
@@ -128,7 +128,7 @@ class FolletosInformativosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20061',  # noqa: E501
+            response_type='InlineResponse20062',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

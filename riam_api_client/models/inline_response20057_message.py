@@ -32,95 +32,41 @@ class InlineResponse20057Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'short_name': 'str',
-        'long_name': 'str'
+        'archivo': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'short_name': 'shortName',
-        'long_name': 'longName'
+        'archivo': 'archivo'
     }
 
-    def __init__(self, id=None, short_name=None, long_name=None):  # noqa: E501
+    def __init__(self, archivo=None):  # noqa: E501
         """InlineResponse20057Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._short_name = None
-        self._long_name = None
+        self._archivo = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
+        if archivo is not None:
+            self.archivo = archivo
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20057Message.  # noqa: E501
-        Identificador del Tipo de Valorización  # noqa: E501
+    def archivo(self):
+        """Gets the archivo of this InlineResponse20057Message.  # noqa: E501
+        Archivo XML con los resultados del ajuste  # noqa: E501
 
-        :return: The id of this InlineResponse20057Message.  # noqa: E501
+        :return: The archivo of this InlineResponse20057Message.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._archivo
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20057Message.
+    @archivo.setter
+    def archivo(self, archivo):
+        """Sets the archivo of this InlineResponse20057Message.
 
-        Identificador del Tipo de Valorización  # noqa: E501
+        Archivo XML con los resultados del ajuste  # noqa: E501
 
-        :param id: The id of this InlineResponse20057Message.  # noqa: E501
+        :param archivo: The archivo of this InlineResponse20057Message.  # noqa: E501
         :type: str
         """
 
-        self._id = id
-
-    @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse20057Message.  # noqa: E501
-        Título del Tipo de Valorización  # noqa: E501
-
-        :return: The short_name of this InlineResponse20057Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._short_name
-
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse20057Message.
-
-        Título del Tipo de Valorización  # noqa: E501
-
-        :param short_name: The short_name of this InlineResponse20057Message.  # noqa: E501
-        :type: str
-        """
-
-        self._short_name = short_name
-
-    @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse20057Message.  # noqa: E501
-        Descripción del Tipo de Valorizacion  # noqa: E501
-
-        :return: The long_name of this InlineResponse20057Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._long_name
-
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse20057Message.
-
-        Descripción del Tipo de Valorizacion  # noqa: E501
-
-        :param long_name: The long_name of this InlineResponse20057Message.  # noqa: E501
-        :type: str
-        """
-
-        self._long_name = long_name
+        self._archivo = archivo
 
     def to_dict(self):
         """Returns the model properties as a dict"""

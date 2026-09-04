@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20066_message_valorizacion import InlineResponse20066MessageValorizacion
 
 
 
@@ -33,39 +32,122 @@ class InlineResponse20066Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'valorizacion': 'InlineResponse20066MessageValorizacion'
+        'id': 'int',
+        'short_name': 'str',
+        'long_name': 'str',
+        'mime_type': 'str'
     }
 
     attribute_map = {
-        'valorizacion': 'Valorizacion'
+        'id': 'id',
+        'short_name': 'shortName',
+        'long_name': 'longName',
+        'mime_type': 'mimeType'
     }
 
-    def __init__(self, valorizacion=None):  # noqa: E501
+    def __init__(self, id=None, short_name=None, long_name=None, mime_type=None):  # noqa: E501
         """InlineResponse20066Message - a model defined in Swagger"""  # noqa: E501
-        self._valorizacion = None
+        self._id = None
+        self._short_name = None
+        self._long_name = None
+        self._mime_type = None
         self.discriminator = None
-        if valorizacion is not None:
-            self.valorizacion = valorizacion
+        if id is not None:
+            self.id = id
+        if short_name is not None:
+            self.short_name = short_name
+        if long_name is not None:
+            self.long_name = long_name
+        if mime_type is not None:
+            self.mime_type = mime_type
 
     @property
-    def valorizacion(self):
-        """Gets the valorizacion of this InlineResponse20066Message.  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20066Message.  # noqa: E501
+        Identificador del formato de descarga  # noqa: E501
 
-        :return: The valorizacion of this InlineResponse20066Message.  # noqa: E501
-        :rtype: InlineResponse20066MessageValorizacion
+        :return: The id of this InlineResponse20066Message.  # noqa: E501
+        :rtype: int
         """
-        return self._valorizacion
+        return self._id
 
-    @valorizacion.setter
-    def valorizacion(self, valorizacion):
-        """Sets the valorizacion of this InlineResponse20066Message.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20066Message.
 
+        Identificador del formato de descarga  # noqa: E501
 
-        :param valorizacion: The valorizacion of this InlineResponse20066Message.  # noqa: E501
-        :type: InlineResponse20066MessageValorizacion
+        :param id: The id of this InlineResponse20066Message.  # noqa: E501
+        :type: int
         """
 
-        self._valorizacion = valorizacion
+        self._id = id
+
+    @property
+    def short_name(self):
+        """Gets the short_name of this InlineResponse20066Message.  # noqa: E501
+        Título del formato de descarga  # noqa: E501
+
+        :return: The short_name of this InlineResponse20066Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_name
+
+    @short_name.setter
+    def short_name(self, short_name):
+        """Sets the short_name of this InlineResponse20066Message.
+
+        Título del formato de descarga  # noqa: E501
+
+        :param short_name: The short_name of this InlineResponse20066Message.  # noqa: E501
+        :type: str
+        """
+
+        self._short_name = short_name
+
+    @property
+    def long_name(self):
+        """Gets the long_name of this InlineResponse20066Message.  # noqa: E501
+        Descripción del formato de descarga  # noqa: E501
+
+        :return: The long_name of this InlineResponse20066Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._long_name
+
+    @long_name.setter
+    def long_name(self, long_name):
+        """Sets the long_name of this InlineResponse20066Message.
+
+        Descripción del formato de descarga  # noqa: E501
+
+        :param long_name: The long_name of this InlineResponse20066Message.  # noqa: E501
+        :type: str
+        """
+
+        self._long_name = long_name
+
+    @property
+    def mime_type(self):
+        """Gets the mime_type of this InlineResponse20066Message.  # noqa: E501
+        MimeType que describe el tipo de archivo usado para la descarga  # noqa: E501
+
+        :return: The mime_type of this InlineResponse20066Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._mime_type
+
+    @mime_type.setter
+    def mime_type(self, mime_type):
+        """Sets the mime_type of this InlineResponse20066Message.
+
+        MimeType que describe el tipo de archivo usado para la descarga  # noqa: E501
+
+        :param mime_type: The mime_type of this InlineResponse20066Message.  # noqa: E501
+        :type: str
+        """
+
+        self._mime_type = mime_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

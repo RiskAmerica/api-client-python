@@ -15,9 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20054_message_posicion import InlineResponse20054MessagePosicion
-from .inline_response20054_message_contribucion import InlineResponse20054MessageContribucion
-from .inline_response20054_message_performance import InlineResponse20054MessagePerformance
 
 
 
@@ -35,89 +32,122 @@ class InlineResponse20054Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'posicion': 'InlineResponse20054MessagePosicion',
-        'contribucion': 'InlineResponse20054MessageContribucion',
-        'performance': 'InlineResponse20054MessagePerformance'
+        'fecha': 'date',
+        'moneda': 'str',
+        'base': 'str',
+        'valor': 'float'
     }
 
     attribute_map = {
-        'posicion': 'Posicion',
-        'contribucion': 'Contribucion',
-        'performance': 'Performance'
+        'fecha': 'fecha',
+        'moneda': 'moneda',
+        'base': 'base',
+        'valor': 'valor'
     }
 
-    def __init__(self, posicion=None, contribucion=None, performance=None):  # noqa: E501
+    def __init__(self, fecha=None, moneda=None, base=None, valor=None):  # noqa: E501
         """InlineResponse20054Message - a model defined in Swagger"""  # noqa: E501
-        self._posicion = None
-        self._contribucion = None
-        self._performance = None
+        self._fecha = None
+        self._moneda = None
+        self._base = None
+        self._valor = None
         self.discriminator = None
-        if posicion is not None:
-            self.posicion = posicion
-        if contribucion is not None:
-            self.contribucion = contribucion
-        if performance is not None:
-            self.performance = performance
+        if fecha is not None:
+            self.fecha = fecha
+        if moneda is not None:
+            self.moneda = moneda
+        if base is not None:
+            self.base = base
+        if valor is not None:
+            self.valor = valor
 
     @property
-    def posicion(self):
-        """Gets the posicion of this InlineResponse20054Message.  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20054Message.  # noqa: E501
+        Fecha del tipo cambio segun estandar del Banco Central  # noqa: E501
 
-        :return: The posicion of this InlineResponse20054Message.  # noqa: E501
-        :rtype: InlineResponse20054MessagePosicion
+        :return: The fecha of this InlineResponse20054Message.  # noqa: E501
+        :rtype: date
         """
-        return self._posicion
+        return self._fecha
 
-    @posicion.setter
-    def posicion(self, posicion):
-        """Sets the posicion of this InlineResponse20054Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20054Message.
 
+        Fecha del tipo cambio segun estandar del Banco Central  # noqa: E501
 
-        :param posicion: The posicion of this InlineResponse20054Message.  # noqa: E501
-        :type: InlineResponse20054MessagePosicion
+        :param fecha: The fecha of this InlineResponse20054Message.  # noqa: E501
+        :type: date
         """
 
-        self._posicion = posicion
+        self._fecha = fecha
 
     @property
-    def contribucion(self):
-        """Gets the contribucion of this InlineResponse20054Message.  # noqa: E501
+    def moneda(self):
+        """Gets the moneda of this InlineResponse20054Message.  # noqa: E501
+        Moneda consultada  # noqa: E501
 
-        :return: The contribucion of this InlineResponse20054Message.  # noqa: E501
-        :rtype: InlineResponse20054MessageContribucion
+        :return: The moneda of this InlineResponse20054Message.  # noqa: E501
+        :rtype: str
         """
-        return self._contribucion
+        return self._moneda
 
-    @contribucion.setter
-    def contribucion(self, contribucion):
-        """Sets the contribucion of this InlineResponse20054Message.
+    @moneda.setter
+    def moneda(self, moneda):
+        """Sets the moneda of this InlineResponse20054Message.
 
+        Moneda consultada  # noqa: E501
 
-        :param contribucion: The contribucion of this InlineResponse20054Message.  # noqa: E501
-        :type: InlineResponse20054MessageContribucion
+        :param moneda: The moneda of this InlineResponse20054Message.  # noqa: E501
+        :type: str
         """
 
-        self._contribucion = contribucion
+        self._moneda = moneda
 
     @property
-    def performance(self):
-        """Gets the performance of this InlineResponse20054Message.  # noqa: E501
+    def base(self):
+        """Gets the base of this InlineResponse20054Message.  # noqa: E501
+        Moneda en la cual se expresa el valor  # noqa: E501
 
-        :return: The performance of this InlineResponse20054Message.  # noqa: E501
-        :rtype: InlineResponse20054MessagePerformance
+        :return: The base of this InlineResponse20054Message.  # noqa: E501
+        :rtype: str
         """
-        return self._performance
+        return self._base
 
-    @performance.setter
-    def performance(self, performance):
-        """Sets the performance of this InlineResponse20054Message.
+    @base.setter
+    def base(self, base):
+        """Sets the base of this InlineResponse20054Message.
 
+        Moneda en la cual se expresa el valor  # noqa: E501
 
-        :param performance: The performance of this InlineResponse20054Message.  # noqa: E501
-        :type: InlineResponse20054MessagePerformance
+        :param base: The base of this InlineResponse20054Message.  # noqa: E501
+        :type: str
         """
 
-        self._performance = performance
+        self._base = base
+
+    @property
+    def valor(self):
+        """Gets the valor of this InlineResponse20054Message.  # noqa: E501
+        Tipo de cambio  # noqa: E501
+
+        :return: The valor of this InlineResponse20054Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._valor
+
+    @valor.setter
+    def valor(self, valor):
+        """Sets the valor of this InlineResponse20054Message.
+
+        Tipo de cambio  # noqa: E501
+
+        :param valor: The valor of this InlineResponse20054Message.  # noqa: E501
+        :type: float
+        """
+
+        self._valor = valor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

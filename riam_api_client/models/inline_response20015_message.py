@@ -32,95 +32,203 @@ class InlineResponse20015Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'short_name': 'str',
-        'long_name': 'str'
+        'ponderacion_inicio_dia': 'float',
+        'nemo': 'str',
+        'moneda': 'str',
+        'clasificacion': 'str',
+        'duracion': 'float',
+        'plazo_residual': 'float',
+        'tipo_svs': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'short_name': 'shortName',
-        'long_name': 'longName'
+        'ponderacion_inicio_dia': 'ponderacionInicioDia',
+        'nemo': 'nemo',
+        'moneda': 'moneda',
+        'clasificacion': 'clasificacion',
+        'duracion': 'duracion',
+        'plazo_residual': 'plazoResidual',
+        'tipo_svs': 'tipoSVS'
     }
 
-    def __init__(self, id=None, short_name=None, long_name=None):  # noqa: E501
+    def __init__(self, ponderacion_inicio_dia=None, nemo=None, moneda=None, clasificacion=None, duracion=None, plazo_residual=None, tipo_svs=None):  # noqa: E501
         """InlineResponse20015Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._short_name = None
-        self._long_name = None
+        self._ponderacion_inicio_dia = None
+        self._nemo = None
+        self._moneda = None
+        self._clasificacion = None
+        self._duracion = None
+        self._plazo_residual = None
+        self._tipo_svs = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
+        if ponderacion_inicio_dia is not None:
+            self.ponderacion_inicio_dia = ponderacion_inicio_dia
+        if nemo is not None:
+            self.nemo = nemo
+        if moneda is not None:
+            self.moneda = moneda
+        if clasificacion is not None:
+            self.clasificacion = clasificacion
+        if duracion is not None:
+            self.duracion = duracion
+        if plazo_residual is not None:
+            self.plazo_residual = plazo_residual
+        if tipo_svs is not None:
+            self.tipo_svs = tipo_svs
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20015Message.  # noqa: E501
-        Identificador de RiskAmerica para la Unidad  # noqa: E501
+    def ponderacion_inicio_dia(self):
+        """Gets the ponderacion_inicio_dia of this InlineResponse20015Message.  # noqa: E501
+        Ponderación del instrumento para la fecha consultada  # noqa: E501
 
-        :return: The id of this InlineResponse20015Message.  # noqa: E501
+        :return: The ponderacion_inicio_dia of this InlineResponse20015Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ponderacion_inicio_dia
+
+    @ponderacion_inicio_dia.setter
+    def ponderacion_inicio_dia(self, ponderacion_inicio_dia):
+        """Sets the ponderacion_inicio_dia of this InlineResponse20015Message.
+
+        Ponderación del instrumento para la fecha consultada  # noqa: E501
+
+        :param ponderacion_inicio_dia: The ponderacion_inicio_dia of this InlineResponse20015Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ponderacion_inicio_dia = ponderacion_inicio_dia
+
+    @property
+    def nemo(self):
+        """Gets the nemo of this InlineResponse20015Message.  # noqa: E501
+        Nemotécnico del instrumento  # noqa: E501
+
+        :return: The nemo of this InlineResponse20015Message.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._nemo
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20015Message.
+    @nemo.setter
+    def nemo(self, nemo):
+        """Sets the nemo of this InlineResponse20015Message.
 
-        Identificador de RiskAmerica para la Unidad  # noqa: E501
+        Nemotécnico del instrumento  # noqa: E501
 
-        :param id: The id of this InlineResponse20015Message.  # noqa: E501
+        :param nemo: The nemo of this InlineResponse20015Message.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._nemo = nemo
 
     @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse20015Message.  # noqa: E501
-        Nombre corto de la Unidad  # noqa: E501
+    def moneda(self):
+        """Gets the moneda of this InlineResponse20015Message.  # noqa: E501
+        Moneda del instrumento  # noqa: E501
 
-        :return: The short_name of this InlineResponse20015Message.  # noqa: E501
+        :return: The moneda of this InlineResponse20015Message.  # noqa: E501
         :rtype: str
         """
-        return self._short_name
+        return self._moneda
 
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse20015Message.
+    @moneda.setter
+    def moneda(self, moneda):
+        """Sets the moneda of this InlineResponse20015Message.
 
-        Nombre corto de la Unidad  # noqa: E501
+        Moneda del instrumento  # noqa: E501
 
-        :param short_name: The short_name of this InlineResponse20015Message.  # noqa: E501
+        :param moneda: The moneda of this InlineResponse20015Message.  # noqa: E501
         :type: str
         """
 
-        self._short_name = short_name
+        self._moneda = moneda
 
     @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse20015Message.  # noqa: E501
-        Nombre largo de la Unidad  # noqa: E501
+    def clasificacion(self):
+        """Gets the clasificacion of this InlineResponse20015Message.  # noqa: E501
+        Mínima clasificación de riesgo para el instrumento  # noqa: E501
 
-        :return: The long_name of this InlineResponse20015Message.  # noqa: E501
+        :return: The clasificacion of this InlineResponse20015Message.  # noqa: E501
         :rtype: str
         """
-        return self._long_name
+        return self._clasificacion
 
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse20015Message.
+    @clasificacion.setter
+    def clasificacion(self, clasificacion):
+        """Sets the clasificacion of this InlineResponse20015Message.
 
-        Nombre largo de la Unidad  # noqa: E501
+        Mínima clasificación de riesgo para el instrumento  # noqa: E501
 
-        :param long_name: The long_name of this InlineResponse20015Message.  # noqa: E501
+        :param clasificacion: The clasificacion of this InlineResponse20015Message.  # noqa: E501
         :type: str
         """
 
-        self._long_name = long_name
+        self._clasificacion = clasificacion
+
+    @property
+    def duracion(self):
+        """Gets the duracion of this InlineResponse20015Message.  # noqa: E501
+        Duración del instrumento  # noqa: E501
+
+        :return: The duracion of this InlineResponse20015Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._duracion
+
+    @duracion.setter
+    def duracion(self, duracion):
+        """Sets the duracion of this InlineResponse20015Message.
+
+        Duración del instrumento  # noqa: E501
+
+        :param duracion: The duracion of this InlineResponse20015Message.  # noqa: E501
+        :type: float
+        """
+
+        self._duracion = duracion
+
+    @property
+    def plazo_residual(self):
+        """Gets the plazo_residual of this InlineResponse20015Message.  # noqa: E501
+        Plazo del instrumento  # noqa: E501
+
+        :return: The plazo_residual of this InlineResponse20015Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._plazo_residual
+
+    @plazo_residual.setter
+    def plazo_residual(self, plazo_residual):
+        """Sets the plazo_residual of this InlineResponse20015Message.
+
+        Plazo del instrumento  # noqa: E501
+
+        :param plazo_residual: The plazo_residual of this InlineResponse20015Message.  # noqa: E501
+        :type: float
+        """
+
+        self._plazo_residual = plazo_residual
+
+    @property
+    def tipo_svs(self):
+        """Gets the tipo_svs of this InlineResponse20015Message.  # noqa: E501
+        Tipo de instrumento, de acuerdo a la SVS  # noqa: E501
+
+        :return: The tipo_svs of this InlineResponse20015Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._tipo_svs
+
+    @tipo_svs.setter
+    def tipo_svs(self, tipo_svs):
+        """Sets the tipo_svs of this InlineResponse20015Message.
+
+        Tipo de instrumento, de acuerdo a la SVS  # noqa: E501
+
+        :param tipo_svs: The tipo_svs of this InlineResponse20015Message.  # noqa: E501
+        :type: str
+        """
+
+        self._tipo_svs = tipo_svs
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,56 +32,39 @@ class InlineResponse20017Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'plazo': 'float',
         'fecha': 'date',
-        'valor': 'float'
+        'id_indice': 'int',
+        'px_last': 'float',
+        'px_last_norm': 'float'
     }
 
     attribute_map = {
-        'plazo': 'plazo',
         'fecha': 'fecha',
-        'valor': 'valor'
+        'id_indice': 'idIndice',
+        'px_last': 'pxLast',
+        'px_last_norm': 'pxLastNorm'
     }
 
-    def __init__(self, plazo=None, fecha=None, valor=None):  # noqa: E501
+    def __init__(self, fecha=None, id_indice=None, px_last=None, px_last_norm=None):  # noqa: E501
         """InlineResponse20017Message - a model defined in Swagger"""  # noqa: E501
-        self._plazo = None
         self._fecha = None
-        self._valor = None
+        self._id_indice = None
+        self._px_last = None
+        self._px_last_norm = None
         self.discriminator = None
-        if plazo is not None:
-            self.plazo = plazo
         if fecha is not None:
             self.fecha = fecha
-        if valor is not None:
-            self.valor = valor
-
-    @property
-    def plazo(self):
-        """Gets the plazo of this InlineResponse20017Message.  # noqa: E501
-        Plazo para el cual se calculó la Curva  # noqa: E501
-
-        :return: The plazo of this InlineResponse20017Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._plazo
-
-    @plazo.setter
-    def plazo(self, plazo):
-        """Sets the plazo of this InlineResponse20017Message.
-
-        Plazo para el cual se calculó la Curva  # noqa: E501
-
-        :param plazo: The plazo of this InlineResponse20017Message.  # noqa: E501
-        :type: float
-        """
-
-        self._plazo = plazo
+        if id_indice is not None:
+            self.id_indice = id_indice
+        if px_last is not None:
+            self.px_last = px_last
+        if px_last_norm is not None:
+            self.px_last_norm = px_last_norm
 
     @property
     def fecha(self):
         """Gets the fecha of this InlineResponse20017Message.  # noqa: E501
-        Fecha para la cual se calculó la Curva  # noqa: E501
+        Fecha a consultar  # noqa: E501
 
         :return: The fecha of this InlineResponse20017Message.  # noqa: E501
         :rtype: date
@@ -92,7 +75,7 @@ class InlineResponse20017Message(object):
     def fecha(self, fecha):
         """Sets the fecha of this InlineResponse20017Message.
 
-        Fecha para la cual se calculó la Curva  # noqa: E501
+        Fecha a consultar  # noqa: E501
 
         :param fecha: The fecha of this InlineResponse20017Message.  # noqa: E501
         :type: date
@@ -101,26 +84,70 @@ class InlineResponse20017Message(object):
         self._fecha = fecha
 
     @property
-    def valor(self):
-        """Gets the valor of this InlineResponse20017Message.  # noqa: E501
-        Valor de la Curva  # noqa: E501
+    def id_indice(self):
+        """Gets the id_indice of this InlineResponse20017Message.  # noqa: E501
+        Identificador del Indice a consultar  # noqa: E501
 
-        :return: The valor of this InlineResponse20017Message.  # noqa: E501
+        :return: The id_indice of this InlineResponse20017Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._id_indice
+
+    @id_indice.setter
+    def id_indice(self, id_indice):
+        """Sets the id_indice of this InlineResponse20017Message.
+
+        Identificador del Indice a consultar  # noqa: E501
+
+        :param id_indice: The id_indice of this InlineResponse20017Message.  # noqa: E501
+        :type: int
+        """
+
+        self._id_indice = id_indice
+
+    @property
+    def px_last(self):
+        """Gets the px_last of this InlineResponse20017Message.  # noqa: E501
+        Valor del Índice  # noqa: E501
+
+        :return: The px_last of this InlineResponse20017Message.  # noqa: E501
         :rtype: float
         """
-        return self._valor
+        return self._px_last
 
-    @valor.setter
-    def valor(self, valor):
-        """Sets the valor of this InlineResponse20017Message.
+    @px_last.setter
+    def px_last(self, px_last):
+        """Sets the px_last of this InlineResponse20017Message.
 
-        Valor de la Curva  # noqa: E501
+        Valor del Índice  # noqa: E501
 
-        :param valor: The valor of this InlineResponse20017Message.  # noqa: E501
+        :param px_last: The px_last of this InlineResponse20017Message.  # noqa: E501
         :type: float
         """
 
-        self._valor = valor
+        self._px_last = px_last
+
+    @property
+    def px_last_norm(self):
+        """Gets the px_last_norm of this InlineResponse20017Message.  # noqa: E501
+        Valor del Índice en base 100 al primer día con dato del intervalo  # noqa: E501
+
+        :return: The px_last_norm of this InlineResponse20017Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._px_last_norm
+
+    @px_last_norm.setter
+    def px_last_norm(self, px_last_norm):
+        """Sets the px_last_norm of this InlineResponse20017Message.
+
+        Valor del Índice en base 100 al primer día con dato del intervalo  # noqa: E501
+
+        :param px_last_norm: The px_last_norm of this InlineResponse20017Message.  # noqa: E501
+        :type: float
+        """
+
+        self._px_last_norm = px_last_norm
 
     def to_dict(self):
         """Returns the model properties as a dict"""

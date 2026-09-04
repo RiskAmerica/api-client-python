@@ -15,6 +15,9 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20059_message_posicion import InlineResponse20059MessagePosicion
+from .inline_response20059_message_contribucion import InlineResponse20059MessageContribucion
+from .inline_response20059_message_performance import InlineResponse20059MessagePerformance
 
 
 
@@ -32,149 +35,89 @@ class InlineResponse20059Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'nombre': 'str',
-        'descripcion': 'str',
-        'id_tipo_valorizacion': 'str',
-        'replicacion': 'int'
+        'posicion': 'InlineResponse20059MessagePosicion',
+        'contribucion': 'InlineResponse20059MessageContribucion',
+        'performance': 'InlineResponse20059MessagePerformance'
     }
 
     attribute_map = {
-        'id': 'id',
-        'nombre': 'nombre',
-        'descripcion': 'descripcion',
-        'id_tipo_valorizacion': 'idTipoValorizacion',
-        'replicacion': 'replicacion'
+        'posicion': 'Posicion',
+        'contribucion': 'Contribucion',
+        'performance': 'Performance'
     }
 
-    def __init__(self, id=None, nombre=None, descripcion=None, id_tipo_valorizacion=None, replicacion=None):  # noqa: E501
+    def __init__(self, posicion=None, contribucion=None, performance=None):  # noqa: E501
         """InlineResponse20059Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._nombre = None
-        self._descripcion = None
-        self._id_tipo_valorizacion = None
-        self._replicacion = None
+        self._posicion = None
+        self._contribucion = None
+        self._performance = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if nombre is not None:
-            self.nombre = nombre
-        if descripcion is not None:
-            self.descripcion = descripcion
-        if id_tipo_valorizacion is not None:
-            self.id_tipo_valorizacion = id_tipo_valorizacion
-        if replicacion is not None:
-            self.replicacion = replicacion
+        if posicion is not None:
+            self.posicion = posicion
+        if contribucion is not None:
+            self.contribucion = contribucion
+        if performance is not None:
+            self.performance = performance
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20059Message.  # noqa: E501
-        Identificador del FileTask  # noqa: E501
+    def posicion(self):
+        """Gets the posicion of this InlineResponse20059Message.  # noqa: E501
 
-        :return: The id of this InlineResponse20059Message.  # noqa: E501
-        :rtype: int
+        :return: The posicion of this InlineResponse20059Message.  # noqa: E501
+        :rtype: InlineResponse20059MessagePosicion
         """
-        return self._id
+        return self._posicion
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20059Message.
+    @posicion.setter
+    def posicion(self, posicion):
+        """Sets the posicion of this InlineResponse20059Message.
 
-        Identificador del FileTask  # noqa: E501
 
-        :param id: The id of this InlineResponse20059Message.  # noqa: E501
-        :type: int
+        :param posicion: The posicion of this InlineResponse20059Message.  # noqa: E501
+        :type: InlineResponse20059MessagePosicion
         """
 
-        self._id = id
+        self._posicion = posicion
 
     @property
-    def nombre(self):
-        """Gets the nombre of this InlineResponse20059Message.  # noqa: E501
-        Título del FileTask  # noqa: E501
+    def contribucion(self):
+        """Gets the contribucion of this InlineResponse20059Message.  # noqa: E501
 
-        :return: The nombre of this InlineResponse20059Message.  # noqa: E501
-        :rtype: str
+        :return: The contribucion of this InlineResponse20059Message.  # noqa: E501
+        :rtype: InlineResponse20059MessageContribucion
         """
-        return self._nombre
+        return self._contribucion
 
-    @nombre.setter
-    def nombre(self, nombre):
-        """Sets the nombre of this InlineResponse20059Message.
+    @contribucion.setter
+    def contribucion(self, contribucion):
+        """Sets the contribucion of this InlineResponse20059Message.
 
-        Título del FileTask  # noqa: E501
 
-        :param nombre: The nombre of this InlineResponse20059Message.  # noqa: E501
-        :type: str
+        :param contribucion: The contribucion of this InlineResponse20059Message.  # noqa: E501
+        :type: InlineResponse20059MessageContribucion
         """
 
-        self._nombre = nombre
+        self._contribucion = contribucion
 
     @property
-    def descripcion(self):
-        """Gets the descripcion of this InlineResponse20059Message.  # noqa: E501
-        Descripción del Filetask  # noqa: E501
+    def performance(self):
+        """Gets the performance of this InlineResponse20059Message.  # noqa: E501
 
-        :return: The descripcion of this InlineResponse20059Message.  # noqa: E501
-        :rtype: str
+        :return: The performance of this InlineResponse20059Message.  # noqa: E501
+        :rtype: InlineResponse20059MessagePerformance
         """
-        return self._descripcion
+        return self._performance
 
-    @descripcion.setter
-    def descripcion(self, descripcion):
-        """Sets the descripcion of this InlineResponse20059Message.
+    @performance.setter
+    def performance(self, performance):
+        """Sets the performance of this InlineResponse20059Message.
 
-        Descripción del Filetask  # noqa: E501
 
-        :param descripcion: The descripcion of this InlineResponse20059Message.  # noqa: E501
-        :type: str
+        :param performance: The performance of this InlineResponse20059Message.  # noqa: E501
+        :type: InlineResponse20059MessagePerformance
         """
 
-        self._descripcion = descripcion
-
-    @property
-    def id_tipo_valorizacion(self):
-        """Gets the id_tipo_valorizacion of this InlineResponse20059Message.  # noqa: E501
-        Descripción del Tipo de Valorizacion  # noqa: E501
-
-        :return: The id_tipo_valorizacion of this InlineResponse20059Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_tipo_valorizacion
-
-    @id_tipo_valorizacion.setter
-    def id_tipo_valorizacion(self, id_tipo_valorizacion):
-        """Sets the id_tipo_valorizacion of this InlineResponse20059Message.
-
-        Descripción del Tipo de Valorizacion  # noqa: E501
-
-        :param id_tipo_valorizacion: The id_tipo_valorizacion of this InlineResponse20059Message.  # noqa: E501
-        :type: str
-        """
-
-        self._id_tipo_valorizacion = id_tipo_valorizacion
-
-    @property
-    def replicacion(self):
-        """Gets the replicacion of this InlineResponse20059Message.  # noqa: E501
-        Si está en 1, para el caso de Tipo Valorizacion Internacional, provoca que si el cliente no carga el archivo este se copiará del día anterior.  # noqa: E501
-
-        :return: The replicacion of this InlineResponse20059Message.  # noqa: E501
-        :rtype: int
-        """
-        return self._replicacion
-
-    @replicacion.setter
-    def replicacion(self, replicacion):
-        """Sets the replicacion of this InlineResponse20059Message.
-
-        Si está en 1, para el caso de Tipo Valorizacion Internacional, provoca que si el cliente no carga el archivo este se copiará del día anterior.  # noqa: E501
-
-        :param replicacion: The replicacion of this InlineResponse20059Message.  # noqa: E501
-        :type: int
-        """
-
-        self._replicacion = replicacion
+        self._performance = performance
 
     def to_dict(self):
         """Returns the model properties as a dict"""

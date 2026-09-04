@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20044_message_tabla_desarrollo import InlineResponse20044MessageTablaDesarrollo
+from .inline_response20044_message_clasificadora import InlineResponse20044MessageClasificadora
 
 
 
@@ -33,39 +33,39 @@ class InlineResponse20044Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'tabla_desarrollo': 'list[InlineResponse20044MessageTablaDesarrollo]'
+        'clasificadora': 'InlineResponse20044MessageClasificadora'
     }
 
     attribute_map = {
-        'tabla_desarrollo': 'TablaDesarrollo'
+        'clasificadora': 'clasificadora'
     }
 
-    def __init__(self, tabla_desarrollo=None):  # noqa: E501
+    def __init__(self, clasificadora=None):  # noqa: E501
         """InlineResponse20044Message - a model defined in Swagger"""  # noqa: E501
-        self._tabla_desarrollo = None
+        self._clasificadora = None
         self.discriminator = None
-        if tabla_desarrollo is not None:
-            self.tabla_desarrollo = tabla_desarrollo
+        if clasificadora is not None:
+            self.clasificadora = clasificadora
 
     @property
-    def tabla_desarrollo(self):
-        """Gets the tabla_desarrollo of this InlineResponse20044Message.  # noqa: E501
+    def clasificadora(self):
+        """Gets the clasificadora of this InlineResponse20044Message.  # noqa: E501
 
-        :return: The tabla_desarrollo of this InlineResponse20044Message.  # noqa: E501
-        :rtype: list[InlineResponse20044MessageTablaDesarrollo]
+        :return: The clasificadora of this InlineResponse20044Message.  # noqa: E501
+        :rtype: InlineResponse20044MessageClasificadora
         """
-        return self._tabla_desarrollo
+        return self._clasificadora
 
-    @tabla_desarrollo.setter
-    def tabla_desarrollo(self, tabla_desarrollo):
-        """Sets the tabla_desarrollo of this InlineResponse20044Message.
+    @clasificadora.setter
+    def clasificadora(self, clasificadora):
+        """Sets the clasificadora of this InlineResponse20044Message.
 
 
-        :param tabla_desarrollo: The tabla_desarrollo of this InlineResponse20044Message.  # noqa: E501
-        :type: list[InlineResponse20044MessageTablaDesarrollo]
+        :param clasificadora: The clasificadora of this InlineResponse20044Message.  # noqa: E501
+        :type: InlineResponse20044MessageClasificadora
         """
 
-        self._tabla_desarrollo = tabla_desarrollo
+        self._clasificadora = clasificadora
 
     def to_dict(self):
         """Returns the model properties as a dict"""

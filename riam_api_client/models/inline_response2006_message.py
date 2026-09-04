@@ -34,47 +34,32 @@ class InlineResponse2006Message(object):
     swagger_types = {
         'rut': 'int',
         'serie': 'str',
-        'fecha': 'date',
-        'tac_remuneracion_fija': 'float',
-        'tac_remuneracion_variable': 'float',
-        'tac_gastos_operacionales': 'float',
-        'tac_total': 'float'
+        'fecha_reproceso': 'datetime',
+        'fecha_reprocesada': 'date'
     }
 
     attribute_map = {
         'rut': 'rut',
         'serie': 'serie',
-        'fecha': 'fecha',
-        'tac_remuneracion_fija': 'tacRemuneracionFija',
-        'tac_remuneracion_variable': 'tacRemuneracionVariable',
-        'tac_gastos_operacionales': 'tacGastosOperacionales',
-        'tac_total': 'tacTotal'
+        'fecha_reproceso': 'fechaReproceso',
+        'fecha_reprocesada': 'fechaReprocesada'
     }
 
-    def __init__(self, rut=None, serie=None, fecha=None, tac_remuneracion_fija=None, tac_remuneracion_variable=None, tac_gastos_operacionales=None, tac_total=None):  # noqa: E501
+    def __init__(self, rut=None, serie=None, fecha_reproceso=None, fecha_reprocesada=None):  # noqa: E501
         """InlineResponse2006Message - a model defined in Swagger"""  # noqa: E501
         self._rut = None
         self._serie = None
-        self._fecha = None
-        self._tac_remuneracion_fija = None
-        self._tac_remuneracion_variable = None
-        self._tac_gastos_operacionales = None
-        self._tac_total = None
+        self._fecha_reproceso = None
+        self._fecha_reprocesada = None
         self.discriminator = None
         if rut is not None:
             self.rut = rut
         if serie is not None:
             self.serie = serie
-        if fecha is not None:
-            self.fecha = fecha
-        if tac_remuneracion_fija is not None:
-            self.tac_remuneracion_fija = tac_remuneracion_fija
-        if tac_remuneracion_variable is not None:
-            self.tac_remuneracion_variable = tac_remuneracion_variable
-        if tac_gastos_operacionales is not None:
-            self.tac_gastos_operacionales = tac_gastos_operacionales
-        if tac_total is not None:
-            self.tac_total = tac_total
+        if fecha_reproceso is not None:
+            self.fecha_reproceso = fecha_reproceso
+        if fecha_reprocesada is not None:
+            self.fecha_reprocesada = fecha_reprocesada
 
     @property
     def rut(self):
@@ -121,114 +106,48 @@ class InlineResponse2006Message(object):
         self._serie = serie
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse2006Message.  # noqa: E501
-        Fecha de los valores entregados  # noqa: E501
+    def fecha_reproceso(self):
+        """Gets the fecha_reproceso of this InlineResponse2006Message.  # noqa: E501
+        Fecha de los datos cuota que cambiaron  # noqa: E501
 
-        :return: The fecha of this InlineResponse2006Message.  # noqa: E501
+        :return: The fecha_reproceso of this InlineResponse2006Message.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._fecha_reproceso
+
+    @fecha_reproceso.setter
+    def fecha_reproceso(self, fecha_reproceso):
+        """Sets the fecha_reproceso of this InlineResponse2006Message.
+
+        Fecha de los datos cuota que cambiaron  # noqa: E501
+
+        :param fecha_reproceso: The fecha_reproceso of this InlineResponse2006Message.  # noqa: E501
+        :type: datetime
+        """
+
+        self._fecha_reproceso = fecha_reproceso
+
+    @property
+    def fecha_reprocesada(self):
+        """Gets the fecha_reprocesada of this InlineResponse2006Message.  # noqa: E501
+        Fecha en que ocurrió el reproceso  # noqa: E501
+
+        :return: The fecha_reprocesada of this InlineResponse2006Message.  # noqa: E501
         :rtype: date
         """
-        return self._fecha
+        return self._fecha_reprocesada
 
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse2006Message.
+    @fecha_reprocesada.setter
+    def fecha_reprocesada(self, fecha_reprocesada):
+        """Sets the fecha_reprocesada of this InlineResponse2006Message.
 
-        Fecha de los valores entregados  # noqa: E501
+        Fecha en que ocurrió el reproceso  # noqa: E501
 
-        :param fecha: The fecha of this InlineResponse2006Message.  # noqa: E501
+        :param fecha_reprocesada: The fecha_reprocesada of this InlineResponse2006Message.  # noqa: E501
         :type: date
         """
 
-        self._fecha = fecha
-
-    @property
-    def tac_remuneracion_fija(self):
-        """Gets the tac_remuneracion_fija of this InlineResponse2006Message.  # noqa: E501
-        TAC de remuneración fija (%)  # noqa: E501
-
-        :return: The tac_remuneracion_fija of this InlineResponse2006Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tac_remuneracion_fija
-
-    @tac_remuneracion_fija.setter
-    def tac_remuneracion_fija(self, tac_remuneracion_fija):
-        """Sets the tac_remuneracion_fija of this InlineResponse2006Message.
-
-        TAC de remuneración fija (%)  # noqa: E501
-
-        :param tac_remuneracion_fija: The tac_remuneracion_fija of this InlineResponse2006Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tac_remuneracion_fija = tac_remuneracion_fija
-
-    @property
-    def tac_remuneracion_variable(self):
-        """Gets the tac_remuneracion_variable of this InlineResponse2006Message.  # noqa: E501
-        TAC de remuneración variable (%)  # noqa: E501
-
-        :return: The tac_remuneracion_variable of this InlineResponse2006Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tac_remuneracion_variable
-
-    @tac_remuneracion_variable.setter
-    def tac_remuneracion_variable(self, tac_remuneracion_variable):
-        """Sets the tac_remuneracion_variable of this InlineResponse2006Message.
-
-        TAC de remuneración variable (%)  # noqa: E501
-
-        :param tac_remuneracion_variable: The tac_remuneracion_variable of this InlineResponse2006Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tac_remuneracion_variable = tac_remuneracion_variable
-
-    @property
-    def tac_gastos_operacionales(self):
-        """Gets the tac_gastos_operacionales of this InlineResponse2006Message.  # noqa: E501
-        TAC de gastos (%)  # noqa: E501
-
-        :return: The tac_gastos_operacionales of this InlineResponse2006Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tac_gastos_operacionales
-
-    @tac_gastos_operacionales.setter
-    def tac_gastos_operacionales(self, tac_gastos_operacionales):
-        """Sets the tac_gastos_operacionales of this InlineResponse2006Message.
-
-        TAC de gastos (%)  # noqa: E501
-
-        :param tac_gastos_operacionales: The tac_gastos_operacionales of this InlineResponse2006Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tac_gastos_operacionales = tac_gastos_operacionales
-
-    @property
-    def tac_total(self):
-        """Gets the tac_total of this InlineResponse2006Message.  # noqa: E501
-        Tasa Anual de Costo (%)  # noqa: E501
-
-        :return: The tac_total of this InlineResponse2006Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tac_total
-
-    @tac_total.setter
-    def tac_total(self, tac_total):
-        """Sets the tac_total of this InlineResponse2006Message.
-
-        Tasa Anual de Costo (%)  # noqa: E501
-
-        :param tac_total: The tac_total of this InlineResponse2006Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tac_total = tac_total
+        self._fecha_reprocesada = fecha_reprocesada
 
     def to_dict(self):
         """Returns the model properties as a dict"""

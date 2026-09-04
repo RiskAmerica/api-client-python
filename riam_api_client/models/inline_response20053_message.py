@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20054_message import InlineResponse20054Message
 
 
 
@@ -32,95 +33,39 @@ class InlineResponse20053Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'nombre': 'str',
-        'aplicacion': 'str',
-        'fecha_inicio': 'date'
+        'tipo_cambio': 'InlineResponse20054Message'
     }
 
     attribute_map = {
-        'nombre': 'nombre',
-        'aplicacion': 'aplicacion',
-        'fecha_inicio': 'fechaInicio'
+        'tipo_cambio': 'TipoCambio'
     }
 
-    def __init__(self, nombre=None, aplicacion=None, fecha_inicio=None):  # noqa: E501
+    def __init__(self, tipo_cambio=None):  # noqa: E501
         """InlineResponse20053Message - a model defined in Swagger"""  # noqa: E501
-        self._nombre = None
-        self._aplicacion = None
-        self._fecha_inicio = None
+        self._tipo_cambio = None
         self.discriminator = None
-        if nombre is not None:
-            self.nombre = nombre
-        if aplicacion is not None:
-            self.aplicacion = aplicacion
-        if fecha_inicio is not None:
-            self.fecha_inicio = fecha_inicio
+        if tipo_cambio is not None:
+            self.tipo_cambio = tipo_cambio
 
     @property
-    def nombre(self):
-        """Gets the nombre of this InlineResponse20053Message.  # noqa: E501
-        Nombre del fondo  # noqa: E501
+    def tipo_cambio(self):
+        """Gets the tipo_cambio of this InlineResponse20053Message.  # noqa: E501
 
-        :return: The nombre of this InlineResponse20053Message.  # noqa: E501
-        :rtype: str
+        :return: The tipo_cambio of this InlineResponse20053Message.  # noqa: E501
+        :rtype: InlineResponse20054Message
         """
-        return self._nombre
+        return self._tipo_cambio
 
-    @nombre.setter
-    def nombre(self, nombre):
-        """Sets the nombre of this InlineResponse20053Message.
+    @tipo_cambio.setter
+    def tipo_cambio(self, tipo_cambio):
+        """Sets the tipo_cambio of this InlineResponse20053Message.
 
-        Nombre del fondo  # noqa: E501
 
-        :param nombre: The nombre of this InlineResponse20053Message.  # noqa: E501
-        :type: str
+        :param tipo_cambio: The tipo_cambio of this InlineResponse20053Message.  # noqa: E501
+        :type: InlineResponse20054Message
         """
 
-        self._nombre = nombre
-
-    @property
-    def aplicacion(self):
-        """Gets the aplicacion of this InlineResponse20053Message.  # noqa: E501
-        Aplicacion  # noqa: E501
-
-        :return: The aplicacion of this InlineResponse20053Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._aplicacion
-
-    @aplicacion.setter
-    def aplicacion(self, aplicacion):
-        """Sets the aplicacion of this InlineResponse20053Message.
-
-        Aplicacion  # noqa: E501
-
-        :param aplicacion: The aplicacion of this InlineResponse20053Message.  # noqa: E501
-        :type: str
-        """
-
-        self._aplicacion = aplicacion
-
-    @property
-    def fecha_inicio(self):
-        """Gets the fecha_inicio of this InlineResponse20053Message.  # noqa: E501
-        fecha de Inicio del Ejercicio  # noqa: E501
-
-        :return: The fecha_inicio of this InlineResponse20053Message.  # noqa: E501
-        :rtype: date
-        """
-        return self._fecha_inicio
-
-    @fecha_inicio.setter
-    def fecha_inicio(self, fecha_inicio):
-        """Sets the fecha_inicio of this InlineResponse20053Message.
-
-        fecha de Inicio del Ejercicio  # noqa: E501
-
-        :param fecha_inicio: The fecha_inicio of this InlineResponse20053Message.  # noqa: E501
-        :type: date
-        """
-
-        self._fecha_inicio = fecha_inicio
+        self._tipo_cambio = tipo_cambio
 
     def to_dict(self):
         """Returns the model properties as a dict"""

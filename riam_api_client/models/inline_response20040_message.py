@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20040_message_liquidez import InlineResponse20040MessageLiquidez
 
 
 
@@ -33,39 +32,68 @@ class InlineResponse20040Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'liquidez': 'InlineResponse20040MessageLiquidez'
+        'fecha': 'date',
+        'tasa_prepago': 'float'
     }
 
     attribute_map = {
-        'liquidez': 'liquidez'
+        'fecha': 'fecha',
+        'tasa_prepago': 'tasaPrepago'
     }
 
-    def __init__(self, liquidez=None):  # noqa: E501
+    def __init__(self, fecha=None, tasa_prepago=None):  # noqa: E501
         """InlineResponse20040Message - a model defined in Swagger"""  # noqa: E501
-        self._liquidez = None
+        self._fecha = None
+        self._tasa_prepago = None
         self.discriminator = None
-        if liquidez is not None:
-            self.liquidez = liquidez
+        if fecha is not None:
+            self.fecha = fecha
+        if tasa_prepago is not None:
+            self.tasa_prepago = tasa_prepago
 
     @property
-    def liquidez(self):
-        """Gets the liquidez of this InlineResponse20040Message.  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20040Message.  # noqa: E501
+        Fecha  # noqa: E501
 
-        :return: The liquidez of this InlineResponse20040Message.  # noqa: E501
-        :rtype: InlineResponse20040MessageLiquidez
+        :return: The fecha of this InlineResponse20040Message.  # noqa: E501
+        :rtype: date
         """
-        return self._liquidez
+        return self._fecha
 
-    @liquidez.setter
-    def liquidez(self, liquidez):
-        """Sets the liquidez of this InlineResponse20040Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20040Message.
 
+        Fecha  # noqa: E501
 
-        :param liquidez: The liquidez of this InlineResponse20040Message.  # noqa: E501
-        :type: InlineResponse20040MessageLiquidez
+        :param fecha: The fecha of this InlineResponse20040Message.  # noqa: E501
+        :type: date
         """
 
-        self._liquidez = liquidez
+        self._fecha = fecha
+
+    @property
+    def tasa_prepago(self):
+        """Gets the tasa_prepago of this InlineResponse20040Message.  # noqa: E501
+        Tasa de prepago  # noqa: E501
+
+        :return: The tasa_prepago of this InlineResponse20040Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tasa_prepago
+
+    @tasa_prepago.setter
+    def tasa_prepago(self, tasa_prepago):
+        """Sets the tasa_prepago of this InlineResponse20040Message.
+
+        Tasa de prepago  # noqa: E501
+
+        :param tasa_prepago: The tasa_prepago of this InlineResponse20040Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tasa_prepago = tasa_prepago
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,365 +32,122 @@ class InlineResponse20065Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha': 'date',
-        'hora_remate': 'str',
-        'tir': 'float',
-        'tir_base': 'float',
-        'spread': 'float',
-        'plazo_residual': 'int',
-        'duracion_macaulay': 'float',
-        'duracion_mod_act365': 'float',
-        'precio_porcentaje_valor_par': 'float',
-        'valor_par': 'float',
-        'convexidad': 'float',
-        'tir_act365': 'float',
-        'tipo_val': 'str'
+        'id': 'int',
+        'short_name': 'str',
+        'long_name': 'str',
+        'mime_type': 'str'
     }
 
     attribute_map = {
-        'fecha': 'fecha',
-        'hora_remate': 'horaRemate',
-        'tir': 'tir',
-        'tir_base': 'tirBase',
-        'spread': 'spread',
-        'plazo_residual': 'plazoResidual',
-        'duracion_macaulay': 'duracionMacaulay',
-        'duracion_mod_act365': 'duracionModACT365',
-        'precio_porcentaje_valor_par': 'precioPorcentajeValorPar',
-        'valor_par': 'valorPar',
-        'convexidad': 'convexidad',
-        'tir_act365': 'tirACT365',
-        'tipo_val': 'tipoVal'
+        'id': 'id',
+        'short_name': 'shortName',
+        'long_name': 'longName',
+        'mime_type': 'mimeType'
     }
 
-    def __init__(self, fecha=None, hora_remate=None, tir=None, tir_base=None, spread=None, plazo_residual=None, duracion_macaulay=None, duracion_mod_act365=None, precio_porcentaje_valor_par=None, valor_par=None, convexidad=None, tir_act365=None, tipo_val=None):  # noqa: E501
+    def __init__(self, id=None, short_name=None, long_name=None, mime_type=None):  # noqa: E501
         """InlineResponse20065Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha = None
-        self._hora_remate = None
-        self._tir = None
-        self._tir_base = None
-        self._spread = None
-        self._plazo_residual = None
-        self._duracion_macaulay = None
-        self._duracion_mod_act365 = None
-        self._precio_porcentaje_valor_par = None
-        self._valor_par = None
-        self._convexidad = None
-        self._tir_act365 = None
-        self._tipo_val = None
+        self._id = None
+        self._short_name = None
+        self._long_name = None
+        self._mime_type = None
         self.discriminator = None
-        if fecha is not None:
-            self.fecha = fecha
-        if hora_remate is not None:
-            self.hora_remate = hora_remate
-        if tir is not None:
-            self.tir = tir
-        if tir_base is not None:
-            self.tir_base = tir_base
-        if spread is not None:
-            self.spread = spread
-        if plazo_residual is not None:
-            self.plazo_residual = plazo_residual
-        if duracion_macaulay is not None:
-            self.duracion_macaulay = duracion_macaulay
-        if duracion_mod_act365 is not None:
-            self.duracion_mod_act365 = duracion_mod_act365
-        if precio_porcentaje_valor_par is not None:
-            self.precio_porcentaje_valor_par = precio_porcentaje_valor_par
-        if valor_par is not None:
-            self.valor_par = valor_par
-        if convexidad is not None:
-            self.convexidad = convexidad
-        if tir_act365 is not None:
-            self.tir_act365 = tir_act365
-        if tipo_val is not None:
-            self.tipo_val = tipo_val
+        if id is not None:
+            self.id = id
+        if short_name is not None:
+            self.short_name = short_name
+        if long_name is not None:
+            self.long_name = long_name
+        if mime_type is not None:
+            self.mime_type = mime_type
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20065Message.  # noqa: E501
-        Fecha de la Valorización  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20065Message.  # noqa: E501
+        Identificador del formato de carga  # noqa: E501
 
-        :return: The fecha of this InlineResponse20065Message.  # noqa: E501
-        :rtype: date
-        """
-        return self._fecha
-
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20065Message.
-
-        Fecha de la Valorización  # noqa: E501
-
-        :param fecha: The fecha of this InlineResponse20065Message.  # noqa: E501
-        :type: date
-        """
-
-        self._fecha = fecha
-
-    @property
-    def hora_remate(self):
-        """Gets the hora_remate of this InlineResponse20065Message.  # noqa: E501
-        Hora del remate  # noqa: E501
-
-        :return: The hora_remate of this InlineResponse20065Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._hora_remate
-
-    @hora_remate.setter
-    def hora_remate(self, hora_remate):
-        """Sets the hora_remate of this InlineResponse20065Message.
-
-        Hora del remate  # noqa: E501
-
-        :param hora_remate: The hora_remate of this InlineResponse20065Message.  # noqa: E501
-        :type: str
-        """
-
-        self._hora_remate = hora_remate
-
-    @property
-    def tir(self):
-        """Gets the tir of this InlineResponse20065Message.  # noqa: E501
-        Tir de la Valorización  # noqa: E501
-
-        :return: The tir of this InlineResponse20065Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir
-
-    @tir.setter
-    def tir(self, tir):
-        """Sets the tir of this InlineResponse20065Message.
-
-        Tir de la Valorización  # noqa: E501
-
-        :param tir: The tir of this InlineResponse20065Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tir = tir
-
-    @property
-    def tir_base(self):
-        """Gets the tir_base of this InlineResponse20065Message.  # noqa: E501
-        Tir Base Curva RiskAmerica  # noqa: E501
-
-        :return: The tir_base of this InlineResponse20065Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir_base
-
-    @tir_base.setter
-    def tir_base(self, tir_base):
-        """Sets the tir_base of this InlineResponse20065Message.
-
-        Tir Base Curva RiskAmerica  # noqa: E501
-
-        :param tir_base: The tir_base of this InlineResponse20065Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tir_base = tir_base
-
-    @property
-    def spread(self):
-        """Gets the spread of this InlineResponse20065Message.  # noqa: E501
-        Diferencia entre la TIR de valorización y la TIR libre de riesgo  # noqa: E501
-
-        :return: The spread of this InlineResponse20065Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._spread
-
-    @spread.setter
-    def spread(self, spread):
-        """Sets the spread of this InlineResponse20065Message.
-
-        Diferencia entre la TIR de valorización y la TIR libre de riesgo  # noqa: E501
-
-        :param spread: The spread of this InlineResponse20065Message.  # noqa: E501
-        :type: float
-        """
-
-        self._spread = spread
-
-    @property
-    def plazo_residual(self):
-        """Gets the plazo_residual of this InlineResponse20065Message.  # noqa: E501
-        Días al vencimiento  # noqa: E501
-
-        :return: The plazo_residual of this InlineResponse20065Message.  # noqa: E501
+        :return: The id of this InlineResponse20065Message.  # noqa: E501
         :rtype: int
         """
-        return self._plazo_residual
+        return self._id
 
-    @plazo_residual.setter
-    def plazo_residual(self, plazo_residual):
-        """Sets the plazo_residual of this InlineResponse20065Message.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20065Message.
 
-        Días al vencimiento  # noqa: E501
+        Identificador del formato de carga  # noqa: E501
 
-        :param plazo_residual: The plazo_residual of this InlineResponse20065Message.  # noqa: E501
+        :param id: The id of this InlineResponse20065Message.  # noqa: E501
         :type: int
         """
 
-        self._plazo_residual = plazo_residual
+        self._id = id
 
     @property
-    def duracion_macaulay(self):
-        """Gets the duracion_macaulay of this InlineResponse20065Message.  # noqa: E501
-        Duración de Macaulay  # noqa: E501
+    def short_name(self):
+        """Gets the short_name of this InlineResponse20065Message.  # noqa: E501
+        Título del formato de carga  # noqa: E501
 
-        :return: The duracion_macaulay of this InlineResponse20065Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._duracion_macaulay
-
-    @duracion_macaulay.setter
-    def duracion_macaulay(self, duracion_macaulay):
-        """Sets the duracion_macaulay of this InlineResponse20065Message.
-
-        Duración de Macaulay  # noqa: E501
-
-        :param duracion_macaulay: The duracion_macaulay of this InlineResponse20065Message.  # noqa: E501
-        :type: float
-        """
-
-        self._duracion_macaulay = duracion_macaulay
-
-    @property
-    def duracion_mod_act365(self):
-        """Gets the duracion_mod_act365 of this InlineResponse20065Message.  # noqa: E501
-        Duración Modificada en ACT365  # noqa: E501
-
-        :return: The duracion_mod_act365 of this InlineResponse20065Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._duracion_mod_act365
-
-    @duracion_mod_act365.setter
-    def duracion_mod_act365(self, duracion_mod_act365):
-        """Sets the duracion_mod_act365 of this InlineResponse20065Message.
-
-        Duración Modificada en ACT365  # noqa: E501
-
-        :param duracion_mod_act365: The duracion_mod_act365 of this InlineResponse20065Message.  # noqa: E501
-        :type: float
-        """
-
-        self._duracion_mod_act365 = duracion_mod_act365
-
-    @property
-    def precio_porcentaje_valor_par(self):
-        """Gets the precio_porcentaje_valor_par of this InlineResponse20065Message.  # noqa: E501
-        Precio Porcentaje Valor Par  # noqa: E501
-
-        :return: The precio_porcentaje_valor_par of this InlineResponse20065Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._precio_porcentaje_valor_par
-
-    @precio_porcentaje_valor_par.setter
-    def precio_porcentaje_valor_par(self, precio_porcentaje_valor_par):
-        """Sets the precio_porcentaje_valor_par of this InlineResponse20065Message.
-
-        Precio Porcentaje Valor Par  # noqa: E501
-
-        :param precio_porcentaje_valor_par: The precio_porcentaje_valor_par of this InlineResponse20065Message.  # noqa: E501
-        :type: float
-        """
-
-        self._precio_porcentaje_valor_par = precio_porcentaje_valor_par
-
-    @property
-    def valor_par(self):
-        """Gets the valor_par of this InlineResponse20065Message.  # noqa: E501
-        Valor Par  # noqa: E501
-
-        :return: The valor_par of this InlineResponse20065Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._valor_par
-
-    @valor_par.setter
-    def valor_par(self, valor_par):
-        """Sets the valor_par of this InlineResponse20065Message.
-
-        Valor Par  # noqa: E501
-
-        :param valor_par: The valor_par of this InlineResponse20065Message.  # noqa: E501
-        :type: float
-        """
-
-        self._valor_par = valor_par
-
-    @property
-    def convexidad(self):
-        """Gets the convexidad of this InlineResponse20065Message.  # noqa: E501
-        Convexidad  # noqa: E501
-
-        :return: The convexidad of this InlineResponse20065Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._convexidad
-
-    @convexidad.setter
-    def convexidad(self, convexidad):
-        """Sets the convexidad of this InlineResponse20065Message.
-
-        Convexidad  # noqa: E501
-
-        :param convexidad: The convexidad of this InlineResponse20065Message.  # noqa: E501
-        :type: float
-        """
-
-        self._convexidad = convexidad
-
-    @property
-    def tir_act365(self):
-        """Gets the tir_act365 of this InlineResponse20065Message.  # noqa: E501
-        Tir de Valorización en ACT365  # noqa: E501
-
-        :return: The tir_act365 of this InlineResponse20065Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir_act365
-
-    @tir_act365.setter
-    def tir_act365(self, tir_act365):
-        """Sets the tir_act365 of this InlineResponse20065Message.
-
-        Tir de Valorización en ACT365  # noqa: E501
-
-        :param tir_act365: The tir_act365 of this InlineResponse20065Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tir_act365 = tir_act365
-
-    @property
-    def tipo_val(self):
-        """Gets the tipo_val of this InlineResponse20065Message.  # noqa: E501
-        Tipo de Valorización usada por RiskAmerica  # noqa: E501
-
-        :return: The tipo_val of this InlineResponse20065Message.  # noqa: E501
+        :return: The short_name of this InlineResponse20065Message.  # noqa: E501
         :rtype: str
         """
-        return self._tipo_val
+        return self._short_name
 
-    @tipo_val.setter
-    def tipo_val(self, tipo_val):
-        """Sets the tipo_val of this InlineResponse20065Message.
+    @short_name.setter
+    def short_name(self, short_name):
+        """Sets the short_name of this InlineResponse20065Message.
 
-        Tipo de Valorización usada por RiskAmerica  # noqa: E501
+        Título del formato de carga  # noqa: E501
 
-        :param tipo_val: The tipo_val of this InlineResponse20065Message.  # noqa: E501
+        :param short_name: The short_name of this InlineResponse20065Message.  # noqa: E501
         :type: str
         """
 
-        self._tipo_val = tipo_val
+        self._short_name = short_name
+
+    @property
+    def long_name(self):
+        """Gets the long_name of this InlineResponse20065Message.  # noqa: E501
+        Descripción del formato de carga  # noqa: E501
+
+        :return: The long_name of this InlineResponse20065Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._long_name
+
+    @long_name.setter
+    def long_name(self, long_name):
+        """Sets the long_name of this InlineResponse20065Message.
+
+        Descripción del formato de carga  # noqa: E501
+
+        :param long_name: The long_name of this InlineResponse20065Message.  # noqa: E501
+        :type: str
+        """
+
+        self._long_name = long_name
+
+    @property
+    def mime_type(self):
+        """Gets the mime_type of this InlineResponse20065Message.  # noqa: E501
+        MimeType que describe el tipo de archivo usado para la carga  # noqa: E501
+
+        :return: The mime_type of this InlineResponse20065Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._mime_type
+
+    @mime_type.setter
+    def mime_type(self, mime_type):
+        """Sets the mime_type of this InlineResponse20065Message.
+
+        MimeType que describe el tipo de archivo usado para la carga  # noqa: E501
+
+        :param mime_type: The mime_type of this InlineResponse20065Message.  # noqa: E501
+        :type: str
+        """
+
+        self._mime_type = mime_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

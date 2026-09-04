@@ -33,38 +33,38 @@ class InlineResponse2004Message(object):
     """
     swagger_types = {
         'rut': 'int',
-        'serie': 'str',
-        'fecha_reproceso': 'datetime',
-        'fecha_reprocesada': 'date'
+        'fecha': 'date',
+        'moneda': 'str',
+        'cuota_normalizada': 'float'
     }
 
     attribute_map = {
         'rut': 'rut',
-        'serie': 'serie',
-        'fecha_reproceso': 'fechaReproceso',
-        'fecha_reprocesada': 'fechaReprocesada'
+        'fecha': 'fecha',
+        'moneda': 'moneda',
+        'cuota_normalizada': 'cuotaNormalizada'
     }
 
-    def __init__(self, rut=None, serie=None, fecha_reproceso=None, fecha_reprocesada=None):  # noqa: E501
+    def __init__(self, rut=None, fecha=None, moneda=None, cuota_normalizada=None):  # noqa: E501
         """InlineResponse2004Message - a model defined in Swagger"""  # noqa: E501
         self._rut = None
-        self._serie = None
-        self._fecha_reproceso = None
-        self._fecha_reprocesada = None
+        self._fecha = None
+        self._moneda = None
+        self._cuota_normalizada = None
         self.discriminator = None
         if rut is not None:
             self.rut = rut
-        if serie is not None:
-            self.serie = serie
-        if fecha_reproceso is not None:
-            self.fecha_reproceso = fecha_reproceso
-        if fecha_reprocesada is not None:
-            self.fecha_reprocesada = fecha_reprocesada
+        if fecha is not None:
+            self.fecha = fecha
+        if moneda is not None:
+            self.moneda = moneda
+        if cuota_normalizada is not None:
+            self.cuota_normalizada = cuota_normalizada
 
     @property
     def rut(self):
         """Gets the rut of this InlineResponse2004Message.  # noqa: E501
-        Rut del Fondo (sin dígito verificador)  # noqa: E501
+        Rut del Fondo  # noqa: E501
 
         :return: The rut of this InlineResponse2004Message.  # noqa: E501
         :rtype: int
@@ -75,7 +75,7 @@ class InlineResponse2004Message(object):
     def rut(self, rut):
         """Sets the rut of this InlineResponse2004Message.
 
-        Rut del Fondo (sin dígito verificador)  # noqa: E501
+        Rut del Fondo  # noqa: E501
 
         :param rut: The rut of this InlineResponse2004Message.  # noqa: E501
         :type: int
@@ -84,70 +84,70 @@ class InlineResponse2004Message(object):
         self._rut = rut
 
     @property
-    def serie(self):
-        """Gets the serie of this InlineResponse2004Message.  # noqa: E501
-        Código de la serie  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse2004Message.  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :return: The serie of this InlineResponse2004Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._serie
-
-    @serie.setter
-    def serie(self, serie):
-        """Sets the serie of this InlineResponse2004Message.
-
-        Código de la serie  # noqa: E501
-
-        :param serie: The serie of this InlineResponse2004Message.  # noqa: E501
-        :type: str
-        """
-
-        self._serie = serie
-
-    @property
-    def fecha_reproceso(self):
-        """Gets the fecha_reproceso of this InlineResponse2004Message.  # noqa: E501
-        Fecha de los datos cuota que cambiaron  # noqa: E501
-
-        :return: The fecha_reproceso of this InlineResponse2004Message.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._fecha_reproceso
-
-    @fecha_reproceso.setter
-    def fecha_reproceso(self, fecha_reproceso):
-        """Sets the fecha_reproceso of this InlineResponse2004Message.
-
-        Fecha de los datos cuota que cambiaron  # noqa: E501
-
-        :param fecha_reproceso: The fecha_reproceso of this InlineResponse2004Message.  # noqa: E501
-        :type: datetime
-        """
-
-        self._fecha_reproceso = fecha_reproceso
-
-    @property
-    def fecha_reprocesada(self):
-        """Gets the fecha_reprocesada of this InlineResponse2004Message.  # noqa: E501
-        Fecha en que ocurrió el reproceso  # noqa: E501
-
-        :return: The fecha_reprocesada of this InlineResponse2004Message.  # noqa: E501
+        :return: The fecha of this InlineResponse2004Message.  # noqa: E501
         :rtype: date
         """
-        return self._fecha_reprocesada
+        return self._fecha
 
-    @fecha_reprocesada.setter
-    def fecha_reprocesada(self, fecha_reprocesada):
-        """Sets the fecha_reprocesada of this InlineResponse2004Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse2004Message.
 
-        Fecha en que ocurrió el reproceso  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :param fecha_reprocesada: The fecha_reprocesada of this InlineResponse2004Message.  # noqa: E501
+        :param fecha: The fecha of this InlineResponse2004Message.  # noqa: E501
         :type: date
         """
 
-        self._fecha_reprocesada = fecha_reprocesada
+        self._fecha = fecha
+
+    @property
+    def moneda(self):
+        """Gets the moneda of this InlineResponse2004Message.  # noqa: E501
+        Moneda en la cual se calculó la serie normalizada  # noqa: E501
+
+        :return: The moneda of this InlineResponse2004Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._moneda
+
+    @moneda.setter
+    def moneda(self, moneda):
+        """Sets the moneda of this InlineResponse2004Message.
+
+        Moneda en la cual se calculó la serie normalizada  # noqa: E501
+
+        :param moneda: The moneda of this InlineResponse2004Message.  # noqa: E501
+        :type: str
+        """
+
+        self._moneda = moneda
+
+    @property
+    def cuota_normalizada(self):
+        """Gets the cuota_normalizada of this InlineResponse2004Message.  # noqa: E501
+        Valor cuota ajustado en base 100 al primer día con dato del rango  # noqa: E501
+
+        :return: The cuota_normalizada of this InlineResponse2004Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._cuota_normalizada
+
+    @cuota_normalizada.setter
+    def cuota_normalizada(self, cuota_normalizada):
+        """Sets the cuota_normalizada of this InlineResponse2004Message.
+
+        Valor cuota ajustado en base 100 al primer día con dato del rango  # noqa: E501
+
+        :param cuota_normalizada: The cuota_normalizada of this InlineResponse2004Message.  # noqa: E501
+        :type: float
+        """
+
+        self._cuota_normalizada = cuota_normalizada
 
     def to_dict(self):
         """Returns the model properties as a dict"""

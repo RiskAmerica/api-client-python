@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20071_message_valorizacion import InlineResponse20071MessageValorizacion
 
 
 
@@ -32,41 +33,39 @@ class InlineResponse20071Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'disponible': 'int'
+        'valorizacion': 'InlineResponse20071MessageValorizacion'
     }
 
     attribute_map = {
-        'disponible': 'disponible'
+        'valorizacion': 'Valorizacion'
     }
 
-    def __init__(self, disponible=None):  # noqa: E501
+    def __init__(self, valorizacion=None):  # noqa: E501
         """InlineResponse20071Message - a model defined in Swagger"""  # noqa: E501
-        self._disponible = None
+        self._valorizacion = None
         self.discriminator = None
-        if disponible is not None:
-            self.disponible = disponible
+        if valorizacion is not None:
+            self.valorizacion = valorizacion
 
     @property
-    def disponible(self):
-        """Gets the disponible of this InlineResponse20071Message.  # noqa: E501
-        1 si valorización está disponible para la fecha, 0 si no.  # noqa: E501
+    def valorizacion(self):
+        """Gets the valorizacion of this InlineResponse20071Message.  # noqa: E501
 
-        :return: The disponible of this InlineResponse20071Message.  # noqa: E501
-        :rtype: int
+        :return: The valorizacion of this InlineResponse20071Message.  # noqa: E501
+        :rtype: InlineResponse20071MessageValorizacion
         """
-        return self._disponible
+        return self._valorizacion
 
-    @disponible.setter
-    def disponible(self, disponible):
-        """Sets the disponible of this InlineResponse20071Message.
+    @valorizacion.setter
+    def valorizacion(self, valorizacion):
+        """Sets the valorizacion of this InlineResponse20071Message.
 
-        1 si valorización está disponible para la fecha, 0 si no.  # noqa: E501
 
-        :param disponible: The disponible of this InlineResponse20071Message.  # noqa: E501
-        :type: int
+        :param valorizacion: The valorizacion of this InlineResponse20071Message.  # noqa: E501
+        :type: InlineResponse20071MessageValorizacion
         """
 
-        self._disponible = disponible
+        self._valorizacion = valorizacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,68 +32,716 @@ class InlineResponse20016Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'hora_cierre': 'str'
+        'fecha': 'date',
+        'id_indice': 'int',
+        'px_last': 'float',
+        'num_em': 'int',
+        'monto': 'float',
+        'ret1_d': 'float',
+        'ret_cont1_d': 'float',
+        'ret1_a': 'float',
+        'ret_mtd': 'float',
+        'ret_ytd': 'float',
+        'desv_est1_a': 'float',
+        'desv_est3_a': 'float',
+        'desv_est5_a': 'float',
+        'dur_mac': 'float',
+        'dur_mod': 'float',
+        'tir_media': 'float',
+        'plazo': 'float',
+        'convexidad': 'float',
+        'tir_act365_clp': 'float',
+        'tir_act365_uf': 'float',
+        'spread365': 'float',
+        'ret_sc1_d': 'float',
+        'max_draw_down': 'float',
+        'tir_act365_usd': 'float',
+        'porcentaje_uf': 'float',
+        'porcentaje_clp': 'float'
     }
 
     attribute_map = {
-        'id': 'id',
-        'hora_cierre': 'horaCierre'
+        'fecha': 'fecha',
+        'id_indice': 'idIndice',
+        'px_last': 'pxLast',
+        'num_em': 'numEm',
+        'monto': 'monto',
+        'ret1_d': 'ret1D',
+        'ret_cont1_d': 'retCont1D',
+        'ret1_a': 'ret1A',
+        'ret_mtd': 'retMTD',
+        'ret_ytd': 'retYTD',
+        'desv_est1_a': 'desvEst1A',
+        'desv_est3_a': 'desvEst3A',
+        'desv_est5_a': 'desvEst5A',
+        'dur_mac': 'durMac',
+        'dur_mod': 'durMod',
+        'tir_media': 'tirMedia',
+        'plazo': 'plazo',
+        'convexidad': 'convexidad',
+        'tir_act365_clp': 'tirAct365CLP',
+        'tir_act365_uf': 'tirAct365UF',
+        'spread365': 'spread365',
+        'ret_sc1_d': 'retSC1D',
+        'max_draw_down': 'maxDrawDown',
+        'tir_act365_usd': 'tirACT365USD',
+        'porcentaje_uf': 'porcentajeUF',
+        'porcentaje_clp': 'porcentajeCLP'
     }
 
-    def __init__(self, id=None, hora_cierre=None):  # noqa: E501
+    def __init__(self, fecha=None, id_indice=None, px_last=None, num_em=None, monto=None, ret1_d=None, ret_cont1_d=None, ret1_a=None, ret_mtd=None, ret_ytd=None, desv_est1_a=None, desv_est3_a=None, desv_est5_a=None, dur_mac=None, dur_mod=None, tir_media=None, plazo=None, convexidad=None, tir_act365_clp=None, tir_act365_uf=None, spread365=None, ret_sc1_d=None, max_draw_down=None, tir_act365_usd=None, porcentaje_uf=None, porcentaje_clp=None):  # noqa: E501
         """InlineResponse20016Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._hora_cierre = None
+        self._fecha = None
+        self._id_indice = None
+        self._px_last = None
+        self._num_em = None
+        self._monto = None
+        self._ret1_d = None
+        self._ret_cont1_d = None
+        self._ret1_a = None
+        self._ret_mtd = None
+        self._ret_ytd = None
+        self._desv_est1_a = None
+        self._desv_est3_a = None
+        self._desv_est5_a = None
+        self._dur_mac = None
+        self._dur_mod = None
+        self._tir_media = None
+        self._plazo = None
+        self._convexidad = None
+        self._tir_act365_clp = None
+        self._tir_act365_uf = None
+        self._spread365 = None
+        self._ret_sc1_d = None
+        self._max_draw_down = None
+        self._tir_act365_usd = None
+        self._porcentaje_uf = None
+        self._porcentaje_clp = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if hora_cierre is not None:
-            self.hora_cierre = hora_cierre
+        if fecha is not None:
+            self.fecha = fecha
+        if id_indice is not None:
+            self.id_indice = id_indice
+        if px_last is not None:
+            self.px_last = px_last
+        if num_em is not None:
+            self.num_em = num_em
+        if monto is not None:
+            self.monto = monto
+        if ret1_d is not None:
+            self.ret1_d = ret1_d
+        if ret_cont1_d is not None:
+            self.ret_cont1_d = ret_cont1_d
+        if ret1_a is not None:
+            self.ret1_a = ret1_a
+        if ret_mtd is not None:
+            self.ret_mtd = ret_mtd
+        if ret_ytd is not None:
+            self.ret_ytd = ret_ytd
+        if desv_est1_a is not None:
+            self.desv_est1_a = desv_est1_a
+        if desv_est3_a is not None:
+            self.desv_est3_a = desv_est3_a
+        if desv_est5_a is not None:
+            self.desv_est5_a = desv_est5_a
+        if dur_mac is not None:
+            self.dur_mac = dur_mac
+        if dur_mod is not None:
+            self.dur_mod = dur_mod
+        if tir_media is not None:
+            self.tir_media = tir_media
+        if plazo is not None:
+            self.plazo = plazo
+        if convexidad is not None:
+            self.convexidad = convexidad
+        if tir_act365_clp is not None:
+            self.tir_act365_clp = tir_act365_clp
+        if tir_act365_uf is not None:
+            self.tir_act365_uf = tir_act365_uf
+        if spread365 is not None:
+            self.spread365 = spread365
+        if ret_sc1_d is not None:
+            self.ret_sc1_d = ret_sc1_d
+        if max_draw_down is not None:
+            self.max_draw_down = max_draw_down
+        if tir_act365_usd is not None:
+            self.tir_act365_usd = tir_act365_usd
+        if porcentaje_uf is not None:
+            self.porcentaje_uf = porcentaje_uf
+        if porcentaje_clp is not None:
+            self.porcentaje_clp = porcentaje_clp
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20016Message.  # noqa: E501
-        Identificador de RiskAmerica para la Familia  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20016Message.  # noqa: E501
+        Fecha a consultar  # noqa: E501
 
-        :return: The id of this InlineResponse20016Message.  # noqa: E501
+        :return: The fecha of this InlineResponse20016Message.  # noqa: E501
+        :rtype: date
+        """
+        return self._fecha
+
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20016Message.
+
+        Fecha a consultar  # noqa: E501
+
+        :param fecha: The fecha of this InlineResponse20016Message.  # noqa: E501
+        :type: date
+        """
+
+        self._fecha = fecha
+
+    @property
+    def id_indice(self):
+        """Gets the id_indice of this InlineResponse20016Message.  # noqa: E501
+        Identificador del Indice a consultar  # noqa: E501
+
+        :return: The id_indice of this InlineResponse20016Message.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._id_indice
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20016Message.
+    @id_indice.setter
+    def id_indice(self, id_indice):
+        """Sets the id_indice of this InlineResponse20016Message.
 
-        Identificador de RiskAmerica para la Familia  # noqa: E501
+        Identificador del Indice a consultar  # noqa: E501
 
-        :param id: The id of this InlineResponse20016Message.  # noqa: E501
+        :param id_indice: The id_indice of this InlineResponse20016Message.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._id_indice = id_indice
 
     @property
-    def hora_cierre(self):
-        """Gets the hora_cierre of this InlineResponse20016Message.  # noqa: E501
-        Hora a la que se inicia el procesamiento del Intraday  # noqa: E501
+    def px_last(self):
+        """Gets the px_last of this InlineResponse20016Message.  # noqa: E501
+        Valor del Índice  # noqa: E501
 
-        :return: The hora_cierre of this InlineResponse20016Message.  # noqa: E501
-        :rtype: str
+        :return: The px_last of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
         """
-        return self._hora_cierre
+        return self._px_last
 
-    @hora_cierre.setter
-    def hora_cierre(self, hora_cierre):
-        """Sets the hora_cierre of this InlineResponse20016Message.
+    @px_last.setter
+    def px_last(self, px_last):
+        """Sets the px_last of this InlineResponse20016Message.
 
-        Hora a la que se inicia el procesamiento del Intraday  # noqa: E501
+        Valor del Índice  # noqa: E501
 
-        :param hora_cierre: The hora_cierre of this InlineResponse20016Message.  # noqa: E501
-        :type: str
+        :param px_last: The px_last of this InlineResponse20016Message.  # noqa: E501
+        :type: float
         """
 
-        self._hora_cierre = hora_cierre
+        self._px_last = px_last
+
+    @property
+    def num_em(self):
+        """Gets the num_em of this InlineResponse20016Message.  # noqa: E501
+        Cantidad de instrumentos agrupados bajo este retorno  # noqa: E501
+
+        :return: The num_em of this InlineResponse20016Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._num_em
+
+    @num_em.setter
+    def num_em(self, num_em):
+        """Sets the num_em of this InlineResponse20016Message.
+
+        Cantidad de instrumentos agrupados bajo este retorno  # noqa: E501
+
+        :param num_em: The num_em of this InlineResponse20016Message.  # noqa: E501
+        :type: int
+        """
+
+        self._num_em = num_em
+
+    @property
+    def monto(self):
+        """Gets the monto of this InlineResponse20016Message.  # noqa: E501
+        Monto outstanding promedio del Índice  # noqa: E501
+
+        :return: The monto of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._monto
+
+    @monto.setter
+    def monto(self, monto):
+        """Sets the monto of this InlineResponse20016Message.
+
+        Monto outstanding promedio del Índice  # noqa: E501
+
+        :param monto: The monto of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._monto = monto
+
+    @property
+    def ret1_d(self):
+        """Gets the ret1_d of this InlineResponse20016Message.  # noqa: E501
+        Retorno 1 Día  # noqa: E501
+
+        :return: The ret1_d of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret1_d
+
+    @ret1_d.setter
+    def ret1_d(self, ret1_d):
+        """Sets the ret1_d of this InlineResponse20016Message.
+
+        Retorno 1 Día  # noqa: E501
+
+        :param ret1_d: The ret1_d of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret1_d = ret1_d
+
+    @property
+    def ret_cont1_d(self):
+        """Gets the ret_cont1_d of this InlineResponse20016Message.  # noqa: E501
+        Retorno 1 Día continuo  # noqa: E501
+
+        :return: The ret_cont1_d of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_cont1_d
+
+    @ret_cont1_d.setter
+    def ret_cont1_d(self, ret_cont1_d):
+        """Sets the ret_cont1_d of this InlineResponse20016Message.
+
+        Retorno 1 Día continuo  # noqa: E501
+
+        :param ret_cont1_d: The ret_cont1_d of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_cont1_d = ret_cont1_d
+
+    @property
+    def ret1_a(self):
+        """Gets the ret1_a of this InlineResponse20016Message.  # noqa: E501
+        Retorno 1 Año  # noqa: E501
+
+        :return: The ret1_a of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret1_a
+
+    @ret1_a.setter
+    def ret1_a(self, ret1_a):
+        """Sets the ret1_a of this InlineResponse20016Message.
+
+        Retorno 1 Año  # noqa: E501
+
+        :param ret1_a: The ret1_a of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret1_a = ret1_a
+
+    @property
+    def ret_mtd(self):
+        """Gets the ret_mtd of this InlineResponse20016Message.  # noqa: E501
+        Retorno Month to Date  # noqa: E501
+
+        :return: The ret_mtd of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_mtd
+
+    @ret_mtd.setter
+    def ret_mtd(self, ret_mtd):
+        """Sets the ret_mtd of this InlineResponse20016Message.
+
+        Retorno Month to Date  # noqa: E501
+
+        :param ret_mtd: The ret_mtd of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_mtd = ret_mtd
+
+    @property
+    def ret_ytd(self):
+        """Gets the ret_ytd of this InlineResponse20016Message.  # noqa: E501
+        Retorno Year to Date  # noqa: E501
+
+        :return: The ret_ytd of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_ytd
+
+    @ret_ytd.setter
+    def ret_ytd(self, ret_ytd):
+        """Sets the ret_ytd of this InlineResponse20016Message.
+
+        Retorno Year to Date  # noqa: E501
+
+        :param ret_ytd: The ret_ytd of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_ytd = ret_ytd
+
+    @property
+    def desv_est1_a(self):
+        """Gets the desv_est1_a of this InlineResponse20016Message.  # noqa: E501
+        Desviación estandar anualizada del retorno con ventana de 1 año  # noqa: E501
+
+        :return: The desv_est1_a of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._desv_est1_a
+
+    @desv_est1_a.setter
+    def desv_est1_a(self, desv_est1_a):
+        """Sets the desv_est1_a of this InlineResponse20016Message.
+
+        Desviación estandar anualizada del retorno con ventana de 1 año  # noqa: E501
+
+        :param desv_est1_a: The desv_est1_a of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._desv_est1_a = desv_est1_a
+
+    @property
+    def desv_est3_a(self):
+        """Gets the desv_est3_a of this InlineResponse20016Message.  # noqa: E501
+        Desviación estandar anualizada del retorno con ventana de 3 años  # noqa: E501
+
+        :return: The desv_est3_a of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._desv_est3_a
+
+    @desv_est3_a.setter
+    def desv_est3_a(self, desv_est3_a):
+        """Sets the desv_est3_a of this InlineResponse20016Message.
+
+        Desviación estandar anualizada del retorno con ventana de 3 años  # noqa: E501
+
+        :param desv_est3_a: The desv_est3_a of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._desv_est3_a = desv_est3_a
+
+    @property
+    def desv_est5_a(self):
+        """Gets the desv_est5_a of this InlineResponse20016Message.  # noqa: E501
+        Desviación estandar anualizada del retorno con ventana de 5 años  # noqa: E501
+
+        :return: The desv_est5_a of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._desv_est5_a
+
+    @desv_est5_a.setter
+    def desv_est5_a(self, desv_est5_a):
+        """Sets the desv_est5_a of this InlineResponse20016Message.
+
+        Desviación estandar anualizada del retorno con ventana de 5 años  # noqa: E501
+
+        :param desv_est5_a: The desv_est5_a of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._desv_est5_a = desv_est5_a
+
+    @property
+    def dur_mac(self):
+        """Gets the dur_mac of this InlineResponse20016Message.  # noqa: E501
+        Duración de Macaulay promedio del Índice  # noqa: E501
+
+        :return: The dur_mac of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._dur_mac
+
+    @dur_mac.setter
+    def dur_mac(self, dur_mac):
+        """Sets the dur_mac of this InlineResponse20016Message.
+
+        Duración de Macaulay promedio del Índice  # noqa: E501
+
+        :param dur_mac: The dur_mac of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._dur_mac = dur_mac
+
+    @property
+    def dur_mod(self):
+        """Gets the dur_mod of this InlineResponse20016Message.  # noqa: E501
+        Duración Modificada promedio del Índice  # noqa: E501
+
+        :return: The dur_mod of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._dur_mod
+
+    @dur_mod.setter
+    def dur_mod(self, dur_mod):
+        """Sets the dur_mod of this InlineResponse20016Message.
+
+        Duración Modificada promedio del Índice  # noqa: E501
+
+        :param dur_mod: The dur_mod of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._dur_mod = dur_mod
+
+    @property
+    def tir_media(self):
+        """Gets the tir_media of this InlineResponse20016Message.  # noqa: E501
+        TIR promedio del Índice  # noqa: E501
+
+        :return: The tir_media of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tir_media
+
+    @tir_media.setter
+    def tir_media(self, tir_media):
+        """Sets the tir_media of this InlineResponse20016Message.
+
+        TIR promedio del Índice  # noqa: E501
+
+        :param tir_media: The tir_media of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tir_media = tir_media
+
+    @property
+    def plazo(self):
+        """Gets the plazo of this InlineResponse20016Message.  # noqa: E501
+        Plazo residual promedio del Índice  # noqa: E501
+
+        :return: The plazo of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._plazo
+
+    @plazo.setter
+    def plazo(self, plazo):
+        """Sets the plazo of this InlineResponse20016Message.
+
+        Plazo residual promedio del Índice  # noqa: E501
+
+        :param plazo: The plazo of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._plazo = plazo
+
+    @property
+    def convexidad(self):
+        """Gets the convexidad of this InlineResponse20016Message.  # noqa: E501
+        Convexidad promedio del Índice  # noqa: E501
+
+        :return: The convexidad of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._convexidad
+
+    @convexidad.setter
+    def convexidad(self, convexidad):
+        """Sets the convexidad of this InlineResponse20016Message.
+
+        Convexidad promedio del Índice  # noqa: E501
+
+        :param convexidad: The convexidad of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._convexidad = convexidad
+
+    @property
+    def tir_act365_clp(self):
+        """Gets the tir_act365_clp of this InlineResponse20016Message.  # noqa: E501
+        TIR del indice en Pesos  # noqa: E501
+
+        :return: The tir_act365_clp of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tir_act365_clp
+
+    @tir_act365_clp.setter
+    def tir_act365_clp(self, tir_act365_clp):
+        """Sets the tir_act365_clp of this InlineResponse20016Message.
+
+        TIR del indice en Pesos  # noqa: E501
+
+        :param tir_act365_clp: The tir_act365_clp of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tir_act365_clp = tir_act365_clp
+
+    @property
+    def tir_act365_uf(self):
+        """Gets the tir_act365_uf of this InlineResponse20016Message.  # noqa: E501
+        TIR del indice en UF  # noqa: E501
+
+        :return: The tir_act365_uf of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tir_act365_uf
+
+    @tir_act365_uf.setter
+    def tir_act365_uf(self, tir_act365_uf):
+        """Sets the tir_act365_uf of this InlineResponse20016Message.
+
+        TIR del indice en UF  # noqa: E501
+
+        :param tir_act365_uf: The tir_act365_uf of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tir_act365_uf = tir_act365_uf
+
+    @property
+    def spread365(self):
+        """Gets the spread365 of this InlineResponse20016Message.  # noqa: E501
+        spread del indice  # noqa: E501
+
+        :return: The spread365 of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._spread365
+
+    @spread365.setter
+    def spread365(self, spread365):
+        """Sets the spread365 of this InlineResponse20016Message.
+
+        spread del indice  # noqa: E501
+
+        :param spread365: The spread365 of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._spread365 = spread365
+
+    @property
+    def ret_sc1_d(self):
+        """Gets the ret_sc1_d of this InlineResponse20016Message.  # noqa: E501
+        Retorno 1 Día sin considerar cupones  # noqa: E501
+
+        :return: The ret_sc1_d of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ret_sc1_d
+
+    @ret_sc1_d.setter
+    def ret_sc1_d(self, ret_sc1_d):
+        """Sets the ret_sc1_d of this InlineResponse20016Message.
+
+        Retorno 1 Día sin considerar cupones  # noqa: E501
+
+        :param ret_sc1_d: The ret_sc1_d of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ret_sc1_d = ret_sc1_d
+
+    @property
+    def max_draw_down(self):
+        """Gets the max_draw_down of this InlineResponse20016Message.  # noqa: E501
+        maxDrawDown del indice  # noqa: E501
+
+        :return: The max_draw_down of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._max_draw_down
+
+    @max_draw_down.setter
+    def max_draw_down(self, max_draw_down):
+        """Sets the max_draw_down of this InlineResponse20016Message.
+
+        maxDrawDown del indice  # noqa: E501
+
+        :param max_draw_down: The max_draw_down of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._max_draw_down = max_draw_down
+
+    @property
+    def tir_act365_usd(self):
+        """Gets the tir_act365_usd of this InlineResponse20016Message.  # noqa: E501
+        TIR del indice en USD  # noqa: E501
+
+        :return: The tir_act365_usd of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._tir_act365_usd
+
+    @tir_act365_usd.setter
+    def tir_act365_usd(self, tir_act365_usd):
+        """Sets the tir_act365_usd of this InlineResponse20016Message.
+
+        TIR del indice en USD  # noqa: E501
+
+        :param tir_act365_usd: The tir_act365_usd of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._tir_act365_usd = tir_act365_usd
+
+    @property
+    def porcentaje_uf(self):
+        """Gets the porcentaje_uf of this InlineResponse20016Message.  # noqa: E501
+        Porcentaje del indice invertido en UF  # noqa: E501
+
+        :return: The porcentaje_uf of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._porcentaje_uf
+
+    @porcentaje_uf.setter
+    def porcentaje_uf(self, porcentaje_uf):
+        """Sets the porcentaje_uf of this InlineResponse20016Message.
+
+        Porcentaje del indice invertido en UF  # noqa: E501
+
+        :param porcentaje_uf: The porcentaje_uf of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._porcentaje_uf = porcentaje_uf
+
+    @property
+    def porcentaje_clp(self):
+        """Gets the porcentaje_clp of this InlineResponse20016Message.  # noqa: E501
+        Porcentaje del indice invertido en Pesos  # noqa: E501
+
+        :return: The porcentaje_clp of this InlineResponse20016Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._porcentaje_clp
+
+    @porcentaje_clp.setter
+    def porcentaje_clp(self, porcentaje_clp):
+        """Sets the porcentaje_clp of this InlineResponse20016Message.
+
+        Porcentaje del indice invertido en Pesos  # noqa: E501
+
+        :param porcentaje_clp: The porcentaje_clp of this InlineResponse20016Message.  # noqa: E501
+        :type: float
+        """
+
+        self._porcentaje_clp = porcentaje_clp
 
     def to_dict(self):
         """Returns the model properties as a dict"""

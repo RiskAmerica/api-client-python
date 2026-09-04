@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20055_message_issues import InlineResponse20055MessageIssues
 
 
 
@@ -32,473 +33,66 @@ class InlineResponse20055Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'name': 'str',
-        'fecha_creacion': 'date',
-        'trigger_clp': 'float',
-        'trigger_otros': 'float',
-        'trigger_cartera': 'float',
-        'objetivo_clp': 'float',
-        'objetivo_otros': 'float',
-        'objetivo_cartera': 'float',
-        'primer_criterio': 'str',
-        'orden_primer_criterio': 'str',
-        'segundo_criterio': 'str',
-        'orden_segundo_criterio': 'str',
-        'ultimo_ajuste': 'str',
-        'ajuste_derivado': 'str',
-        'ajustar_siempre_derivado': 'int',
-        'condicion_pago': 'str'
+        'status': 'str',
+        'issues': 'list[InlineResponse20055MessageIssues]'
     }
 
     attribute_map = {
-        'id': 'id',
-        'name': 'name',
-        'fecha_creacion': 'fechaCreacion',
-        'trigger_clp': 'triggerClp',
-        'trigger_otros': 'triggerOtros',
-        'trigger_cartera': 'triggerCartera',
-        'objetivo_clp': 'objetivoClp',
-        'objetivo_otros': 'objetivoOtros',
-        'objetivo_cartera': 'objetivoCartera',
-        'primer_criterio': 'primerCriterio',
-        'orden_primer_criterio': 'ordenPrimerCriterio',
-        'segundo_criterio': 'segundoCriterio',
-        'orden_segundo_criterio': 'ordenSegundoCriterio',
-        'ultimo_ajuste': 'ultimoAjuste',
-        'ajuste_derivado': 'ajusteDerivado',
-        'ajustar_siempre_derivado': 'ajustarSiempreDerivado',
-        'condicion_pago': 'condicionPago'
+        'status': 'status',
+        'issues': 'issues'
     }
 
-    def __init__(self, id=None, name=None, fecha_creacion=None, trigger_clp=None, trigger_otros=None, trigger_cartera=None, objetivo_clp=None, objetivo_otros=None, objetivo_cartera=None, primer_criterio=None, orden_primer_criterio=None, segundo_criterio=None, orden_segundo_criterio=None, ultimo_ajuste=None, ajuste_derivado=None, ajustar_siempre_derivado=None, condicion_pago=None):  # noqa: E501
+    def __init__(self, status=None, issues=None):  # noqa: E501
         """InlineResponse20055Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._name = None
-        self._fecha_creacion = None
-        self._trigger_clp = None
-        self._trigger_otros = None
-        self._trigger_cartera = None
-        self._objetivo_clp = None
-        self._objetivo_otros = None
-        self._objetivo_cartera = None
-        self._primer_criterio = None
-        self._orden_primer_criterio = None
-        self._segundo_criterio = None
-        self._orden_segundo_criterio = None
-        self._ultimo_ajuste = None
-        self._ajuste_derivado = None
-        self._ajustar_siempre_derivado = None
-        self._condicion_pago = None
+        self._status = None
+        self._issues = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if name is not None:
-            self.name = name
-        if fecha_creacion is not None:
-            self.fecha_creacion = fecha_creacion
-        if trigger_clp is not None:
-            self.trigger_clp = trigger_clp
-        if trigger_otros is not None:
-            self.trigger_otros = trigger_otros
-        if trigger_cartera is not None:
-            self.trigger_cartera = trigger_cartera
-        if objetivo_clp is not None:
-            self.objetivo_clp = objetivo_clp
-        if objetivo_otros is not None:
-            self.objetivo_otros = objetivo_otros
-        if objetivo_cartera is not None:
-            self.objetivo_cartera = objetivo_cartera
-        if primer_criterio is not None:
-            self.primer_criterio = primer_criterio
-        if orden_primer_criterio is not None:
-            self.orden_primer_criterio = orden_primer_criterio
-        if segundo_criterio is not None:
-            self.segundo_criterio = segundo_criterio
-        if orden_segundo_criterio is not None:
-            self.orden_segundo_criterio = orden_segundo_criterio
-        if ultimo_ajuste is not None:
-            self.ultimo_ajuste = ultimo_ajuste
-        if ajuste_derivado is not None:
-            self.ajuste_derivado = ajuste_derivado
-        if ajustar_siempre_derivado is not None:
-            self.ajustar_siempre_derivado = ajustar_siempre_derivado
-        if condicion_pago is not None:
-            self.condicion_pago = condicion_pago
+        if status is not None:
+            self.status = status
+        if issues is not None:
+            self.issues = issues
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20055Message.  # noqa: E501
-        Identificador del parámetro  # noqa: E501
+    def status(self):
+        """Gets the status of this InlineResponse20055Message.  # noqa: E501
+        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
 
-        :return: The id of this InlineResponse20055Message.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20055Message.
-
-        Identificador del parámetro  # noqa: E501
-
-        :param id: The id of this InlineResponse20055Message.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def name(self):
-        """Gets the name of this InlineResponse20055Message.  # noqa: E501
-        Nombre  # noqa: E501
-
-        :return: The name of this InlineResponse20055Message.  # noqa: E501
+        :return: The status of this InlineResponse20055Message.  # noqa: E501
         :rtype: str
         """
-        return self._name
+        return self._status
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineResponse20055Message.
+    @status.setter
+    def status(self, status):
+        """Sets the status of this InlineResponse20055Message.
 
-        Nombre  # noqa: E501
+        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
 
-        :param name: The name of this InlineResponse20055Message.  # noqa: E501
+        :param status: The status of this InlineResponse20055Message.  # noqa: E501
         :type: str
         """
 
-        self._name = name
+        self._status = status
 
     @property
-    def fecha_creacion(self):
-        """Gets the fecha_creacion of this InlineResponse20055Message.  # noqa: E501
-        Fecha de creación  # noqa: E501
+    def issues(self):
+        """Gets the issues of this InlineResponse20055Message.  # noqa: E501
 
-        :return: The fecha_creacion of this InlineResponse20055Message.  # noqa: E501
-        :rtype: date
+        :return: The issues of this InlineResponse20055Message.  # noqa: E501
+        :rtype: list[InlineResponse20055MessageIssues]
         """
-        return self._fecha_creacion
+        return self._issues
 
-    @fecha_creacion.setter
-    def fecha_creacion(self, fecha_creacion):
-        """Sets the fecha_creacion of this InlineResponse20055Message.
+    @issues.setter
+    def issues(self, issues):
+        """Sets the issues of this InlineResponse20055Message.
 
-        Fecha de creación  # noqa: E501
 
-        :param fecha_creacion: The fecha_creacion of this InlineResponse20055Message.  # noqa: E501
-        :type: date
+        :param issues: The issues of this InlineResponse20055Message.  # noqa: E501
+        :type: list[InlineResponse20055MessageIssues]
         """
 
-        self._fecha_creacion = fecha_creacion
-
-    @property
-    def trigger_clp(self):
-        """Gets the trigger_clp of this InlineResponse20055Message.  # noqa: E501
-        maxima desviacion absoluta de instrumentos RF CLP  # noqa: E501
-
-        :return: The trigger_clp of this InlineResponse20055Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._trigger_clp
-
-    @trigger_clp.setter
-    def trigger_clp(self, trigger_clp):
-        """Sets the trigger_clp of this InlineResponse20055Message.
-
-        maxima desviacion absoluta de instrumentos RF CLP  # noqa: E501
-
-        :param trigger_clp: The trigger_clp of this InlineResponse20055Message.  # noqa: E501
-        :type: float
-        """
-
-        self._trigger_clp = trigger_clp
-
-    @property
-    def trigger_otros(self):
-        """Gets the trigger_otros of this InlineResponse20055Message.  # noqa: E501
-        maxima desviacion absoluta de instrumentos no RF CLP  # noqa: E501
-
-        :return: The trigger_otros of this InlineResponse20055Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._trigger_otros
-
-    @trigger_otros.setter
-    def trigger_otros(self, trigger_otros):
-        """Sets the trigger_otros of this InlineResponse20055Message.
-
-        maxima desviacion absoluta de instrumentos no RF CLP  # noqa: E501
-
-        :param trigger_otros: The trigger_otros of this InlineResponse20055Message.  # noqa: E501
-        :type: float
-        """
-
-        self._trigger_otros = trigger_otros
-
-    @property
-    def trigger_cartera(self):
-        """Gets the trigger_cartera of this InlineResponse20055Message.  # noqa: E501
-        maxima desviacion absoluta de cartera  # noqa: E501
-
-        :return: The trigger_cartera of this InlineResponse20055Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._trigger_cartera
-
-    @trigger_cartera.setter
-    def trigger_cartera(self, trigger_cartera):
-        """Sets the trigger_cartera of this InlineResponse20055Message.
-
-        maxima desviacion absoluta de cartera  # noqa: E501
-
-        :param trigger_cartera: The trigger_cartera of this InlineResponse20055Message.  # noqa: E501
-        :type: float
-        """
-
-        self._trigger_cartera = trigger_cartera
-
-    @property
-    def objetivo_clp(self):
-        """Gets the objetivo_clp of this InlineResponse20055Message.  # noqa: E501
-        desviacion buscada al ajustar por criterio CLP (triggerClp) 0=mercado  # noqa: E501
-
-        :return: The objetivo_clp of this InlineResponse20055Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._objetivo_clp
-
-    @objetivo_clp.setter
-    def objetivo_clp(self, objetivo_clp):
-        """Sets the objetivo_clp of this InlineResponse20055Message.
-
-        desviacion buscada al ajustar por criterio CLP (triggerClp) 0=mercado  # noqa: E501
-
-        :param objetivo_clp: The objetivo_clp of this InlineResponse20055Message.  # noqa: E501
-        :type: float
-        """
-
-        self._objetivo_clp = objetivo_clp
-
-    @property
-    def objetivo_otros(self):
-        """Gets the objetivo_otros of this InlineResponse20055Message.  # noqa: E501
-        desviacion buscada al ajustar por criterio Otros (triggerOtros) 0=mercado  # noqa: E501
-
-        :return: The objetivo_otros of this InlineResponse20055Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._objetivo_otros
-
-    @objetivo_otros.setter
-    def objetivo_otros(self, objetivo_otros):
-        """Sets the objetivo_otros of this InlineResponse20055Message.
-
-        desviacion buscada al ajustar por criterio Otros (triggerOtros) 0=mercado  # noqa: E501
-
-        :param objetivo_otros: The objetivo_otros of this InlineResponse20055Message.  # noqa: E501
-        :type: float
-        """
-
-        self._objetivo_otros = objetivo_otros
-
-    @property
-    def objetivo_cartera(self):
-        """Gets the objetivo_cartera of this InlineResponse20055Message.  # noqa: E501
-        desviacion de cartera buscada al ajustar por criterio de cartera(triggerCartera) 0=mercado  # noqa: E501
-
-        :return: The objetivo_cartera of this InlineResponse20055Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._objetivo_cartera
-
-    @objetivo_cartera.setter
-    def objetivo_cartera(self, objetivo_cartera):
-        """Sets the objetivo_cartera of this InlineResponse20055Message.
-
-        desviacion de cartera buscada al ajustar por criterio de cartera(triggerCartera) 0=mercado  # noqa: E501
-
-        :param objetivo_cartera: The objetivo_cartera of this InlineResponse20055Message.  # noqa: E501
-        :type: float
-        """
-
-        self._objetivo_cartera = objetivo_cartera
-
-    @property
-    def primer_criterio(self):
-        """Gets the primer_criterio of this InlineResponse20055Message.  # noqa: E501
-        primer criterio de ordenamiento de instrumentos al ajustar por criterio de cartera (DESVIACION,IMPACTO,PESO CARTERA,DURACION,PLAZO,valido para objetivoCartera>0)  # noqa: E501
-
-        :return: The primer_criterio of this InlineResponse20055Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._primer_criterio
-
-    @primer_criterio.setter
-    def primer_criterio(self, primer_criterio):
-        """Sets the primer_criterio of this InlineResponse20055Message.
-
-        primer criterio de ordenamiento de instrumentos al ajustar por criterio de cartera (DESVIACION,IMPACTO,PESO CARTERA,DURACION,PLAZO,valido para objetivoCartera>0)  # noqa: E501
-
-        :param primer_criterio: The primer_criterio of this InlineResponse20055Message.  # noqa: E501
-        :type: str
-        """
-
-        self._primer_criterio = primer_criterio
-
-    @property
-    def orden_primer_criterio(self):
-        """Gets the orden_primer_criterio of this InlineResponse20055Message.  # noqa: E501
-        order primer criterio (ASC,DESC)  # noqa: E501
-
-        :return: The orden_primer_criterio of this InlineResponse20055Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._orden_primer_criterio
-
-    @orden_primer_criterio.setter
-    def orden_primer_criterio(self, orden_primer_criterio):
-        """Sets the orden_primer_criterio of this InlineResponse20055Message.
-
-        order primer criterio (ASC,DESC)  # noqa: E501
-
-        :param orden_primer_criterio: The orden_primer_criterio of this InlineResponse20055Message.  # noqa: E501
-        :type: str
-        """
-
-        self._orden_primer_criterio = orden_primer_criterio
-
-    @property
-    def segundo_criterio(self):
-        """Gets the segundo_criterio of this InlineResponse20055Message.  # noqa: E501
-        segundo criterio de ordenamiento de instrumentos al ajustar por criterio de cartera (DESVIACION,IMPACTO,PESO CARTERA,DURACION,PLAZO,valido para objetivoCartera>0)  # noqa: E501
-
-        :return: The segundo_criterio of this InlineResponse20055Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._segundo_criterio
-
-    @segundo_criterio.setter
-    def segundo_criterio(self, segundo_criterio):
-        """Sets the segundo_criterio of this InlineResponse20055Message.
-
-        segundo criterio de ordenamiento de instrumentos al ajustar por criterio de cartera (DESVIACION,IMPACTO,PESO CARTERA,DURACION,PLAZO,valido para objetivoCartera>0)  # noqa: E501
-
-        :param segundo_criterio: The segundo_criterio of this InlineResponse20055Message.  # noqa: E501
-        :type: str
-        """
-
-        self._segundo_criterio = segundo_criterio
-
-    @property
-    def orden_segundo_criterio(self):
-        """Gets the orden_segundo_criterio of this InlineResponse20055Message.  # noqa: E501
-        order segundo criterio (ASC,DESC)  # noqa: E501
-
-        :return: The orden_segundo_criterio of this InlineResponse20055Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._orden_segundo_criterio
-
-    @orden_segundo_criterio.setter
-    def orden_segundo_criterio(self, orden_segundo_criterio):
-        """Sets the orden_segundo_criterio of this InlineResponse20055Message.
-
-        order segundo criterio (ASC,DESC)  # noqa: E501
-
-        :param orden_segundo_criterio: The orden_segundo_criterio of this InlineResponse20055Message.  # noqa: E501
-        :type: str
-        """
-
-        self._orden_segundo_criterio = orden_segundo_criterio
-
-    @property
-    def ultimo_ajuste(self):
-        """Gets the ultimo_ajuste of this InlineResponse20055Message.  # noqa: E501
-        desviacion buscada al ajustar el ultimo instrumento por criterio de cartera (valido para objetivoCartera>0)  # noqa: E501
-
-        :return: The ultimo_ajuste of this InlineResponse20055Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._ultimo_ajuste
-
-    @ultimo_ajuste.setter
-    def ultimo_ajuste(self, ultimo_ajuste):
-        """Sets the ultimo_ajuste of this InlineResponse20055Message.
-
-        desviacion buscada al ajustar el ultimo instrumento por criterio de cartera (valido para objetivoCartera>0)  # noqa: E501
-
-        :param ultimo_ajuste: The ultimo_ajuste of this InlineResponse20055Message.  # noqa: E501
-        :type: str
-        """
-
-        self._ultimo_ajuste = ultimo_ajuste
-
-    @property
-    def ajuste_derivado(self):
-        """Gets the ajuste_derivado of this InlineResponse20055Message.  # noqa: E501
-        criterio para ajustar derivados(PRIMER_RECURSO,ULTIMO_RECURSO,POR_CRITERIO)  # noqa: E501
-
-        :return: The ajuste_derivado of this InlineResponse20055Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._ajuste_derivado
-
-    @ajuste_derivado.setter
-    def ajuste_derivado(self, ajuste_derivado):
-        """Sets the ajuste_derivado of this InlineResponse20055Message.
-
-        criterio para ajustar derivados(PRIMER_RECURSO,ULTIMO_RECURSO,POR_CRITERIO)  # noqa: E501
-
-        :param ajuste_derivado: The ajuste_derivado of this InlineResponse20055Message.  # noqa: E501
-        :type: str
-        """
-
-        self._ajuste_derivado = ajuste_derivado
-
-    @property
-    def ajustar_siempre_derivado(self):
-        """Gets the ajustar_siempre_derivado of this InlineResponse20055Message.  # noqa: E501
-        Detalla si siempre se ajustan los derivados a mercado (1 = si, 0 = no)  # noqa: E501
-
-        :return: The ajustar_siempre_derivado of this InlineResponse20055Message.  # noqa: E501
-        :rtype: int
-        """
-        return self._ajustar_siempre_derivado
-
-    @ajustar_siempre_derivado.setter
-    def ajustar_siempre_derivado(self, ajustar_siempre_derivado):
-        """Sets the ajustar_siempre_derivado of this InlineResponse20055Message.
-
-        Detalla si siempre se ajustan los derivados a mercado (1 = si, 0 = no)  # noqa: E501
-
-        :param ajustar_siempre_derivado: The ajustar_siempre_derivado of this InlineResponse20055Message.  # noqa: E501
-        :type: int
-        """
-
-        self._ajustar_siempre_derivado = ajustar_siempre_derivado
-
-    @property
-    def condicion_pago(self):
-        """Gets the condicion_pago of this InlineResponse20055Message.  # noqa: E501
-        Detalla si los instrumentos se realizan a Pago Hoy (PH) o Pago Mañana (PM)  # noqa: E501
-
-        :return: The condicion_pago of this InlineResponse20055Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._condicion_pago
-
-    @condicion_pago.setter
-    def condicion_pago(self, condicion_pago):
-        """Sets the condicion_pago of this InlineResponse20055Message.
-
-        Detalla si los instrumentos se realizan a Pago Hoy (PH) o Pago Mañana (PM)  # noqa: E501
-
-        :param condicion_pago: The condicion_pago of this InlineResponse20055Message.  # noqa: E501
-        :type: str
-        """
-
-        self._condicion_pago = condicion_pago
+        self._issues = issues
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,267 +32,74 @@ class InlineResponse20052MessageValorizacion(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'nemo': 'str',
         'fecha': 'date',
-        'hora_transaccion': 'str',
-        'remate': 'str',
-        'tir': 'float',
-        'monto_transado_clp': 'float',
-        'cantidad': 'float',
-        'precio_porcentaje_valor_par': 'float',
-        'plazo_residual': 'int',
-        'duracion_macaulay': 'float',
-        'nemo': 'str'
+        'nominal': 'int',
+        'tasa': 'float',
+        'ppv_par': 'float',
+        'valor_par': 'float',
+        'duracion': 'float',
+        'plazo_residual': 'float',
+        'convexidad': 'float',
+        'monto': 'float',
+        'monto_clp': 'float'
     }
 
     attribute_map = {
+        'nemo': 'nemo',
         'fecha': 'fecha',
-        'hora_transaccion': 'horaTransaccion',
-        'remate': 'remate',
-        'tir': 'tir',
-        'monto_transado_clp': 'montoTransadoCLP',
-        'cantidad': 'cantidad',
-        'precio_porcentaje_valor_par': 'precioPorcentajeValorPar',
+        'nominal': 'nominal',
+        'tasa': 'tasa',
+        'ppv_par': 'PPVPar',
+        'valor_par': 'valorPar',
+        'duracion': 'duracion',
         'plazo_residual': 'plazoResidual',
-        'duracion_macaulay': 'duracionMacaulay',
-        'nemo': 'nemo'
+        'convexidad': 'convexidad',
+        'monto': 'monto',
+        'monto_clp': 'montoCLP'
     }
 
-    def __init__(self, fecha=None, hora_transaccion=None, remate=None, tir=None, monto_transado_clp=None, cantidad=None, precio_porcentaje_valor_par=None, plazo_residual=None, duracion_macaulay=None, nemo=None):  # noqa: E501
+    def __init__(self, nemo=None, fecha=None, nominal=None, tasa=None, ppv_par=None, valor_par=None, duracion=None, plazo_residual=None, convexidad=None, monto=None, monto_clp=None):  # noqa: E501
         """InlineResponse20052MessageValorizacion - a model defined in Swagger"""  # noqa: E501
-        self._fecha = None
-        self._hora_transaccion = None
-        self._remate = None
-        self._tir = None
-        self._monto_transado_clp = None
-        self._cantidad = None
-        self._precio_porcentaje_valor_par = None
-        self._plazo_residual = None
-        self._duracion_macaulay = None
         self._nemo = None
+        self._fecha = None
+        self._nominal = None
+        self._tasa = None
+        self._ppv_par = None
+        self._valor_par = None
+        self._duracion = None
+        self._plazo_residual = None
+        self._convexidad = None
+        self._monto = None
+        self._monto_clp = None
         self.discriminator = None
-        if fecha is not None:
-            self.fecha = fecha
-        if hora_transaccion is not None:
-            self.hora_transaccion = hora_transaccion
-        if remate is not None:
-            self.remate = remate
-        if tir is not None:
-            self.tir = tir
-        if monto_transado_clp is not None:
-            self.monto_transado_clp = monto_transado_clp
-        if cantidad is not None:
-            self.cantidad = cantidad
-        if precio_porcentaje_valor_par is not None:
-            self.precio_porcentaje_valor_par = precio_porcentaje_valor_par
-        if plazo_residual is not None:
-            self.plazo_residual = plazo_residual
-        if duracion_macaulay is not None:
-            self.duracion_macaulay = duracion_macaulay
         if nemo is not None:
             self.nemo = nemo
-
-    @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        Fecha de la Valorización  # noqa: E501
-
-        :return: The fecha of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :rtype: date
-        """
-        return self._fecha
-
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20052MessageValorizacion.
-
-        Fecha de la Valorización  # noqa: E501
-
-        :param fecha: The fecha of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :type: date
-        """
-
-        self._fecha = fecha
-
-    @property
-    def hora_transaccion(self):
-        """Gets the hora_transaccion of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        Hora de la transaccion  # noqa: E501
-
-        :return: The hora_transaccion of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :rtype: str
-        """
-        return self._hora_transaccion
-
-    @hora_transaccion.setter
-    def hora_transaccion(self, hora_transaccion):
-        """Sets the hora_transaccion of this InlineResponse20052MessageValorizacion.
-
-        Hora de la transaccion  # noqa: E501
-
-        :param hora_transaccion: The hora_transaccion of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :type: str
-        """
-
-        self._hora_transaccion = hora_transaccion
-
-    @property
-    def remate(self):
-        """Gets the remate of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        Remate  # noqa: E501
-
-        :return: The remate of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :rtype: str
-        """
-        return self._remate
-
-    @remate.setter
-    def remate(self, remate):
-        """Sets the remate of this InlineResponse20052MessageValorizacion.
-
-        Remate  # noqa: E501
-
-        :param remate: The remate of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :type: str
-        """
-
-        self._remate = remate
-
-    @property
-    def tir(self):
-        """Gets the tir of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        Tir de la transacción  # noqa: E501
-
-        :return: The tir of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir
-
-    @tir.setter
-    def tir(self, tir):
-        """Sets the tir of this InlineResponse20052MessageValorizacion.
-
-        Tir de la transacción  # noqa: E501
-
-        :param tir: The tir of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :type: float
-        """
-
-        self._tir = tir
-
-    @property
-    def monto_transado_clp(self):
-        """Gets the monto_transado_clp of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        Monto Transado en Pesos  # noqa: E501
-
-        :return: The monto_transado_clp of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :rtype: float
-        """
-        return self._monto_transado_clp
-
-    @monto_transado_clp.setter
-    def monto_transado_clp(self, monto_transado_clp):
-        """Sets the monto_transado_clp of this InlineResponse20052MessageValorizacion.
-
-        Monto Transado en Pesos  # noqa: E501
-
-        :param monto_transado_clp: The monto_transado_clp of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :type: float
-        """
-
-        self._monto_transado_clp = monto_transado_clp
-
-    @property
-    def cantidad(self):
-        """Gets the cantidad of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        Cantidad Transada  # noqa: E501
-
-        :return: The cantidad of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :rtype: float
-        """
-        return self._cantidad
-
-    @cantidad.setter
-    def cantidad(self, cantidad):
-        """Sets the cantidad of this InlineResponse20052MessageValorizacion.
-
-        Cantidad Transada  # noqa: E501
-
-        :param cantidad: The cantidad of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :type: float
-        """
-
-        self._cantidad = cantidad
-
-    @property
-    def precio_porcentaje_valor_par(self):
-        """Gets the precio_porcentaje_valor_par of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        Precio Porcentaje Valor Par  # noqa: E501
-
-        :return: The precio_porcentaje_valor_par of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :rtype: float
-        """
-        return self._precio_porcentaje_valor_par
-
-    @precio_porcentaje_valor_par.setter
-    def precio_porcentaje_valor_par(self, precio_porcentaje_valor_par):
-        """Sets the precio_porcentaje_valor_par of this InlineResponse20052MessageValorizacion.
-
-        Precio Porcentaje Valor Par  # noqa: E501
-
-        :param precio_porcentaje_valor_par: The precio_porcentaje_valor_par of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :type: float
-        """
-
-        self._precio_porcentaje_valor_par = precio_porcentaje_valor_par
-
-    @property
-    def plazo_residual(self):
-        """Gets the plazo_residual of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        Días al vencimiento  # noqa: E501
-
-        :return: The plazo_residual of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :rtype: int
-        """
-        return self._plazo_residual
-
-    @plazo_residual.setter
-    def plazo_residual(self, plazo_residual):
-        """Sets the plazo_residual of this InlineResponse20052MessageValorizacion.
-
-        Días al vencimiento  # noqa: E501
-
-        :param plazo_residual: The plazo_residual of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :type: int
-        """
-
-        self._plazo_residual = plazo_residual
-
-    @property
-    def duracion_macaulay(self):
-        """Gets the duracion_macaulay of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        Duración de Macaulay  # noqa: E501
-
-        :return: The duracion_macaulay of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :rtype: float
-        """
-        return self._duracion_macaulay
-
-    @duracion_macaulay.setter
-    def duracion_macaulay(self, duracion_macaulay):
-        """Sets the duracion_macaulay of this InlineResponse20052MessageValorizacion.
-
-        Duración de Macaulay  # noqa: E501
-
-        :param duracion_macaulay: The duracion_macaulay of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        :type: float
-        """
-
-        self._duracion_macaulay = duracion_macaulay
+        if fecha is not None:
+            self.fecha = fecha
+        if nominal is not None:
+            self.nominal = nominal
+        if tasa is not None:
+            self.tasa = tasa
+        if ppv_par is not None:
+            self.ppv_par = ppv_par
+        if valor_par is not None:
+            self.valor_par = valor_par
+        if duracion is not None:
+            self.duracion = duracion
+        if plazo_residual is not None:
+            self.plazo_residual = plazo_residual
+        if convexidad is not None:
+            self.convexidad = convexidad
+        if monto is not None:
+            self.monto = monto
+        if monto_clp is not None:
+            self.monto_clp = monto_clp
 
     @property
     def nemo(self):
         """Gets the nemo of this InlineResponse20052MessageValorizacion.  # noqa: E501
-        Nemotécnico del instrumento  # noqa: E501
+        Nemotecnico Valorizado  # noqa: E501
 
         :return: The nemo of this InlineResponse20052MessageValorizacion.  # noqa: E501
         :rtype: str
@@ -303,13 +110,233 @@ class InlineResponse20052MessageValorizacion(object):
     def nemo(self, nemo):
         """Sets the nemo of this InlineResponse20052MessageValorizacion.
 
-        Nemotécnico del instrumento  # noqa: E501
+        Nemotecnico Valorizado  # noqa: E501
 
         :param nemo: The nemo of this InlineResponse20052MessageValorizacion.  # noqa: E501
         :type: str
         """
 
         self._nemo = nemo
+
+    @property
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        Fecha para la cual se efectuó la valorización  # noqa: E501
+
+        :return: The fecha of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :rtype: date
+        """
+        return self._fecha
+
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20052MessageValorizacion.
+
+        Fecha para la cual se efectuó la valorización  # noqa: E501
+
+        :param fecha: The fecha of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :type: date
+        """
+
+        self._fecha = fecha
+
+    @property
+    def nominal(self):
+        """Gets the nominal of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        Nominal usado para la valorización  # noqa: E501
+
+        :return: The nominal of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :rtype: int
+        """
+        return self._nominal
+
+    @nominal.setter
+    def nominal(self, nominal):
+        """Sets the nominal of this InlineResponse20052MessageValorizacion.
+
+        Nominal usado para la valorización  # noqa: E501
+
+        :param nominal: The nominal of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :type: int
+        """
+
+        self._nominal = nominal
+
+    @property
+    def tasa(self):
+        """Gets the tasa of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        Tasa  # noqa: E501
+
+        :return: The tasa of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :rtype: float
+        """
+        return self._tasa
+
+    @tasa.setter
+    def tasa(self, tasa):
+        """Sets the tasa of this InlineResponse20052MessageValorizacion.
+
+        Tasa  # noqa: E501
+
+        :param tasa: The tasa of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :type: float
+        """
+
+        self._tasa = tasa
+
+    @property
+    def ppv_par(self):
+        """Gets the ppv_par of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        Precio como porcentaje del Valor Par  # noqa: E501
+
+        :return: The ppv_par of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :rtype: float
+        """
+        return self._ppv_par
+
+    @ppv_par.setter
+    def ppv_par(self, ppv_par):
+        """Sets the ppv_par of this InlineResponse20052MessageValorizacion.
+
+        Precio como porcentaje del Valor Par  # noqa: E501
+
+        :param ppv_par: The ppv_par of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :type: float
+        """
+
+        self._ppv_par = ppv_par
+
+    @property
+    def valor_par(self):
+        """Gets the valor_par of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        Valor Par  # noqa: E501
+
+        :return: The valor_par of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :rtype: float
+        """
+        return self._valor_par
+
+    @valor_par.setter
+    def valor_par(self, valor_par):
+        """Sets the valor_par of this InlineResponse20052MessageValorizacion.
+
+        Valor Par  # noqa: E501
+
+        :param valor_par: The valor_par of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :type: float
+        """
+
+        self._valor_par = valor_par
+
+    @property
+    def duracion(self):
+        """Gets the duracion of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        Duración Macaulay del Instrumento  # noqa: E501
+
+        :return: The duracion of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :rtype: float
+        """
+        return self._duracion
+
+    @duracion.setter
+    def duracion(self, duracion):
+        """Sets the duracion of this InlineResponse20052MessageValorizacion.
+
+        Duración Macaulay del Instrumento  # noqa: E501
+
+        :param duracion: The duracion of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :type: float
+        """
+
+        self._duracion = duracion
+
+    @property
+    def plazo_residual(self):
+        """Gets the plazo_residual of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        Plazo al vencimiento en años del Instrumento  # noqa: E501
+
+        :return: The plazo_residual of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :rtype: float
+        """
+        return self._plazo_residual
+
+    @plazo_residual.setter
+    def plazo_residual(self, plazo_residual):
+        """Sets the plazo_residual of this InlineResponse20052MessageValorizacion.
+
+        Plazo al vencimiento en años del Instrumento  # noqa: E501
+
+        :param plazo_residual: The plazo_residual of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :type: float
+        """
+
+        self._plazo_residual = plazo_residual
+
+    @property
+    def convexidad(self):
+        """Gets the convexidad of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        Convexidad del Instrumento  # noqa: E501
+
+        :return: The convexidad of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :rtype: float
+        """
+        return self._convexidad
+
+    @convexidad.setter
+    def convexidad(self, convexidad):
+        """Sets the convexidad of this InlineResponse20052MessageValorizacion.
+
+        Convexidad del Instrumento  # noqa: E501
+
+        :param convexidad: The convexidad of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :type: float
+        """
+
+        self._convexidad = convexidad
+
+    @property
+    def monto(self):
+        """Gets the monto of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        Valorización en la moneda del Instrumento  # noqa: E501
+
+        :return: The monto of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :rtype: float
+        """
+        return self._monto
+
+    @monto.setter
+    def monto(self, monto):
+        """Sets the monto of this InlineResponse20052MessageValorizacion.
+
+        Valorización en la moneda del Instrumento  # noqa: E501
+
+        :param monto: The monto of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :type: float
+        """
+
+        self._monto = monto
+
+    @property
+    def monto_clp(self):
+        """Gets the monto_clp of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        Valorización en pesos del Instrumento  # noqa: E501
+
+        :return: The monto_clp of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :rtype: float
+        """
+        return self._monto_clp
+
+    @monto_clp.setter
+    def monto_clp(self, monto_clp):
+        """Sets the monto_clp of this InlineResponse20052MessageValorizacion.
+
+        Valorización en pesos del Instrumento  # noqa: E501
+
+        :param monto_clp: The monto_clp of this InlineResponse20052MessageValorizacion.  # noqa: E501
+        :type: float
+        """
+
+        self._monto_clp = monto_clp
 
     def to_dict(self):
         """Returns the model properties as a dict"""

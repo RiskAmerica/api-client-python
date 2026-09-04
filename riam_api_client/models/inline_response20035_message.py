@@ -32,68 +32,41 @@ class InlineResponse20035Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha': 'date',
-        'tasa_prepago': 'float'
+        'id': 'str'
     }
 
     attribute_map = {
-        'fecha': 'fecha',
-        'tasa_prepago': 'tasaPrepago'
+        'id': 'id'
     }
 
-    def __init__(self, fecha=None, tasa_prepago=None):  # noqa: E501
+    def __init__(self, id=None):  # noqa: E501
         """InlineResponse20035Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha = None
-        self._tasa_prepago = None
+        self._id = None
         self.discriminator = None
-        if fecha is not None:
-            self.fecha = fecha
-        if tasa_prepago is not None:
-            self.tasa_prepago = tasa_prepago
+        if id is not None:
+            self.id = id
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20035Message.  # noqa: E501
-        Fecha de la Tasa  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20035Message.  # noqa: E501
+        id de la familia  # noqa: E501
 
-        :return: The fecha of this InlineResponse20035Message.  # noqa: E501
-        :rtype: date
+        :return: The id of this InlineResponse20035Message.  # noqa: E501
+        :rtype: str
         """
-        return self._fecha
+        return self._id
 
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20035Message.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20035Message.
 
-        Fecha de la Tasa  # noqa: E501
+        id de la familia  # noqa: E501
 
-        :param fecha: The fecha of this InlineResponse20035Message.  # noqa: E501
-        :type: date
-        """
-
-        self._fecha = fecha
-
-    @property
-    def tasa_prepago(self):
-        """Gets the tasa_prepago of this InlineResponse20035Message.  # noqa: E501
-        Tasa de prepago  # noqa: E501
-
-        :return: The tasa_prepago of this InlineResponse20035Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tasa_prepago
-
-    @tasa_prepago.setter
-    def tasa_prepago(self, tasa_prepago):
-        """Sets the tasa_prepago of this InlineResponse20035Message.
-
-        Tasa de prepago  # noqa: E501
-
-        :param tasa_prepago: The tasa_prepago of this InlineResponse20035Message.  # noqa: E501
-        :type: float
+        :param id: The id of this InlineResponse20035Message.  # noqa: E501
+        :type: str
         """
 
-        self._tasa_prepago = tasa_prepago
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

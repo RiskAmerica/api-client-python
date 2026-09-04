@@ -35,25 +35,76 @@ class InlineResponse2005Message(object):
         'rut': 'int',
         'serie': 'str',
         'fecha': 'date',
-        'duracion_rfn': 'float',
-        'duracion_total': 'float'
+        'dia': 'float',
+        'mtd': 'float',
+        'qtd': 'float',
+        'ytd': 'float',
+        'meses_1': 'float',
+        'meses_3': 'float',
+        'meses_6': 'float',
+        'meses_9': 'float',
+        'anos_1': 'float',
+        'anos_2': 'float',
+        'anos_3': 'float',
+        'anos_5': 'float',
+        'stddev': 'float',
+        'stddev3_a': 'float',
+        'stddev5_a': 'float',
+        'stddev10_a': 'float',
+        'max_draw_down1_a': 'float',
+        'max_draw_down3_a': 'float',
+        'max_draw_down5_a': 'float'
     }
 
     attribute_map = {
         'rut': 'rut',
         'serie': 'serie',
         'fecha': 'fecha',
-        'duracion_rfn': 'duracionRFN',
-        'duracion_total': 'duracionTotal'
+        'dia': 'Dia',
+        'mtd': 'MTD',
+        'qtd': 'QTD',
+        'ytd': 'YTD',
+        'meses_1': 'Meses_1',
+        'meses_3': 'Meses_3',
+        'meses_6': 'Meses_6',
+        'meses_9': 'Meses_9',
+        'anos_1': 'Anos_1',
+        'anos_2': 'Anos_2',
+        'anos_3': 'Anos_3',
+        'anos_5': 'Anos_5',
+        'stddev': 'stddev',
+        'stddev3_a': 'stddev3A',
+        'stddev5_a': 'stddev5A',
+        'stddev10_a': 'stddev10A',
+        'max_draw_down1_a': 'maxDrawDown1A',
+        'max_draw_down3_a': 'maxDrawDown3A',
+        'max_draw_down5_a': 'maxDrawDown5A'
     }
 
-    def __init__(self, rut=None, serie=None, fecha=None, duracion_rfn=None, duracion_total=None):  # noqa: E501
+    def __init__(self, rut=None, serie=None, fecha=None, dia=None, mtd=None, qtd=None, ytd=None, meses_1=None, meses_3=None, meses_6=None, meses_9=None, anos_1=None, anos_2=None, anos_3=None, anos_5=None, stddev=None, stddev3_a=None, stddev5_a=None, stddev10_a=None, max_draw_down1_a=None, max_draw_down3_a=None, max_draw_down5_a=None):  # noqa: E501
         """InlineResponse2005Message - a model defined in Swagger"""  # noqa: E501
         self._rut = None
         self._serie = None
         self._fecha = None
-        self._duracion_rfn = None
-        self._duracion_total = None
+        self._dia = None
+        self._mtd = None
+        self._qtd = None
+        self._ytd = None
+        self._meses_1 = None
+        self._meses_3 = None
+        self._meses_6 = None
+        self._meses_9 = None
+        self._anos_1 = None
+        self._anos_2 = None
+        self._anos_3 = None
+        self._anos_5 = None
+        self._stddev = None
+        self._stddev3_a = None
+        self._stddev5_a = None
+        self._stddev10_a = None
+        self._max_draw_down1_a = None
+        self._max_draw_down3_a = None
+        self._max_draw_down5_a = None
         self.discriminator = None
         if rut is not None:
             self.rut = rut
@@ -61,10 +112,44 @@ class InlineResponse2005Message(object):
             self.serie = serie
         if fecha is not None:
             self.fecha = fecha
-        if duracion_rfn is not None:
-            self.duracion_rfn = duracion_rfn
-        if duracion_total is not None:
-            self.duracion_total = duracion_total
+        if dia is not None:
+            self.dia = dia
+        if mtd is not None:
+            self.mtd = mtd
+        if qtd is not None:
+            self.qtd = qtd
+        if ytd is not None:
+            self.ytd = ytd
+        if meses_1 is not None:
+            self.meses_1 = meses_1
+        if meses_3 is not None:
+            self.meses_3 = meses_3
+        if meses_6 is not None:
+            self.meses_6 = meses_6
+        if meses_9 is not None:
+            self.meses_9 = meses_9
+        if anos_1 is not None:
+            self.anos_1 = anos_1
+        if anos_2 is not None:
+            self.anos_2 = anos_2
+        if anos_3 is not None:
+            self.anos_3 = anos_3
+        if anos_5 is not None:
+            self.anos_5 = anos_5
+        if stddev is not None:
+            self.stddev = stddev
+        if stddev3_a is not None:
+            self.stddev3_a = stddev3_a
+        if stddev5_a is not None:
+            self.stddev5_a = stddev5_a
+        if stddev10_a is not None:
+            self.stddev10_a = stddev10_a
+        if max_draw_down1_a is not None:
+            self.max_draw_down1_a = max_draw_down1_a
+        if max_draw_down3_a is not None:
+            self.max_draw_down3_a = max_draw_down3_a
+        if max_draw_down5_a is not None:
+            self.max_draw_down5_a = max_draw_down5_a
 
     @property
     def rut(self):
@@ -133,48 +218,422 @@ class InlineResponse2005Message(object):
         self._fecha = fecha
 
     @property
-    def duracion_rfn(self):
-        """Gets the duracion_rfn of this InlineResponse2005Message.  # noqa: E501
-        Duracion RFN  # noqa: E501
+    def dia(self):
+        """Gets the dia of this InlineResponse2005Message.  # noqa: E501
+        Retorno con respecto al día anterior  # noqa: E501
 
-        :return: The duracion_rfn of this InlineResponse2005Message.  # noqa: E501
+        :return: The dia of this InlineResponse2005Message.  # noqa: E501
         :rtype: float
         """
-        return self._duracion_rfn
+        return self._dia
 
-    @duracion_rfn.setter
-    def duracion_rfn(self, duracion_rfn):
-        """Sets the duracion_rfn of this InlineResponse2005Message.
+    @dia.setter
+    def dia(self, dia):
+        """Sets the dia of this InlineResponse2005Message.
 
-        Duracion RFN  # noqa: E501
+        Retorno con respecto al día anterior  # noqa: E501
 
-        :param duracion_rfn: The duracion_rfn of this InlineResponse2005Message.  # noqa: E501
+        :param dia: The dia of this InlineResponse2005Message.  # noqa: E501
         :type: float
         """
 
-        self._duracion_rfn = duracion_rfn
+        self._dia = dia
 
     @property
-    def duracion_total(self):
-        """Gets the duracion_total of this InlineResponse2005Message.  # noqa: E501
-        Duracion Total  # noqa: E501
+    def mtd(self):
+        """Gets the mtd of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado desde el primer día del mes  # noqa: E501
 
-        :return: The duracion_total of this InlineResponse2005Message.  # noqa: E501
+        :return: The mtd of this InlineResponse2005Message.  # noqa: E501
         :rtype: float
         """
-        return self._duracion_total
+        return self._mtd
 
-    @duracion_total.setter
-    def duracion_total(self, duracion_total):
-        """Sets the duracion_total of this InlineResponse2005Message.
+    @mtd.setter
+    def mtd(self, mtd):
+        """Sets the mtd of this InlineResponse2005Message.
 
-        Duracion Total  # noqa: E501
+        Retorno acumulado desde el primer día del mes  # noqa: E501
 
-        :param duracion_total: The duracion_total of this InlineResponse2005Message.  # noqa: E501
+        :param mtd: The mtd of this InlineResponse2005Message.  # noqa: E501
         :type: float
         """
 
-        self._duracion_total = duracion_total
+        self._mtd = mtd
+
+    @property
+    def qtd(self):
+        """Gets the qtd of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado del trimestre  # noqa: E501
+
+        :return: The qtd of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._qtd
+
+    @qtd.setter
+    def qtd(self, qtd):
+        """Sets the qtd of this InlineResponse2005Message.
+
+        Retorno acumulado del trimestre  # noqa: E501
+
+        :param qtd: The qtd of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._qtd = qtd
+
+    @property
+    def ytd(self):
+        """Gets the ytd of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado desde el 1 de Enero del año  # noqa: E501
+
+        :return: The ytd of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ytd
+
+    @ytd.setter
+    def ytd(self, ytd):
+        """Sets the ytd of this InlineResponse2005Message.
+
+        Retorno acumulado desde el 1 de Enero del año  # noqa: E501
+
+        :param ytd: The ytd of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ytd = ytd
+
+    @property
+    def meses_1(self):
+        """Gets the meses_1 of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado en 1 mes  # noqa: E501
+
+        :return: The meses_1 of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._meses_1
+
+    @meses_1.setter
+    def meses_1(self, meses_1):
+        """Sets the meses_1 of this InlineResponse2005Message.
+
+        Retorno acumulado en 1 mes  # noqa: E501
+
+        :param meses_1: The meses_1 of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._meses_1 = meses_1
+
+    @property
+    def meses_3(self):
+        """Gets the meses_3 of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado en 3 meses  # noqa: E501
+
+        :return: The meses_3 of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._meses_3
+
+    @meses_3.setter
+    def meses_3(self, meses_3):
+        """Sets the meses_3 of this InlineResponse2005Message.
+
+        Retorno acumulado en 3 meses  # noqa: E501
+
+        :param meses_3: The meses_3 of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._meses_3 = meses_3
+
+    @property
+    def meses_6(self):
+        """Gets the meses_6 of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado en 6 meses  # noqa: E501
+
+        :return: The meses_6 of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._meses_6
+
+    @meses_6.setter
+    def meses_6(self, meses_6):
+        """Sets the meses_6 of this InlineResponse2005Message.
+
+        Retorno acumulado en 6 meses  # noqa: E501
+
+        :param meses_6: The meses_6 of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._meses_6 = meses_6
+
+    @property
+    def meses_9(self):
+        """Gets the meses_9 of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado en 9 meses  # noqa: E501
+
+        :return: The meses_9 of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._meses_9
+
+    @meses_9.setter
+    def meses_9(self, meses_9):
+        """Sets the meses_9 of this InlineResponse2005Message.
+
+        Retorno acumulado en 9 meses  # noqa: E501
+
+        :param meses_9: The meses_9 of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._meses_9 = meses_9
+
+    @property
+    def anos_1(self):
+        """Gets the anos_1 of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado en 1 año  # noqa: E501
+
+        :return: The anos_1 of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._anos_1
+
+    @anos_1.setter
+    def anos_1(self, anos_1):
+        """Sets the anos_1 of this InlineResponse2005Message.
+
+        Retorno acumulado en 1 año  # noqa: E501
+
+        :param anos_1: The anos_1 of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._anos_1 = anos_1
+
+    @property
+    def anos_2(self):
+        """Gets the anos_2 of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado en 2 años  # noqa: E501
+
+        :return: The anos_2 of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._anos_2
+
+    @anos_2.setter
+    def anos_2(self, anos_2):
+        """Sets the anos_2 of this InlineResponse2005Message.
+
+        Retorno acumulado en 2 años  # noqa: E501
+
+        :param anos_2: The anos_2 of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._anos_2 = anos_2
+
+    @property
+    def anos_3(self):
+        """Gets the anos_3 of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado en 3 años  # noqa: E501
+
+        :return: The anos_3 of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._anos_3
+
+    @anos_3.setter
+    def anos_3(self, anos_3):
+        """Sets the anos_3 of this InlineResponse2005Message.
+
+        Retorno acumulado en 3 años  # noqa: E501
+
+        :param anos_3: The anos_3 of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._anos_3 = anos_3
+
+    @property
+    def anos_5(self):
+        """Gets the anos_5 of this InlineResponse2005Message.  # noqa: E501
+        Retorno acumulado en 5 años  # noqa: E501
+
+        :return: The anos_5 of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._anos_5
+
+    @anos_5.setter
+    def anos_5(self, anos_5):
+        """Sets the anos_5 of this InlineResponse2005Message.
+
+        Retorno acumulado en 5 años  # noqa: E501
+
+        :param anos_5: The anos_5 of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._anos_5 = anos_5
+
+    @property
+    def stddev(self):
+        """Gets the stddev of this InlineResponse2005Message.  # noqa: E501
+        Desviacion standard diaria con ventana de 1 año  # noqa: E501
+
+        :return: The stddev of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._stddev
+
+    @stddev.setter
+    def stddev(self, stddev):
+        """Sets the stddev of this InlineResponse2005Message.
+
+        Desviacion standard diaria con ventana de 1 año  # noqa: E501
+
+        :param stddev: The stddev of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._stddev = stddev
+
+    @property
+    def stddev3_a(self):
+        """Gets the stddev3_a of this InlineResponse2005Message.  # noqa: E501
+        Desviacion standard diaria con ventana de 3 años  # noqa: E501
+
+        :return: The stddev3_a of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._stddev3_a
+
+    @stddev3_a.setter
+    def stddev3_a(self, stddev3_a):
+        """Sets the stddev3_a of this InlineResponse2005Message.
+
+        Desviacion standard diaria con ventana de 3 años  # noqa: E501
+
+        :param stddev3_a: The stddev3_a of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._stddev3_a = stddev3_a
+
+    @property
+    def stddev5_a(self):
+        """Gets the stddev5_a of this InlineResponse2005Message.  # noqa: E501
+        Desviacion standard diaria con ventana de 5 años  # noqa: E501
+
+        :return: The stddev5_a of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._stddev5_a
+
+    @stddev5_a.setter
+    def stddev5_a(self, stddev5_a):
+        """Sets the stddev5_a of this InlineResponse2005Message.
+
+        Desviacion standard diaria con ventana de 5 años  # noqa: E501
+
+        :param stddev5_a: The stddev5_a of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._stddev5_a = stddev5_a
+
+    @property
+    def stddev10_a(self):
+        """Gets the stddev10_a of this InlineResponse2005Message.  # noqa: E501
+        Desviacion standard diaria con ventana de 10 años  # noqa: E501
+
+        :return: The stddev10_a of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._stddev10_a
+
+    @stddev10_a.setter
+    def stddev10_a(self, stddev10_a):
+        """Sets the stddev10_a of this InlineResponse2005Message.
+
+        Desviacion standard diaria con ventana de 10 años  # noqa: E501
+
+        :param stddev10_a: The stddev10_a of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._stddev10_a = stddev10_a
+
+    @property
+    def max_draw_down1_a(self):
+        """Gets the max_draw_down1_a of this InlineResponse2005Message.  # noqa: E501
+        Máxima caída (máximo drawdown) con ventana de 1 año  # noqa: E501
+
+        :return: The max_draw_down1_a of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._max_draw_down1_a
+
+    @max_draw_down1_a.setter
+    def max_draw_down1_a(self, max_draw_down1_a):
+        """Sets the max_draw_down1_a of this InlineResponse2005Message.
+
+        Máxima caída (máximo drawdown) con ventana de 1 año  # noqa: E501
+
+        :param max_draw_down1_a: The max_draw_down1_a of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._max_draw_down1_a = max_draw_down1_a
+
+    @property
+    def max_draw_down3_a(self):
+        """Gets the max_draw_down3_a of this InlineResponse2005Message.  # noqa: E501
+        Máxima caída (máximo drawdown) con ventana de 3 años  # noqa: E501
+
+        :return: The max_draw_down3_a of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._max_draw_down3_a
+
+    @max_draw_down3_a.setter
+    def max_draw_down3_a(self, max_draw_down3_a):
+        """Sets the max_draw_down3_a of this InlineResponse2005Message.
+
+        Máxima caída (máximo drawdown) con ventana de 3 años  # noqa: E501
+
+        :param max_draw_down3_a: The max_draw_down3_a of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._max_draw_down3_a = max_draw_down3_a
+
+    @property
+    def max_draw_down5_a(self):
+        """Gets the max_draw_down5_a of this InlineResponse2005Message.  # noqa: E501
+        Máxima caída (máximo drawdown) con ventana de 5 años  # noqa: E501
+
+        :return: The max_draw_down5_a of this InlineResponse2005Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._max_draw_down5_a
+
+    @max_draw_down5_a.setter
+    def max_draw_down5_a(self, max_draw_down5_a):
+        """Sets the max_draw_down5_a of this InlineResponse2005Message.
+
+        Máxima caída (máximo drawdown) con ventana de 5 años  # noqa: E501
+
+        :param max_draw_down5_a: The max_draw_down5_a of this InlineResponse2005Message.  # noqa: E501
+        :type: float
+        """
+
+        self._max_draw_down5_a = max_draw_down5_a
 
     def to_dict(self):
         """Returns the model properties as a dict"""

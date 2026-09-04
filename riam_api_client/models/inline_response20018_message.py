@@ -32,365 +32,284 @@ class InlineResponse20018Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha': 'date',
-        'tir': 'float',
-        'cantidad': 'float',
-        'monto_transado': 'float',
-        'moneda': 'str',
-        'monto_transado_clp': 'float',
-        'precio_porcentaje_valor_par': 'float',
-        'duracion_macaulay': 'float',
-        'tir_base': 'float',
-        'origen': 'str',
-        'nemo': 'str',
-        'spread': 'float',
-        'clasificacion': 'str'
+        'id': 'str',
+        'short_name': 'str',
+        'long_name': 'str',
+        'id_moneda': 'str',
+        'id_base_tasa': 'str',
+        'id_familia_curva': 'str',
+        'tiene_intraday': 'int',
+        'unidad_tiempo': 'str',
+        'plazo_max': 'float',
+        'plazo_min': 'float'
     }
 
     attribute_map = {
-        'fecha': 'fecha',
-        'tir': 'tir',
-        'cantidad': 'cantidad',
-        'monto_transado': 'montoTransado',
-        'moneda': 'moneda',
-        'monto_transado_clp': 'montoTransadoCLP',
-        'precio_porcentaje_valor_par': 'precioPorcentajeValorPar',
-        'duracion_macaulay': 'duracionMacaulay',
-        'tir_base': 'tirBase',
-        'origen': 'origen',
-        'nemo': 'nemo',
-        'spread': 'spread',
-        'clasificacion': 'clasificacion'
+        'id': 'id',
+        'short_name': 'shortName',
+        'long_name': 'longName',
+        'id_moneda': 'idMoneda',
+        'id_base_tasa': 'idBaseTasa',
+        'id_familia_curva': 'idFamiliaCurva',
+        'tiene_intraday': 'tieneIntraday',
+        'unidad_tiempo': 'unidadTiempo',
+        'plazo_max': 'plazoMax',
+        'plazo_min': 'plazoMin'
     }
 
-    def __init__(self, fecha=None, tir=None, cantidad=None, monto_transado=None, moneda=None, monto_transado_clp=None, precio_porcentaje_valor_par=None, duracion_macaulay=None, tir_base=None, origen=None, nemo=None, spread=None, clasificacion=None):  # noqa: E501
+    def __init__(self, id=None, short_name=None, long_name=None, id_moneda=None, id_base_tasa=None, id_familia_curva=None, tiene_intraday=None, unidad_tiempo=None, plazo_max=None, plazo_min=None):  # noqa: E501
         """InlineResponse20018Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha = None
-        self._tir = None
-        self._cantidad = None
-        self._monto_transado = None
-        self._moneda = None
-        self._monto_transado_clp = None
-        self._precio_porcentaje_valor_par = None
-        self._duracion_macaulay = None
-        self._tir_base = None
-        self._origen = None
-        self._nemo = None
-        self._spread = None
-        self._clasificacion = None
+        self._id = None
+        self._short_name = None
+        self._long_name = None
+        self._id_moneda = None
+        self._id_base_tasa = None
+        self._id_familia_curva = None
+        self._tiene_intraday = None
+        self._unidad_tiempo = None
+        self._plazo_max = None
+        self._plazo_min = None
         self.discriminator = None
-        if fecha is not None:
-            self.fecha = fecha
-        if tir is not None:
-            self.tir = tir
-        if cantidad is not None:
-            self.cantidad = cantidad
-        if monto_transado is not None:
-            self.monto_transado = monto_transado
-        if moneda is not None:
-            self.moneda = moneda
-        if monto_transado_clp is not None:
-            self.monto_transado_clp = monto_transado_clp
-        if precio_porcentaje_valor_par is not None:
-            self.precio_porcentaje_valor_par = precio_porcentaje_valor_par
-        if duracion_macaulay is not None:
-            self.duracion_macaulay = duracion_macaulay
-        if tir_base is not None:
-            self.tir_base = tir_base
-        if origen is not None:
-            self.origen = origen
-        if nemo is not None:
-            self.nemo = nemo
-        if spread is not None:
-            self.spread = spread
-        if clasificacion is not None:
-            self.clasificacion = clasificacion
+        if id is not None:
+            self.id = id
+        if short_name is not None:
+            self.short_name = short_name
+        if long_name is not None:
+            self.long_name = long_name
+        if id_moneda is not None:
+            self.id_moneda = id_moneda
+        if id_base_tasa is not None:
+            self.id_base_tasa = id_base_tasa
+        if id_familia_curva is not None:
+            self.id_familia_curva = id_familia_curva
+        if tiene_intraday is not None:
+            self.tiene_intraday = tiene_intraday
+        if unidad_tiempo is not None:
+            self.unidad_tiempo = unidad_tiempo
+        if plazo_max is not None:
+            self.plazo_max = plazo_max
+        if plazo_min is not None:
+            self.plazo_min = plazo_min
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20018Message.  # noqa: E501
-        Fecha de la transacción  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20018Message.  # noqa: E501
+        Identificador de la Curva  # noqa: E501
 
-        :return: The fecha of this InlineResponse20018Message.  # noqa: E501
-        :rtype: date
-        """
-        return self._fecha
-
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20018Message.
-
-        Fecha de la transacción  # noqa: E501
-
-        :param fecha: The fecha of this InlineResponse20018Message.  # noqa: E501
-        :type: date
-        """
-
-        self._fecha = fecha
-
-    @property
-    def tir(self):
-        """Gets the tir of this InlineResponse20018Message.  # noqa: E501
-        Tasa de la transacción  # noqa: E501
-
-        :return: The tir of this InlineResponse20018Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir
-
-    @tir.setter
-    def tir(self, tir):
-        """Sets the tir of this InlineResponse20018Message.
-
-        Tasa de la transacción  # noqa: E501
-
-        :param tir: The tir of this InlineResponse20018Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tir = tir
-
-    @property
-    def cantidad(self):
-        """Gets the cantidad of this InlineResponse20018Message.  # noqa: E501
-        Cantidad que se transa  # noqa: E501
-
-        :return: The cantidad of this InlineResponse20018Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._cantidad
-
-    @cantidad.setter
-    def cantidad(self, cantidad):
-        """Sets the cantidad of this InlineResponse20018Message.
-
-        Cantidad que se transa  # noqa: E501
-
-        :param cantidad: The cantidad of this InlineResponse20018Message.  # noqa: E501
-        :type: float
-        """
-
-        self._cantidad = cantidad
-
-    @property
-    def monto_transado(self):
-        """Gets the monto_transado of this InlineResponse20018Message.  # noqa: E501
-        Monto transado en moneda del instrumento  # noqa: E501
-
-        :return: The monto_transado of this InlineResponse20018Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._monto_transado
-
-    @monto_transado.setter
-    def monto_transado(self, monto_transado):
-        """Sets the monto_transado of this InlineResponse20018Message.
-
-        Monto transado en moneda del instrumento  # noqa: E501
-
-        :param monto_transado: The monto_transado of this InlineResponse20018Message.  # noqa: E501
-        :type: float
-        """
-
-        self._monto_transado = monto_transado
-
-    @property
-    def moneda(self):
-        """Gets the moneda of this InlineResponse20018Message.  # noqa: E501
-        Moneda del instrumento  # noqa: E501
-
-        :return: The moneda of this InlineResponse20018Message.  # noqa: E501
+        :return: The id of this InlineResponse20018Message.  # noqa: E501
         :rtype: str
         """
-        return self._moneda
+        return self._id
 
-    @moneda.setter
-    def moneda(self, moneda):
-        """Sets the moneda of this InlineResponse20018Message.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20018Message.
 
-        Moneda del instrumento  # noqa: E501
+        Identificador de la Curva  # noqa: E501
 
-        :param moneda: The moneda of this InlineResponse20018Message.  # noqa: E501
+        :param id: The id of this InlineResponse20018Message.  # noqa: E501
         :type: str
         """
 
-        self._moneda = moneda
+        self._id = id
 
     @property
-    def monto_transado_clp(self):
-        """Gets the monto_transado_clp of this InlineResponse20018Message.  # noqa: E501
-        Monto transado en pesos  # noqa: E501
+    def short_name(self):
+        """Gets the short_name of this InlineResponse20018Message.  # noqa: E501
+        Nombre corto de la Curva  # noqa: E501
 
-        :return: The monto_transado_clp of this InlineResponse20018Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._monto_transado_clp
-
-    @monto_transado_clp.setter
-    def monto_transado_clp(self, monto_transado_clp):
-        """Sets the monto_transado_clp of this InlineResponse20018Message.
-
-        Monto transado en pesos  # noqa: E501
-
-        :param monto_transado_clp: The monto_transado_clp of this InlineResponse20018Message.  # noqa: E501
-        :type: float
-        """
-
-        self._monto_transado_clp = monto_transado_clp
-
-    @property
-    def precio_porcentaje_valor_par(self):
-        """Gets the precio_porcentaje_valor_par of this InlineResponse20018Message.  # noqa: E501
-        Precio porcentaje valor par  # noqa: E501
-
-        :return: The precio_porcentaje_valor_par of this InlineResponse20018Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._precio_porcentaje_valor_par
-
-    @precio_porcentaje_valor_par.setter
-    def precio_porcentaje_valor_par(self, precio_porcentaje_valor_par):
-        """Sets the precio_porcentaje_valor_par of this InlineResponse20018Message.
-
-        Precio porcentaje valor par  # noqa: E501
-
-        :param precio_porcentaje_valor_par: The precio_porcentaje_valor_par of this InlineResponse20018Message.  # noqa: E501
-        :type: float
-        """
-
-        self._precio_porcentaje_valor_par = precio_porcentaje_valor_par
-
-    @property
-    def duracion_macaulay(self):
-        """Gets the duracion_macaulay of this InlineResponse20018Message.  # noqa: E501
-        Duración de Macaulay calculada con la TIR de la transacción  # noqa: E501
-
-        :return: The duracion_macaulay of this InlineResponse20018Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._duracion_macaulay
-
-    @duracion_macaulay.setter
-    def duracion_macaulay(self, duracion_macaulay):
-        """Sets the duracion_macaulay of this InlineResponse20018Message.
-
-        Duración de Macaulay calculada con la TIR de la transacción  # noqa: E501
-
-        :param duracion_macaulay: The duracion_macaulay of this InlineResponse20018Message.  # noqa: E501
-        :type: float
-        """
-
-        self._duracion_macaulay = duracion_macaulay
-
-    @property
-    def tir_base(self):
-        """Gets the tir_base of this InlineResponse20018Message.  # noqa: E501
-        TIR Base  # noqa: E501
-
-        :return: The tir_base of this InlineResponse20018Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir_base
-
-    @tir_base.setter
-    def tir_base(self, tir_base):
-        """Sets the tir_base of this InlineResponse20018Message.
-
-        TIR Base  # noqa: E501
-
-        :param tir_base: The tir_base of this InlineResponse20018Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tir_base = tir_base
-
-    @property
-    def origen(self):
-        """Gets the origen of this InlineResponse20018Message.  # noqa: E501
-        Origen  # noqa: E501
-
-        :return: The origen of this InlineResponse20018Message.  # noqa: E501
+        :return: The short_name of this InlineResponse20018Message.  # noqa: E501
         :rtype: str
         """
-        return self._origen
+        return self._short_name
 
-    @origen.setter
-    def origen(self, origen):
-        """Sets the origen of this InlineResponse20018Message.
+    @short_name.setter
+    def short_name(self, short_name):
+        """Sets the short_name of this InlineResponse20018Message.
 
-        Origen  # noqa: E501
+        Nombre corto de la Curva  # noqa: E501
 
-        :param origen: The origen of this InlineResponse20018Message.  # noqa: E501
+        :param short_name: The short_name of this InlineResponse20018Message.  # noqa: E501
         :type: str
         """
 
-        self._origen = origen
+        self._short_name = short_name
 
     @property
-    def nemo(self):
-        """Gets the nemo of this InlineResponse20018Message.  # noqa: E501
-        Nemotécnico del instrumento  # noqa: E501
+    def long_name(self):
+        """Gets the long_name of this InlineResponse20018Message.  # noqa: E501
+        Nombre largo de la Curva  # noqa: E501
 
-        :return: The nemo of this InlineResponse20018Message.  # noqa: E501
+        :return: The long_name of this InlineResponse20018Message.  # noqa: E501
         :rtype: str
         """
-        return self._nemo
+        return self._long_name
 
-    @nemo.setter
-    def nemo(self, nemo):
-        """Sets the nemo of this InlineResponse20018Message.
+    @long_name.setter
+    def long_name(self, long_name):
+        """Sets the long_name of this InlineResponse20018Message.
 
-        Nemotécnico del instrumento  # noqa: E501
+        Nombre largo de la Curva  # noqa: E501
 
-        :param nemo: The nemo of this InlineResponse20018Message.  # noqa: E501
+        :param long_name: The long_name of this InlineResponse20018Message.  # noqa: E501
         :type: str
         """
 
-        self._nemo = nemo
+        self._long_name = long_name
 
     @property
-    def spread(self):
-        """Gets the spread of this InlineResponse20018Message.  # noqa: E501
-        Spread de la transacción  # noqa: E501
+    def id_moneda(self):
+        """Gets the id_moneda of this InlineResponse20018Message.  # noqa: E501
+        Moneda base de la Curva  # noqa: E501
 
-        :return: The spread of this InlineResponse20018Message.  # noqa: E501
+        :return: The id_moneda of this InlineResponse20018Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_moneda
+
+    @id_moneda.setter
+    def id_moneda(self, id_moneda):
+        """Sets the id_moneda of this InlineResponse20018Message.
+
+        Moneda base de la Curva  # noqa: E501
+
+        :param id_moneda: The id_moneda of this InlineResponse20018Message.  # noqa: E501
+        :type: str
+        """
+
+        self._id_moneda = id_moneda
+
+    @property
+    def id_base_tasa(self):
+        """Gets the id_base_tasa of this InlineResponse20018Message.  # noqa: E501
+        Identificador de la Tasa Base de la Curva  # noqa: E501
+
+        :return: The id_base_tasa of this InlineResponse20018Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_base_tasa
+
+    @id_base_tasa.setter
+    def id_base_tasa(self, id_base_tasa):
+        """Sets the id_base_tasa of this InlineResponse20018Message.
+
+        Identificador de la Tasa Base de la Curva  # noqa: E501
+
+        :param id_base_tasa: The id_base_tasa of this InlineResponse20018Message.  # noqa: E501
+        :type: str
+        """
+
+        self._id_base_tasa = id_base_tasa
+
+    @property
+    def id_familia_curva(self):
+        """Gets the id_familia_curva of this InlineResponse20018Message.  # noqa: E501
+        Identificador de la Familia de la Curva  # noqa: E501
+
+        :return: The id_familia_curva of this InlineResponse20018Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_familia_curva
+
+    @id_familia_curva.setter
+    def id_familia_curva(self, id_familia_curva):
+        """Sets the id_familia_curva of this InlineResponse20018Message.
+
+        Identificador de la Familia de la Curva  # noqa: E501
+
+        :param id_familia_curva: The id_familia_curva of this InlineResponse20018Message.  # noqa: E501
+        :type: str
+        """
+
+        self._id_familia_curva = id_familia_curva
+
+    @property
+    def tiene_intraday(self):
+        """Gets the tiene_intraday of this InlineResponse20018Message.  # noqa: E501
+        Detalla si la Curva tiene valores Intraday (1 = si, 0 = no)  # noqa: E501
+
+        :return: The tiene_intraday of this InlineResponse20018Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._tiene_intraday
+
+    @tiene_intraday.setter
+    def tiene_intraday(self, tiene_intraday):
+        """Sets the tiene_intraday of this InlineResponse20018Message.
+
+        Detalla si la Curva tiene valores Intraday (1 = si, 0 = no)  # noqa: E501
+
+        :param tiene_intraday: The tiene_intraday of this InlineResponse20018Message.  # noqa: E501
+        :type: int
+        """
+
+        self._tiene_intraday = tiene_intraday
+
+    @property
+    def unidad_tiempo(self):
+        """Gets the unidad_tiempo of this InlineResponse20018Message.  # noqa: E501
+        Unidad de tiempo base para la Curva  # noqa: E501
+
+        :return: The unidad_tiempo of this InlineResponse20018Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._unidad_tiempo
+
+    @unidad_tiempo.setter
+    def unidad_tiempo(self, unidad_tiempo):
+        """Sets the unidad_tiempo of this InlineResponse20018Message.
+
+        Unidad de tiempo base para la Curva  # noqa: E501
+
+        :param unidad_tiempo: The unidad_tiempo of this InlineResponse20018Message.  # noqa: E501
+        :type: str
+        """
+
+        self._unidad_tiempo = unidad_tiempo
+
+    @property
+    def plazo_max(self):
+        """Gets the plazo_max of this InlineResponse20018Message.  # noqa: E501
+        Plazo máximo en unidades de tiempo base de la curva  # noqa: E501
+
+        :return: The plazo_max of this InlineResponse20018Message.  # noqa: E501
         :rtype: float
         """
-        return self._spread
+        return self._plazo_max
 
-    @spread.setter
-    def spread(self, spread):
-        """Sets the spread of this InlineResponse20018Message.
+    @plazo_max.setter
+    def plazo_max(self, plazo_max):
+        """Sets the plazo_max of this InlineResponse20018Message.
 
-        Spread de la transacción  # noqa: E501
+        Plazo máximo en unidades de tiempo base de la curva  # noqa: E501
 
-        :param spread: The spread of this InlineResponse20018Message.  # noqa: E501
+        :param plazo_max: The plazo_max of this InlineResponse20018Message.  # noqa: E501
         :type: float
         """
 
-        self._spread = spread
+        self._plazo_max = plazo_max
 
     @property
-    def clasificacion(self):
-        """Gets the clasificacion of this InlineResponse20018Message.  # noqa: E501
-        Clasificación de Riesgo  # noqa: E501
+    def plazo_min(self):
+        """Gets the plazo_min of this InlineResponse20018Message.  # noqa: E501
+        Plazo mínimo en unidades de tiempo base de la curva  # noqa: E501
 
-        :return: The clasificacion of this InlineResponse20018Message.  # noqa: E501
-        :rtype: str
+        :return: The plazo_min of this InlineResponse20018Message.  # noqa: E501
+        :rtype: float
         """
-        return self._clasificacion
+        return self._plazo_min
 
-    @clasificacion.setter
-    def clasificacion(self, clasificacion):
-        """Sets the clasificacion of this InlineResponse20018Message.
+    @plazo_min.setter
+    def plazo_min(self, plazo_min):
+        """Sets the plazo_min of this InlineResponse20018Message.
 
-        Clasificación de Riesgo  # noqa: E501
+        Plazo mínimo en unidades de tiempo base de la curva  # noqa: E501
 
-        :param clasificacion: The clasificacion of this InlineResponse20018Message.  # noqa: E501
-        :type: str
+        :param plazo_min: The plazo_min of this InlineResponse20018Message.  # noqa: E501
+        :type: float
         """
 
-        self._clasificacion = clasificacion
+        self._plazo_min = plazo_min
 
     def to_dict(self):
         """Returns the model properties as a dict"""

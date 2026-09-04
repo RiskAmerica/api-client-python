@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20045_message_liquidez import InlineResponse20045MessageLiquidez
 
 
 
@@ -32,68 +33,39 @@ class InlineResponse20045Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'nemo': 'str',
-        'fecha_cambio_tabla_desarrollo': 'date'
+        'liquidez': 'InlineResponse20045MessageLiquidez'
     }
 
     attribute_map = {
-        'nemo': 'nemo',
-        'fecha_cambio_tabla_desarrollo': 'fechaCambioTablaDesarrollo'
+        'liquidez': 'liquidez'
     }
 
-    def __init__(self, nemo=None, fecha_cambio_tabla_desarrollo=None):  # noqa: E501
+    def __init__(self, liquidez=None):  # noqa: E501
         """InlineResponse20045Message - a model defined in Swagger"""  # noqa: E501
-        self._nemo = None
-        self._fecha_cambio_tabla_desarrollo = None
+        self._liquidez = None
         self.discriminator = None
-        if nemo is not None:
-            self.nemo = nemo
-        if fecha_cambio_tabla_desarrollo is not None:
-            self.fecha_cambio_tabla_desarrollo = fecha_cambio_tabla_desarrollo
+        if liquidez is not None:
+            self.liquidez = liquidez
 
     @property
-    def nemo(self):
-        """Gets the nemo of this InlineResponse20045Message.  # noqa: E501
-        nemo con cambio en la tabla de desarrollo  # noqa: E501
+    def liquidez(self):
+        """Gets the liquidez of this InlineResponse20045Message.  # noqa: E501
 
-        :return: The nemo of this InlineResponse20045Message.  # noqa: E501
-        :rtype: str
+        :return: The liquidez of this InlineResponse20045Message.  # noqa: E501
+        :rtype: InlineResponse20045MessageLiquidez
         """
-        return self._nemo
+        return self._liquidez
 
-    @nemo.setter
-    def nemo(self, nemo):
-        """Sets the nemo of this InlineResponse20045Message.
+    @liquidez.setter
+    def liquidez(self, liquidez):
+        """Sets the liquidez of this InlineResponse20045Message.
 
-        nemo con cambio en la tabla de desarrollo  # noqa: E501
 
-        :param nemo: The nemo of this InlineResponse20045Message.  # noqa: E501
-        :type: str
+        :param liquidez: The liquidez of this InlineResponse20045Message.  # noqa: E501
+        :type: InlineResponse20045MessageLiquidez
         """
 
-        self._nemo = nemo
-
-    @property
-    def fecha_cambio_tabla_desarrollo(self):
-        """Gets the fecha_cambio_tabla_desarrollo of this InlineResponse20045Message.  # noqa: E501
-        fecha de cambio en la tabla de desarrollo  # noqa: E501
-
-        :return: The fecha_cambio_tabla_desarrollo of this InlineResponse20045Message.  # noqa: E501
-        :rtype: date
-        """
-        return self._fecha_cambio_tabla_desarrollo
-
-    @fecha_cambio_tabla_desarrollo.setter
-    def fecha_cambio_tabla_desarrollo(self, fecha_cambio_tabla_desarrollo):
-        """Sets the fecha_cambio_tabla_desarrollo of this InlineResponse20045Message.
-
-        fecha de cambio en la tabla de desarrollo  # noqa: E501
-
-        :param fecha_cambio_tabla_desarrollo: The fecha_cambio_tabla_desarrollo of this InlineResponse20045Message.  # noqa: E501
-        :type: date
-        """
-
-        self._fecha_cambio_tabla_desarrollo = fecha_cambio_tabla_desarrollo
+        self._liquidez = liquidez
 
     def to_dict(self):
         """Returns the model properties as a dict"""

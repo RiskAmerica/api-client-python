@@ -32,95 +32,473 @@ class InlineResponse20010Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'short_name': 'str',
-        'long_name': 'str'
+        'rut': 'int',
+        'fecha': 'date',
+        'mercado': 'str',
+        'nemotecnico': 'str',
+        'emisor': 'str',
+        'moneda_svs': 'str',
+        'tipo_instrumento': 'str',
+        'tipo_instrumento_svs': 'str',
+        'fecha_vencimiento': 'date',
+        'clasificacion_riesgo': 'str',
+        'plazo_residual': 'float',
+        'sector': 'str',
+        'duracion': 'float',
+        'zona_economica': 'str',
+        'porcentaje_fondo': 'float',
+        'cantidad': 'float',
+        'valorizacion_mercado_clp': 'float'
     }
 
     attribute_map = {
-        'id': 'id',
-        'short_name': 'shortName',
-        'long_name': 'longName'
+        'rut': 'rut',
+        'fecha': 'fecha',
+        'mercado': 'mercado',
+        'nemotecnico': 'nemotecnico',
+        'emisor': 'emisor',
+        'moneda_svs': 'monedaSVS',
+        'tipo_instrumento': 'tipoInstrumento',
+        'tipo_instrumento_svs': 'tipoInstrumentoSVS',
+        'fecha_vencimiento': 'fechaVencimiento',
+        'clasificacion_riesgo': 'clasificacionRiesgo',
+        'plazo_residual': 'plazoResidual',
+        'sector': 'sector',
+        'duracion': 'duracion',
+        'zona_economica': 'zonaEconomica',
+        'porcentaje_fondo': 'porcentajeFondo',
+        'cantidad': 'cantidad',
+        'valorizacion_mercado_clp': 'valorizacionMercadoCLP'
     }
 
-    def __init__(self, id=None, short_name=None, long_name=None):  # noqa: E501
+    def __init__(self, rut=None, fecha=None, mercado=None, nemotecnico=None, emisor=None, moneda_svs=None, tipo_instrumento=None, tipo_instrumento_svs=None, fecha_vencimiento=None, clasificacion_riesgo=None, plazo_residual=None, sector=None, duracion=None, zona_economica=None, porcentaje_fondo=None, cantidad=None, valorizacion_mercado_clp=None):  # noqa: E501
         """InlineResponse20010Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._short_name = None
-        self._long_name = None
+        self._rut = None
+        self._fecha = None
+        self._mercado = None
+        self._nemotecnico = None
+        self._emisor = None
+        self._moneda_svs = None
+        self._tipo_instrumento = None
+        self._tipo_instrumento_svs = None
+        self._fecha_vencimiento = None
+        self._clasificacion_riesgo = None
+        self._plazo_residual = None
+        self._sector = None
+        self._duracion = None
+        self._zona_economica = None
+        self._porcentaje_fondo = None
+        self._cantidad = None
+        self._valorizacion_mercado_clp = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
+        if rut is not None:
+            self.rut = rut
+        if fecha is not None:
+            self.fecha = fecha
+        if mercado is not None:
+            self.mercado = mercado
+        if nemotecnico is not None:
+            self.nemotecnico = nemotecnico
+        if emisor is not None:
+            self.emisor = emisor
+        if moneda_svs is not None:
+            self.moneda_svs = moneda_svs
+        if tipo_instrumento is not None:
+            self.tipo_instrumento = tipo_instrumento
+        if tipo_instrumento_svs is not None:
+            self.tipo_instrumento_svs = tipo_instrumento_svs
+        if fecha_vencimiento is not None:
+            self.fecha_vencimiento = fecha_vencimiento
+        if clasificacion_riesgo is not None:
+            self.clasificacion_riesgo = clasificacion_riesgo
+        if plazo_residual is not None:
+            self.plazo_residual = plazo_residual
+        if sector is not None:
+            self.sector = sector
+        if duracion is not None:
+            self.duracion = duracion
+        if zona_economica is not None:
+            self.zona_economica = zona_economica
+        if porcentaje_fondo is not None:
+            self.porcentaje_fondo = porcentaje_fondo
+        if cantidad is not None:
+            self.cantidad = cantidad
+        if valorizacion_mercado_clp is not None:
+            self.valorizacion_mercado_clp = valorizacion_mercado_clp
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20010Message.  # noqa: E501
-        Identificador de RiskAmerica para el Tipo de día que el Índice tiene Retornos  # noqa: E501
+    def rut(self):
+        """Gets the rut of this InlineResponse20010Message.  # noqa: E501
+        Rut del Fondo  # noqa: E501
 
-        :return: The id of this InlineResponse20010Message.  # noqa: E501
+        :return: The rut of this InlineResponse20010Message.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._rut
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20010Message.
+    @rut.setter
+    def rut(self, rut):
+        """Sets the rut of this InlineResponse20010Message.
 
-        Identificador de RiskAmerica para el Tipo de día que el Índice tiene Retornos  # noqa: E501
+        Rut del Fondo  # noqa: E501
 
-        :param id: The id of this InlineResponse20010Message.  # noqa: E501
+        :param rut: The rut of this InlineResponse20010Message.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._rut = rut
 
     @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse20010Message.  # noqa: E501
-        Nombre corto del Tipo  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20010Message.  # noqa: E501
+        Fecha de la cartera  # noqa: E501
 
-        :return: The short_name of this InlineResponse20010Message.  # noqa: E501
+        :return: The fecha of this InlineResponse20010Message.  # noqa: E501
+        :rtype: date
+        """
+        return self._fecha
+
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20010Message.
+
+        Fecha de la cartera  # noqa: E501
+
+        :param fecha: The fecha of this InlineResponse20010Message.  # noqa: E501
+        :type: date
+        """
+
+        self._fecha = fecha
+
+    @property
+    def mercado(self):
+        """Gets the mercado of this InlineResponse20010Message.  # noqa: E501
+        Mercado del instrumento  # noqa: E501
+
+        :return: The mercado of this InlineResponse20010Message.  # noqa: E501
         :rtype: str
         """
-        return self._short_name
+        return self._mercado
 
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse20010Message.
+    @mercado.setter
+    def mercado(self, mercado):
+        """Sets the mercado of this InlineResponse20010Message.
 
-        Nombre corto del Tipo  # noqa: E501
+        Mercado del instrumento  # noqa: E501
 
-        :param short_name: The short_name of this InlineResponse20010Message.  # noqa: E501
+        :param mercado: The mercado of this InlineResponse20010Message.  # noqa: E501
         :type: str
         """
 
-        self._short_name = short_name
+        self._mercado = mercado
 
     @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse20010Message.  # noqa: E501
-        Nombre largo del Tipo  # noqa: E501
+    def nemotecnico(self):
+        """Gets the nemotecnico of this InlineResponse20010Message.  # noqa: E501
+        Nemotécnico del instrumento  # noqa: E501
 
-        :return: The long_name of this InlineResponse20010Message.  # noqa: E501
+        :return: The nemotecnico of this InlineResponse20010Message.  # noqa: E501
         :rtype: str
         """
-        return self._long_name
+        return self._nemotecnico
 
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse20010Message.
+    @nemotecnico.setter
+    def nemotecnico(self, nemotecnico):
+        """Sets the nemotecnico of this InlineResponse20010Message.
 
-        Nombre largo del Tipo  # noqa: E501
+        Nemotécnico del instrumento  # noqa: E501
 
-        :param long_name: The long_name of this InlineResponse20010Message.  # noqa: E501
+        :param nemotecnico: The nemotecnico of this InlineResponse20010Message.  # noqa: E501
         :type: str
         """
 
-        self._long_name = long_name
+        self._nemotecnico = nemotecnico
+
+    @property
+    def emisor(self):
+        """Gets the emisor of this InlineResponse20010Message.  # noqa: E501
+        Nombre del emisor del instrumento  # noqa: E501
+
+        :return: The emisor of this InlineResponse20010Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._emisor
+
+    @emisor.setter
+    def emisor(self, emisor):
+        """Sets the emisor of this InlineResponse20010Message.
+
+        Nombre del emisor del instrumento  # noqa: E501
+
+        :param emisor: The emisor of this InlineResponse20010Message.  # noqa: E501
+        :type: str
+        """
+
+        self._emisor = emisor
+
+    @property
+    def moneda_svs(self):
+        """Gets the moneda_svs of this InlineResponse20010Message.  # noqa: E501
+        Moneda según clasificación SVS  # noqa: E501
+
+        :return: The moneda_svs of this InlineResponse20010Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._moneda_svs
+
+    @moneda_svs.setter
+    def moneda_svs(self, moneda_svs):
+        """Sets the moneda_svs of this InlineResponse20010Message.
+
+        Moneda según clasificación SVS  # noqa: E501
+
+        :param moneda_svs: The moneda_svs of this InlineResponse20010Message.  # noqa: E501
+        :type: str
+        """
+
+        self._moneda_svs = moneda_svs
+
+    @property
+    def tipo_instrumento(self):
+        """Gets the tipo_instrumento of this InlineResponse20010Message.  # noqa: E501
+        Tipo de instrumento  # noqa: E501
+
+        :return: The tipo_instrumento of this InlineResponse20010Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._tipo_instrumento
+
+    @tipo_instrumento.setter
+    def tipo_instrumento(self, tipo_instrumento):
+        """Sets the tipo_instrumento of this InlineResponse20010Message.
+
+        Tipo de instrumento  # noqa: E501
+
+        :param tipo_instrumento: The tipo_instrumento of this InlineResponse20010Message.  # noqa: E501
+        :type: str
+        """
+
+        self._tipo_instrumento = tipo_instrumento
+
+    @property
+    def tipo_instrumento_svs(self):
+        """Gets the tipo_instrumento_svs of this InlineResponse20010Message.  # noqa: E501
+        Tipo de instrumento según clasificación SVS  # noqa: E501
+
+        :return: The tipo_instrumento_svs of this InlineResponse20010Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._tipo_instrumento_svs
+
+    @tipo_instrumento_svs.setter
+    def tipo_instrumento_svs(self, tipo_instrumento_svs):
+        """Sets the tipo_instrumento_svs of this InlineResponse20010Message.
+
+        Tipo de instrumento según clasificación SVS  # noqa: E501
+
+        :param tipo_instrumento_svs: The tipo_instrumento_svs of this InlineResponse20010Message.  # noqa: E501
+        :type: str
+        """
+
+        self._tipo_instrumento_svs = tipo_instrumento_svs
+
+    @property
+    def fecha_vencimiento(self):
+        """Gets the fecha_vencimiento of this InlineResponse20010Message.  # noqa: E501
+        Fecha de vencimiento del instrumento  # noqa: E501
+
+        :return: The fecha_vencimiento of this InlineResponse20010Message.  # noqa: E501
+        :rtype: date
+        """
+        return self._fecha_vencimiento
+
+    @fecha_vencimiento.setter
+    def fecha_vencimiento(self, fecha_vencimiento):
+        """Sets the fecha_vencimiento of this InlineResponse20010Message.
+
+        Fecha de vencimiento del instrumento  # noqa: E501
+
+        :param fecha_vencimiento: The fecha_vencimiento of this InlineResponse20010Message.  # noqa: E501
+        :type: date
+        """
+
+        self._fecha_vencimiento = fecha_vencimiento
+
+    @property
+    def clasificacion_riesgo(self):
+        """Gets the clasificacion_riesgo of this InlineResponse20010Message.  # noqa: E501
+        Clasificación de riesgo del instrumento  # noqa: E501
+
+        :return: The clasificacion_riesgo of this InlineResponse20010Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._clasificacion_riesgo
+
+    @clasificacion_riesgo.setter
+    def clasificacion_riesgo(self, clasificacion_riesgo):
+        """Sets the clasificacion_riesgo of this InlineResponse20010Message.
+
+        Clasificación de riesgo del instrumento  # noqa: E501
+
+        :param clasificacion_riesgo: The clasificacion_riesgo of this InlineResponse20010Message.  # noqa: E501
+        :type: str
+        """
+
+        self._clasificacion_riesgo = clasificacion_riesgo
+
+    @property
+    def plazo_residual(self):
+        """Gets the plazo_residual of this InlineResponse20010Message.  # noqa: E501
+        Plazo residual del instrumento  # noqa: E501
+
+        :return: The plazo_residual of this InlineResponse20010Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._plazo_residual
+
+    @plazo_residual.setter
+    def plazo_residual(self, plazo_residual):
+        """Sets the plazo_residual of this InlineResponse20010Message.
+
+        Plazo residual del instrumento  # noqa: E501
+
+        :param plazo_residual: The plazo_residual of this InlineResponse20010Message.  # noqa: E501
+        :type: float
+        """
+
+        self._plazo_residual = plazo_residual
+
+    @property
+    def sector(self):
+        """Gets the sector of this InlineResponse20010Message.  # noqa: E501
+        Sector económico del emisor  # noqa: E501
+
+        :return: The sector of this InlineResponse20010Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._sector
+
+    @sector.setter
+    def sector(self, sector):
+        """Sets the sector of this InlineResponse20010Message.
+
+        Sector económico del emisor  # noqa: E501
+
+        :param sector: The sector of this InlineResponse20010Message.  # noqa: E501
+        :type: str
+        """
+
+        self._sector = sector
+
+    @property
+    def duracion(self):
+        """Gets the duracion of this InlineResponse20010Message.  # noqa: E501
+        Duración del instrumento  # noqa: E501
+
+        :return: The duracion of this InlineResponse20010Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._duracion
+
+    @duracion.setter
+    def duracion(self, duracion):
+        """Sets the duracion of this InlineResponse20010Message.
+
+        Duración del instrumento  # noqa: E501
+
+        :param duracion: The duracion of this InlineResponse20010Message.  # noqa: E501
+        :type: float
+        """
+
+        self._duracion = duracion
+
+    @property
+    def zona_economica(self):
+        """Gets the zona_economica of this InlineResponse20010Message.  # noqa: E501
+        Zona económica del instrumento  # noqa: E501
+
+        :return: The zona_economica of this InlineResponse20010Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._zona_economica
+
+    @zona_economica.setter
+    def zona_economica(self, zona_economica):
+        """Sets the zona_economica of this InlineResponse20010Message.
+
+        Zona económica del instrumento  # noqa: E501
+
+        :param zona_economica: The zona_economica of this InlineResponse20010Message.  # noqa: E501
+        :type: str
+        """
+
+        self._zona_economica = zona_economica
+
+    @property
+    def porcentaje_fondo(self):
+        """Gets the porcentaje_fondo of this InlineResponse20010Message.  # noqa: E501
+        Peso porcentual en la cartera del fondo  # noqa: E501
+
+        :return: The porcentaje_fondo of this InlineResponse20010Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._porcentaje_fondo
+
+    @porcentaje_fondo.setter
+    def porcentaje_fondo(self, porcentaje_fondo):
+        """Sets the porcentaje_fondo of this InlineResponse20010Message.
+
+        Peso porcentual en la cartera del fondo  # noqa: E501
+
+        :param porcentaje_fondo: The porcentaje_fondo of this InlineResponse20010Message.  # noqa: E501
+        :type: float
+        """
+
+        self._porcentaje_fondo = porcentaje_fondo
+
+    @property
+    def cantidad(self):
+        """Gets the cantidad of this InlineResponse20010Message.  # noqa: E501
+        Cantidad  # noqa: E501
+
+        :return: The cantidad of this InlineResponse20010Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._cantidad
+
+    @cantidad.setter
+    def cantidad(self, cantidad):
+        """Sets the cantidad of this InlineResponse20010Message.
+
+        Cantidad  # noqa: E501
+
+        :param cantidad: The cantidad of this InlineResponse20010Message.  # noqa: E501
+        :type: float
+        """
+
+        self._cantidad = cantidad
+
+    @property
+    def valorizacion_mercado_clp(self):
+        """Gets the valorizacion_mercado_clp of this InlineResponse20010Message.  # noqa: E501
+        Valorización a mercado en CLP  # noqa: E501
+
+        :return: The valorizacion_mercado_clp of this InlineResponse20010Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._valorizacion_mercado_clp
+
+    @valorizacion_mercado_clp.setter
+    def valorizacion_mercado_clp(self, valorizacion_mercado_clp):
+        """Sets the valorizacion_mercado_clp of this InlineResponse20010Message.
+
+        Valorización a mercado en CLP  # noqa: E501
+
+        :param valorizacion_mercado_clp: The valorizacion_mercado_clp of this InlineResponse20010Message.  # noqa: E501
+        :type: float
+        """
+
+        self._valorizacion_mercado_clp = valorizacion_mercado_clp
 
     def to_dict(self):
         """Returns the model properties as a dict"""

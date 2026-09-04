@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20031_message_valorizacion import InlineResponse20031MessageValorizacion
+from .inline_response20025_message import InlineResponse20025Message
 
 
 
@@ -35,7 +35,7 @@ class InlineResponse20025(object):
     swagger_types = {
         'code': 'int',
         'error': 'str',
-        'message': 'list[InlineResponse20031MessageValorizacion]'
+        'message': 'list[InlineResponse20025Message]'
     }
 
     attribute_map = {
@@ -102,7 +102,7 @@ class InlineResponse20025(object):
         """Gets the message of this InlineResponse20025.  # noqa: E501
 
         :return: The message of this InlineResponse20025.  # noqa: E501
-        :rtype: list[InlineResponse20031MessageValorizacion]
+        :rtype: list[InlineResponse20025Message]
         """
         return self._message
 
@@ -112,7 +112,7 @@ class InlineResponse20025(object):
 
 
         :param message: The message of this InlineResponse20025.  # noqa: E501
-        :type: list[InlineResponse20031MessageValorizacion]
+        :type: list[InlineResponse20025Message]
         """
 
         self._message = message

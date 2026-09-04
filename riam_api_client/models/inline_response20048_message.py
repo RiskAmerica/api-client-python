@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20048_message_tipo_cambio import InlineResponse20048MessageTipoCambio
 
 
 
@@ -33,39 +32,68 @@ class InlineResponse20048Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'tipo_cambio': 'InlineResponse20048MessageTipoCambio'
+        'fecha': 'date',
+        'ncg376': 'float'
     }
 
     attribute_map = {
-        'tipo_cambio': 'TipoCambio'
+        'fecha': 'fecha',
+        'ncg376': 'ncg376'
     }
 
-    def __init__(self, tipo_cambio=None):  # noqa: E501
+    def __init__(self, fecha=None, ncg376=None):  # noqa: E501
         """InlineResponse20048Message - a model defined in Swagger"""  # noqa: E501
-        self._tipo_cambio = None
+        self._fecha = None
+        self._ncg376 = None
         self.discriminator = None
-        if tipo_cambio is not None:
-            self.tipo_cambio = tipo_cambio
+        if fecha is not None:
+            self.fecha = fecha
+        if ncg376 is not None:
+            self.ncg376 = ncg376
 
     @property
-    def tipo_cambio(self):
-        """Gets the tipo_cambio of this InlineResponse20048Message.  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20048Message.  # noqa: E501
+        Fecha del saldo  # noqa: E501
 
-        :return: The tipo_cambio of this InlineResponse20048Message.  # noqa: E501
-        :rtype: InlineResponse20048MessageTipoCambio
+        :return: The fecha of this InlineResponse20048Message.  # noqa: E501
+        :rtype: date
         """
-        return self._tipo_cambio
+        return self._fecha
 
-    @tipo_cambio.setter
-    def tipo_cambio(self, tipo_cambio):
-        """Sets the tipo_cambio of this InlineResponse20048Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20048Message.
 
+        Fecha del saldo  # noqa: E501
 
-        :param tipo_cambio: The tipo_cambio of this InlineResponse20048Message.  # noqa: E501
-        :type: InlineResponse20048MessageTipoCambio
+        :param fecha: The fecha of this InlineResponse20048Message.  # noqa: E501
+        :type: date
         """
 
-        self._tipo_cambio = tipo_cambio
+        self._fecha = fecha
+
+    @property
+    def ncg376(self):
+        """Gets the ncg376 of this InlineResponse20048Message.  # noqa: E501
+        Saldo custodia NCG 376  # noqa: E501
+
+        :return: The ncg376 of this InlineResponse20048Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._ncg376
+
+    @ncg376.setter
+    def ncg376(self, ncg376):
+        """Sets the ncg376 of this InlineResponse20048Message.
+
+        Saldo custodia NCG 376  # noqa: E501
+
+        :param ncg376: The ncg376 of this InlineResponse20048Message.  # noqa: E501
+        :type: float
+        """
+
+        self._ncg376 = ncg376
 
     def to_dict(self):
         """Returns the model properties as a dict"""

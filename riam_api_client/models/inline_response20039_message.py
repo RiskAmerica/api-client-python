@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20039_clasificacion import InlineResponse20039Clasificacion
 
 
 
@@ -34,27 +33,28 @@ class InlineResponse20039Message(object):
     """
     swagger_types = {
         'fecha': 'date',
-        'clasificacion': 'InlineResponse20039Clasificacion'
+        'tasa_prepago': 'float'
     }
 
     attribute_map = {
-        'fecha': 'Fecha',
-        'clasificacion': 'Clasificacion'
+        'fecha': 'fecha',
+        'tasa_prepago': 'tasaPrepago'
     }
 
-    def __init__(self, fecha=None, clasificacion=None):  # noqa: E501
+    def __init__(self, fecha=None, tasa_prepago=None):  # noqa: E501
         """InlineResponse20039Message - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
-        self._clasificacion = None
+        self._tasa_prepago = None
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
-        if clasificacion is not None:
-            self.clasificacion = clasificacion
+        if tasa_prepago is not None:
+            self.tasa_prepago = tasa_prepago
 
     @property
     def fecha(self):
         """Gets the fecha of this InlineResponse20039Message.  # noqa: E501
+        Fecha de la Tasa  # noqa: E501
 
         :return: The fecha of this InlineResponse20039Message.  # noqa: E501
         :rtype: date
@@ -65,6 +65,7 @@ class InlineResponse20039Message(object):
     def fecha(self, fecha):
         """Sets the fecha of this InlineResponse20039Message.
 
+        Fecha de la Tasa  # noqa: E501
 
         :param fecha: The fecha of this InlineResponse20039Message.  # noqa: E501
         :type: date
@@ -73,24 +74,26 @@ class InlineResponse20039Message(object):
         self._fecha = fecha
 
     @property
-    def clasificacion(self):
-        """Gets the clasificacion of this InlineResponse20039Message.  # noqa: E501
+    def tasa_prepago(self):
+        """Gets the tasa_prepago of this InlineResponse20039Message.  # noqa: E501
+        Tasa de prepago  # noqa: E501
 
-        :return: The clasificacion of this InlineResponse20039Message.  # noqa: E501
-        :rtype: InlineResponse20039Clasificacion
+        :return: The tasa_prepago of this InlineResponse20039Message.  # noqa: E501
+        :rtype: float
         """
-        return self._clasificacion
+        return self._tasa_prepago
 
-    @clasificacion.setter
-    def clasificacion(self, clasificacion):
-        """Sets the clasificacion of this InlineResponse20039Message.
+    @tasa_prepago.setter
+    def tasa_prepago(self, tasa_prepago):
+        """Sets the tasa_prepago of this InlineResponse20039Message.
 
+        Tasa de prepago  # noqa: E501
 
-        :param clasificacion: The clasificacion of this InlineResponse20039Message.  # noqa: E501
-        :type: InlineResponse20039Clasificacion
+        :param tasa_prepago: The tasa_prepago of this InlineResponse20039Message.  # noqa: E501
+        :type: float
         """
 
-        self._clasificacion = clasificacion
+        self._tasa_prepago = tasa_prepago
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -32,95 +32,95 @@ class InlineResponse20058Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'short_name': 'str',
-        'long_name': 'str'
+        'nombre': 'str',
+        'aplicacion': 'str',
+        'fecha_inicio': 'date'
     }
 
     attribute_map = {
-        'id': 'id',
-        'short_name': 'shortName',
-        'long_name': 'longName'
+        'nombre': 'nombre',
+        'aplicacion': 'aplicacion',
+        'fecha_inicio': 'fechaInicio'
     }
 
-    def __init__(self, id=None, short_name=None, long_name=None):  # noqa: E501
+    def __init__(self, nombre=None, aplicacion=None, fecha_inicio=None):  # noqa: E501
         """InlineResponse20058Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._short_name = None
-        self._long_name = None
+        self._nombre = None
+        self._aplicacion = None
+        self._fecha_inicio = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
+        if nombre is not None:
+            self.nombre = nombre
+        if aplicacion is not None:
+            self.aplicacion = aplicacion
+        if fecha_inicio is not None:
+            self.fecha_inicio = fecha_inicio
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20058Message.  # noqa: E501
-        Identificador del Tipo de Valorización  # noqa: E501
+    def nombre(self):
+        """Gets the nombre of this InlineResponse20058Message.  # noqa: E501
+        Nombre del fondo  # noqa: E501
 
-        :return: The id of this InlineResponse20058Message.  # noqa: E501
+        :return: The nombre of this InlineResponse20058Message.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._nombre
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20058Message.
+    @nombre.setter
+    def nombre(self, nombre):
+        """Sets the nombre of this InlineResponse20058Message.
 
-        Identificador del Tipo de Valorización  # noqa: E501
+        Nombre del fondo  # noqa: E501
 
-        :param id: The id of this InlineResponse20058Message.  # noqa: E501
+        :param nombre: The nombre of this InlineResponse20058Message.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._nombre = nombre
 
     @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse20058Message.  # noqa: E501
-        Título del Tipo de Valorización  # noqa: E501
+    def aplicacion(self):
+        """Gets the aplicacion of this InlineResponse20058Message.  # noqa: E501
+        Aplicacion  # noqa: E501
 
-        :return: The short_name of this InlineResponse20058Message.  # noqa: E501
+        :return: The aplicacion of this InlineResponse20058Message.  # noqa: E501
         :rtype: str
         """
-        return self._short_name
+        return self._aplicacion
 
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse20058Message.
+    @aplicacion.setter
+    def aplicacion(self, aplicacion):
+        """Sets the aplicacion of this InlineResponse20058Message.
 
-        Título del Tipo de Valorización  # noqa: E501
+        Aplicacion  # noqa: E501
 
-        :param short_name: The short_name of this InlineResponse20058Message.  # noqa: E501
+        :param aplicacion: The aplicacion of this InlineResponse20058Message.  # noqa: E501
         :type: str
         """
 
-        self._short_name = short_name
+        self._aplicacion = aplicacion
 
     @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse20058Message.  # noqa: E501
-        Descripción del Tipo de Valorizacion  # noqa: E501
+    def fecha_inicio(self):
+        """Gets the fecha_inicio of this InlineResponse20058Message.  # noqa: E501
+        fecha de Inicio del Ejercicio  # noqa: E501
 
-        :return: The long_name of this InlineResponse20058Message.  # noqa: E501
-        :rtype: str
+        :return: The fecha_inicio of this InlineResponse20058Message.  # noqa: E501
+        :rtype: date
         """
-        return self._long_name
+        return self._fecha_inicio
 
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse20058Message.
+    @fecha_inicio.setter
+    def fecha_inicio(self, fecha_inicio):
+        """Sets the fecha_inicio of this InlineResponse20058Message.
 
-        Descripción del Tipo de Valorizacion  # noqa: E501
+        fecha de Inicio del Ejercicio  # noqa: E501
 
-        :param long_name: The long_name of this InlineResponse20058Message.  # noqa: E501
-        :type: str
+        :param fecha_inicio: The fecha_inicio of this InlineResponse20058Message.  # noqa: E501
+        :type: date
         """
 
-        self._long_name = long_name
+        self._fecha_inicio = fecha_inicio
 
     def to_dict(self):
         """Returns the model properties as a dict"""

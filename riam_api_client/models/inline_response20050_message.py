@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20050_message_issues import InlineResponse20050MessageIssues
 
 
 
@@ -33,66 +32,68 @@ class InlineResponse20050Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'status': 'str',
-        'issues': 'list[InlineResponse20050MessageIssues]'
+        'nemo': 'str',
+        'fecha_cambio_tabla_desarrollo': 'date'
     }
 
     attribute_map = {
-        'status': 'status',
-        'issues': 'issues'
+        'nemo': 'nemo',
+        'fecha_cambio_tabla_desarrollo': 'fechaCambioTablaDesarrollo'
     }
 
-    def __init__(self, status=None, issues=None):  # noqa: E501
+    def __init__(self, nemo=None, fecha_cambio_tabla_desarrollo=None):  # noqa: E501
         """InlineResponse20050Message - a model defined in Swagger"""  # noqa: E501
-        self._status = None
-        self._issues = None
+        self._nemo = None
+        self._fecha_cambio_tabla_desarrollo = None
         self.discriminator = None
-        if status is not None:
-            self.status = status
-        if issues is not None:
-            self.issues = issues
+        if nemo is not None:
+            self.nemo = nemo
+        if fecha_cambio_tabla_desarrollo is not None:
+            self.fecha_cambio_tabla_desarrollo = fecha_cambio_tabla_desarrollo
 
     @property
-    def status(self):
-        """Gets the status of this InlineResponse20050Message.  # noqa: E501
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+    def nemo(self):
+        """Gets the nemo of this InlineResponse20050Message.  # noqa: E501
+        nemo con cambio en la tabla de desarrollo  # noqa: E501
 
-        :return: The status of this InlineResponse20050Message.  # noqa: E501
+        :return: The nemo of this InlineResponse20050Message.  # noqa: E501
         :rtype: str
         """
-        return self._status
+        return self._nemo
 
-    @status.setter
-    def status(self, status):
-        """Sets the status of this InlineResponse20050Message.
+    @nemo.setter
+    def nemo(self, nemo):
+        """Sets the nemo of this InlineResponse20050Message.
 
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+        nemo con cambio en la tabla de desarrollo  # noqa: E501
 
-        :param status: The status of this InlineResponse20050Message.  # noqa: E501
+        :param nemo: The nemo of this InlineResponse20050Message.  # noqa: E501
         :type: str
         """
 
-        self._status = status
+        self._nemo = nemo
 
     @property
-    def issues(self):
-        """Gets the issues of this InlineResponse20050Message.  # noqa: E501
+    def fecha_cambio_tabla_desarrollo(self):
+        """Gets the fecha_cambio_tabla_desarrollo of this InlineResponse20050Message.  # noqa: E501
+        fecha de cambio en la tabla de desarrollo  # noqa: E501
 
-        :return: The issues of this InlineResponse20050Message.  # noqa: E501
-        :rtype: list[InlineResponse20050MessageIssues]
+        :return: The fecha_cambio_tabla_desarrollo of this InlineResponse20050Message.  # noqa: E501
+        :rtype: date
         """
-        return self._issues
+        return self._fecha_cambio_tabla_desarrollo
 
-    @issues.setter
-    def issues(self, issues):
-        """Sets the issues of this InlineResponse20050Message.
+    @fecha_cambio_tabla_desarrollo.setter
+    def fecha_cambio_tabla_desarrollo(self, fecha_cambio_tabla_desarrollo):
+        """Sets the fecha_cambio_tabla_desarrollo of this InlineResponse20050Message.
 
+        fecha de cambio en la tabla de desarrollo  # noqa: E501
 
-        :param issues: The issues of this InlineResponse20050Message.  # noqa: E501
-        :type: list[InlineResponse20050MessageIssues]
+        :param fecha_cambio_tabla_desarrollo: The fecha_cambio_tabla_desarrollo of this InlineResponse20050Message.  # noqa: E501
+        :type: date
         """
 
-        self._issues = issues
+        self._fecha_cambio_tabla_desarrollo = fecha_cambio_tabla_desarrollo
 
     def to_dict(self):
         """Returns the model properties as a dict"""

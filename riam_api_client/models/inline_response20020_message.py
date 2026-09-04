@@ -32,230 +32,95 @@ class InlineResponse20020Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fecha': 'date',
-        'tir': 'float',
-        'cantidad': 'float',
-        'monto_transado_clp': 'float',
-        'precio_porcentaje_valor_par': 'float',
-        'tir_base': 'float',
-        'spread': 'float',
-        'nemo': 'str'
+        'id': 'str',
+        'short_name': 'str',
+        'long_name': 'str'
     }
 
     attribute_map = {
-        'fecha': 'fecha',
-        'tir': 'tir',
-        'cantidad': 'cantidad',
-        'monto_transado_clp': 'montoTransadoCLP',
-        'precio_porcentaje_valor_par': 'precioPorcentajeValorPar',
-        'tir_base': 'tirBase',
-        'spread': 'spread',
-        'nemo': 'nemo'
+        'id': 'id',
+        'short_name': 'shortName',
+        'long_name': 'longName'
     }
 
-    def __init__(self, fecha=None, tir=None, cantidad=None, monto_transado_clp=None, precio_porcentaje_valor_par=None, tir_base=None, spread=None, nemo=None):  # noqa: E501
+    def __init__(self, id=None, short_name=None, long_name=None):  # noqa: E501
         """InlineResponse20020Message - a model defined in Swagger"""  # noqa: E501
-        self._fecha = None
-        self._tir = None
-        self._cantidad = None
-        self._monto_transado_clp = None
-        self._precio_porcentaje_valor_par = None
-        self._tir_base = None
-        self._spread = None
-        self._nemo = None
+        self._id = None
+        self._short_name = None
+        self._long_name = None
         self.discriminator = None
-        if fecha is not None:
-            self.fecha = fecha
-        if tir is not None:
-            self.tir = tir
-        if cantidad is not None:
-            self.cantidad = cantidad
-        if monto_transado_clp is not None:
-            self.monto_transado_clp = monto_transado_clp
-        if precio_porcentaje_valor_par is not None:
-            self.precio_porcentaje_valor_par = precio_porcentaje_valor_par
-        if tir_base is not None:
-            self.tir_base = tir_base
-        if spread is not None:
-            self.spread = spread
-        if nemo is not None:
-            self.nemo = nemo
+        if id is not None:
+            self.id = id
+        if short_name is not None:
+            self.short_name = short_name
+        if long_name is not None:
+            self.long_name = long_name
 
     @property
-    def fecha(self):
-        """Gets the fecha of this InlineResponse20020Message.  # noqa: E501
-        Fecha de la última transacción  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20020Message.  # noqa: E501
+        Identificador de RiskAmerica para la Unidad  # noqa: E501
 
-        :return: The fecha of this InlineResponse20020Message.  # noqa: E501
-        :rtype: date
-        """
-        return self._fecha
-
-    @fecha.setter
-    def fecha(self, fecha):
-        """Sets the fecha of this InlineResponse20020Message.
-
-        Fecha de la última transacción  # noqa: E501
-
-        :param fecha: The fecha of this InlineResponse20020Message.  # noqa: E501
-        :type: date
-        """
-
-        self._fecha = fecha
-
-    @property
-    def tir(self):
-        """Gets the tir of this InlineResponse20020Message.  # noqa: E501
-        Tasa de la última transacción  # noqa: E501
-
-        :return: The tir of this InlineResponse20020Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir
-
-    @tir.setter
-    def tir(self, tir):
-        """Sets the tir of this InlineResponse20020Message.
-
-        Tasa de la última transacción  # noqa: E501
-
-        :param tir: The tir of this InlineResponse20020Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tir = tir
-
-    @property
-    def cantidad(self):
-        """Gets the cantidad of this InlineResponse20020Message.  # noqa: E501
-        Cantidad de la última transacción  # noqa: E501
-
-        :return: The cantidad of this InlineResponse20020Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._cantidad
-
-    @cantidad.setter
-    def cantidad(self, cantidad):
-        """Sets the cantidad of this InlineResponse20020Message.
-
-        Cantidad de la última transacción  # noqa: E501
-
-        :param cantidad: The cantidad of this InlineResponse20020Message.  # noqa: E501
-        :type: float
-        """
-
-        self._cantidad = cantidad
-
-    @property
-    def monto_transado_clp(self):
-        """Gets the monto_transado_clp of this InlineResponse20020Message.  # noqa: E501
-        Monto transado en pesos de la última transacción  # noqa: E501
-
-        :return: The monto_transado_clp of this InlineResponse20020Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._monto_transado_clp
-
-    @monto_transado_clp.setter
-    def monto_transado_clp(self, monto_transado_clp):
-        """Sets the monto_transado_clp of this InlineResponse20020Message.
-
-        Monto transado en pesos de la última transacción  # noqa: E501
-
-        :param monto_transado_clp: The monto_transado_clp of this InlineResponse20020Message.  # noqa: E501
-        :type: float
-        """
-
-        self._monto_transado_clp = monto_transado_clp
-
-    @property
-    def precio_porcentaje_valor_par(self):
-        """Gets the precio_porcentaje_valor_par of this InlineResponse20020Message.  # noqa: E501
-        Precio porcentaje valor par de la última transacción  # noqa: E501
-
-        :return: The precio_porcentaje_valor_par of this InlineResponse20020Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._precio_porcentaje_valor_par
-
-    @precio_porcentaje_valor_par.setter
-    def precio_porcentaje_valor_par(self, precio_porcentaje_valor_par):
-        """Sets the precio_porcentaje_valor_par of this InlineResponse20020Message.
-
-        Precio porcentaje valor par de la última transacción  # noqa: E501
-
-        :param precio_porcentaje_valor_par: The precio_porcentaje_valor_par of this InlineResponse20020Message.  # noqa: E501
-        :type: float
-        """
-
-        self._precio_porcentaje_valor_par = precio_porcentaje_valor_par
-
-    @property
-    def tir_base(self):
-        """Gets the tir_base of this InlineResponse20020Message.  # noqa: E501
-        TIR Base de la última transacción  # noqa: E501
-
-        :return: The tir_base of this InlineResponse20020Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir_base
-
-    @tir_base.setter
-    def tir_base(self, tir_base):
-        """Sets the tir_base of this InlineResponse20020Message.
-
-        TIR Base de la última transacción  # noqa: E501
-
-        :param tir_base: The tir_base of this InlineResponse20020Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tir_base = tir_base
-
-    @property
-    def spread(self):
-        """Gets the spread of this InlineResponse20020Message.  # noqa: E501
-        Spread de la transacción  # noqa: E501
-
-        :return: The spread of this InlineResponse20020Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._spread
-
-    @spread.setter
-    def spread(self, spread):
-        """Sets the spread of this InlineResponse20020Message.
-
-        Spread de la transacción  # noqa: E501
-
-        :param spread: The spread of this InlineResponse20020Message.  # noqa: E501
-        :type: float
-        """
-
-        self._spread = spread
-
-    @property
-    def nemo(self):
-        """Gets the nemo of this InlineResponse20020Message.  # noqa: E501
-        Nemotécnico del instrumento  # noqa: E501
-
-        :return: The nemo of this InlineResponse20020Message.  # noqa: E501
+        :return: The id of this InlineResponse20020Message.  # noqa: E501
         :rtype: str
         """
-        return self._nemo
+        return self._id
 
-    @nemo.setter
-    def nemo(self, nemo):
-        """Sets the nemo of this InlineResponse20020Message.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20020Message.
 
-        Nemotécnico del instrumento  # noqa: E501
+        Identificador de RiskAmerica para la Unidad  # noqa: E501
 
-        :param nemo: The nemo of this InlineResponse20020Message.  # noqa: E501
+        :param id: The id of this InlineResponse20020Message.  # noqa: E501
         :type: str
         """
 
-        self._nemo = nemo
+        self._id = id
+
+    @property
+    def short_name(self):
+        """Gets the short_name of this InlineResponse20020Message.  # noqa: E501
+        Nombre corto de la Unidad  # noqa: E501
+
+        :return: The short_name of this InlineResponse20020Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_name
+
+    @short_name.setter
+    def short_name(self, short_name):
+        """Sets the short_name of this InlineResponse20020Message.
+
+        Nombre corto de la Unidad  # noqa: E501
+
+        :param short_name: The short_name of this InlineResponse20020Message.  # noqa: E501
+        :type: str
+        """
+
+        self._short_name = short_name
+
+    @property
+    def long_name(self):
+        """Gets the long_name of this InlineResponse20020Message.  # noqa: E501
+        Nombre largo de la Unidad  # noqa: E501
+
+        :return: The long_name of this InlineResponse20020Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._long_name
+
+    @long_name.setter
+    def long_name(self, long_name):
+        """Sets the long_name of this InlineResponse20020Message.
+
+        Nombre largo de la Unidad  # noqa: E501
+
+        :param long_name: The long_name of this InlineResponse20020Message.  # noqa: E501
+        :type: str
+        """
+
+        self._long_name = long_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

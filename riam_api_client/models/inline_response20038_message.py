@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20039_message import InlineResponse20039Message
+from .inline_response20038_message_instrumento import InlineResponse20038MessageInstrumento
 
 
 
@@ -33,39 +33,39 @@ class InlineResponse20038Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'tipo_cambio': 'InlineResponse20039Message'
+        'instrumento': 'InlineResponse20038MessageInstrumento'
     }
 
     attribute_map = {
-        'tipo_cambio': 'TipoCambio'
+        'instrumento': 'Instrumento'
     }
 
-    def __init__(self, tipo_cambio=None):  # noqa: E501
+    def __init__(self, instrumento=None):  # noqa: E501
         """InlineResponse20038Message - a model defined in Swagger"""  # noqa: E501
-        self._tipo_cambio = None
+        self._instrumento = None
         self.discriminator = None
-        if tipo_cambio is not None:
-            self.tipo_cambio = tipo_cambio
+        if instrumento is not None:
+            self.instrumento = instrumento
 
     @property
-    def tipo_cambio(self):
-        """Gets the tipo_cambio of this InlineResponse20038Message.  # noqa: E501
+    def instrumento(self):
+        """Gets the instrumento of this InlineResponse20038Message.  # noqa: E501
 
-        :return: The tipo_cambio of this InlineResponse20038Message.  # noqa: E501
-        :rtype: InlineResponse20039Message
+        :return: The instrumento of this InlineResponse20038Message.  # noqa: E501
+        :rtype: InlineResponse20038MessageInstrumento
         """
-        return self._tipo_cambio
+        return self._instrumento
 
-    @tipo_cambio.setter
-    def tipo_cambio(self, tipo_cambio):
-        """Sets the tipo_cambio of this InlineResponse20038Message.
+    @instrumento.setter
+    def instrumento(self, instrumento):
+        """Sets the instrumento of this InlineResponse20038Message.
 
 
-        :param tipo_cambio: The tipo_cambio of this InlineResponse20038Message.  # noqa: E501
-        :type: InlineResponse20039Message
+        :param instrumento: The instrumento of this InlineResponse20038Message.  # noqa: E501
+        :type: InlineResponse20038MessageInstrumento
         """
 
-        self._tipo_cambio = tipo_cambio
+        self._instrumento = instrumento
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -17,8 +17,8 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20047
-from . import InlineResponse20046
+from . import InlineResponse20052
+from . import InlineResponse20051
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -51,10 +51,10 @@ class RFNCalculadoraApi(object):
         :param float monto_clp: Monto CLP utilizado para encontrar la TIR (required)
         :param float nominal: Nominal a valorizar. (required)
         :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
-        :return: InlineResponse20047
+        :return: InlineResponse20052
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20047 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20052 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -78,10 +78,10 @@ class RFNCalculadoraApi(object):
         :param float monto_clp: Monto CLP utilizado para encontrar la TIR (required)
         :param float nominal: Nominal a valorizar. (required)
         :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
-        :return: InlineResponse20047
+        :return: InlineResponse20052
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20047 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20052 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha', 'monto_clp', 'nominal', 'condicion_pago']  # noqa: E501
@@ -153,7 +153,7 @@ class RFNCalculadoraApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20047',  # noqa: E501
+            response_type='InlineResponse20052',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -176,10 +176,10 @@ class RFNCalculadoraApi(object):
         :param float tir: Tasa usada para valorizar (required)
         :param float nominal: Nominal a valorizar. Si no se carga se asume 1000
         :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
-        :return: InlineResponse20046
+        :return: InlineResponse20051
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20046 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20051 | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -203,10 +203,10 @@ class RFNCalculadoraApi(object):
         :param float tir: Tasa usada para valorizar (required)
         :param float nominal: Nominal a valorizar. Si no se carga se asume 1000
         :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
-        :return: InlineResponse20046
+        :return: InlineResponse20051
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20046 | multiprocessing.pool.ApplyResult
+        :rtype: InlineResponse20051 | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha', 'tir', 'nominal', 'condicion_pago']  # noqa: E501
@@ -274,7 +274,7 @@ class RFNCalculadoraApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20046',  # noqa: E501
+            response_type='InlineResponse20051',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -35,40 +35,22 @@ class InlineResponse20013Message(object):
         'id': 'str',
         'short_name': 'str',
         'long_name': 'str',
-        'id_moneda': 'str',
-        'id_base_tasa': 'str',
-        'id_familia_curva': 'str',
-        'tiene_intraday': 'int',
-        'unidad_tiempo': 'str',
-        'plazo_max': 'float',
-        'plazo_min': 'float'
+        'id_grupo_padre': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'short_name': 'shortName',
         'long_name': 'longName',
-        'id_moneda': 'idMoneda',
-        'id_base_tasa': 'idBaseTasa',
-        'id_familia_curva': 'idFamiliaCurva',
-        'tiene_intraday': 'tieneIntraday',
-        'unidad_tiempo': 'unidadTiempo',
-        'plazo_max': 'plazoMax',
-        'plazo_min': 'plazoMin'
+        'id_grupo_padre': 'idGrupoPadre'
     }
 
-    def __init__(self, id=None, short_name=None, long_name=None, id_moneda=None, id_base_tasa=None, id_familia_curva=None, tiene_intraday=None, unidad_tiempo=None, plazo_max=None, plazo_min=None):  # noqa: E501
+    def __init__(self, id=None, short_name=None, long_name=None, id_grupo_padre=None):  # noqa: E501
         """InlineResponse20013Message - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._short_name = None
         self._long_name = None
-        self._id_moneda = None
-        self._id_base_tasa = None
-        self._id_familia_curva = None
-        self._tiene_intraday = None
-        self._unidad_tiempo = None
-        self._plazo_max = None
-        self._plazo_min = None
+        self._id_grupo_padre = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -76,25 +58,13 @@ class InlineResponse20013Message(object):
             self.short_name = short_name
         if long_name is not None:
             self.long_name = long_name
-        if id_moneda is not None:
-            self.id_moneda = id_moneda
-        if id_base_tasa is not None:
-            self.id_base_tasa = id_base_tasa
-        if id_familia_curva is not None:
-            self.id_familia_curva = id_familia_curva
-        if tiene_intraday is not None:
-            self.tiene_intraday = tiene_intraday
-        if unidad_tiempo is not None:
-            self.unidad_tiempo = unidad_tiempo
-        if plazo_max is not None:
-            self.plazo_max = plazo_max
-        if plazo_min is not None:
-            self.plazo_min = plazo_min
+        if id_grupo_padre is not None:
+            self.id_grupo_padre = id_grupo_padre
 
     @property
     def id(self):
         """Gets the id of this InlineResponse20013Message.  # noqa: E501
-        Identificador de la Curva  # noqa: E501
+        Identificador de RiskAmerica para el Grupo  # noqa: E501
 
         :return: The id of this InlineResponse20013Message.  # noqa: E501
         :rtype: str
@@ -105,7 +75,7 @@ class InlineResponse20013Message(object):
     def id(self, id):
         """Sets the id of this InlineResponse20013Message.
 
-        Identificador de la Curva  # noqa: E501
+        Identificador de RiskAmerica para el Grupo  # noqa: E501
 
         :param id: The id of this InlineResponse20013Message.  # noqa: E501
         :type: str
@@ -116,7 +86,7 @@ class InlineResponse20013Message(object):
     @property
     def short_name(self):
         """Gets the short_name of this InlineResponse20013Message.  # noqa: E501
-        Nombre corto de la Curva  # noqa: E501
+        Nombre corto del Grupo  # noqa: E501
 
         :return: The short_name of this InlineResponse20013Message.  # noqa: E501
         :rtype: str
@@ -127,7 +97,7 @@ class InlineResponse20013Message(object):
     def short_name(self, short_name):
         """Sets the short_name of this InlineResponse20013Message.
 
-        Nombre corto de la Curva  # noqa: E501
+        Nombre corto del Grupo  # noqa: E501
 
         :param short_name: The short_name of this InlineResponse20013Message.  # noqa: E501
         :type: str
@@ -138,7 +108,7 @@ class InlineResponse20013Message(object):
     @property
     def long_name(self):
         """Gets the long_name of this InlineResponse20013Message.  # noqa: E501
-        Nombre largo de la Curva  # noqa: E501
+        Nombre largo del Grupo  # noqa: E501
 
         :return: The long_name of this InlineResponse20013Message.  # noqa: E501
         :rtype: str
@@ -149,7 +119,7 @@ class InlineResponse20013Message(object):
     def long_name(self, long_name):
         """Sets the long_name of this InlineResponse20013Message.
 
-        Nombre largo de la Curva  # noqa: E501
+        Nombre largo del Grupo  # noqa: E501
 
         :param long_name: The long_name of this InlineResponse20013Message.  # noqa: E501
         :type: str
@@ -158,158 +128,26 @@ class InlineResponse20013Message(object):
         self._long_name = long_name
 
     @property
-    def id_moneda(self):
-        """Gets the id_moneda of this InlineResponse20013Message.  # noqa: E501
-        Moneda base de la Curva  # noqa: E501
+    def id_grupo_padre(self):
+        """Gets the id_grupo_padre of this InlineResponse20013Message.  # noqa: E501
+        Identificador del Grupo Padre al cual pertenece este Grupo dentro de la jerarquía de grupos  # noqa: E501
 
-        :return: The id_moneda of this InlineResponse20013Message.  # noqa: E501
+        :return: The id_grupo_padre of this InlineResponse20013Message.  # noqa: E501
         :rtype: str
         """
-        return self._id_moneda
+        return self._id_grupo_padre
 
-    @id_moneda.setter
-    def id_moneda(self, id_moneda):
-        """Sets the id_moneda of this InlineResponse20013Message.
+    @id_grupo_padre.setter
+    def id_grupo_padre(self, id_grupo_padre):
+        """Sets the id_grupo_padre of this InlineResponse20013Message.
 
-        Moneda base de la Curva  # noqa: E501
+        Identificador del Grupo Padre al cual pertenece este Grupo dentro de la jerarquía de grupos  # noqa: E501
 
-        :param id_moneda: The id_moneda of this InlineResponse20013Message.  # noqa: E501
+        :param id_grupo_padre: The id_grupo_padre of this InlineResponse20013Message.  # noqa: E501
         :type: str
         """
 
-        self._id_moneda = id_moneda
-
-    @property
-    def id_base_tasa(self):
-        """Gets the id_base_tasa of this InlineResponse20013Message.  # noqa: E501
-        Identificador de la Tasa Base de la Curva  # noqa: E501
-
-        :return: The id_base_tasa of this InlineResponse20013Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_base_tasa
-
-    @id_base_tasa.setter
-    def id_base_tasa(self, id_base_tasa):
-        """Sets the id_base_tasa of this InlineResponse20013Message.
-
-        Identificador de la Tasa Base de la Curva  # noqa: E501
-
-        :param id_base_tasa: The id_base_tasa of this InlineResponse20013Message.  # noqa: E501
-        :type: str
-        """
-
-        self._id_base_tasa = id_base_tasa
-
-    @property
-    def id_familia_curva(self):
-        """Gets the id_familia_curva of this InlineResponse20013Message.  # noqa: E501
-        Identificador de la Familia de la Curva  # noqa: E501
-
-        :return: The id_familia_curva of this InlineResponse20013Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_familia_curva
-
-    @id_familia_curva.setter
-    def id_familia_curva(self, id_familia_curva):
-        """Sets the id_familia_curva of this InlineResponse20013Message.
-
-        Identificador de la Familia de la Curva  # noqa: E501
-
-        :param id_familia_curva: The id_familia_curva of this InlineResponse20013Message.  # noqa: E501
-        :type: str
-        """
-
-        self._id_familia_curva = id_familia_curva
-
-    @property
-    def tiene_intraday(self):
-        """Gets the tiene_intraday of this InlineResponse20013Message.  # noqa: E501
-        Detalla si la Curva tiene valores Intraday (1 = si, 0 = no)  # noqa: E501
-
-        :return: The tiene_intraday of this InlineResponse20013Message.  # noqa: E501
-        :rtype: int
-        """
-        return self._tiene_intraday
-
-    @tiene_intraday.setter
-    def tiene_intraday(self, tiene_intraday):
-        """Sets the tiene_intraday of this InlineResponse20013Message.
-
-        Detalla si la Curva tiene valores Intraday (1 = si, 0 = no)  # noqa: E501
-
-        :param tiene_intraday: The tiene_intraday of this InlineResponse20013Message.  # noqa: E501
-        :type: int
-        """
-
-        self._tiene_intraday = tiene_intraday
-
-    @property
-    def unidad_tiempo(self):
-        """Gets the unidad_tiempo of this InlineResponse20013Message.  # noqa: E501
-        Unidad de tiempo base para la Curva  # noqa: E501
-
-        :return: The unidad_tiempo of this InlineResponse20013Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._unidad_tiempo
-
-    @unidad_tiempo.setter
-    def unidad_tiempo(self, unidad_tiempo):
-        """Sets the unidad_tiempo of this InlineResponse20013Message.
-
-        Unidad de tiempo base para la Curva  # noqa: E501
-
-        :param unidad_tiempo: The unidad_tiempo of this InlineResponse20013Message.  # noqa: E501
-        :type: str
-        """
-
-        self._unidad_tiempo = unidad_tiempo
-
-    @property
-    def plazo_max(self):
-        """Gets the plazo_max of this InlineResponse20013Message.  # noqa: E501
-        Plazo máximo en unidades de tiempo base de la curva  # noqa: E501
-
-        :return: The plazo_max of this InlineResponse20013Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._plazo_max
-
-    @plazo_max.setter
-    def plazo_max(self, plazo_max):
-        """Sets the plazo_max of this InlineResponse20013Message.
-
-        Plazo máximo en unidades de tiempo base de la curva  # noqa: E501
-
-        :param plazo_max: The plazo_max of this InlineResponse20013Message.  # noqa: E501
-        :type: float
-        """
-
-        self._plazo_max = plazo_max
-
-    @property
-    def plazo_min(self):
-        """Gets the plazo_min of this InlineResponse20013Message.  # noqa: E501
-        Plazo mínimo en unidades de tiempo base de la curva  # noqa: E501
-
-        :return: The plazo_min of this InlineResponse20013Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._plazo_min
-
-    @plazo_min.setter
-    def plazo_min(self, plazo_min):
-        """Sets the plazo_min of this InlineResponse20013Message.
-
-        Plazo mínimo en unidades de tiempo base de la curva  # noqa: E501
-
-        :param plazo_min: The plazo_min of this InlineResponse20013Message.  # noqa: E501
-        :type: float
-        """
-
-        self._plazo_min = plazo_min
+        self._id_grupo_padre = id_grupo_padre
 
     def to_dict(self):
         """Returns the model properties as a dict"""

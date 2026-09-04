@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20052_message_valorizacion import InlineResponse20052MessageValorizacion
 
 
 
@@ -32,122 +33,39 @@ class InlineResponse20052Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'nombre': 'str',
-        'aplicacion': 'str',
-        'fecha_inicio': 'date'
+        'valorizacion': 'InlineResponse20052MessageValorizacion'
     }
 
     attribute_map = {
-        'id': 'id',
-        'nombre': 'nombre',
-        'aplicacion': 'aplicacion',
-        'fecha_inicio': 'fechaInicio'
+        'valorizacion': 'Valorizacion'
     }
 
-    def __init__(self, id=None, nombre=None, aplicacion=None, fecha_inicio=None):  # noqa: E501
+    def __init__(self, valorizacion=None):  # noqa: E501
         """InlineResponse20052Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._nombre = None
-        self._aplicacion = None
-        self._fecha_inicio = None
+        self._valorizacion = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if nombre is not None:
-            self.nombre = nombre
-        if aplicacion is not None:
-            self.aplicacion = aplicacion
-        if fecha_inicio is not None:
-            self.fecha_inicio = fecha_inicio
+        if valorizacion is not None:
+            self.valorizacion = valorizacion
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20052Message.  # noqa: E501
-        Identificador del fondo  # noqa: E501
+    def valorizacion(self):
+        """Gets the valorizacion of this InlineResponse20052Message.  # noqa: E501
 
-        :return: The id of this InlineResponse20052Message.  # noqa: E501
-        :rtype: int
+        :return: The valorizacion of this InlineResponse20052Message.  # noqa: E501
+        :rtype: InlineResponse20052MessageValorizacion
         """
-        return self._id
+        return self._valorizacion
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20052Message.
+    @valorizacion.setter
+    def valorizacion(self, valorizacion):
+        """Sets the valorizacion of this InlineResponse20052Message.
 
-        Identificador del fondo  # noqa: E501
 
-        :param id: The id of this InlineResponse20052Message.  # noqa: E501
-        :type: int
+        :param valorizacion: The valorizacion of this InlineResponse20052Message.  # noqa: E501
+        :type: InlineResponse20052MessageValorizacion
         """
 
-        self._id = id
-
-    @property
-    def nombre(self):
-        """Gets the nombre of this InlineResponse20052Message.  # noqa: E501
-        Nombre del fondo  # noqa: E501
-
-        :return: The nombre of this InlineResponse20052Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._nombre
-
-    @nombre.setter
-    def nombre(self, nombre):
-        """Sets the nombre of this InlineResponse20052Message.
-
-        Nombre del fondo  # noqa: E501
-
-        :param nombre: The nombre of this InlineResponse20052Message.  # noqa: E501
-        :type: str
-        """
-
-        self._nombre = nombre
-
-    @property
-    def aplicacion(self):
-        """Gets the aplicacion of this InlineResponse20052Message.  # noqa: E501
-        Aplicacion  # noqa: E501
-
-        :return: The aplicacion of this InlineResponse20052Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._aplicacion
-
-    @aplicacion.setter
-    def aplicacion(self, aplicacion):
-        """Sets the aplicacion of this InlineResponse20052Message.
-
-        Aplicacion  # noqa: E501
-
-        :param aplicacion: The aplicacion of this InlineResponse20052Message.  # noqa: E501
-        :type: str
-        """
-
-        self._aplicacion = aplicacion
-
-    @property
-    def fecha_inicio(self):
-        """Gets the fecha_inicio of this InlineResponse20052Message.  # noqa: E501
-        fecha de Inicio del Ejercicio  # noqa: E501
-
-        :return: The fecha_inicio of this InlineResponse20052Message.  # noqa: E501
-        :rtype: date
-        """
-        return self._fecha_inicio
-
-    @fecha_inicio.setter
-    def fecha_inicio(self, fecha_inicio):
-        """Sets the fecha_inicio of this InlineResponse20052Message.
-
-        fecha de Inicio del Ejercicio  # noqa: E501
-
-        :param fecha_inicio: The fecha_inicio of this InlineResponse20052Message.  # noqa: E501
-        :type: date
-        """
-
-        self._fecha_inicio = fecha_inicio
+        self._valorizacion = valorizacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

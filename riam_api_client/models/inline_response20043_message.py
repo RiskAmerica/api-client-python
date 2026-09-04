@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20043_clasificacion import InlineResponse20043Clasificacion
 
 
 
@@ -32,29 +33,55 @@ class InlineResponse20043Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'nemo': 'str',
         'fecha': 'date',
-        'ncg376': 'float'
+        'clasificacion': 'InlineResponse20043Clasificacion'
     }
 
     attribute_map = {
-        'fecha': 'fecha',
-        'ncg376': 'ncg376'
+        'nemo': 'nemo',
+        'fecha': 'Fecha',
+        'clasificacion': 'Clasificacion'
     }
 
-    def __init__(self, fecha=None, ncg376=None):  # noqa: E501
+    def __init__(self, nemo=None, fecha=None, clasificacion=None):  # noqa: E501
         """InlineResponse20043Message - a model defined in Swagger"""  # noqa: E501
+        self._nemo = None
         self._fecha = None
-        self._ncg376 = None
+        self._clasificacion = None
         self.discriminator = None
+        if nemo is not None:
+            self.nemo = nemo
         if fecha is not None:
             self.fecha = fecha
-        if ncg376 is not None:
-            self.ncg376 = ncg376
+        if clasificacion is not None:
+            self.clasificacion = clasificacion
+
+    @property
+    def nemo(self):
+        """Gets the nemo of this InlineResponse20043Message.  # noqa: E501
+        Nemotécnico del instrumento  # noqa: E501
+
+        :return: The nemo of this InlineResponse20043Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._nemo
+
+    @nemo.setter
+    def nemo(self, nemo):
+        """Sets the nemo of this InlineResponse20043Message.
+
+        Nemotécnico del instrumento  # noqa: E501
+
+        :param nemo: The nemo of this InlineResponse20043Message.  # noqa: E501
+        :type: str
+        """
+
+        self._nemo = nemo
 
     @property
     def fecha(self):
         """Gets the fecha of this InlineResponse20043Message.  # noqa: E501
-        Fecha del saldo  # noqa: E501
 
         :return: The fecha of this InlineResponse20043Message.  # noqa: E501
         :rtype: date
@@ -65,7 +92,6 @@ class InlineResponse20043Message(object):
     def fecha(self, fecha):
         """Sets the fecha of this InlineResponse20043Message.
 
-        Fecha del saldo  # noqa: E501
 
         :param fecha: The fecha of this InlineResponse20043Message.  # noqa: E501
         :type: date
@@ -74,26 +100,24 @@ class InlineResponse20043Message(object):
         self._fecha = fecha
 
     @property
-    def ncg376(self):
-        """Gets the ncg376 of this InlineResponse20043Message.  # noqa: E501
-        Saldo custodia NCG 376  # noqa: E501
+    def clasificacion(self):
+        """Gets the clasificacion of this InlineResponse20043Message.  # noqa: E501
 
-        :return: The ncg376 of this InlineResponse20043Message.  # noqa: E501
-        :rtype: float
+        :return: The clasificacion of this InlineResponse20043Message.  # noqa: E501
+        :rtype: InlineResponse20043Clasificacion
         """
-        return self._ncg376
+        return self._clasificacion
 
-    @ncg376.setter
-    def ncg376(self, ncg376):
-        """Sets the ncg376 of this InlineResponse20043Message.
+    @clasificacion.setter
+    def clasificacion(self, clasificacion):
+        """Sets the clasificacion of this InlineResponse20043Message.
 
-        Saldo custodia NCG 376  # noqa: E501
 
-        :param ncg376: The ncg376 of this InlineResponse20043Message.  # noqa: E501
-        :type: float
+        :param clasificacion: The clasificacion of this InlineResponse20043Message.  # noqa: E501
+        :type: InlineResponse20043Clasificacion
         """
 
-        self._ncg376 = ncg376
+        self._clasificacion = clasificacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

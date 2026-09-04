@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20047_message_valorizacion import InlineResponse20047MessageValorizacion
 
 
 
@@ -33,39 +32,68 @@ class InlineResponse20047Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'valorizacion': 'InlineResponse20047MessageValorizacion'
+        'fecha': 'date',
+        'saldo_custodia': 'float'
     }
 
     attribute_map = {
-        'valorizacion': 'Valorizacion'
+        'fecha': 'fecha',
+        'saldo_custodia': 'saldoCustodia'
     }
 
-    def __init__(self, valorizacion=None):  # noqa: E501
+    def __init__(self, fecha=None, saldo_custodia=None):  # noqa: E501
         """InlineResponse20047Message - a model defined in Swagger"""  # noqa: E501
-        self._valorizacion = None
+        self._fecha = None
+        self._saldo_custodia = None
         self.discriminator = None
-        if valorizacion is not None:
-            self.valorizacion = valorizacion
+        if fecha is not None:
+            self.fecha = fecha
+        if saldo_custodia is not None:
+            self.saldo_custodia = saldo_custodia
 
     @property
-    def valorizacion(self):
-        """Gets the valorizacion of this InlineResponse20047Message.  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse20047Message.  # noqa: E501
+        Fecha del saldo  # noqa: E501
 
-        :return: The valorizacion of this InlineResponse20047Message.  # noqa: E501
-        :rtype: InlineResponse20047MessageValorizacion
+        :return: The fecha of this InlineResponse20047Message.  # noqa: E501
+        :rtype: date
         """
-        return self._valorizacion
+        return self._fecha
 
-    @valorizacion.setter
-    def valorizacion(self, valorizacion):
-        """Sets the valorizacion of this InlineResponse20047Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse20047Message.
 
+        Fecha del saldo  # noqa: E501
 
-        :param valorizacion: The valorizacion of this InlineResponse20047Message.  # noqa: E501
-        :type: InlineResponse20047MessageValorizacion
+        :param fecha: The fecha of this InlineResponse20047Message.  # noqa: E501
+        :type: date
         """
 
-        self._valorizacion = valorizacion
+        self._fecha = fecha
+
+    @property
+    def saldo_custodia(self):
+        """Gets the saldo_custodia of this InlineResponse20047Message.  # noqa: E501
+        Saldo custodia insoluto  # noqa: E501
+
+        :return: The saldo_custodia of this InlineResponse20047Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._saldo_custodia
+
+    @saldo_custodia.setter
+    def saldo_custodia(self, saldo_custodia):
+        """Sets the saldo_custodia of this InlineResponse20047Message.
+
+        Saldo custodia insoluto  # noqa: E501
+
+        :param saldo_custodia: The saldo_custodia of this InlineResponse20047Message.  # noqa: E501
+        :type: float
+        """
+
+        self._saldo_custodia = saldo_custodia
 
     def to_dict(self):
         """Returns the model properties as a dict"""

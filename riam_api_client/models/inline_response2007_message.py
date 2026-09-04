@@ -35,25 +35,25 @@ class InlineResponse2007Message(object):
         'rut': 'int',
         'serie': 'str',
         'fecha': 'date',
-        'tir_rfnclp': 'float',
-        'tir_rfnuf': 'float'
+        'duracion_rfn': 'float',
+        'duracion_total': 'float'
     }
 
     attribute_map = {
         'rut': 'rut',
         'serie': 'serie',
         'fecha': 'fecha',
-        'tir_rfnclp': 'tirRFNCLP',
-        'tir_rfnuf': 'tirRFNUF'
+        'duracion_rfn': 'duracionRFN',
+        'duracion_total': 'duracionTotal'
     }
 
-    def __init__(self, rut=None, serie=None, fecha=None, tir_rfnclp=None, tir_rfnuf=None):  # noqa: E501
+    def __init__(self, rut=None, serie=None, fecha=None, duracion_rfn=None, duracion_total=None):  # noqa: E501
         """InlineResponse2007Message - a model defined in Swagger"""  # noqa: E501
         self._rut = None
         self._serie = None
         self._fecha = None
-        self._tir_rfnclp = None
-        self._tir_rfnuf = None
+        self._duracion_rfn = None
+        self._duracion_total = None
         self.discriminator = None
         if rut is not None:
             self.rut = rut
@@ -61,10 +61,10 @@ class InlineResponse2007Message(object):
             self.serie = serie
         if fecha is not None:
             self.fecha = fecha
-        if tir_rfnclp is not None:
-            self.tir_rfnclp = tir_rfnclp
-        if tir_rfnuf is not None:
-            self.tir_rfnuf = tir_rfnuf
+        if duracion_rfn is not None:
+            self.duracion_rfn = duracion_rfn
+        if duracion_total is not None:
+            self.duracion_total = duracion_total
 
     @property
     def rut(self):
@@ -133,48 +133,48 @@ class InlineResponse2007Message(object):
         self._fecha = fecha
 
     @property
-    def tir_rfnclp(self):
-        """Gets the tir_rfnclp of this InlineResponse2007Message.  # noqa: E501
-        TIR RFN en Pesos  # noqa: E501
+    def duracion_rfn(self):
+        """Gets the duracion_rfn of this InlineResponse2007Message.  # noqa: E501
+        Duracion RFN  # noqa: E501
 
-        :return: The tir_rfnclp of this InlineResponse2007Message.  # noqa: E501
+        :return: The duracion_rfn of this InlineResponse2007Message.  # noqa: E501
         :rtype: float
         """
-        return self._tir_rfnclp
+        return self._duracion_rfn
 
-    @tir_rfnclp.setter
-    def tir_rfnclp(self, tir_rfnclp):
-        """Sets the tir_rfnclp of this InlineResponse2007Message.
+    @duracion_rfn.setter
+    def duracion_rfn(self, duracion_rfn):
+        """Sets the duracion_rfn of this InlineResponse2007Message.
 
-        TIR RFN en Pesos  # noqa: E501
+        Duracion RFN  # noqa: E501
 
-        :param tir_rfnclp: The tir_rfnclp of this InlineResponse2007Message.  # noqa: E501
+        :param duracion_rfn: The duracion_rfn of this InlineResponse2007Message.  # noqa: E501
         :type: float
         """
 
-        self._tir_rfnclp = tir_rfnclp
+        self._duracion_rfn = duracion_rfn
 
     @property
-    def tir_rfnuf(self):
-        """Gets the tir_rfnuf of this InlineResponse2007Message.  # noqa: E501
-        TIR RFN en UF  # noqa: E501
+    def duracion_total(self):
+        """Gets the duracion_total of this InlineResponse2007Message.  # noqa: E501
+        Duracion Total  # noqa: E501
 
-        :return: The tir_rfnuf of this InlineResponse2007Message.  # noqa: E501
+        :return: The duracion_total of this InlineResponse2007Message.  # noqa: E501
         :rtype: float
         """
-        return self._tir_rfnuf
+        return self._duracion_total
 
-    @tir_rfnuf.setter
-    def tir_rfnuf(self, tir_rfnuf):
-        """Sets the tir_rfnuf of this InlineResponse2007Message.
+    @duracion_total.setter
+    def duracion_total(self, duracion_total):
+        """Sets the duracion_total of this InlineResponse2007Message.
 
-        TIR RFN en UF  # noqa: E501
+        Duracion Total  # noqa: E501
 
-        :param tir_rfnuf: The tir_rfnuf of this InlineResponse2007Message.  # noqa: E501
+        :param duracion_total: The duracion_total of this InlineResponse2007Message.  # noqa: E501
         :type: float
         """
 
-        self._tir_rfnuf = tir_rfnuf
+        self._duracion_total = duracion_total
 
     def to_dict(self):
         """Returns the model properties as a dict"""

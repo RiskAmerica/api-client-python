@@ -32,257 +32,203 @@ class InlineResponse2008Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'cod': 'str',
-        'short_name': 'str',
-        'long_name': 'str',
-        'fecha_creacion': 'date',
-        'fecha_inicio': 'date',
-        'id_dias_con_retornos': 'int',
-        'id_grupo': 'str',
-        'ticker_bloomberg': 'str'
+        'rut': 'int',
+        'serie': 'str',
+        'fecha': 'date',
+        'tac_remuneracion_fija': 'float',
+        'tac_remuneracion_variable': 'float',
+        'tac_gastos_operacionales': 'float',
+        'tac_total': 'float'
     }
 
     attribute_map = {
-        'id': 'id',
-        'cod': 'cod',
-        'short_name': 'shortName',
-        'long_name': 'longName',
-        'fecha_creacion': 'fechaCreacion',
-        'fecha_inicio': 'fechaInicio',
-        'id_dias_con_retornos': 'idDiasConRetornos',
-        'id_grupo': 'idGrupo',
-        'ticker_bloomberg': 'tickerBloomberg'
+        'rut': 'rut',
+        'serie': 'serie',
+        'fecha': 'fecha',
+        'tac_remuneracion_fija': 'tacRemuneracionFija',
+        'tac_remuneracion_variable': 'tacRemuneracionVariable',
+        'tac_gastos_operacionales': 'tacGastosOperacionales',
+        'tac_total': 'tacTotal'
     }
 
-    def __init__(self, id=None, cod=None, short_name=None, long_name=None, fecha_creacion=None, fecha_inicio=None, id_dias_con_retornos=None, id_grupo=None, ticker_bloomberg=None):  # noqa: E501
+    def __init__(self, rut=None, serie=None, fecha=None, tac_remuneracion_fija=None, tac_remuneracion_variable=None, tac_gastos_operacionales=None, tac_total=None):  # noqa: E501
         """InlineResponse2008Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._cod = None
-        self._short_name = None
-        self._long_name = None
-        self._fecha_creacion = None
-        self._fecha_inicio = None
-        self._id_dias_con_retornos = None
-        self._id_grupo = None
-        self._ticker_bloomberg = None
+        self._rut = None
+        self._serie = None
+        self._fecha = None
+        self._tac_remuneracion_fija = None
+        self._tac_remuneracion_variable = None
+        self._tac_gastos_operacionales = None
+        self._tac_total = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if cod is not None:
-            self.cod = cod
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
-        if fecha_creacion is not None:
-            self.fecha_creacion = fecha_creacion
-        if fecha_inicio is not None:
-            self.fecha_inicio = fecha_inicio
-        if id_dias_con_retornos is not None:
-            self.id_dias_con_retornos = id_dias_con_retornos
-        if id_grupo is not None:
-            self.id_grupo = id_grupo
-        if ticker_bloomberg is not None:
-            self.ticker_bloomberg = ticker_bloomberg
+        if rut is not None:
+            self.rut = rut
+        if serie is not None:
+            self.serie = serie
+        if fecha is not None:
+            self.fecha = fecha
+        if tac_remuneracion_fija is not None:
+            self.tac_remuneracion_fija = tac_remuneracion_fija
+        if tac_remuneracion_variable is not None:
+            self.tac_remuneracion_variable = tac_remuneracion_variable
+        if tac_gastos_operacionales is not None:
+            self.tac_gastos_operacionales = tac_gastos_operacionales
+        if tac_total is not None:
+            self.tac_total = tac_total
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse2008Message.  # noqa: E501
-        Identificador de RiskAmerica para el Índice  # noqa: E501
+    def rut(self):
+        """Gets the rut of this InlineResponse2008Message.  # noqa: E501
+        Rut del Fondo (sin dígito verificador)  # noqa: E501
 
-        :return: The id of this InlineResponse2008Message.  # noqa: E501
+        :return: The rut of this InlineResponse2008Message.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._rut
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse2008Message.
+    @rut.setter
+    def rut(self, rut):
+        """Sets the rut of this InlineResponse2008Message.
 
-        Identificador de RiskAmerica para el Índice  # noqa: E501
+        Rut del Fondo (sin dígito verificador)  # noqa: E501
 
-        :param id: The id of this InlineResponse2008Message.  # noqa: E501
+        :param rut: The rut of this InlineResponse2008Message.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._rut = rut
 
     @property
-    def cod(self):
-        """Gets the cod of this InlineResponse2008Message.  # noqa: E501
-        Código del Índice  # noqa: E501
+    def serie(self):
+        """Gets the serie of this InlineResponse2008Message.  # noqa: E501
+        Código de la serie  # noqa: E501
 
-        :return: The cod of this InlineResponse2008Message.  # noqa: E501
+        :return: The serie of this InlineResponse2008Message.  # noqa: E501
         :rtype: str
         """
-        return self._cod
+        return self._serie
 
-    @cod.setter
-    def cod(self, cod):
-        """Sets the cod of this InlineResponse2008Message.
+    @serie.setter
+    def serie(self, serie):
+        """Sets the serie of this InlineResponse2008Message.
 
-        Código del Índice  # noqa: E501
+        Código de la serie  # noqa: E501
 
-        :param cod: The cod of this InlineResponse2008Message.  # noqa: E501
+        :param serie: The serie of this InlineResponse2008Message.  # noqa: E501
         :type: str
         """
 
-        self._cod = cod
+        self._serie = serie
 
     @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse2008Message.  # noqa: E501
-        Nombre corto del Índice  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse2008Message.  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :return: The short_name of this InlineResponse2008Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._short_name
-
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse2008Message.
-
-        Nombre corto del Índice  # noqa: E501
-
-        :param short_name: The short_name of this InlineResponse2008Message.  # noqa: E501
-        :type: str
-        """
-
-        self._short_name = short_name
-
-    @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse2008Message.  # noqa: E501
-        Nombre largo del Índice  # noqa: E501
-
-        :return: The long_name of this InlineResponse2008Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._long_name
-
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse2008Message.
-
-        Nombre largo del Índice  # noqa: E501
-
-        :param long_name: The long_name of this InlineResponse2008Message.  # noqa: E501
-        :type: str
-        """
-
-        self._long_name = long_name
-
-    @property
-    def fecha_creacion(self):
-        """Gets the fecha_creacion of this InlineResponse2008Message.  # noqa: E501
-        Fecha de la creación del Índice  # noqa: E501
-
-        :return: The fecha_creacion of this InlineResponse2008Message.  # noqa: E501
+        :return: The fecha of this InlineResponse2008Message.  # noqa: E501
         :rtype: date
         """
-        return self._fecha_creacion
+        return self._fecha
 
-    @fecha_creacion.setter
-    def fecha_creacion(self, fecha_creacion):
-        """Sets the fecha_creacion of this InlineResponse2008Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse2008Message.
 
-        Fecha de la creación del Índice  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :param fecha_creacion: The fecha_creacion of this InlineResponse2008Message.  # noqa: E501
+        :param fecha: The fecha of this InlineResponse2008Message.  # noqa: E501
         :type: date
         """
 
-        self._fecha_creacion = fecha_creacion
+        self._fecha = fecha
 
     @property
-    def fecha_inicio(self):
-        """Gets the fecha_inicio of this InlineResponse2008Message.  # noqa: E501
-        Fecha desde la cual el Índice tiene datos  # noqa: E501
+    def tac_remuneracion_fija(self):
+        """Gets the tac_remuneracion_fija of this InlineResponse2008Message.  # noqa: E501
+        TAC de remuneración fija (%)  # noqa: E501
 
-        :return: The fecha_inicio of this InlineResponse2008Message.  # noqa: E501
-        :rtype: date
+        :return: The tac_remuneracion_fija of this InlineResponse2008Message.  # noqa: E501
+        :rtype: float
         """
-        return self._fecha_inicio
+        return self._tac_remuneracion_fija
 
-    @fecha_inicio.setter
-    def fecha_inicio(self, fecha_inicio):
-        """Sets the fecha_inicio of this InlineResponse2008Message.
+    @tac_remuneracion_fija.setter
+    def tac_remuneracion_fija(self, tac_remuneracion_fija):
+        """Sets the tac_remuneracion_fija of this InlineResponse2008Message.
 
-        Fecha desde la cual el Índice tiene datos  # noqa: E501
+        TAC de remuneración fija (%)  # noqa: E501
 
-        :param fecha_inicio: The fecha_inicio of this InlineResponse2008Message.  # noqa: E501
-        :type: date
+        :param tac_remuneracion_fija: The tac_remuneracion_fija of this InlineResponse2008Message.  # noqa: E501
+        :type: float
         """
 
-        self._fecha_inicio = fecha_inicio
+        self._tac_remuneracion_fija = tac_remuneracion_fija
 
     @property
-    def id_dias_con_retornos(self):
-        """Gets the id_dias_con_retornos of this InlineResponse2008Message.  # noqa: E501
-        Identificador de los Días que el Índice tiene Retornos  # noqa: E501
+    def tac_remuneracion_variable(self):
+        """Gets the tac_remuneracion_variable of this InlineResponse2008Message.  # noqa: E501
+        TAC de remuneración variable (%)  # noqa: E501
 
-        :return: The id_dias_con_retornos of this InlineResponse2008Message.  # noqa: E501
-        :rtype: int
+        :return: The tac_remuneracion_variable of this InlineResponse2008Message.  # noqa: E501
+        :rtype: float
         """
-        return self._id_dias_con_retornos
+        return self._tac_remuneracion_variable
 
-    @id_dias_con_retornos.setter
-    def id_dias_con_retornos(self, id_dias_con_retornos):
-        """Sets the id_dias_con_retornos of this InlineResponse2008Message.
+    @tac_remuneracion_variable.setter
+    def tac_remuneracion_variable(self, tac_remuneracion_variable):
+        """Sets the tac_remuneracion_variable of this InlineResponse2008Message.
 
-        Identificador de los Días que el Índice tiene Retornos  # noqa: E501
+        TAC de remuneración variable (%)  # noqa: E501
 
-        :param id_dias_con_retornos: The id_dias_con_retornos of this InlineResponse2008Message.  # noqa: E501
-        :type: int
+        :param tac_remuneracion_variable: The tac_remuneracion_variable of this InlineResponse2008Message.  # noqa: E501
+        :type: float
         """
 
-        self._id_dias_con_retornos = id_dias_con_retornos
+        self._tac_remuneracion_variable = tac_remuneracion_variable
 
     @property
-    def id_grupo(self):
-        """Gets the id_grupo of this InlineResponse2008Message.  # noqa: E501
-        Identificador del grupo al que pertenece el Índice  # noqa: E501
+    def tac_gastos_operacionales(self):
+        """Gets the tac_gastos_operacionales of this InlineResponse2008Message.  # noqa: E501
+        TAC de gastos (%)  # noqa: E501
 
-        :return: The id_grupo of this InlineResponse2008Message.  # noqa: E501
-        :rtype: str
+        :return: The tac_gastos_operacionales of this InlineResponse2008Message.  # noqa: E501
+        :rtype: float
         """
-        return self._id_grupo
+        return self._tac_gastos_operacionales
 
-    @id_grupo.setter
-    def id_grupo(self, id_grupo):
-        """Sets the id_grupo of this InlineResponse2008Message.
+    @tac_gastos_operacionales.setter
+    def tac_gastos_operacionales(self, tac_gastos_operacionales):
+        """Sets the tac_gastos_operacionales of this InlineResponse2008Message.
 
-        Identificador del grupo al que pertenece el Índice  # noqa: E501
+        TAC de gastos (%)  # noqa: E501
 
-        :param id_grupo: The id_grupo of this InlineResponse2008Message.  # noqa: E501
-        :type: str
+        :param tac_gastos_operacionales: The tac_gastos_operacionales of this InlineResponse2008Message.  # noqa: E501
+        :type: float
         """
 
-        self._id_grupo = id_grupo
+        self._tac_gastos_operacionales = tac_gastos_operacionales
 
     @property
-    def ticker_bloomberg(self):
-        """Gets the ticker_bloomberg of this InlineResponse2008Message.  # noqa: E501
-        Ticker del Índice en Bloomberg  # noqa: E501
+    def tac_total(self):
+        """Gets the tac_total of this InlineResponse2008Message.  # noqa: E501
+        Tasa Anual de Costo (%)  # noqa: E501
 
-        :return: The ticker_bloomberg of this InlineResponse2008Message.  # noqa: E501
-        :rtype: str
+        :return: The tac_total of this InlineResponse2008Message.  # noqa: E501
+        :rtype: float
         """
-        return self._ticker_bloomberg
+        return self._tac_total
 
-    @ticker_bloomberg.setter
-    def ticker_bloomberg(self, ticker_bloomberg):
-        """Sets the ticker_bloomberg of this InlineResponse2008Message.
+    @tac_total.setter
+    def tac_total(self, tac_total):
+        """Sets the tac_total of this InlineResponse2008Message.
 
-        Ticker del Índice en Bloomberg  # noqa: E501
+        Tasa Anual de Costo (%)  # noqa: E501
 
-        :param ticker_bloomberg: The ticker_bloomberg of this InlineResponse2008Message.  # noqa: E501
-        :type: str
+        :param tac_total: The tac_total of this InlineResponse2008Message.  # noqa: E501
+        :type: float
         """
 
-        self._ticker_bloomberg = ticker_bloomberg
+        self._tac_total = tac_total
 
     def to_dict(self):
         """Returns the model properties as a dict"""

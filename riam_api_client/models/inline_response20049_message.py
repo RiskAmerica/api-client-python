@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20049_message_issues import InlineResponse20049MessageIssues
+from .inline_response20049_message_tabla_desarrollo import InlineResponse20049MessageTablaDesarrollo
 
 
 
@@ -33,66 +33,39 @@ class InlineResponse20049Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'status': 'str',
-        'issues': 'list[InlineResponse20049MessageIssues]'
+        'tabla_desarrollo': 'list[InlineResponse20049MessageTablaDesarrollo]'
     }
 
     attribute_map = {
-        'status': 'status',
-        'issues': 'issues'
+        'tabla_desarrollo': 'TablaDesarrollo'
     }
 
-    def __init__(self, status=None, issues=None):  # noqa: E501
+    def __init__(self, tabla_desarrollo=None):  # noqa: E501
         """InlineResponse20049Message - a model defined in Swagger"""  # noqa: E501
-        self._status = None
-        self._issues = None
+        self._tabla_desarrollo = None
         self.discriminator = None
-        if status is not None:
-            self.status = status
-        if issues is not None:
-            self.issues = issues
+        if tabla_desarrollo is not None:
+            self.tabla_desarrollo = tabla_desarrollo
 
     @property
-    def status(self):
-        """Gets the status of this InlineResponse20049Message.  # noqa: E501
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+    def tabla_desarrollo(self):
+        """Gets the tabla_desarrollo of this InlineResponse20049Message.  # noqa: E501
 
-        :return: The status of this InlineResponse20049Message.  # noqa: E501
-        :rtype: str
+        :return: The tabla_desarrollo of this InlineResponse20049Message.  # noqa: E501
+        :rtype: list[InlineResponse20049MessageTablaDesarrollo]
         """
-        return self._status
+        return self._tabla_desarrollo
 
-    @status.setter
-    def status(self, status):
-        """Sets the status of this InlineResponse20049Message.
+    @tabla_desarrollo.setter
+    def tabla_desarrollo(self, tabla_desarrollo):
+        """Sets the tabla_desarrollo of this InlineResponse20049Message.
 
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
 
-        :param status: The status of this InlineResponse20049Message.  # noqa: E501
-        :type: str
+        :param tabla_desarrollo: The tabla_desarrollo of this InlineResponse20049Message.  # noqa: E501
+        :type: list[InlineResponse20049MessageTablaDesarrollo]
         """
 
-        self._status = status
-
-    @property
-    def issues(self):
-        """Gets the issues of this InlineResponse20049Message.  # noqa: E501
-
-        :return: The issues of this InlineResponse20049Message.  # noqa: E501
-        :rtype: list[InlineResponse20049MessageIssues]
-        """
-        return self._issues
-
-    @issues.setter
-    def issues(self, issues):
-        """Sets the issues of this InlineResponse20049Message.
-
-
-        :param issues: The issues of this InlineResponse20049Message.  # noqa: E501
-        :type: list[InlineResponse20049MessageIssues]
-        """
-
-        self._issues = issues
+        self._tabla_desarrollo = tabla_desarrollo
 
     def to_dict(self):
         """Returns the model properties as a dict"""

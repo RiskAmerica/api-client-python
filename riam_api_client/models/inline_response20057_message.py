@@ -32,41 +32,122 @@ class InlineResponse20057Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'archivo': 'str'
+        'id': 'int',
+        'nombre': 'str',
+        'aplicacion': 'str',
+        'fecha_inicio': 'date'
     }
 
     attribute_map = {
-        'archivo': 'archivo'
+        'id': 'id',
+        'nombre': 'nombre',
+        'aplicacion': 'aplicacion',
+        'fecha_inicio': 'fechaInicio'
     }
 
-    def __init__(self, archivo=None):  # noqa: E501
+    def __init__(self, id=None, nombre=None, aplicacion=None, fecha_inicio=None):  # noqa: E501
         """InlineResponse20057Message - a model defined in Swagger"""  # noqa: E501
-        self._archivo = None
+        self._id = None
+        self._nombre = None
+        self._aplicacion = None
+        self._fecha_inicio = None
         self.discriminator = None
-        if archivo is not None:
-            self.archivo = archivo
+        if id is not None:
+            self.id = id
+        if nombre is not None:
+            self.nombre = nombre
+        if aplicacion is not None:
+            self.aplicacion = aplicacion
+        if fecha_inicio is not None:
+            self.fecha_inicio = fecha_inicio
 
     @property
-    def archivo(self):
-        """Gets the archivo of this InlineResponse20057Message.  # noqa: E501
-        Archivo XML con los resultados del ajuste  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20057Message.  # noqa: E501
+        Identificador del fondo  # noqa: E501
 
-        :return: The archivo of this InlineResponse20057Message.  # noqa: E501
+        :return: The id of this InlineResponse20057Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20057Message.
+
+        Identificador del fondo  # noqa: E501
+
+        :param id: The id of this InlineResponse20057Message.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def nombre(self):
+        """Gets the nombre of this InlineResponse20057Message.  # noqa: E501
+        Nombre del fondo  # noqa: E501
+
+        :return: The nombre of this InlineResponse20057Message.  # noqa: E501
         :rtype: str
         """
-        return self._archivo
+        return self._nombre
 
-    @archivo.setter
-    def archivo(self, archivo):
-        """Sets the archivo of this InlineResponse20057Message.
+    @nombre.setter
+    def nombre(self, nombre):
+        """Sets the nombre of this InlineResponse20057Message.
 
-        Archivo XML con los resultados del ajuste  # noqa: E501
+        Nombre del fondo  # noqa: E501
 
-        :param archivo: The archivo of this InlineResponse20057Message.  # noqa: E501
+        :param nombre: The nombre of this InlineResponse20057Message.  # noqa: E501
         :type: str
         """
 
-        self._archivo = archivo
+        self._nombre = nombre
+
+    @property
+    def aplicacion(self):
+        """Gets the aplicacion of this InlineResponse20057Message.  # noqa: E501
+        Aplicacion  # noqa: E501
+
+        :return: The aplicacion of this InlineResponse20057Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._aplicacion
+
+    @aplicacion.setter
+    def aplicacion(self, aplicacion):
+        """Sets the aplicacion of this InlineResponse20057Message.
+
+        Aplicacion  # noqa: E501
+
+        :param aplicacion: The aplicacion of this InlineResponse20057Message.  # noqa: E501
+        :type: str
+        """
+
+        self._aplicacion = aplicacion
+
+    @property
+    def fecha_inicio(self):
+        """Gets the fecha_inicio of this InlineResponse20057Message.  # noqa: E501
+        fecha de Inicio del Ejercicio  # noqa: E501
+
+        :return: The fecha_inicio of this InlineResponse20057Message.  # noqa: E501
+        :rtype: date
+        """
+        return self._fecha_inicio
+
+    @fecha_inicio.setter
+    def fecha_inicio(self, fecha_inicio):
+        """Sets the fecha_inicio of this InlineResponse20057Message.
+
+        fecha de Inicio del Ejercicio  # noqa: E501
+
+        :param fecha_inicio: The fecha_inicio of this InlineResponse20057Message.  # noqa: E501
+        :type: date
+        """
+
+        self._fecha_inicio = fecha_inicio
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,7 +33,6 @@ class InlineResponse20029MessageValorizacion(object):
     """
     swagger_types = {
         'fecha': 'date',
-        'nemotecnico': 'str',
         'tir': 'float',
         'tir_base': 'float',
         'spread': 'float',
@@ -54,7 +53,6 @@ class InlineResponse20029MessageValorizacion(object):
 
     attribute_map = {
         'fecha': 'fecha',
-        'nemotecnico': 'nemotecnico',
         'tir': 'tir',
         'tir_base': 'tirBase',
         'spread': 'spread',
@@ -73,10 +71,9 @@ class InlineResponse20029MessageValorizacion(object):
         'tir_base_curva_swap': 'tirBaseCurvaSwap'
     }
 
-    def __init__(self, fecha=None, nemotecnico=None, tir=None, tir_base=None, spread=None, plazo_residual=None, duracion_macaulay=None, duracion_mod_act365=None, precio_porcentaje_valor_par=None, valor_par=None, convexidad=None, volatilidad=None, monto_clp=None, tir_act365=None, tipo_val=None, clasificacion=None, tir_base_bono_gob=None, tir_base_curva_swap=None):  # noqa: E501
+    def __init__(self, fecha=None, tir=None, tir_base=None, spread=None, plazo_residual=None, duracion_macaulay=None, duracion_mod_act365=None, precio_porcentaje_valor_par=None, valor_par=None, convexidad=None, volatilidad=None, monto_clp=None, tir_act365=None, tipo_val=None, clasificacion=None, tir_base_bono_gob=None, tir_base_curva_swap=None):  # noqa: E501
         """InlineResponse20029MessageValorizacion - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
-        self._nemotecnico = None
         self._tir = None
         self._tir_base = None
         self._spread = None
@@ -96,8 +93,6 @@ class InlineResponse20029MessageValorizacion(object):
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
-        if nemotecnico is not None:
-            self.nemotecnico = nemotecnico
         if tir is not None:
             self.tir = tir
         if tir_base is not None:
@@ -152,28 +147,6 @@ class InlineResponse20029MessageValorizacion(object):
         """
 
         self._fecha = fecha
-
-    @property
-    def nemotecnico(self):
-        """Gets the nemotecnico of this InlineResponse20029MessageValorizacion.  # noqa: E501
-        Nemotécnico del instrumento  # noqa: E501
-
-        :return: The nemotecnico of this InlineResponse20029MessageValorizacion.  # noqa: E501
-        :rtype: str
-        """
-        return self._nemotecnico
-
-    @nemotecnico.setter
-    def nemotecnico(self, nemotecnico):
-        """Sets the nemotecnico of this InlineResponse20029MessageValorizacion.
-
-        Nemotécnico del instrumento  # noqa: E501
-
-        :param nemotecnico: The nemotecnico of this InlineResponse20029MessageValorizacion.  # noqa: E501
-        :type: str
-        """
-
-        self._nemotecnico = nemotecnico
 
     @property
     def tir(self):

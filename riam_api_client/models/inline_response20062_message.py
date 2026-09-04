@@ -32,66 +32,41 @@ class InlineResponse20062Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'estado': 'str',
-        'warnings': 'list[str]'
+        'archivo': 'str'
     }
 
     attribute_map = {
-        'estado': 'estado',
-        'warnings': 'warnings'
+        'archivo': 'archivo'
     }
 
-    def __init__(self, estado=None, warnings=None):  # noqa: E501
+    def __init__(self, archivo=None):  # noqa: E501
         """InlineResponse20062Message - a model defined in Swagger"""  # noqa: E501
-        self._estado = None
-        self._warnings = None
+        self._archivo = None
         self.discriminator = None
-        if estado is not None:
-            self.estado = estado
-        if warnings is not None:
-            self.warnings = warnings
+        if archivo is not None:
+            self.archivo = archivo
 
     @property
-    def estado(self):
-        """Gets the estado of this InlineResponse20062Message.  # noqa: E501
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+    def archivo(self):
+        """Gets the archivo of this InlineResponse20062Message.  # noqa: E501
+        Archivo XML con los resultados del ajuste  # noqa: E501
 
-        :return: The estado of this InlineResponse20062Message.  # noqa: E501
+        :return: The archivo of this InlineResponse20062Message.  # noqa: E501
         :rtype: str
         """
-        return self._estado
+        return self._archivo
 
-    @estado.setter
-    def estado(self, estado):
-        """Sets the estado of this InlineResponse20062Message.
+    @archivo.setter
+    def archivo(self, archivo):
+        """Sets the archivo of this InlineResponse20062Message.
 
-        Estado de la carga (Posibilidades OK y WARNING).  # noqa: E501
+        Archivo XML con los resultados del ajuste  # noqa: E501
 
-        :param estado: The estado of this InlineResponse20062Message.  # noqa: E501
+        :param archivo: The archivo of this InlineResponse20062Message.  # noqa: E501
         :type: str
         """
 
-        self._estado = estado
-
-    @property
-    def warnings(self):
-        """Gets the warnings of this InlineResponse20062Message.  # noqa: E501
-
-        :return: The warnings of this InlineResponse20062Message.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._warnings
-
-    @warnings.setter
-    def warnings(self, warnings):
-        """Sets the warnings of this InlineResponse20062Message.
-
-
-        :param warnings: The warnings of this InlineResponse20062Message.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._warnings = warnings
+        self._archivo = archivo
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
+from .inline_response20051_message_valorizacion import InlineResponse20051MessageValorizacion
 
 
 
@@ -32,122 +33,39 @@ class InlineResponse20051Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'rut': 'int',
-        'nombre': 'str',
-        'identificador_cliente': 'str'
+        'valorizacion': 'InlineResponse20051MessageValorizacion'
     }
 
     attribute_map = {
-        'id': 'id',
-        'rut': 'rut',
-        'nombre': 'nombre',
-        'identificador_cliente': 'identificadorCliente'
+        'valorizacion': 'Valorizacion'
     }
 
-    def __init__(self, id=None, rut=None, nombre=None, identificador_cliente=None):  # noqa: E501
+    def __init__(self, valorizacion=None):  # noqa: E501
         """InlineResponse20051Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._rut = None
-        self._nombre = None
-        self._identificador_cliente = None
+        self._valorizacion = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if rut is not None:
-            self.rut = rut
-        if nombre is not None:
-            self.nombre = nombre
-        if identificador_cliente is not None:
-            self.identificador_cliente = identificador_cliente
+        if valorizacion is not None:
+            self.valorizacion = valorizacion
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20051Message.  # noqa: E501
-        Identificador del fondo  # noqa: E501
+    def valorizacion(self):
+        """Gets the valorizacion of this InlineResponse20051Message.  # noqa: E501
 
-        :return: The id of this InlineResponse20051Message.  # noqa: E501
-        :rtype: int
+        :return: The valorizacion of this InlineResponse20051Message.  # noqa: E501
+        :rtype: InlineResponse20051MessageValorizacion
         """
-        return self._id
+        return self._valorizacion
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20051Message.
+    @valorizacion.setter
+    def valorizacion(self, valorizacion):
+        """Sets the valorizacion of this InlineResponse20051Message.
 
-        Identificador del fondo  # noqa: E501
 
-        :param id: The id of this InlineResponse20051Message.  # noqa: E501
-        :type: int
+        :param valorizacion: The valorizacion of this InlineResponse20051Message.  # noqa: E501
+        :type: InlineResponse20051MessageValorizacion
         """
 
-        self._id = id
-
-    @property
-    def rut(self):
-        """Gets the rut of this InlineResponse20051Message.  # noqa: E501
-        RUT  # noqa: E501
-
-        :return: The rut of this InlineResponse20051Message.  # noqa: E501
-        :rtype: int
-        """
-        return self._rut
-
-    @rut.setter
-    def rut(self, rut):
-        """Sets the rut of this InlineResponse20051Message.
-
-        RUT  # noqa: E501
-
-        :param rut: The rut of this InlineResponse20051Message.  # noqa: E501
-        :type: int
-        """
-
-        self._rut = rut
-
-    @property
-    def nombre(self):
-        """Gets the nombre of this InlineResponse20051Message.  # noqa: E501
-        Nombre del fondo  # noqa: E501
-
-        :return: The nombre of this InlineResponse20051Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._nombre
-
-    @nombre.setter
-    def nombre(self, nombre):
-        """Sets the nombre of this InlineResponse20051Message.
-
-        Nombre del fondo  # noqa: E501
-
-        :param nombre: The nombre of this InlineResponse20051Message.  # noqa: E501
-        :type: str
-        """
-
-        self._nombre = nombre
-
-    @property
-    def identificador_cliente(self):
-        """Gets the identificador_cliente of this InlineResponse20051Message.  # noqa: E501
-        Identificador personalizado  # noqa: E501
-
-        :return: The identificador_cliente of this InlineResponse20051Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._identificador_cliente
-
-    @identificador_cliente.setter
-    def identificador_cliente(self, identificador_cliente):
-        """Sets the identificador_cliente of this InlineResponse20051Message.
-
-        Identificador personalizado  # noqa: E501
-
-        :param identificador_cliente: The identificador_cliente of this InlineResponse20051Message.  # noqa: E501
-        :type: str
-        """
-
-        self._identificador_cliente = identificador_cliente
+        self._valorizacion = valorizacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

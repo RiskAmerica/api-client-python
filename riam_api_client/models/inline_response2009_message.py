@@ -32,122 +32,149 @@ class InlineResponse2009Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'short_name': 'str',
-        'long_name': 'str',
-        'id_grupo_padre': 'str'
+        'rut': 'int',
+        'serie': 'str',
+        'fecha': 'date',
+        'tir_rfnclp': 'float',
+        'tir_rfnuf': 'float'
     }
 
     attribute_map = {
-        'id': 'id',
-        'short_name': 'shortName',
-        'long_name': 'longName',
-        'id_grupo_padre': 'idGrupoPadre'
+        'rut': 'rut',
+        'serie': 'serie',
+        'fecha': 'fecha',
+        'tir_rfnclp': 'tirRFNCLP',
+        'tir_rfnuf': 'tirRFNUF'
     }
 
-    def __init__(self, id=None, short_name=None, long_name=None, id_grupo_padre=None):  # noqa: E501
+    def __init__(self, rut=None, serie=None, fecha=None, tir_rfnclp=None, tir_rfnuf=None):  # noqa: E501
         """InlineResponse2009Message - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._short_name = None
-        self._long_name = None
-        self._id_grupo_padre = None
+        self._rut = None
+        self._serie = None
+        self._fecha = None
+        self._tir_rfnclp = None
+        self._tir_rfnuf = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if short_name is not None:
-            self.short_name = short_name
-        if long_name is not None:
-            self.long_name = long_name
-        if id_grupo_padre is not None:
-            self.id_grupo_padre = id_grupo_padre
+        if rut is not None:
+            self.rut = rut
+        if serie is not None:
+            self.serie = serie
+        if fecha is not None:
+            self.fecha = fecha
+        if tir_rfnclp is not None:
+            self.tir_rfnclp = tir_rfnclp
+        if tir_rfnuf is not None:
+            self.tir_rfnuf = tir_rfnuf
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse2009Message.  # noqa: E501
-        Identificador de RiskAmerica para el Grupo  # noqa: E501
+    def rut(self):
+        """Gets the rut of this InlineResponse2009Message.  # noqa: E501
+        Rut del Fondo (sin dígito verificador)  # noqa: E501
 
-        :return: The id of this InlineResponse2009Message.  # noqa: E501
+        :return: The rut of this InlineResponse2009Message.  # noqa: E501
+        :rtype: int
+        """
+        return self._rut
+
+    @rut.setter
+    def rut(self, rut):
+        """Sets the rut of this InlineResponse2009Message.
+
+        Rut del Fondo (sin dígito verificador)  # noqa: E501
+
+        :param rut: The rut of this InlineResponse2009Message.  # noqa: E501
+        :type: int
+        """
+
+        self._rut = rut
+
+    @property
+    def serie(self):
+        """Gets the serie of this InlineResponse2009Message.  # noqa: E501
+        Código de la serie  # noqa: E501
+
+        :return: The serie of this InlineResponse2009Message.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._serie
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse2009Message.
+    @serie.setter
+    def serie(self, serie):
+        """Sets the serie of this InlineResponse2009Message.
 
-        Identificador de RiskAmerica para el Grupo  # noqa: E501
+        Código de la serie  # noqa: E501
 
-        :param id: The id of this InlineResponse2009Message.  # noqa: E501
+        :param serie: The serie of this InlineResponse2009Message.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._serie = serie
 
     @property
-    def short_name(self):
-        """Gets the short_name of this InlineResponse2009Message.  # noqa: E501
-        Nombre corto del Grupo  # noqa: E501
+    def fecha(self):
+        """Gets the fecha of this InlineResponse2009Message.  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :return: The short_name of this InlineResponse2009Message.  # noqa: E501
-        :rtype: str
+        :return: The fecha of this InlineResponse2009Message.  # noqa: E501
+        :rtype: date
         """
-        return self._short_name
+        return self._fecha
 
-    @short_name.setter
-    def short_name(self, short_name):
-        """Sets the short_name of this InlineResponse2009Message.
+    @fecha.setter
+    def fecha(self, fecha):
+        """Sets the fecha of this InlineResponse2009Message.
 
-        Nombre corto del Grupo  # noqa: E501
+        Fecha de los valores entregados  # noqa: E501
 
-        :param short_name: The short_name of this InlineResponse2009Message.  # noqa: E501
-        :type: str
+        :param fecha: The fecha of this InlineResponse2009Message.  # noqa: E501
+        :type: date
         """
 
-        self._short_name = short_name
+        self._fecha = fecha
 
     @property
-    def long_name(self):
-        """Gets the long_name of this InlineResponse2009Message.  # noqa: E501
-        Nombre largo del Grupo  # noqa: E501
+    def tir_rfnclp(self):
+        """Gets the tir_rfnclp of this InlineResponse2009Message.  # noqa: E501
+        TIR RFN en Pesos  # noqa: E501
 
-        :return: The long_name of this InlineResponse2009Message.  # noqa: E501
-        :rtype: str
+        :return: The tir_rfnclp of this InlineResponse2009Message.  # noqa: E501
+        :rtype: float
         """
-        return self._long_name
+        return self._tir_rfnclp
 
-    @long_name.setter
-    def long_name(self, long_name):
-        """Sets the long_name of this InlineResponse2009Message.
+    @tir_rfnclp.setter
+    def tir_rfnclp(self, tir_rfnclp):
+        """Sets the tir_rfnclp of this InlineResponse2009Message.
 
-        Nombre largo del Grupo  # noqa: E501
+        TIR RFN en Pesos  # noqa: E501
 
-        :param long_name: The long_name of this InlineResponse2009Message.  # noqa: E501
-        :type: str
+        :param tir_rfnclp: The tir_rfnclp of this InlineResponse2009Message.  # noqa: E501
+        :type: float
         """
 
-        self._long_name = long_name
+        self._tir_rfnclp = tir_rfnclp
 
     @property
-    def id_grupo_padre(self):
-        """Gets the id_grupo_padre of this InlineResponse2009Message.  # noqa: E501
-        Identificador del Grupo Padre al cual pertenece este Grupo dentro de la jerarquía de grupos  # noqa: E501
+    def tir_rfnuf(self):
+        """Gets the tir_rfnuf of this InlineResponse2009Message.  # noqa: E501
+        TIR RFN en UF  # noqa: E501
 
-        :return: The id_grupo_padre of this InlineResponse2009Message.  # noqa: E501
-        :rtype: str
+        :return: The tir_rfnuf of this InlineResponse2009Message.  # noqa: E501
+        :rtype: float
         """
-        return self._id_grupo_padre
+        return self._tir_rfnuf
 
-    @id_grupo_padre.setter
-    def id_grupo_padre(self, id_grupo_padre):
-        """Sets the id_grupo_padre of this InlineResponse2009Message.
+    @tir_rfnuf.setter
+    def tir_rfnuf(self, tir_rfnuf):
+        """Sets the tir_rfnuf of this InlineResponse2009Message.
 
-        Identificador del Grupo Padre al cual pertenece este Grupo dentro de la jerarquía de grupos  # noqa: E501
+        TIR RFN en UF  # noqa: E501
 
-        :param id_grupo_padre: The id_grupo_padre of this InlineResponse2009Message.  # noqa: E501
-        :type: str
+        :param tir_rfnuf: The tir_rfnuf of this InlineResponse2009Message.  # noqa: E501
+        :type: float
         """
 
-        self._id_grupo_padre = id_grupo_padre
+        self._tir_rfnuf = tir_rfnuf
 
     def to_dict(self):
         """Returns the model properties as a dict"""

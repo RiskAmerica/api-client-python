@@ -32,7 +32,7 @@ class InlineResponse20014Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
+        'id': 'int',
         'short_name': 'str',
         'long_name': 'str'
     }
@@ -59,10 +59,10 @@ class InlineResponse20014Message(object):
     @property
     def id(self):
         """Gets the id of this InlineResponse20014Message.  # noqa: E501
-        Identificador de RiskAmerica para la Familia  # noqa: E501
+        Identificador de RiskAmerica para el Tipo de día que el Índice tiene Retornos  # noqa: E501
 
         :return: The id of this InlineResponse20014Message.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._id
 
@@ -70,10 +70,10 @@ class InlineResponse20014Message(object):
     def id(self, id):
         """Sets the id of this InlineResponse20014Message.
 
-        Identificador de RiskAmerica para la Familia  # noqa: E501
+        Identificador de RiskAmerica para el Tipo de día que el Índice tiene Retornos  # noqa: E501
 
         :param id: The id of this InlineResponse20014Message.  # noqa: E501
-        :type: str
+        :type: int
         """
 
         self._id = id
@@ -81,7 +81,7 @@ class InlineResponse20014Message(object):
     @property
     def short_name(self):
         """Gets the short_name of this InlineResponse20014Message.  # noqa: E501
-        Nombre corto de la Familia  # noqa: E501
+        Nombre corto del Tipo  # noqa: E501
 
         :return: The short_name of this InlineResponse20014Message.  # noqa: E501
         :rtype: str
@@ -92,7 +92,7 @@ class InlineResponse20014Message(object):
     def short_name(self, short_name):
         """Sets the short_name of this InlineResponse20014Message.
 
-        Nombre corto de la Familia  # noqa: E501
+        Nombre corto del Tipo  # noqa: E501
 
         :param short_name: The short_name of this InlineResponse20014Message.  # noqa: E501
         :type: str
@@ -103,7 +103,7 @@ class InlineResponse20014Message(object):
     @property
     def long_name(self):
         """Gets the long_name of this InlineResponse20014Message.  # noqa: E501
-        Nombre largo de la Familia  # noqa: E501
+        Nombre largo del Tipo  # noqa: E501
 
         :return: The long_name of this InlineResponse20014Message.  # noqa: E501
         :rtype: str
@@ -114,7 +114,7 @@ class InlineResponse20014Message(object):
     def long_name(self, long_name):
         """Sets the long_name of this InlineResponse20014Message.
 
-        Nombre largo de la Familia  # noqa: E501
+        Nombre largo del Tipo  # noqa: E501
 
         :param long_name: The long_name of this InlineResponse20014Message.  # noqa: E501
         :type: str

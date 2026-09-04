@@ -33,73 +33,63 @@ class InlineResponse20027Message(object):
     """
     swagger_types = {
         'fecha': 'date',
-        'ret_total': 'float',
-        'ret_mtd': 'float',
-        'ret_ytd': 'float',
-        'ret_curva_cero': 'float',
-        'ret_spread': 'float',
-        'ret_devengo': 'float',
-        'ret_prepago': 'float',
-        'ret_moneda': 'float',
-        'ret_roll_down': 'float',
-        'ret_residual': 'float'
+        'tir': 'float',
+        'cantidad': 'float',
+        'monto_transado': 'float',
+        'monto_transado_clp': 'float',
+        'precio_porcentaje_valor_par': 'float',
+        'tir_base': 'float',
+        'spread': 'float',
+        'nemo': 'str'
     }
 
     attribute_map = {
         'fecha': 'fecha',
-        'ret_total': 'retTotal',
-        'ret_mtd': 'retMTD',
-        'ret_ytd': 'retYTD',
-        'ret_curva_cero': 'retCurvaCero',
-        'ret_spread': 'retSpread',
-        'ret_devengo': 'retDevengo',
-        'ret_prepago': 'retPrepago',
-        'ret_moneda': 'retMoneda',
-        'ret_roll_down': 'retRollDown',
-        'ret_residual': 'retResidual'
+        'tir': 'tir',
+        'cantidad': 'cantidad',
+        'monto_transado': 'montoTransado',
+        'monto_transado_clp': 'montoTransadoCLP',
+        'precio_porcentaje_valor_par': 'precioPorcentajeValorPar',
+        'tir_base': 'tirBase',
+        'spread': 'spread',
+        'nemo': 'nemo'
     }
 
-    def __init__(self, fecha=None, ret_total=None, ret_mtd=None, ret_ytd=None, ret_curva_cero=None, ret_spread=None, ret_devengo=None, ret_prepago=None, ret_moneda=None, ret_roll_down=None, ret_residual=None):  # noqa: E501
+    def __init__(self, fecha=None, tir=None, cantidad=None, monto_transado=None, monto_transado_clp=None, precio_porcentaje_valor_par=None, tir_base=None, spread=None, nemo=None):  # noqa: E501
         """InlineResponse20027Message - a model defined in Swagger"""  # noqa: E501
         self._fecha = None
-        self._ret_total = None
-        self._ret_mtd = None
-        self._ret_ytd = None
-        self._ret_curva_cero = None
-        self._ret_spread = None
-        self._ret_devengo = None
-        self._ret_prepago = None
-        self._ret_moneda = None
-        self._ret_roll_down = None
-        self._ret_residual = None
+        self._tir = None
+        self._cantidad = None
+        self._monto_transado = None
+        self._monto_transado_clp = None
+        self._precio_porcentaje_valor_par = None
+        self._tir_base = None
+        self._spread = None
+        self._nemo = None
         self.discriminator = None
         if fecha is not None:
             self.fecha = fecha
-        if ret_total is not None:
-            self.ret_total = ret_total
-        if ret_mtd is not None:
-            self.ret_mtd = ret_mtd
-        if ret_ytd is not None:
-            self.ret_ytd = ret_ytd
-        if ret_curva_cero is not None:
-            self.ret_curva_cero = ret_curva_cero
-        if ret_spread is not None:
-            self.ret_spread = ret_spread
-        if ret_devengo is not None:
-            self.ret_devengo = ret_devengo
-        if ret_prepago is not None:
-            self.ret_prepago = ret_prepago
-        if ret_moneda is not None:
-            self.ret_moneda = ret_moneda
-        if ret_roll_down is not None:
-            self.ret_roll_down = ret_roll_down
-        if ret_residual is not None:
-            self.ret_residual = ret_residual
+        if tir is not None:
+            self.tir = tir
+        if cantidad is not None:
+            self.cantidad = cantidad
+        if monto_transado is not None:
+            self.monto_transado = monto_transado
+        if monto_transado_clp is not None:
+            self.monto_transado_clp = monto_transado_clp
+        if precio_porcentaje_valor_par is not None:
+            self.precio_porcentaje_valor_par = precio_porcentaje_valor_par
+        if tir_base is not None:
+            self.tir_base = tir_base
+        if spread is not None:
+            self.spread = spread
+        if nemo is not None:
+            self.nemo = nemo
 
     @property
     def fecha(self):
         """Gets the fecha of this InlineResponse20027Message.  # noqa: E501
-        Fecha de la Valorización  # noqa: E501
+        Fecha de la última transacción  # noqa: E501
 
         :return: The fecha of this InlineResponse20027Message.  # noqa: E501
         :rtype: date
@@ -110,7 +100,7 @@ class InlineResponse20027Message(object):
     def fecha(self, fecha):
         """Sets the fecha of this InlineResponse20027Message.
 
-        Fecha de la Valorización  # noqa: E501
+        Fecha de la última transacción  # noqa: E501
 
         :param fecha: The fecha of this InlineResponse20027Message.  # noqa: E501
         :type: date
@@ -119,224 +109,180 @@ class InlineResponse20027Message(object):
         self._fecha = fecha
 
     @property
-    def ret_total(self):
-        """Gets the ret_total of this InlineResponse20027Message.  # noqa: E501
-        Retorno Día.  # noqa: E501
+    def tir(self):
+        """Gets the tir of this InlineResponse20027Message.  # noqa: E501
+        Tasa de la última transacción  # noqa: E501
 
-        :return: The ret_total of this InlineResponse20027Message.  # noqa: E501
+        :return: The tir of this InlineResponse20027Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_total
+        return self._tir
 
-    @ret_total.setter
-    def ret_total(self, ret_total):
-        """Sets the ret_total of this InlineResponse20027Message.
+    @tir.setter
+    def tir(self, tir):
+        """Sets the tir of this InlineResponse20027Message.
 
-        Retorno Día.  # noqa: E501
+        Tasa de la última transacción  # noqa: E501
 
-        :param ret_total: The ret_total of this InlineResponse20027Message.  # noqa: E501
+        :param tir: The tir of this InlineResponse20027Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_total = ret_total
+        self._tir = tir
 
     @property
-    def ret_mtd(self):
-        """Gets the ret_mtd of this InlineResponse20027Message.  # noqa: E501
-        Retorno Month to Date  # noqa: E501
+    def cantidad(self):
+        """Gets the cantidad of this InlineResponse20027Message.  # noqa: E501
+        Cantidad de la última transacción  # noqa: E501
 
-        :return: The ret_mtd of this InlineResponse20027Message.  # noqa: E501
+        :return: The cantidad of this InlineResponse20027Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_mtd
+        return self._cantidad
 
-    @ret_mtd.setter
-    def ret_mtd(self, ret_mtd):
-        """Sets the ret_mtd of this InlineResponse20027Message.
+    @cantidad.setter
+    def cantidad(self, cantidad):
+        """Sets the cantidad of this InlineResponse20027Message.
 
-        Retorno Month to Date  # noqa: E501
+        Cantidad de la última transacción  # noqa: E501
 
-        :param ret_mtd: The ret_mtd of this InlineResponse20027Message.  # noqa: E501
+        :param cantidad: The cantidad of this InlineResponse20027Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_mtd = ret_mtd
+        self._cantidad = cantidad
 
     @property
-    def ret_ytd(self):
-        """Gets the ret_ytd of this InlineResponse20027Message.  # noqa: E501
-        Retorno Year to Date  # noqa: E501
+    def monto_transado(self):
+        """Gets the monto_transado of this InlineResponse20027Message.  # noqa: E501
+        Monto transado en moneda del instrumento de la última transaccion  # noqa: E501
 
-        :return: The ret_ytd of this InlineResponse20027Message.  # noqa: E501
+        :return: The monto_transado of this InlineResponse20027Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_ytd
+        return self._monto_transado
 
-    @ret_ytd.setter
-    def ret_ytd(self, ret_ytd):
-        """Sets the ret_ytd of this InlineResponse20027Message.
+    @monto_transado.setter
+    def monto_transado(self, monto_transado):
+        """Sets the monto_transado of this InlineResponse20027Message.
 
-        Retorno Year to Date  # noqa: E501
+        Monto transado en moneda del instrumento de la última transaccion  # noqa: E501
 
-        :param ret_ytd: The ret_ytd of this InlineResponse20027Message.  # noqa: E501
+        :param monto_transado: The monto_transado of this InlineResponse20027Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_ytd = ret_ytd
+        self._monto_transado = monto_transado
 
     @property
-    def ret_curva_cero(self):
-        """Gets the ret_curva_cero of this InlineResponse20027Message.  # noqa: E501
-        Retorno Curva Cero  # noqa: E501
+    def monto_transado_clp(self):
+        """Gets the monto_transado_clp of this InlineResponse20027Message.  # noqa: E501
+        Monto transado en pesos de la última transacción  # noqa: E501
 
-        :return: The ret_curva_cero of this InlineResponse20027Message.  # noqa: E501
+        :return: The monto_transado_clp of this InlineResponse20027Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_curva_cero
+        return self._monto_transado_clp
 
-    @ret_curva_cero.setter
-    def ret_curva_cero(self, ret_curva_cero):
-        """Sets the ret_curva_cero of this InlineResponse20027Message.
+    @monto_transado_clp.setter
+    def monto_transado_clp(self, monto_transado_clp):
+        """Sets the monto_transado_clp of this InlineResponse20027Message.
 
-        Retorno Curva Cero  # noqa: E501
+        Monto transado en pesos de la última transacción  # noqa: E501
 
-        :param ret_curva_cero: The ret_curva_cero of this InlineResponse20027Message.  # noqa: E501
+        :param monto_transado_clp: The monto_transado_clp of this InlineResponse20027Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_curva_cero = ret_curva_cero
+        self._monto_transado_clp = monto_transado_clp
 
     @property
-    def ret_spread(self):
-        """Gets the ret_spread of this InlineResponse20027Message.  # noqa: E501
-        Retorno Spread  # noqa: E501
+    def precio_porcentaje_valor_par(self):
+        """Gets the precio_porcentaje_valor_par of this InlineResponse20027Message.  # noqa: E501
+        Precio porcentaje valor par de la última transacción  # noqa: E501
 
-        :return: The ret_spread of this InlineResponse20027Message.  # noqa: E501
+        :return: The precio_porcentaje_valor_par of this InlineResponse20027Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_spread
+        return self._precio_porcentaje_valor_par
 
-    @ret_spread.setter
-    def ret_spread(self, ret_spread):
-        """Sets the ret_spread of this InlineResponse20027Message.
+    @precio_porcentaje_valor_par.setter
+    def precio_porcentaje_valor_par(self, precio_porcentaje_valor_par):
+        """Sets the precio_porcentaje_valor_par of this InlineResponse20027Message.
 
-        Retorno Spread  # noqa: E501
+        Precio porcentaje valor par de la última transacción  # noqa: E501
 
-        :param ret_spread: The ret_spread of this InlineResponse20027Message.  # noqa: E501
+        :param precio_porcentaje_valor_par: The precio_porcentaje_valor_par of this InlineResponse20027Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_spread = ret_spread
+        self._precio_porcentaje_valor_par = precio_porcentaje_valor_par
 
     @property
-    def ret_devengo(self):
-        """Gets the ret_devengo of this InlineResponse20027Message.  # noqa: E501
-        Retorno Devengo  # noqa: E501
+    def tir_base(self):
+        """Gets the tir_base of this InlineResponse20027Message.  # noqa: E501
+        TIR Base de la última transacción  # noqa: E501
 
-        :return: The ret_devengo of this InlineResponse20027Message.  # noqa: E501
+        :return: The tir_base of this InlineResponse20027Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_devengo
+        return self._tir_base
 
-    @ret_devengo.setter
-    def ret_devengo(self, ret_devengo):
-        """Sets the ret_devengo of this InlineResponse20027Message.
+    @tir_base.setter
+    def tir_base(self, tir_base):
+        """Sets the tir_base of this InlineResponse20027Message.
 
-        Retorno Devengo  # noqa: E501
+        TIR Base de la última transacción  # noqa: E501
 
-        :param ret_devengo: The ret_devengo of this InlineResponse20027Message.  # noqa: E501
+        :param tir_base: The tir_base of this InlineResponse20027Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_devengo = ret_devengo
+        self._tir_base = tir_base
 
     @property
-    def ret_prepago(self):
-        """Gets the ret_prepago of this InlineResponse20027Message.  # noqa: E501
-        Retorno Prepago  # noqa: E501
+    def spread(self):
+        """Gets the spread of this InlineResponse20027Message.  # noqa: E501
+        Spread de la transacción  # noqa: E501
 
-        :return: The ret_prepago of this InlineResponse20027Message.  # noqa: E501
+        :return: The spread of this InlineResponse20027Message.  # noqa: E501
         :rtype: float
         """
-        return self._ret_prepago
+        return self._spread
 
-    @ret_prepago.setter
-    def ret_prepago(self, ret_prepago):
-        """Sets the ret_prepago of this InlineResponse20027Message.
+    @spread.setter
+    def spread(self, spread):
+        """Sets the spread of this InlineResponse20027Message.
 
-        Retorno Prepago  # noqa: E501
+        Spread de la transacción  # noqa: E501
 
-        :param ret_prepago: The ret_prepago of this InlineResponse20027Message.  # noqa: E501
+        :param spread: The spread of this InlineResponse20027Message.  # noqa: E501
         :type: float
         """
 
-        self._ret_prepago = ret_prepago
+        self._spread = spread
 
     @property
-    def ret_moneda(self):
-        """Gets the ret_moneda of this InlineResponse20027Message.  # noqa: E501
-        Retorno Moneda  # noqa: E501
+    def nemo(self):
+        """Gets the nemo of this InlineResponse20027Message.  # noqa: E501
+        Nemotécnico del instrumento  # noqa: E501
 
-        :return: The ret_moneda of this InlineResponse20027Message.  # noqa: E501
-        :rtype: float
+        :return: The nemo of this InlineResponse20027Message.  # noqa: E501
+        :rtype: str
         """
-        return self._ret_moneda
+        return self._nemo
 
-    @ret_moneda.setter
-    def ret_moneda(self, ret_moneda):
-        """Sets the ret_moneda of this InlineResponse20027Message.
+    @nemo.setter
+    def nemo(self, nemo):
+        """Sets the nemo of this InlineResponse20027Message.
 
-        Retorno Moneda  # noqa: E501
+        Nemotécnico del instrumento  # noqa: E501
 
-        :param ret_moneda: The ret_moneda of this InlineResponse20027Message.  # noqa: E501
-        :type: float
-        """
-
-        self._ret_moneda = ret_moneda
-
-    @property
-    def ret_roll_down(self):
-        """Gets the ret_roll_down of this InlineResponse20027Message.  # noqa: E501
-        Retorno RollDown  # noqa: E501
-
-        :return: The ret_roll_down of this InlineResponse20027Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._ret_roll_down
-
-    @ret_roll_down.setter
-    def ret_roll_down(self, ret_roll_down):
-        """Sets the ret_roll_down of this InlineResponse20027Message.
-
-        Retorno RollDown  # noqa: E501
-
-        :param ret_roll_down: The ret_roll_down of this InlineResponse20027Message.  # noqa: E501
-        :type: float
+        :param nemo: The nemo of this InlineResponse20027Message.  # noqa: E501
+        :type: str
         """
 
-        self._ret_roll_down = ret_roll_down
-
-    @property
-    def ret_residual(self):
-        """Gets the ret_residual of this InlineResponse20027Message.  # noqa: E501
-        Retorno Residual  # noqa: E501
-
-        :return: The ret_residual of this InlineResponse20027Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._ret_residual
-
-    @ret_residual.setter
-    def ret_residual(self, ret_residual):
-        """Sets the ret_residual of this InlineResponse20027Message.
-
-        Retorno Residual  # noqa: E501
-
-        :param ret_residual: The ret_residual of this InlineResponse20027Message.  # noqa: E501
-        :type: float
-        """
-
-        self._ret_residual = ret_residual
+        self._nemo = nemo
 
     def to_dict(self):
         """Returns the model properties as a dict"""

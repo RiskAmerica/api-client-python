@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20068_message_emisor import InlineResponse20068MessageEmisor
+from .inline_response20068_message_punta_compra import InlineResponse20068MessagePuntaCompra
 
 
 
@@ -33,39 +33,39 @@ class InlineResponse20068Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'emisor': 'InlineResponse20068MessageEmisor'
+        'punta_compra': 'list[InlineResponse20068MessagePuntaCompra]'
     }
 
     attribute_map = {
-        'emisor': 'Emisor'
+        'punta_compra': 'PuntaCompra'
     }
 
-    def __init__(self, emisor=None):  # noqa: E501
+    def __init__(self, punta_compra=None):  # noqa: E501
         """InlineResponse20068Message - a model defined in Swagger"""  # noqa: E501
-        self._emisor = None
+        self._punta_compra = None
         self.discriminator = None
-        if emisor is not None:
-            self.emisor = emisor
+        if punta_compra is not None:
+            self.punta_compra = punta_compra
 
     @property
-    def emisor(self):
-        """Gets the emisor of this InlineResponse20068Message.  # noqa: E501
+    def punta_compra(self):
+        """Gets the punta_compra of this InlineResponse20068Message.  # noqa: E501
 
-        :return: The emisor of this InlineResponse20068Message.  # noqa: E501
-        :rtype: InlineResponse20068MessageEmisor
+        :return: The punta_compra of this InlineResponse20068Message.  # noqa: E501
+        :rtype: list[InlineResponse20068MessagePuntaCompra]
         """
-        return self._emisor
+        return self._punta_compra
 
-    @emisor.setter
-    def emisor(self, emisor):
-        """Sets the emisor of this InlineResponse20068Message.
+    @punta_compra.setter
+    def punta_compra(self, punta_compra):
+        """Sets the punta_compra of this InlineResponse20068Message.
 
 
-        :param emisor: The emisor of this InlineResponse20068Message.  # noqa: E501
-        :type: InlineResponse20068MessageEmisor
+        :param punta_compra: The punta_compra of this InlineResponse20068Message.  # noqa: E501
+        :type: list[InlineResponse20068MessagePuntaCompra]
         """
 
-        self._emisor = emisor
+        self._punta_compra = punta_compra
 
     def to_dict(self):
         """Returns the model properties as a dict"""

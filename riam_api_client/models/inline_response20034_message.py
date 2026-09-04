@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20034_message_instrumento import InlineResponse20034MessageInstrumento
+from .inline_response20034_message_valorizacion import InlineResponse20034MessageValorizacion
 
 
 
@@ -33,39 +33,39 @@ class InlineResponse20034Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'instrumento': 'InlineResponse20034MessageInstrumento'
+        'valorizacion': 'InlineResponse20034MessageValorizacion'
     }
 
     attribute_map = {
-        'instrumento': 'Instrumento'
+        'valorizacion': 'Valorizacion'
     }
 
-    def __init__(self, instrumento=None):  # noqa: E501
+    def __init__(self, valorizacion=None):  # noqa: E501
         """InlineResponse20034Message - a model defined in Swagger"""  # noqa: E501
-        self._instrumento = None
+        self._valorizacion = None
         self.discriminator = None
-        if instrumento is not None:
-            self.instrumento = instrumento
+        if valorizacion is not None:
+            self.valorizacion = valorizacion
 
     @property
-    def instrumento(self):
-        """Gets the instrumento of this InlineResponse20034Message.  # noqa: E501
+    def valorizacion(self):
+        """Gets the valorizacion of this InlineResponse20034Message.  # noqa: E501
 
-        :return: The instrumento of this InlineResponse20034Message.  # noqa: E501
-        :rtype: InlineResponse20034MessageInstrumento
+        :return: The valorizacion of this InlineResponse20034Message.  # noqa: E501
+        :rtype: InlineResponse20034MessageValorizacion
         """
-        return self._instrumento
+        return self._valorizacion
 
-    @instrumento.setter
-    def instrumento(self, instrumento):
-        """Sets the instrumento of this InlineResponse20034Message.
+    @valorizacion.setter
+    def valorizacion(self, valorizacion):
+        """Sets the valorizacion of this InlineResponse20034Message.
 
 
-        :param instrumento: The instrumento of this InlineResponse20034Message.  # noqa: E501
-        :type: InlineResponse20034MessageInstrumento
+        :param valorizacion: The valorizacion of this InlineResponse20034Message.  # noqa: E501
+        :type: InlineResponse20034MessageValorizacion
         """
 
-        self._instrumento = instrumento
+        self._valorizacion = valorizacion
 
     def to_dict(self):
         """Returns the model properties as a dict"""

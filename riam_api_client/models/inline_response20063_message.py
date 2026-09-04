@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 # Importing related models
-from .inline_response20063_message_punta_compra import InlineResponse20063MessagePuntaCompra
 
 
 
@@ -33,39 +32,95 @@ class InlineResponse20063Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'punta_compra': 'list[InlineResponse20063MessagePuntaCompra]'
+        'id': 'str',
+        'short_name': 'str',
+        'long_name': 'str'
     }
 
     attribute_map = {
-        'punta_compra': 'PuntaCompra'
+        'id': 'id',
+        'short_name': 'shortName',
+        'long_name': 'longName'
     }
 
-    def __init__(self, punta_compra=None):  # noqa: E501
+    def __init__(self, id=None, short_name=None, long_name=None):  # noqa: E501
         """InlineResponse20063Message - a model defined in Swagger"""  # noqa: E501
-        self._punta_compra = None
+        self._id = None
+        self._short_name = None
+        self._long_name = None
         self.discriminator = None
-        if punta_compra is not None:
-            self.punta_compra = punta_compra
+        if id is not None:
+            self.id = id
+        if short_name is not None:
+            self.short_name = short_name
+        if long_name is not None:
+            self.long_name = long_name
 
     @property
-    def punta_compra(self):
-        """Gets the punta_compra of this InlineResponse20063Message.  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20063Message.  # noqa: E501
+        Identificador del Tipo de Valorización  # noqa: E501
 
-        :return: The punta_compra of this InlineResponse20063Message.  # noqa: E501
-        :rtype: list[InlineResponse20063MessagePuntaCompra]
+        :return: The id of this InlineResponse20063Message.  # noqa: E501
+        :rtype: str
         """
-        return self._punta_compra
+        return self._id
 
-    @punta_compra.setter
-    def punta_compra(self, punta_compra):
-        """Sets the punta_compra of this InlineResponse20063Message.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20063Message.
 
+        Identificador del Tipo de Valorización  # noqa: E501
 
-        :param punta_compra: The punta_compra of this InlineResponse20063Message.  # noqa: E501
-        :type: list[InlineResponse20063MessagePuntaCompra]
+        :param id: The id of this InlineResponse20063Message.  # noqa: E501
+        :type: str
         """
 
-        self._punta_compra = punta_compra
+        self._id = id
+
+    @property
+    def short_name(self):
+        """Gets the short_name of this InlineResponse20063Message.  # noqa: E501
+        Título del Tipo de Valorización  # noqa: E501
+
+        :return: The short_name of this InlineResponse20063Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._short_name
+
+    @short_name.setter
+    def short_name(self, short_name):
+        """Sets the short_name of this InlineResponse20063Message.
+
+        Título del Tipo de Valorización  # noqa: E501
+
+        :param short_name: The short_name of this InlineResponse20063Message.  # noqa: E501
+        :type: str
+        """
+
+        self._short_name = short_name
+
+    @property
+    def long_name(self):
+        """Gets the long_name of this InlineResponse20063Message.  # noqa: E501
+        Descripción del Tipo de Valorizacion  # noqa: E501
+
+        :return: The long_name of this InlineResponse20063Message.  # noqa: E501
+        :rtype: str
+        """
+        return self._long_name
+
+    @long_name.setter
+    def long_name(self, long_name):
+        """Sets the long_name of this InlineResponse20063Message.
+
+        Descripción del Tipo de Valorizacion  # noqa: E501
+
+        :param long_name: The long_name of this InlineResponse20063Message.  # noqa: E501
+        :type: str
+        """
+
+        self._long_name = long_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

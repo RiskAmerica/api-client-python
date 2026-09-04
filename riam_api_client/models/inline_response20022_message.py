@@ -32,64 +32,56 @@ class InlineResponse20022Message(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'plazo': 'float',
         'fecha': 'date',
-        'tir': 'float',
-        'cantidad': 'float',
-        'monto_transado': 'float',
-        'monto_transado_clp': 'float',
-        'precio_porcentaje_valor_par': 'float',
-        'tir_base': 'float',
-        'spread': 'float',
-        'nemo': 'str'
+        'valor': 'float'
     }
 
     attribute_map = {
+        'plazo': 'plazo',
         'fecha': 'fecha',
-        'tir': 'tir',
-        'cantidad': 'cantidad',
-        'monto_transado': 'montoTransado',
-        'monto_transado_clp': 'montoTransadoCLP',
-        'precio_porcentaje_valor_par': 'precioPorcentajeValorPar',
-        'tir_base': 'tirBase',
-        'spread': 'spread',
-        'nemo': 'nemo'
+        'valor': 'valor'
     }
 
-    def __init__(self, fecha=None, tir=None, cantidad=None, monto_transado=None, monto_transado_clp=None, precio_porcentaje_valor_par=None, tir_base=None, spread=None, nemo=None):  # noqa: E501
+    def __init__(self, plazo=None, fecha=None, valor=None):  # noqa: E501
         """InlineResponse20022Message - a model defined in Swagger"""  # noqa: E501
+        self._plazo = None
         self._fecha = None
-        self._tir = None
-        self._cantidad = None
-        self._monto_transado = None
-        self._monto_transado_clp = None
-        self._precio_porcentaje_valor_par = None
-        self._tir_base = None
-        self._spread = None
-        self._nemo = None
+        self._valor = None
         self.discriminator = None
+        if plazo is not None:
+            self.plazo = plazo
         if fecha is not None:
             self.fecha = fecha
-        if tir is not None:
-            self.tir = tir
-        if cantidad is not None:
-            self.cantidad = cantidad
-        if monto_transado is not None:
-            self.monto_transado = monto_transado
-        if monto_transado_clp is not None:
-            self.monto_transado_clp = monto_transado_clp
-        if precio_porcentaje_valor_par is not None:
-            self.precio_porcentaje_valor_par = precio_porcentaje_valor_par
-        if tir_base is not None:
-            self.tir_base = tir_base
-        if spread is not None:
-            self.spread = spread
-        if nemo is not None:
-            self.nemo = nemo
+        if valor is not None:
+            self.valor = valor
+
+    @property
+    def plazo(self):
+        """Gets the plazo of this InlineResponse20022Message.  # noqa: E501
+        Plazo para el cual se calculó la Curva  # noqa: E501
+
+        :return: The plazo of this InlineResponse20022Message.  # noqa: E501
+        :rtype: float
+        """
+        return self._plazo
+
+    @plazo.setter
+    def plazo(self, plazo):
+        """Sets the plazo of this InlineResponse20022Message.
+
+        Plazo para el cual se calculó la Curva  # noqa: E501
+
+        :param plazo: The plazo of this InlineResponse20022Message.  # noqa: E501
+        :type: float
+        """
+
+        self._plazo = plazo
 
     @property
     def fecha(self):
         """Gets the fecha of this InlineResponse20022Message.  # noqa: E501
-        Fecha de la última transacción  # noqa: E501
+        Fecha para la cual se calculó la Curva  # noqa: E501
 
         :return: The fecha of this InlineResponse20022Message.  # noqa: E501
         :rtype: date
@@ -100,7 +92,7 @@ class InlineResponse20022Message(object):
     def fecha(self, fecha):
         """Sets the fecha of this InlineResponse20022Message.
 
-        Fecha de la última transacción  # noqa: E501
+        Fecha para la cual se calculó la Curva  # noqa: E501
 
         :param fecha: The fecha of this InlineResponse20022Message.  # noqa: E501
         :type: date
@@ -109,180 +101,26 @@ class InlineResponse20022Message(object):
         self._fecha = fecha
 
     @property
-    def tir(self):
-        """Gets the tir of this InlineResponse20022Message.  # noqa: E501
-        Tasa de la última transacción  # noqa: E501
+    def valor(self):
+        """Gets the valor of this InlineResponse20022Message.  # noqa: E501
+        Valor de la Curva  # noqa: E501
 
-        :return: The tir of this InlineResponse20022Message.  # noqa: E501
+        :return: The valor of this InlineResponse20022Message.  # noqa: E501
         :rtype: float
         """
-        return self._tir
+        return self._valor
 
-    @tir.setter
-    def tir(self, tir):
-        """Sets the tir of this InlineResponse20022Message.
+    @valor.setter
+    def valor(self, valor):
+        """Sets the valor of this InlineResponse20022Message.
 
-        Tasa de la última transacción  # noqa: E501
+        Valor de la Curva  # noqa: E501
 
-        :param tir: The tir of this InlineResponse20022Message.  # noqa: E501
+        :param valor: The valor of this InlineResponse20022Message.  # noqa: E501
         :type: float
         """
 
-        self._tir = tir
-
-    @property
-    def cantidad(self):
-        """Gets the cantidad of this InlineResponse20022Message.  # noqa: E501
-        Cantidad de la última transacción  # noqa: E501
-
-        :return: The cantidad of this InlineResponse20022Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._cantidad
-
-    @cantidad.setter
-    def cantidad(self, cantidad):
-        """Sets the cantidad of this InlineResponse20022Message.
-
-        Cantidad de la última transacción  # noqa: E501
-
-        :param cantidad: The cantidad of this InlineResponse20022Message.  # noqa: E501
-        :type: float
-        """
-
-        self._cantidad = cantidad
-
-    @property
-    def monto_transado(self):
-        """Gets the monto_transado of this InlineResponse20022Message.  # noqa: E501
-        Monto transado en moneda del instrumento de la última transaccion  # noqa: E501
-
-        :return: The monto_transado of this InlineResponse20022Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._monto_transado
-
-    @monto_transado.setter
-    def monto_transado(self, monto_transado):
-        """Sets the monto_transado of this InlineResponse20022Message.
-
-        Monto transado en moneda del instrumento de la última transaccion  # noqa: E501
-
-        :param monto_transado: The monto_transado of this InlineResponse20022Message.  # noqa: E501
-        :type: float
-        """
-
-        self._monto_transado = monto_transado
-
-    @property
-    def monto_transado_clp(self):
-        """Gets the monto_transado_clp of this InlineResponse20022Message.  # noqa: E501
-        Monto transado en pesos de la última transacción  # noqa: E501
-
-        :return: The monto_transado_clp of this InlineResponse20022Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._monto_transado_clp
-
-    @monto_transado_clp.setter
-    def monto_transado_clp(self, monto_transado_clp):
-        """Sets the monto_transado_clp of this InlineResponse20022Message.
-
-        Monto transado en pesos de la última transacción  # noqa: E501
-
-        :param monto_transado_clp: The monto_transado_clp of this InlineResponse20022Message.  # noqa: E501
-        :type: float
-        """
-
-        self._monto_transado_clp = monto_transado_clp
-
-    @property
-    def precio_porcentaje_valor_par(self):
-        """Gets the precio_porcentaje_valor_par of this InlineResponse20022Message.  # noqa: E501
-        Precio porcentaje valor par de la última transacción  # noqa: E501
-
-        :return: The precio_porcentaje_valor_par of this InlineResponse20022Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._precio_porcentaje_valor_par
-
-    @precio_porcentaje_valor_par.setter
-    def precio_porcentaje_valor_par(self, precio_porcentaje_valor_par):
-        """Sets the precio_porcentaje_valor_par of this InlineResponse20022Message.
-
-        Precio porcentaje valor par de la última transacción  # noqa: E501
-
-        :param precio_porcentaje_valor_par: The precio_porcentaje_valor_par of this InlineResponse20022Message.  # noqa: E501
-        :type: float
-        """
-
-        self._precio_porcentaje_valor_par = precio_porcentaje_valor_par
-
-    @property
-    def tir_base(self):
-        """Gets the tir_base of this InlineResponse20022Message.  # noqa: E501
-        TIR Base de la última transacción  # noqa: E501
-
-        :return: The tir_base of this InlineResponse20022Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._tir_base
-
-    @tir_base.setter
-    def tir_base(self, tir_base):
-        """Sets the tir_base of this InlineResponse20022Message.
-
-        TIR Base de la última transacción  # noqa: E501
-
-        :param tir_base: The tir_base of this InlineResponse20022Message.  # noqa: E501
-        :type: float
-        """
-
-        self._tir_base = tir_base
-
-    @property
-    def spread(self):
-        """Gets the spread of this InlineResponse20022Message.  # noqa: E501
-        Spread de la transacción  # noqa: E501
-
-        :return: The spread of this InlineResponse20022Message.  # noqa: E501
-        :rtype: float
-        """
-        return self._spread
-
-    @spread.setter
-    def spread(self, spread):
-        """Sets the spread of this InlineResponse20022Message.
-
-        Spread de la transacción  # noqa: E501
-
-        :param spread: The spread of this InlineResponse20022Message.  # noqa: E501
-        :type: float
-        """
-
-        self._spread = spread
-
-    @property
-    def nemo(self):
-        """Gets the nemo of this InlineResponse20022Message.  # noqa: E501
-        Nemotécnico del instrumento  # noqa: E501
-
-        :return: The nemo of this InlineResponse20022Message.  # noqa: E501
-        :rtype: str
-        """
-        return self._nemo
-
-    @nemo.setter
-    def nemo(self, nemo):
-        """Sets the nemo of this InlineResponse20022Message.
-
-        Nemotécnico del instrumento  # noqa: E501
-
-        :param nemo: The nemo of this InlineResponse20022Message.  # noqa: E501
-        :type: str
-        """
-
-        self._nemo = nemo
+        self._valor = valor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

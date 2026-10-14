@@ -17,9 +17,9 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20010
-from . import InlineResponse20010
-from . import InlineResponse20011
+from . import FondosCarterasCarterasGetFechaResponse
+from . import FondosCarterasCarterasGetFondoResponse
+from . import FondosCarterasCarterasGetUltimaFechaResponse
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -52,10 +52,10 @@ class FondosCarterasApi(object):
         :param str categoria_aafm: Nombre de la categoría AAFM para filtrar (solo aplica a CFM). Si se omite, se retornan todos los fondos del tipo.
         :param int rut_desde: Paginación: rut del último fondo recibido en la página anterior. Se devuelven los fondos con rut mayor. Omitir (o 0) para la primera página.
         :param int page_size: Cantidad de fondos por página (default 50, máximo 100).
-        :return: InlineResponse20010
+        :return: FondosCarterasCarterasGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20010 | multiprocessing.pool.ApplyResult
+        :rtype: FondosCarterasCarterasGetFechaResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -79,10 +79,10 @@ class FondosCarterasApi(object):
         :param str categoria_aafm: Nombre de la categoría AAFM para filtrar (solo aplica a CFM). Si se omite, se retornan todos los fondos del tipo.
         :param int rut_desde: Paginación: rut del último fondo recibido en la página anterior. Se devuelven los fondos con rut mayor. Omitir (o 0) para la primera página.
         :param int page_size: Cantidad de fondos por página (default 50, máximo 100).
-        :return: InlineResponse20010
+        :return: FondosCarterasCarterasGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20010 | multiprocessing.pool.ApplyResult
+        :rtype: FondosCarterasCarterasGetFechaResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'tipo_fondo', 'categoria_aafm', 'rut_desde', 'page_size']  # noqa: E501
@@ -146,7 +146,7 @@ class FondosCarterasApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20010',  # noqa: E501
+            response_type='FondosCarterasCarterasGetFechaResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -166,10 +166,10 @@ class FondosCarterasApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (se usa el mes y año) (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
-        :return: InlineResponse20010
+        :return: FondosCarterasCarterasGetFondoResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20010 | multiprocessing.pool.ApplyResult
+        :rtype: FondosCarterasCarterasGetFondoResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -190,10 +190,10 @@ class FondosCarterasApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (se usa el mes y año) (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
-        :return: InlineResponse20010
+        :return: FondosCarterasCarterasGetFondoResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20010 | multiprocessing.pool.ApplyResult
+        :rtype: FondosCarterasCarterasGetFondoResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'rut']  # noqa: E501
@@ -251,7 +251,7 @@ class FondosCarterasApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20010',  # noqa: E501
+            response_type='FondosCarterasCarterasGetFondoResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -270,10 +270,10 @@ class FondosCarterasApi(object):
 
         :param async_req bool
         :param str tipo_fondo: Tipo de fondo: CFM o CFI (required)
-        :return: InlineResponse20011
+        :return: FondosCarterasCarterasGetUltimaFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20011 | multiprocessing.pool.ApplyResult
+        :rtype: FondosCarterasCarterasGetUltimaFechaResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -293,10 +293,10 @@ class FondosCarterasApi(object):
 
         :param async_req bool
         :param str tipo_fondo: Tipo de fondo: CFM o CFI (required)
-        :return: InlineResponse20011
+        :return: FondosCarterasCarterasGetUltimaFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20011 | multiprocessing.pool.ApplyResult
+        :rtype: FondosCarterasCarterasGetUltimaFechaResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['tipo_fondo']  # noqa: E501
@@ -348,7 +348,7 @@ class FondosCarterasApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20011',  # noqa: E501
+            response_type='FondosCarterasCarterasGetUltimaFechaResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -17,8 +17,8 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20073
-from . import InlineResponse20042
+from . import EmisoresInformacionGetResponse
+from . import EmisoresInformacionGetVigentesResponse
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -47,10 +47,10 @@ class EmisoresApi(object):
 
         :param async_req bool
         :param str emisor: Emisor a consultar (required)
-        :return: InlineResponse20073
+        :return: EmisoresInformacionGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20073 | multiprocessing.pool.ApplyResult
+        :rtype: EmisoresInformacionGetResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -70,10 +70,10 @@ class EmisoresApi(object):
 
         :param async_req bool
         :param str emisor: Emisor a consultar (required)
-        :return: InlineResponse20073
+        :return: EmisoresInformacionGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20073 | multiprocessing.pool.ApplyResult
+        :rtype: EmisoresInformacionGetResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['emisor']  # noqa: E501
@@ -125,7 +125,7 @@ class EmisoresApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20073',  # noqa: E501
+            response_type='EmisoresInformacionGetResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -144,10 +144,10 @@ class EmisoresApi(object):
 
         :param async_req bool
         :param date fecha: Fecha de consulta (required)
-        :return: InlineResponse20042
+        :return: EmisoresInformacionGetVigentesResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20042 | multiprocessing.pool.ApplyResult
+        :rtype: EmisoresInformacionGetVigentesResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -167,10 +167,10 @@ class EmisoresApi(object):
 
         :param async_req bool
         :param date fecha: Fecha de consulta (required)
-        :return: InlineResponse20042
+        :return: EmisoresInformacionGetVigentesResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20042 | multiprocessing.pool.ApplyResult
+        :rtype: EmisoresInformacionGetVigentesResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha']  # noqa: E501
@@ -222,7 +222,7 @@ class EmisoresApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20042',  # noqa: E501
+            response_type='EmisoresInformacionGetVigentesResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -17,9 +17,9 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20031
-from . import InlineResponse20029
-from . import InlineResponse20036
+from . import RFNValorizacionesSinDesfaseValorizacionSinDesfaseCalculadoraResponse
+from . import RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetResponse
+from . import RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetIntervalResponse
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -51,10 +51,10 @@ class RFNValorizacionesSinDesfaseApi(object):
         :param date fecha: Fecha para la cual se efectua la valorización (required)
         :param float nominal: Nominal a valorizar. Si no se carga se asume 1000
         :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
-        :return: InlineResponse20031
+        :return: RFNValorizacionesSinDesfaseValorizacionSinDesfaseCalculadoraResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20031 | multiprocessing.pool.ApplyResult
+        :rtype: RFNValorizacionesSinDesfaseValorizacionSinDesfaseCalculadoraResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -77,10 +77,10 @@ class RFNValorizacionesSinDesfaseApi(object):
         :param date fecha: Fecha para la cual se efectua la valorización (required)
         :param float nominal: Nominal a valorizar. Si no se carga se asume 1000
         :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
-        :return: InlineResponse20031
+        :return: RFNValorizacionesSinDesfaseValorizacionSinDesfaseCalculadoraResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20031 | multiprocessing.pool.ApplyResult
+        :rtype: RFNValorizacionesSinDesfaseValorizacionSinDesfaseCalculadoraResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha', 'nominal', 'condicion_pago']  # noqa: E501
@@ -142,7 +142,7 @@ class RFNValorizacionesSinDesfaseApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20031',  # noqa: E501
+            response_type='RFNValorizacionesSinDesfaseValorizacionSinDesfaseCalculadoraResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -162,10 +162,10 @@ class RFNValorizacionesSinDesfaseApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20029
+        :return: RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20029 | multiprocessing.pool.ApplyResult
+        :rtype: RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -186,10 +186,10 @@ class RFNValorizacionesSinDesfaseApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20029
+        :return: RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20029 | multiprocessing.pool.ApplyResult
+        :rtype: RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'nemo']  # noqa: E501
@@ -247,7 +247,7 @@ class RFNValorizacionesSinDesfaseApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20029',  # noqa: E501
+            response_type='RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -268,10 +268,10 @@ class RFNValorizacionesSinDesfaseApi(object):
         :param date fecha_min: Intervalo Inferior de Fecha (required)
         :param date fecha_max: Intervalo Superior de Fecha (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20036
+        :return: RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetIntervalResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20036 | multiprocessing.pool.ApplyResult
+        :rtype: RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetIntervalResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -293,10 +293,10 @@ class RFNValorizacionesSinDesfaseApi(object):
         :param date fecha_min: Intervalo Inferior de Fecha (required)
         :param date fecha_max: Intervalo Superior de Fecha (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
-        :return: InlineResponse20036
+        :return: RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetIntervalResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20036 | multiprocessing.pool.ApplyResult
+        :rtype: RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetIntervalResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'nemo']  # noqa: E501
@@ -360,7 +360,7 @@ class RFNValorizacionesSinDesfaseApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20036',  # noqa: E501
+            response_type='RFNValorizacionesSinDesfaseValorizacionSinDesfaseGetIntervalResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

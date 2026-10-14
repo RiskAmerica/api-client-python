@@ -17,8 +17,8 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20034
-from . import InlineResponse20035
+from . import RFNValorizacionesBulkValorizacionBulkGetAllResponse
+from . import RFNValorizacionesBulkValorizacionBulkGetFamiliasResponse
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -48,10 +48,10 @@ class RFNValorizacionesBulkApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
         :param str familia: familia a consultar. Ejemplo: BE, BB, BS, BCU, etc. (required)
-        :return: InlineResponse20034
+        :return: RFNValorizacionesBulkValorizacionBulkGetAllResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20034 | multiprocessing.pool.ApplyResult
+        :rtype: RFNValorizacionesBulkValorizacionBulkGetAllResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -72,10 +72,10 @@ class RFNValorizacionesBulkApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
         :param str familia: familia a consultar. Ejemplo: BE, BB, BS, BCU, etc. (required)
-        :return: InlineResponse20034
+        :return: RFNValorizacionesBulkValorizacionBulkGetAllResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20034 | multiprocessing.pool.ApplyResult
+        :rtype: RFNValorizacionesBulkValorizacionBulkGetAllResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'familia']  # noqa: E501
@@ -133,7 +133,7 @@ class RFNValorizacionesBulkApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20034',  # noqa: E501
+            response_type='RFNValorizacionesBulkValorizacionBulkGetAllResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -151,10 +151,10 @@ class RFNValorizacionesBulkApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20035
+        :return: RFNValorizacionesBulkValorizacionBulkGetFamiliasResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20035 | multiprocessing.pool.ApplyResult
+        :rtype: RFNValorizacionesBulkValorizacionBulkGetFamiliasResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -173,10 +173,10 @@ class RFNValorizacionesBulkApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20035
+        :return: RFNValorizacionesBulkValorizacionBulkGetFamiliasResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20035 | multiprocessing.pool.ApplyResult
+        :rtype: RFNValorizacionesBulkValorizacionBulkGetFamiliasResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = []  # noqa: E501
@@ -222,7 +222,7 @@ class RFNValorizacionesBulkApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20035',  # noqa: E501
+            response_type='RFNValorizacionesBulkValorizacionBulkGetFamiliasResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

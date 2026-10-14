@@ -54,9 +54,6 @@ venv/
 # Django stuff:
 *.log
 
-docs/
-test/
-
 # Sphinx documentation
 docs/_build/
 

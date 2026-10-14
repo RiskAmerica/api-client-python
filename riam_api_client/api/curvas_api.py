@@ -17,13 +17,13 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20018
-from . import InlineResponse20019
-from . import InlineResponse20021
-from . import InlineResponse20020
-from . import InlineResponse20022
-from . import InlineResponse20022
-from . import InlineResponse20022
+from . import CurvasInformacionGetCurvasResponse
+from . import CurvasInformacionGetFamiliasResponse
+from . import CurvasInformacionGetIntradaysResponse
+from . import CurvasInformacionGetUnidadTiempoResponse
+from . import CurvasValoresGetResponse
+from . import CurvasValoresGetAllResponse
+from . import CurvasValoresGetIntervalResponse
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -51,10 +51,10 @@ class CurvasApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20018
+        :return: CurvasInformacionGetCurvasResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20018 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasInformacionGetCurvasResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -73,10 +73,10 @@ class CurvasApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20018
+        :return: CurvasInformacionGetCurvasResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20018 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasInformacionGetCurvasResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = []  # noqa: E501
@@ -122,7 +122,7 @@ class CurvasApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20018',  # noqa: E501
+            response_type='CurvasInformacionGetCurvasResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -140,10 +140,10 @@ class CurvasApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20019
+        :return: CurvasInformacionGetFamiliasResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20019 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasInformacionGetFamiliasResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -162,10 +162,10 @@ class CurvasApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20019
+        :return: CurvasInformacionGetFamiliasResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20019 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasInformacionGetFamiliasResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = []  # noqa: E501
@@ -211,7 +211,7 @@ class CurvasApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20019',  # noqa: E501
+            response_type='CurvasInformacionGetFamiliasResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -229,10 +229,10 @@ class CurvasApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20021
+        :return: CurvasInformacionGetIntradaysResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20021 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasInformacionGetIntradaysResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -251,10 +251,10 @@ class CurvasApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20021
+        :return: CurvasInformacionGetIntradaysResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20021 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasInformacionGetIntradaysResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = []  # noqa: E501
@@ -300,7 +300,7 @@ class CurvasApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20021',  # noqa: E501
+            response_type='CurvasInformacionGetIntradaysResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -318,10 +318,10 @@ class CurvasApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20020
+        :return: CurvasInformacionGetUnidadTiempoResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20020 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasInformacionGetUnidadTiempoResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -340,10 +340,10 @@ class CurvasApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20020
+        :return: CurvasInformacionGetUnidadTiempoResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20020 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasInformacionGetUnidadTiempoResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = []  # noqa: E501
@@ -389,7 +389,7 @@ class CurvasApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20020',  # noqa: E501
+            response_type='CurvasInformacionGetUnidadTiempoResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -407,16 +407,16 @@ class CurvasApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ValoresGetBody body: (required)
+        :param CurvasValoresGetRequest body: (required)
         :param date fecha: Fecha para la cual se consulta (required)
         :param str id_curva: Identificador de la Curva (required)
         :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
         :param str id_base_tasa: Base de la tasa en la que se consultan los valores
-        :return: InlineResponse20022
+        :return: CurvasValoresGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20022 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasValoresGetResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -435,16 +435,16 @@ class CurvasApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ValoresGetBody body: (required)
+        :param CurvasValoresGetRequest body: (required)
         :param date fecha: Fecha para la cual se consulta (required)
         :param str id_curva: Identificador de la Curva (required)
         :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
         :param str id_base_tasa: Base de la tasa en la que se consultan los valores
-        :return: InlineResponse20022
+        :return: CurvasValoresGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20022 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasValoresGetResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['body', 'fecha', 'id_curva', 'id_intraday', 'id_unidad', 'id_base_tasa']  # noqa: E501
@@ -522,7 +522,7 @@ class CurvasApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20022',  # noqa: E501
+            response_type='CurvasValoresGetResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -547,10 +547,10 @@ class CurvasApi(object):
         :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
         :param str id_base_tasa: Base de la tasa en la que se consultan los valores
-        :return: InlineResponse20022
+        :return: CurvasValoresGetAllResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20022 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasValoresGetAllResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -576,10 +576,10 @@ class CurvasApi(object):
         :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
         :param str id_unidad: Unidad en la que estan los plazos provistos, las opciones posibles son DIA, MES, ANIO
         :param str id_base_tasa: Base de la tasa en la que se consultan los valores
-        :return: InlineResponse20022
+        :return: CurvasValoresGetAllResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20022 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasValoresGetAllResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'id_curva', 'plazo_inicial', 'plazo_final', 'id_intraday', 'id_unidad', 'id_base_tasa']  # noqa: E501
@@ -659,7 +659,7 @@ class CurvasApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20022',  # noqa: E501
+            response_type='CurvasValoresGetAllResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -684,10 +684,10 @@ class CurvasApi(object):
         :param str id_unidad: Unidad en la que estan los plazos provistos (required)
         :param str id_base_tasa: Base de la tasa en la que se consultan los valores (required)
         :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
-        :return: InlineResponse20022
+        :return: CurvasValoresGetIntervalResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20022 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasValoresGetIntervalResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -713,10 +713,10 @@ class CurvasApi(object):
         :param str id_unidad: Unidad en la que estan los plazos provistos (required)
         :param str id_base_tasa: Base de la tasa en la que se consultan los valores (required)
         :param int id_intraday: Identificador del Intraday para el cual se consulta. EL \"10\" corresponde al cierre oficial del dia. (required)
-        :return: InlineResponse20022
+        :return: CurvasValoresGetIntervalResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20022 | multiprocessing.pool.ApplyResult
+        :rtype: CurvasValoresGetIntervalResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'id_curva', 'plazo', 'id_unidad', 'id_base_tasa', 'id_intraday']  # noqa: E501
@@ -804,7 +804,7 @@ class CurvasApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20022',  # noqa: E501
+            response_type='CurvasValoresGetIntervalResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -17,12 +17,12 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20064
-from . import InlineResponse20065
-from . import InlineResponse20066
-from . import InlineResponse20067
-from . import InlineResponse20063
-from . import InlineResponse20067
+from . import SvcHandlerGetFileTasksResponse
+from . import SvcHandlerGetInputFormatsResponse
+from . import SvcHandlerGetOutputFormatsResponse
+from . import SvcHandlerGetStatusResponse
+from . import SvcHandlerGetTipoValorizacionesResponse
+from . import SvcHandlerUploadFileResponse
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -269,10 +269,10 @@ class SvcApi(object):
 
         :param async_req bool
         :param str id_tipo_valorizacion: Tipo de Valorizacion a consultar (Obtenido de getTipoValorizaciones) (required)
-        :return: InlineResponse20064
+        :return: SvcHandlerGetFileTasksResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20064 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerGetFileTasksResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -292,10 +292,10 @@ class SvcApi(object):
 
         :param async_req bool
         :param str id_tipo_valorizacion: Tipo de Valorizacion a consultar (Obtenido de getTipoValorizaciones) (required)
-        :return: InlineResponse20064
+        :return: SvcHandlerGetFileTasksResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20064 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerGetFileTasksResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['id_tipo_valorizacion']  # noqa: E501
@@ -347,7 +347,7 @@ class SvcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20064',  # noqa: E501
+            response_type='SvcHandlerGetFileTasksResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -366,10 +366,10 @@ class SvcApi(object):
 
         :param async_req bool
         :param int id_file_task: Id FileTask para el cual se consulta (Obtenido de getFileTasks) (required)
-        :return: InlineResponse20065
+        :return: SvcHandlerGetInputFormatsResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20065 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerGetInputFormatsResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -389,10 +389,10 @@ class SvcApi(object):
 
         :param async_req bool
         :param int id_file_task: Id FileTask para el cual se consulta (Obtenido de getFileTasks) (required)
-        :return: InlineResponse20065
+        :return: SvcHandlerGetInputFormatsResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20065 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerGetInputFormatsResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['id_file_task']  # noqa: E501
@@ -444,7 +444,7 @@ class SvcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20065',  # noqa: E501
+            response_type='SvcHandlerGetInputFormatsResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -463,10 +463,10 @@ class SvcApi(object):
 
         :param async_req bool
         :param int id_file_task: Id FileTask para el cual se consulta (Obtenido de getFileTasks) (required)
-        :return: InlineResponse20066
+        :return: SvcHandlerGetOutputFormatsResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20066 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerGetOutputFormatsResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -486,10 +486,10 @@ class SvcApi(object):
 
         :param async_req bool
         :param int id_file_task: Id FileTask para el cual se consulta (Obtenido de getFileTasks) (required)
-        :return: InlineResponse20066
+        :return: SvcHandlerGetOutputFormatsResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20066 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerGetOutputFormatsResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['id_file_task']  # noqa: E501
@@ -541,7 +541,7 @@ class SvcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20066',  # noqa: E501
+            response_type='SvcHandlerGetOutputFormatsResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -561,10 +561,10 @@ class SvcApi(object):
         :param async_req bool
         :param int id_file_task: Id FileTask para el cual se consulta (Obtenido de getFileTasks) (required)
         :param date fecha: Fecha para la cual se esta cargando (required)
-        :return: InlineResponse20067
+        :return: SvcHandlerGetStatusResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20067 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerGetStatusResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -585,10 +585,10 @@ class SvcApi(object):
         :param async_req bool
         :param int id_file_task: Id FileTask para el cual se consulta (Obtenido de getFileTasks) (required)
         :param date fecha: Fecha para la cual se esta cargando (required)
-        :return: InlineResponse20067
+        :return: SvcHandlerGetStatusResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20067 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerGetStatusResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['id_file_task', 'fecha']  # noqa: E501
@@ -646,7 +646,7 @@ class SvcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20067',  # noqa: E501
+            response_type='SvcHandlerGetStatusResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -664,10 +664,10 @@ class SvcApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20063
+        :return: SvcHandlerGetTipoValorizacionesResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20063 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerGetTipoValorizacionesResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -686,10 +686,10 @@ class SvcApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: InlineResponse20063
+        :return: SvcHandlerGetTipoValorizacionesResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20063 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerGetTipoValorizacionesResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = []  # noqa: E501
@@ -735,7 +735,7 @@ class SvcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20063',  # noqa: E501
+            response_type='SvcHandlerGetTipoValorizacionesResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -757,10 +757,10 @@ class SvcApi(object):
         :param int id_file_task: Id FileTask para el cual se consulta (Obtenido de getFileTasks) (required)
         :param int id_file_type: Id del formato de carga el cual se envía (Obtenido de getInputFormats) (required)
         :param date fecha: Fecha para la cual se esta cargando (required)
-        :return: InlineResponse20067
+        :return: SvcHandlerUploadFileResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20067 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerUploadFileResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -783,10 +783,10 @@ class SvcApi(object):
         :param int id_file_task: Id FileTask para el cual se consulta (Obtenido de getFileTasks) (required)
         :param int id_file_type: Id del formato de carga el cual se envía (Obtenido de getInputFormats) (required)
         :param date fecha: Fecha para la cual se esta cargando (required)
-        :return: InlineResponse20067
+        :return: SvcHandlerUploadFileResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20067 | multiprocessing.pool.ApplyResult
+        :rtype: SvcHandlerUploadFileResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['file', 'id_file_task', 'id_file_type', 'fecha']  # noqa: E501
@@ -860,7 +860,7 @@ class SvcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20067',  # noqa: E501
+            response_type='SvcHandlerUploadFileResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

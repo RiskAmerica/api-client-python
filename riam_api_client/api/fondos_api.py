@@ -17,24 +17,24 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse2008
-from . import InlineResponse2008
-from . import InlineResponse2003
-from . import InlineResponse2004
-from . import InlineResponse2001
-from . import InlineResponse2002
-from . import InlineResponse2007
-from . import InlineResponse2007
-from . import InlineResponse200
-from . import InlineResponse200
-from . import InlineResponse2006
-from . import InlineResponse2006
-from . import InlineResponse2005
-from . import InlineResponse2005
-from . import InlineResponse2005
-from . import InlineResponse2005
-from . import InlineResponse2009
-from . import InlineResponse2009
+from . import FondosCostosGetFechaResponse
+from . import FondosCostosGetSerieResponse
+from . import FondosDatosCuotaGetCuotaNormalizadaResponse
+from . import FondosDatosCuotaGetCuotaNormalizadaAjustadaResponse
+from . import FondosDatosCuotaGetFechaResponse
+from . import FondosDatosCuotaGetSerieResponse
+from . import FondosDuracionGetFechaResponse
+from . import FondosDuracionGetSerieResponse
+from . import FondosInformacionGetResponse
+from . import FondosInformacionGetAllResponse
+from . import FondosReprocesosGetPeriodoResponse
+from . import FondosReprocesosGetSerieResponse
+from . import FondosRetornosAjustadosGetFechaResponse
+from . import FondosRetornosAjustadosGetSerieResponse
+from . import FondosRetornosGetFechaResponse
+from . import FondosRetornosGetSerieResponse
+from . import FondosTirGetFechaResponse
+from . import FondosTirGetSerieResponse
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -63,10 +63,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2008
+        :return: FondosCostosGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2008 | multiprocessing.pool.ApplyResult
+        :rtype: FondosCostosGetFechaResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -86,10 +86,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2008
+        :return: FondosCostosGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2008 | multiprocessing.pool.ApplyResult
+        :rtype: FondosCostosGetFechaResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha']  # noqa: E501
@@ -141,7 +141,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2008',  # noqa: E501
+            response_type='FondosCostosGetFechaResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -163,10 +163,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2008
+        :return: FondosCostosGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2008 | multiprocessing.pool.ApplyResult
+        :rtype: FondosCostosGetSerieResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -189,10 +189,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2008
+        :return: FondosCostosGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2008 | multiprocessing.pool.ApplyResult
+        :rtype: FondosCostosGetSerieResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'serie']  # noqa: E501
@@ -262,7 +262,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2008',  # noqa: E501
+            response_type='FondosCostosGetSerieResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -285,10 +285,10 @@ class FondosApi(object):
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
         :param str moneda: Moneda de cálculo de la serie
-        :return: InlineResponse2003
+        :return: FondosDatosCuotaGetCuotaNormalizadaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2003 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDatosCuotaGetCuotaNormalizadaResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -312,10 +312,10 @@ class FondosApi(object):
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
         :param str moneda: Moneda de cálculo de la serie
-        :return: InlineResponse2003
+        :return: FondosDatosCuotaGetCuotaNormalizadaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2003 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDatosCuotaGetCuotaNormalizadaResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'serie', 'moneda']  # noqa: E501
@@ -387,7 +387,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2003',  # noqa: E501
+            response_type='FondosDatosCuotaGetCuotaNormalizadaResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -409,10 +409,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str moneda: Moneda de cálculo de la serie
-        :return: InlineResponse2004
+        :return: FondosDatosCuotaGetCuotaNormalizadaAjustadaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2004 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDatosCuotaGetCuotaNormalizadaAjustadaResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -435,10 +435,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str moneda: Moneda de cálculo de la serie
-        :return: InlineResponse2004
+        :return: FondosDatosCuotaGetCuotaNormalizadaAjustadaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2004 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDatosCuotaGetCuotaNormalizadaAjustadaResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'moneda']  # noqa: E501
@@ -504,7 +504,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2004',  # noqa: E501
+            response_type='FondosDatosCuotaGetCuotaNormalizadaAjustadaResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -524,10 +524,10 @@ class FondosApi(object):
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
         :param str moneda: Moneda en la cual se despliegan los valores. Si se omite este valor se despliegan en la moneda contable del fondo.
-        :return: InlineResponse2001
+        :return: FondosDatosCuotaGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2001 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDatosCuotaGetFechaResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -548,10 +548,10 @@ class FondosApi(object):
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
         :param str moneda: Moneda en la cual se despliegan los valores. Si se omite este valor se despliegan en la moneda contable del fondo.
-        :return: InlineResponse2001
+        :return: FondosDatosCuotaGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2001 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDatosCuotaGetFechaResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'moneda']  # noqa: E501
@@ -605,7 +605,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2001',  # noqa: E501
+            response_type='FondosDatosCuotaGetFechaResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -628,10 +628,10 @@ class FondosApi(object):
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
         :param str moneda: Moneda en la cual se despliegan los valores. Si se omite este valor se despliegan en la moneda contable del fondo.
-        :return: InlineResponse2002
+        :return: FondosDatosCuotaGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2002 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDatosCuotaGetSerieResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -655,10 +655,10 @@ class FondosApi(object):
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
         :param str moneda: Moneda en la cual se despliegan los valores. Si se omite este valor se despliegan en la moneda contable del fondo.
-        :return: InlineResponse2002
+        :return: FondosDatosCuotaGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2002 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDatosCuotaGetSerieResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'serie', 'moneda']  # noqa: E501
@@ -730,7 +730,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2002',  # noqa: E501
+            response_type='FondosDatosCuotaGetSerieResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -749,10 +749,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2007
+        :return: FondosDuracionGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDuracionGetFechaResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -772,10 +772,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2007
+        :return: FondosDuracionGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDuracionGetFechaResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha']  # noqa: E501
@@ -827,7 +827,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2007',  # noqa: E501
+            response_type='FondosDuracionGetFechaResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -849,10 +849,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2007
+        :return: FondosDuracionGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDuracionGetSerieResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -875,10 +875,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2007
+        :return: FondosDuracionGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2007 | multiprocessing.pool.ApplyResult
+        :rtype: FondosDuracionGetSerieResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'serie']  # noqa: E501
@@ -948,7 +948,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2007',  # noqa: E501
+            response_type='FondosDuracionGetSerieResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -968,10 +968,10 @@ class FondosApi(object):
         :param async_req bool
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie. Si no se especifica se muestran todas las series.
-        :return: InlineResponse200
+        :return: FondosInformacionGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse200 | multiprocessing.pool.ApplyResult
+        :rtype: FondosInformacionGetResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -992,10 +992,10 @@ class FondosApi(object):
         :param async_req bool
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie. Si no se especifica se muestran todas las series.
-        :return: InlineResponse200
+        :return: FondosInformacionGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse200 | multiprocessing.pool.ApplyResult
+        :rtype: FondosInformacionGetResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['rut', 'serie']  # noqa: E501
@@ -1049,7 +1049,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200',  # noqa: E501
+            response_type='FondosInformacionGetResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1068,10 +1068,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param str tipo_fondo: tipoFondo. Si no se especifica se consultan todos (CFI y CFM)
-        :return: InlineResponse200
+        :return: FondosInformacionGetAllResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse200 | multiprocessing.pool.ApplyResult
+        :rtype: FondosInformacionGetAllResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1091,10 +1091,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param str tipo_fondo: tipoFondo. Si no se especifica se consultan todos (CFI y CFM)
-        :return: InlineResponse200
+        :return: FondosInformacionGetAllResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse200 | multiprocessing.pool.ApplyResult
+        :rtype: FondosInformacionGetAllResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['tipo_fondo']  # noqa: E501
@@ -1142,7 +1142,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200',  # noqa: E501
+            response_type='FondosInformacionGetAllResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1162,10 +1162,10 @@ class FondosApi(object):
         :param async_req bool
         :param date fecha_min: Fecha mínima a consultar (required)
         :param date fecha_max: Fecha máxima a consultar (No inclusive) (required)
-        :return: InlineResponse2006
+        :return: FondosReprocesosGetPeriodoResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
+        :rtype: FondosReprocesosGetPeriodoResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1186,10 +1186,10 @@ class FondosApi(object):
         :param async_req bool
         :param date fecha_min: Fecha mínima a consultar (required)
         :param date fecha_max: Fecha máxima a consultar (No inclusive) (required)
-        :return: InlineResponse2006
+        :return: FondosReprocesosGetPeriodoResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
+        :rtype: FondosReprocesosGetPeriodoResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max']  # noqa: E501
@@ -1247,7 +1247,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='FondosReprocesosGetPeriodoResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1267,10 +1267,10 @@ class FondosApi(object):
         :param async_req bool
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2006
+        :return: FondosReprocesosGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
+        :rtype: FondosReprocesosGetSerieResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1291,10 +1291,10 @@ class FondosApi(object):
         :param async_req bool
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2006
+        :return: FondosReprocesosGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2006 | multiprocessing.pool.ApplyResult
+        :rtype: FondosReprocesosGetSerieResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['rut', 'serie']  # noqa: E501
@@ -1352,7 +1352,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='FondosReprocesosGetSerieResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1372,10 +1372,10 @@ class FondosApi(object):
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
         :param str tipo_fondo: tipoFondo. Si no se especifica se consultan todos (CFI y CFM)
-        :return: InlineResponse2005
+        :return: FondosRetornosAjustadosGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: FondosRetornosAjustadosGetFechaResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1396,10 +1396,10 @@ class FondosApi(object):
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
         :param str tipo_fondo: tipoFondo. Si no se especifica se consultan todos (CFI y CFM)
-        :return: InlineResponse2005
+        :return: FondosRetornosAjustadosGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: FondosRetornosAjustadosGetFechaResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'tipo_fondo']  # noqa: E501
@@ -1453,7 +1453,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2005',  # noqa: E501
+            response_type='FondosRetornosAjustadosGetFechaResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1475,10 +1475,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2005
+        :return: FondosRetornosAjustadosGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: FondosRetornosAjustadosGetSerieResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1501,10 +1501,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2005
+        :return: FondosRetornosAjustadosGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: FondosRetornosAjustadosGetSerieResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'serie']  # noqa: E501
@@ -1574,7 +1574,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2005',  # noqa: E501
+            response_type='FondosRetornosAjustadosGetSerieResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1593,10 +1593,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2005
+        :return: FondosRetornosGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: FondosRetornosGetFechaResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1616,10 +1616,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2005
+        :return: FondosRetornosGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: FondosRetornosGetFechaResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha']  # noqa: E501
@@ -1671,7 +1671,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2005',  # noqa: E501
+            response_type='FondosRetornosGetFechaResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1693,10 +1693,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2005
+        :return: FondosRetornosGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: FondosRetornosGetSerieResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1719,10 +1719,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2005
+        :return: FondosRetornosGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2005 | multiprocessing.pool.ApplyResult
+        :rtype: FondosRetornosGetSerieResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'serie']  # noqa: E501
@@ -1792,7 +1792,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2005',  # noqa: E501
+            response_type='FondosRetornosGetSerieResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1811,10 +1811,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2009
+        :return: FondosTirGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2009 | multiprocessing.pool.ApplyResult
+        :rtype: FondosTirGetFechaResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1834,10 +1834,10 @@ class FondosApi(object):
 
         :param async_req bool
         :param date fecha: Fecha a Consultar (required)
-        :return: InlineResponse2009
+        :return: FondosTirGetFechaResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2009 | multiprocessing.pool.ApplyResult
+        :rtype: FondosTirGetFechaResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha']  # noqa: E501
@@ -1889,7 +1889,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2009',  # noqa: E501
+            response_type='FondosTirGetFechaResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1911,10 +1911,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2009
+        :return: FondosTirGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2009 | multiprocessing.pool.ApplyResult
+        :rtype: FondosTirGetSerieResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -1937,10 +1937,10 @@ class FondosApi(object):
         :param date fecha_max: Fecha máxima a consultar (required)
         :param int rut: Rut del Fondo (sin dígito verificador) (required)
         :param str serie: Código de la serie (required)
-        :return: InlineResponse2009
+        :return: FondosTirGetSerieResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse2009 | multiprocessing.pool.ApplyResult
+        :rtype: FondosTirGetSerieResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha_min', 'fecha_max', 'rut', 'serie']  # noqa: E501
@@ -2010,7 +2010,7 @@ class FondosApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2009',  # noqa: E501
+            response_type='FondosTirGetSerieResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

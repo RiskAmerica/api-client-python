@@ -17,11 +17,11 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 # Model imports
-from . import InlineResponse20068
-from . import InlineResponse20069
-from . import InlineResponse20071
-from . import InlineResponse20072
-from . import InlineResponse20070
+from . import IntradayPuntasGetPuntasResponse
+from . import IntradayTransaccionIntradayGetResponse
+from . import IntradayValorizacionIntradayCalculadoraResponse
+from . import IntradayValorizacionIntradayFamiliaGetResponse
+from . import IntradayValorizacionIntradayGetResponse
 # Importing for doctring purposes
 # Api Client
 from riam_api_client.api_client import ApiClient
@@ -52,10 +52,10 @@ class IntradayApi(object):
         :param date fecha: Fecha (required)
         :param str nemo: Nemotécnico del instrumento a consultar. (required)
         :param str tipo_punta: Tipo de punta (Compra - Venta). Si no se especifica se entregan ambos tipos.
-        :return: InlineResponse20068
+        :return: IntradayPuntasGetPuntasResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20068 | multiprocessing.pool.ApplyResult
+        :rtype: IntradayPuntasGetPuntasResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -77,10 +77,10 @@ class IntradayApi(object):
         :param date fecha: Fecha (required)
         :param str nemo: Nemotécnico del instrumento a consultar. (required)
         :param str tipo_punta: Tipo de punta (Compra - Venta). Si no se especifica se entregan ambos tipos.
-        :return: InlineResponse20068
+        :return: IntradayPuntasGetPuntasResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20068 | multiprocessing.pool.ApplyResult
+        :rtype: IntradayPuntasGetPuntasResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'nemo', 'tipo_punta']  # noqa: E501
@@ -140,7 +140,7 @@ class IntradayApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20068',  # noqa: E501
+            response_type='IntradayPuntasGetPuntasResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -160,10 +160,10 @@ class IntradayApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
         :param str nemo: Nemotécnico del instrumento a consultar. Si no se especifica se entregan todos los de la fecha.
-        :return: InlineResponse20069
+        :return: IntradayTransaccionIntradayGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20069 | multiprocessing.pool.ApplyResult
+        :rtype: IntradayTransaccionIntradayGetResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -184,10 +184,10 @@ class IntradayApi(object):
         :param async_req bool
         :param date fecha: Fecha a consultar (required)
         :param str nemo: Nemotécnico del instrumento a consultar. Si no se especifica se entregan todos los de la fecha.
-        :return: InlineResponse20069
+        :return: IntradayTransaccionIntradayGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20069 | multiprocessing.pool.ApplyResult
+        :rtype: IntradayTransaccionIntradayGetResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'nemo']  # noqa: E501
@@ -241,7 +241,7 @@ class IntradayApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20069',  # noqa: E501
+            response_type='IntradayTransaccionIntradayGetResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -263,10 +263,10 @@ class IntradayApi(object):
         :param date fecha: Fecha para la cual se efectua la valorización (required)
         :param float nominal: Nominal a valorizar. Si no se carga se asume 1000
         :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
-        :return: InlineResponse20071
+        :return: IntradayValorizacionIntradayCalculadoraResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20071 | multiprocessing.pool.ApplyResult
+        :rtype: IntradayValorizacionIntradayCalculadoraResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -289,10 +289,10 @@ class IntradayApi(object):
         :param date fecha: Fecha para la cual se efectua la valorización (required)
         :param float nominal: Nominal a valorizar. Si no se carga se asume 1000
         :param str condicion_pago: Condicion de Pago. Las opciones posibles son: PH, PM, CN.
-        :return: InlineResponse20071
+        :return: IntradayValorizacionIntradayCalculadoraResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20071 | multiprocessing.pool.ApplyResult
+        :rtype: IntradayValorizacionIntradayCalculadoraResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['nemo', 'fecha', 'nominal', 'condicion_pago']  # noqa: E501
@@ -354,7 +354,7 @@ class IntradayApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20071',  # noqa: E501
+            response_type='IntradayValorizacionIntradayCalculadoraResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -375,10 +375,10 @@ class IntradayApi(object):
         :param date fecha: Fecha a consultar (required)
         :param str familia: familia a consultar. Ejemplo: BE, BB, BS, BCU, etc (required)
         :param bool ultimo_remate: Si es 1, entrega solo la valorizacion del ultimo remate disponible de cada instrumento en vez de todos los remates del dia
-        :return: InlineResponse20072
+        :return: IntradayValorizacionIntradayFamiliaGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20072 | multiprocessing.pool.ApplyResult
+        :rtype: IntradayValorizacionIntradayFamiliaGetResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -400,10 +400,10 @@ class IntradayApi(object):
         :param date fecha: Fecha a consultar (required)
         :param str familia: familia a consultar. Ejemplo: BE, BB, BS, BCU, etc (required)
         :param bool ultimo_remate: Si es 1, entrega solo la valorizacion del ultimo remate disponible de cada instrumento en vez de todos los remates del dia
-        :return: InlineResponse20072
+        :return: IntradayValorizacionIntradayFamiliaGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20072 | multiprocessing.pool.ApplyResult
+        :rtype: IntradayValorizacionIntradayFamiliaGetResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'familia', 'ultimo_remate']  # noqa: E501
@@ -463,7 +463,7 @@ class IntradayApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20072',  # noqa: E501
+            response_type='IntradayValorizacionIntradayFamiliaGetResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -484,10 +484,10 @@ class IntradayApi(object):
         :param date fecha: Fecha a consultar (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param bool ultimo_remate: Si es 1, entrega solo la valorizacion del ultimo remate disponible en vez de todos los remates del dia
-        :return: InlineResponse20070
+        :return: IntradayValorizacionIntradayGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20070 | multiprocessing.pool.ApplyResult
+        :rtype: IntradayValorizacionIntradayGetResponse | multiprocessing.pool.ApplyResult
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
@@ -509,10 +509,10 @@ class IntradayApi(object):
         :param date fecha: Fecha a consultar (required)
         :param str nemo: Nemotécnico del instrumento a consultar (required)
         :param bool ultimo_remate: Si es 1, entrega solo la valorizacion del ultimo remate disponible en vez de todos los remates del dia
-        :return: InlineResponse20070
+        :return: IntradayValorizacionIntradayGetResponse
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InlineResponse20070 | multiprocessing.pool.ApplyResult
+        :rtype: IntradayValorizacionIntradayGetResponse | multiprocessing.pool.ApplyResult
         """
 
         all_params = ['fecha', 'nemo', 'ultimo_remate']  # noqa: E501
@@ -572,7 +572,7 @@ class IntradayApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20070',  # noqa: E501
+            response_type='IntradayValorizacionIntradayGetResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
